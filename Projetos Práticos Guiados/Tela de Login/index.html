@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--4*-->
+    <link rel="stylesheet" href="styles.css">  <!--12*-->
+    <link rel="icon" href="img/pgFavicon.ico"/> <!-- FAVICON -->
+    <title>Tela de Login</title>
+</head>
+<body>
+    <main class="conteudo">
+        <form>
+            <h1>Login</h1>
+            <div class="informarDados">
+                <input placeholder="Usuário" type="email"> <!--1*--> <!--2*-->
+                <i class="bx bxs-user"></i>  <!--5*-->
+            </div>
+
+            <div class="informarDados">
+                <input placeholder="Senha" type="password"> <!--3*-->
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <div class="lembrarOuMudarSenha">
+                <label>  <!--7*-->
+                    <input type="checkbox">  <!--6*-->
+                    Lembrar senha
+                </label>
+                <a href="#">Esqueci a senha</a>  <!--8*--> <!--9*-->
+            </div>
+
+            <button type="submit" class="login">Login</button> <!--10*-->
+
+            <div class="linkDeRegistro">
+                <p>Não tem uma conta? <a href="#">Cadastre-se!</a></p>  <!--11*-->
+            </div>
+        </form>
+    </main>
+    
+</body>
+</html>

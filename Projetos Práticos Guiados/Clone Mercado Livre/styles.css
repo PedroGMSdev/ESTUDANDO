@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+
+.cabecalho {
+    background-color: gold;
+    padding: 10px 0;
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+.pesquisar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.procurandoPor {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    height: 34px;
+}
+
+.botaoProcurar {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    height: 34px;
+}
+
+.principal {
+    padding: 30px 0;
+}
+
+.titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tabelaDeProdutos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 6 */
+    gap: 20px; /* 7 */
+}
+
+.hero {
+background-image: url("https://t2.tudocdn.net/629319?w=1920&h=1080"); 
+    height: 200px;; /* 1 */
+    background-size: cover; /* 2 */
+    background-position: center; /* 3 */
+    display: flex;
+    flex-direction: column; /* 4 */
+    justify-content: flex-end; /* 5 */
+    align-items: center;
+    color: gold;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+.rodape {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 2px solid gold;
+}
+
+.rodape p {
+    color: rgb(205, 206, 207);
+    font-size: 14px;
+}
+
+/* PERSONALIZAÇÃO DO JAVASCRIP */
+.product-card {
+    background-color: aliceblue;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-image { /* 8 */
+    height: 160px;
+    width: 100%;
+    object-fit: cover; /* 9 */
+    margin-bottom: 15px;
+    border-radius: 8px;
+
+}
+
+.product-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 40px;
+    overflow: hidden; /* 10 */
+}
+
+.product-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.product-discount {
+    font-size: 14px;
+    color: green;
+    font-weight: bold;
+}
