@@ -280,18 +280,145 @@ ________________________________**DECISÕES E REPETIÇÕES**____________________
 
 **ESTRUTURAS CONDICIONAIS**
 
+Será escolhido uma condição que SE apresentar valor X o resultado será A, SENÃO, se apresentar o valor Y, o resultado será B.
+
 IF (SE)
 ELSE IF (SENÃO SE)
 ELSE (SENÃO)
 
 	Exp.:
+//Será criada a variável (let) nivelDeFome:
 	let nivelDeFome = parseInt(prompt("Qual seu nível de fome?\n" + "Para Nível 1: Pouca Fome, digite 1\n" + "Para Nível 2: Bastante Fome, digite 2\n" + "Para Nível 3: Fome Para C..., digite 3"))
 	OBS.: o "\n" na String faz quebrar a linha.
 
+//Se o nível de fome for 1, que equivale à "Pouca fome":
 	if (nivelDeFome === 1){
+
+	//Será executado o seguinte comando:
 		console.log("Comprar uma maçã!")
+
+//Se o nível de fome for 2, que equivale à "Bastante fome":
 	} else if (nivelDeFome === 2){
+
+	//Será executado o seguinte comando:
 		console.log("Comprar um hambúrguer!")
+
+//Se o nível de fome for 3, que equivale à "Fome Para C...":
 	} else {
+
+	//Será executado o seguinte comando:
 		console.log("Vamos logo para um rodízio!")
+
+//NUNCA ESQUECER DE FECHAR CADA IF E CADA ELSE:
 	}	
+
+**ESTRUTURAS DE DECISÃO**
+
+Será apresentado uma situação onde irá ESCOLHER a variável e CASO apresente valor X será executado evento A, CASO apresente valor Y será executado evento B, CASO apresente valor Z será executado evento C...
+
+OBS.: SWITCH/CASE é bem indicado quando você tem muitas variações de condições, pois o IF/ELSE pode deixar o código muito bagunçado com muitas alternativas.
+
+SWITCH (ESCOLHA)
+CASE (CASO SEJA)
+	Exp.:
+//Será criado a variável (let) fruta:
+
+	//Será identificada e escolhida a variável fruta:
+		switch (fruta){
+
+		//Caso o valor da variável seja LARANJA
+			case "laranja":
+
+			//Será executado a ação:
+				console.log ("Vamos fazer um suco de laranja!")
+
+		//Caso o valor da variável seja BANANA:
+			case "banana":
+
+			//Será executado a ação:
+				console.log ("Vamos fazer uma bananada!")
+		
+	// NUNCA ESQUECER DE FECHAR O SWITCH:
+		}
+
+BREAK (PARAR)
+O break pode ser acrescentado para impedir que o SWITCH execute todos os resultados depois de encontrar o CASO equivalente e saia da aplicação SWITCH.
+	Exp.:
+		let fruta = "banana"
+
+ 		switch (fruta){
+			case "laranja":
+				console.log ("Vamos fazer um suco de laranja!")
+        		break
+        
+			case "banana":
+				console.log ("Vamos fazer uma bananada!")
+        		break
+
+       		case "maçã":
+        		console.log ("Vamos fazer uma vitamina de maçã!")
+        		break
+		}
+OBS.: No caso acima, o SWITCH vai buscar a variável, e quando encontrar o CASE "banana" ele sairá da aplicação SWITCH, evitando que ele execute os outros casos abaixo do escolhido também. Se retirar o BREAK verá que CASE "maçã" também é executado.
+
+IDEIA: Um caso para não utilizar o BREAK é quando você quer atribuir uma condição para que seja executado algum comando.
+	Exp.:
+		Quero que essas coisas sejam executada nessa ordem quando o valor da variável X for A...
+	Exp. aplicado em um jogo (IDEIA):
+		Seria interessante o não colocamento do BREAK para que quando o resultado da variável for, por exemplo, "sangramento" o personagem comece a perder pontos de vida a cada turno, comece a ficar desorientado, fique confuso... mas, para isso teria que colocar o pior cenário em primeiro e os mais brandos por último.
+			Como:
+				- Desmaiar
+				- Tonto
+				- Sangramento
+				-...
+
+DEFAULT
+Caso você queira implementar uma opção para caso nenhum dos casos informados sejam escolhidos, pode usar o DEFAULT para que uma outra ação não indicada acima seja executada.
+	Exp.:
+		let fruta = "pêra"
+
+ 		switch (fruta){
+			case "laranja":
+				console.log ("Vamos fazer um suco de laranja!")
+        		break
+        
+			case "banana":
+				console.log ("Vamos fazer uma bananada!")
+        		break
+
+       		case "maçã":
+        		console.log ("Vamos fazer uma vitamina de maçã!")
+        		break
+
+			default:
+				console.log ("Vai ficar sem suco mesmo!")
+		}
+OBS.: Tanto os CASEs quanto o DEFAULT devem ser encerrados com ":", senão não funcionarão.
+
+IDEIA: Esse SWITCH pode ser usado para um evento onde o usuário escolherá no menu o que deseja executar, e ao clicar na opção ser redirecionado para o local.
+
+OBS.: O DEFAULT não precisa obrigatóriamente ser usado, mas acho interessante criar uma boa prática utilizar sempre. Assim também como o BREAK.
+
+DICA: Mais de um CASO pode ser atribuído para a mesma ação.
+	Exp.:
+		Na variável (let) fruta será informada uma fruta. Dependendo de que fruta seja informada, saberemos se será feito um suco ou uma vitamina.
+
+		let fruta = "banana"
+
+		switch (fruta){
+			case "laranja":
+			case "maçã":
+			case "melancia":
+				console.log ("Suco de " + fruta)
+				break
+
+			case "banana":
+			case "morango":
+			case "mamão":
+				console.log ("Vitamina de " + fruta)
+				break
+		}
+
+OBS.: Os exemplos acima foram dado em strings, mas pode ser usado com números também.
+
+**ESTRUTURAS DE REPETIÇÃO**
