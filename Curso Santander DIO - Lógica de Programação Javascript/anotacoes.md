@@ -422,3 +422,66 @@ DICA: Mais de um CASO pode ser atribuído para a mesma ação.
 OBS.: Os exemplos acima foram dado em strings, mas pode ser usado com números também.
 
 **ESTRUTURAS DE REPETIÇÃO**
+
+Escolha de ações que serão executadas depois de certo número de repetições, ou depois de certa quantidade de ações.
+	Exp.:
+		Você só vai levantar da mesa depois de terminar de comer tudo!
+
+FOR (PARA)
+	Exp.:
+		PARA (for) uma variável CONTADOR (let contador) que inicialmente é igual a 0 (contador = 0), enquanto ela for menor que 4 (contador < 4), adicione de 1 em 1 até o resultado esperado (contador++).
+
+		for (let contador = 0; contador < 4; contador++){
+			//Será executado a seguinte ação ({}): exibir a variável CONTADOR
+			console.log (contador)
+		}
+DICA: É muito comum ver essa variável, na programação, ser retratada por "i" (abreviação de INTERADOR).
+	Exp.:
+		for (let i = 0; i < 4; i++){
+			console.log (i)
+		}
+OBS.: Para escrever um FOR, você deve informá-lo e entre () informar a regra desejada para ele, e abrir {} onde será informado o que será executado quando atingir a regra desejada.
+
+WHILE (ENQUANTO)
+	Exp.:
+		ENQUANTO (while) a variável CONTADOR (let contador) for menor que 3 (contador < 3) execute ({}) o comando de exibir olá (console.log ("Olá!"))
+
+		let contador = 0
+		while (contador < 3){
+			console.log ("Olá!")
+		}
+DICA: Se não for colocado um interador na variável elá entrará num loop infinito de repetições.
+	Exp.: 
+		let contador = 0
+		while (contador < 3){
+			console.log ("Olá!")
+			//Será adicionado um interador (contador++) que aumentará +1 à variável, para que essa variável tenha possibilidade de alcançar a regra do WHILE (< 3) e encerre o laço de repetição e saia do looping.
+			contador++
+		}
+OBS.: Em caso da variável não atingir a regra, o WHILE não será executado.
+	Exp.:
+		let contador = 3
+		while (contador < 3){
+			console.log ("Olá!")
+			//Será adicionado um interador (contador++) que aumentará +1 à variável, para que essa variável tenha possibilidade de alcançar a regra do WHILE (< 3) e encerre o laço de repetição e saia do looping.
+			contador++
+		}
+		//Como o contador já é maior que a regra, o WHILE não será executado, de maneira alguma.
+
+LEMBRETE: contador++ significa que será adicionado +1 ao valor já existente na variável contador.
+	contador++ que é igual à
+		contador +=1 que é igual à
+			contador = contador + 1.
+
+DO-WHILE (PARA...ENQUANTO)
+	Exp.:
+		FAÇA (do) a seguinte ação ({}), e repita ENQUANTO (while) a regra for ().
+
+		let contador = 3
+		do {
+			console.log ("Olá!") //Ação escolhida para ser executada.
+			contador++ //Interador para evitar um looping infinito.
+		} while (contador < 3)
+OBS.: Diferente do WHILE, o DO-WHILE executará uma vez, mesmo que a variável não atinja a regra do WHILE.
+
+OBS.: No caso do DO-WHILE, a abertura da ação desejada é aberta logo após o DO, não depois do WHILE.
