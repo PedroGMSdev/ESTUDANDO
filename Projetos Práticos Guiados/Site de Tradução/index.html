@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/pgFavicon.ico" type="image/x-icon">
     <title>Tradutor</title>
 </head>
 
 <body>
+
+    <img src="img/pgLogo.jpeg" class="logo">
+
+    <h1 class="tituloPrincipal">SOLUÇÕES</h1>
+
     <div class="areaDePreenchimento">
         <textarea class="informarTexto"></textarea><!--1*-->
 
@@ -20,9 +26,9 @@
                 <option>Japones</option>
             </select><!--2*-->
 
-            <button class="botaoTraduzir">Traduzir</button>
+            <button class="botaoTraduzir" onclick="traduzirTexto()">Traduzir</button>
             <button class="botaoMicrofone">
-                <img src="img/microfone1.png">
+                <img src="img/microfone.jpg">
             </button>
         </div>
 
@@ -32,5 +38,7 @@
         </div>
     </div>
 </body>
+
+<script src="scripts.js"></script>
 
 </html>
