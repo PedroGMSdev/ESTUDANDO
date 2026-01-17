@@ -203,7 +203,7 @@ melhor seria utilizar += que sinalizaria que seria somado (+) ao valor da variá
 Isso pode ser usado com qualquer uma das operações.
 
 
-________________________________**DESAFIO 1**________________________________
+________________________________**DESAFIO 1: DESAFIO DE CÓDIGO 1**________________________________
 
 Faça um programa que calcule e imprima o salário a ser transferido para um funcionário.
 
@@ -228,7 +228,7 @@ Benefícios: 250
 Resultado: 2050.00
 
 
-________________________________**DESAFIO 2**________________________________
+________________________________**DESAFIO 2: DESAFIO DE CÓDIGO 2**________________________________
 
 Você foi contratado para desenvolver um sistema de gerenciamento de contas. O sistema deve identificar o saldo total de todas as contas após uma série de depósitos e saques. Sua tarefa é implementar uma função que calcule esse saldo a partir das operações fornecidas.
 
@@ -251,7 +251,7 @@ SAÍDAS:
 2°: 400
 3°: 30
 
-________________________________**DESAFIO 3**________________________________
+________________________________**DESAFIO 3: DESAFIO DE CÓDIGO 3**________________________________
 
 Você precisa criar um sistema que calcule o imposto sobre o salário de um funcionário de um banco. O imposto é de 10% sobre o valor superior a 3.000. Caso o salário seja inferior ou igual a 3.000, o imposto será de 5%.
 
@@ -485,3 +485,32 @@ DO-WHILE (PARA...ENQUANTO)
 OBS.: Diferente do WHILE, o DO-WHILE executará uma vez, mesmo que a variável não atinja a regra do WHILE.
 
 OBS.: No caso do DO-WHILE, a abertura da ação desejada é aberta logo após o DO, não depois do WHILE.
+
+________________________________**DESAFIO 4: DESAFIO DE PROJETO 1**________________________________
+
+Desafio Classificador de nível de Herói
+
+**O Que deve ser utilizado**
+
+- Variáveis
+- Operadores
+- Laços de repetição
+- Estruturas de decisões
+
+**Objetivo**
+
+Crie uma variável para armazenar o nome e a quantidade de experiência (XP) de um herói, depois utilize uma estrutura de decisão para apresentar alguma das mensagens abaixo:
+
+Se XP for menor do que 1.000 = Ferro
+Se XP for entre 1.001 e 2.000 = Bronze
+Se XP for entre 2.001 e 5.000 = Prata
+Se XP for entre 5.001 e 7.000 = Ouro
+Se XP for entre 7.001 e 8.000 = Platina
+Se XP for entre 8.001 e 9.000 = Ascendente
+Se XP for entre 9.001 e 10.000= Imortal
+Se XP for maior ou igual a 10.001 = Radiante
+
+**Saída**
+
+Ao final deve se exibir uma mensagem:
+"O Herói de nome **{nome}** está no nível de **{nivel}**"
