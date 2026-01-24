@@ -587,5 +587,169 @@ DICA: Existe uma ferramenta que se chama INTERPOLAÇÃO DE STRINGS, muito usada 
 		Pode usar:
 	`Olá ${variavelNome}! Você tem ${variavelIdade} anos!`
 
+EXEMPLO REAL 1: 
+	Vamos supor que será feita uma função para fazer um pedido em uma lanchonete. Nessa lanchonete, para finalizar o pedido precisa-se pegar o PEDIDO, o NOME DO CLIENTE e o VALOR DO PEDIDO.
+		
+		function fazerPedido (pedido, cliente = "Cliente", valor = 99.90){
+			console.log("O cliente " + cliente)
+			console.log("solicitou " + pedido)
+			console.log("que ficará no total de " + valor)
+		}
+
+		//Ao chamar a função, damos os dados que queremos que conste.
+		fazerPedido("pizza de 4 queijos" , "Guilherme", 30.00 )
+		//Os valores informados vão substituir, respectivamente na ordem, os valores dos parâmetros.
+
+EXEMPLO REAL 2:
+	Para solicitar um login, será solicitado o usuário, nome e a senha.
+
+	function criarDatabase (nome, usuario, senha){
+		console.log(`connect:DBCONNECT;user=${usuario};pass=${senha};initial_database=${nome}`)
+	}
+
+	criarDatabase ("Guilherme", "CapivaraZaroia", "1234")
+
+	RESULTADO:
+		connect:DBCONNECT;user=CapivaraZaroia;pass=1234;initial_database=Guilherme
+
 **FUNÇOES COM RETORNO**
 
+Uma função com retorno é quando uma função além de processar a ação, ela já vem com uma saída. Uma saída significa que ela devolverá um valor para quem chamou ela, através do "return". Esse valor pode ser um número, uma string, um objeto, um array... Esse retorno da função pode ser usado em alguma parte do código.
+	Exp.:
+	//Para a função:
+		function soma(numero1, numero2){
+			let somatorio = numero1 + numero2
+		}
+	//O resultado se perderia dentro da função, sem poder ser utilizado fora, durante o código. Mas, se for informado o "return" e for criado uma variável fora para ser armazenada essa devolução, se tornará uma variável com retorno que o código pode utilizar seu valor. , Depois, se quiser, pode ser chamado a variável para ver seu resultado.
+		function soma(numero1, numero2){
+			let somatorio = numero1 + numero2
+			return somatorio
+		}
+
+		let resultado = soma(5, 10)
+
+		console.log(resultado)
+
+EXEMPLO REAL:
+	Supondo que será criada uma função que receberá um NOME COMPLETO cadastrado, mas a função pegará apenas o primeiro nome do cadastro para tratar o usuário.
+
+	Será pedido: cadastre nome completo. Então, depois, a função:
+		function pegarPrimeiroNome (nome){
+			let primeiroNome = nome.split(" ")[0]
+	//OBS.: o SPLIT quebra uma string, criando várias strings menores, no local informado dentro do parenteses (" "), que no caso acima sinaliza que em cada espaço será quebrado a string.
+	//OBS.: o [0] significa que após quebrar em várias strings menores (na verdade chamado de transformar em um vetor), a variável puxará apenas a primeira string da divisão. Caso quisesse apenas dividir e puxar tudo, é só não colocar o [0].
+			
+			return primeiroNome
+		}
+
+		let nomeDoUsuario = pegarPrimeiroNome ("Pedro Guilherme Martins de Sousa")
+
+		console.log("Olá! Seja bem vindo, " + nomeDoUsuario)
+
+OBS.: toda função, que não tiver um retorno, volta como "undefined".
+
+________________________________**DESAFIO 5: DESAFIO DE CÓDIGO 4**________________________________
+
+Explorando Transações com Javascript
+
+Desafio
+Em um movimentado banco, os caixas precisam de ajuda para calcular o total de transações realizadas em um dia. Cada cliente pode realizar múltiplas transações, e o gerente deseja saber quantas transações foram feitas ao longo do dia. Ajude-os a contar!
+
+Entrada
+A entrada deve receber uma string que representa o número de clientes, seguido por uma sequência de transações, onde cada linha contém um número inteiro representando quantas transações cada cliente fez.
+
+A primeira linha contém um número inteiro N (1 ≤ N ≤ 100), representando o número de clientes, e as N linhas seguintes contêm um número inteiro T (0 ≤ T ≤ 100) para cada cliente.
+
+Saída
+Deverá retornar uma string com o total de transações realizadas por todos os clientes, seguido pela mensagem "transacoes no total".
+
+Exemplos
+A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+
+Entrada:
+3
+5
+3
+0
+Saída: 8 transacoes no total
+
+Entrada:
+2
+10
+15
+Saída: 25 transacoes no total
+
+Entrada:
+2
+1
+2
+Saída: 3 transacoes no total
+
+**DESTRINCHANDO O DESAFIO**
+
+A ENTRADA representa os informes dos dados que o banco repassou.
+
+A primeira linha representa a quantidade de clientes do dia.
+
+As demais linhas, a quantidades de transações que cada um fez.
+
+A SAÍDA é o resultado esperado.
+
+Então...
+	Na ENTRADA
+		3 -> número de clientes, ou seja, 3 clientes.
+		5 -> número de transações do cliente 1
+		3 -> número de transações do cliente 2
+		0 -> número de transações do cliente 3
+	Agora, só precisa informar quantidade de transações somando todas as transações, dos 3 clientes.
+	SAÍDA = 5 + 3 + 0 = 8 transações.
+
+________________________________**DESAFIO 6: DESAFIO DE CÓDIGO 5**________________________________
+
+Explorando Transações com Javascript
+
+Desafio
+Você foi contratado para desenvolver um sistema de saque. Nesse contexto, os clientes podem solicitar saques de quantias específicas, mas o sistema só pode entregar valores em notas de 10, 20 e 50. Seu objetivo é calcular a quantidade de cada nota que será entregue ao cliente.
+
+Entrada
+A entrada deve receber uma string representando o valor do saque solicitado, que será um número inteiro positivo, e deve estar entre 10 e 1000. O valor deve ser fornecido sem espaços ou caracteres adicionais.
+
+Saída
+Deverá retornar uma string com a quantidade de notas de 50, 20 e 10 que serão entregues, no formato "50:n 20:m 10:k", onde n, m e k são as quantidades de notas de cada denominação. Se não for possível realizar o saque, retorne "Insira uma quantia valida".
+
+Exemplos
+A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+
+Entrada		Saída
+80			50:1 20:1 10:1
+90			50:1 20:2 10:0
+15			Insira uma quantia valida
+
+________________________________**DESAFIO 7: DESAFIO DE PROJETO 2**________________________________
+
+ # 2️⃣ Calculadora de partidas Rankeadas
+**O Que deve ser utilizado**
+
+- Variáveis
+- Operadores
+- Laços de repetição
+- Estruturas de decisões
+- Funções
+
+## Objetivo:
+
+Crie uma função que recebe como parâmetro a quantidade de vitórias e derrotas de um jogador,
+depois disso retorne o resultado para uma variável, o saldo de Rankeadas deve ser feito através do calculo (vitórias - derrotas)
+
+Se vitórias for menor do que 10 = Ferro
+Se vitórias for entre 11 e 20 = Bronze
+Se vitórias for entre 21 e 50 = Prata
+Se vitórias for entre 51 e 80 = Ouro
+Se vitórias for entre 81 e 90 = Diamante
+Se vitórias for entre 91 e 100= Lendário
+Se vitórias for maior ou igual a 101 = Imortal
+
+## Saída
+
+Ao final deve se exibir uma mensagem:
+"O Herói tem de saldo de **{saldoVitorias}** está no nível de **{nivel}**"
