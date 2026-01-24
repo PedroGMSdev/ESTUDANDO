@@ -517,3 +517,75 @@ Ao final deve se exibir uma mensagem:
 
 ________________________________**FUNÇÕES**________________________________
 
+Uma função é um conjunto de código com uma ação já pronta.
+
+	function NOME DA FUNÇÃO (VARIÁVEL ASSOCIOADA){
+		AÇÃO PROGRAMADA
+	}
+
+OBS.: a função precisa sempre ser chamada para ser executada, seja pelo comando, ação ou por uma variável.
+
+	Exp.: 
+		function torrar(){
+			console.log("Torrando pão")
+		}
+
+		torrar()
+OBS.: o comando "torrar()" pode ser colocado antes ou depois da função.
+
+DICA: sempre que for criar uma função, procure criar uma função para cada ação esperada.
+	Exp.:
+		function envia(){}
+
+		function salvar(){}
+
+		function apagar(){}
+
+**FUNÇÕES COM PARÂMETROS**
+
+Uma função que passam parâmetros, é quando você informa um valor ou variável que quer atrelar à função.
+	Exp.:
+		Se eu criar uma função "torrar", quando eu for chamar ela, posso associá-la à uma variável, e no comando da chamada informar o valor ou variável que terá dentro.
+	
+	//posso informar que a função será atrelada à varíavel "pão".
+		
+		function torrar(pao){
+			console.log("Torrada feita com " + pao)
+		}
+
+	//quando for chamar a função, posso usar os "()" para informar um valor ou uma variável que quero colocar dentro.
+
+		torrar("pão de forma")
+		torrar("pão integral")
+
+OBS.: Uma variável aberta dentro de uma função "morre" ao termino da execução da função. Caso tente ser chamada fora da função, dará erro. O contrário já não acontece. Uma variável criada fora da função pode ser chamada dentro, sem problemas, desde que seja informada com "var" ao invés de "let", o que não é muito recomendada.
+
+DICA: Uma função pode receber mais de um parâmetro.
+	Exp.:
+		function torrar (pao, nome){
+			console.log("Torrada feita de " + pao + " e comida por " + nome)
+		}
+
+		torrar ("pão de forma", "Guilherme")
+
+OBS.: No Javascript/Node.js, caso um dos valores não seja informado, o segundo valor (provavelmente) será informado com "undefined", ou seja, indefinido. Porém, para isso não acontecer, ao passar o parâmetro pra função, você pode associar uma valor que substituirá o "undefined" por ele, chamado de "valor default".
+	Exp.:
+		function  torrar (pao, nome = "cliente"){
+			console.log("Torrada feita de " + pao + " e comida por " + nome)
+		}
+
+		torrar ("pão de forma")
+
+	RESULTADO: Torrada feita de pão de forma e comida por cliente.
+	
+DICA: Caso tenha colocado o parâmetro que pode deixar de ser informado no meio, ao invés de informar ' , "Guilherme"' que dará erro, você pode informar o valor como ' undefined, "Guilherme"'.
+
+DICA: Existe uma ferramenta que se chama INTERPOLAÇÃO DE STRINGS, muito usada com as funções, onde você substitui o jeito iniciante de concatenação, trocando as aspas duplas (" ") por crase (` `) e o sinal de + variável por ${variável}.
+	Exp.:
+		Ao invés de:
+	"Olá, " + variavelNome + "! Você tem " + variavelIdade + " anos!"
+		Pode usar:
+	`Olá ${variavelNome}! Você tem ${variavelIdade} anos!`
+
+**FUNÇOES COM RETORNO**
+
