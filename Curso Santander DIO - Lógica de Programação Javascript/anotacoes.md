@@ -753,3 +753,109 @@ Se vitórias for maior ou igual a 101 = Imortal
 
 Ao final deve se exibir uma mensagem:
 "O Herói tem de saldo de **{saldoVitorias}** está no nível de **{nivel}**"
+
+________________________________**ESTRUTURAS COM OBJETOS**________________________________
+
+Objeto, em Javascript, é qualquer estrutura capaz de guardar dados ou comportamentos (métodos).
+
+**ESTRUTURA DE DADOS JSON**
+
+JSON é um agrupamento de dados de uma maneira mais organizada. São chaves e valores com o objetivo de transferir dados de um lugar para outro.
+
+JSON = JavaScript Object Notation ou Notação de Objetos em JavaScript
+
+	Exp.:
+		Sem JSON:
+			let nome = "Guilherme"
+			let idade = 35
+			let produtos = ["mouse", "teclado", "monitor"]
+			let valores = [29.90, 129.99, 899.99]
+
+			function gerarPedido (nome, idade, produtos, valores){
+				console.log ("O comprador é " + nome)
+				console.log ("A idade é " + idade)
+				console.log ("-------------------")
+				console.log ("O produto é " + produtos[0])
+				console.log ("O valor é " + valores[0])
+			}
+
+			gerarPedido (nome, idade, produtos, valores)
+
+A variável é informada entre chaves, chama-se criar objeto.
+	let pedido = {}
+
+Dentro do escopo (entre {}) será informada as chaves e os valores. A chave é o identificador e o valor é o conteúdo, separado por dois pontos (:).
+	let pedido = {
+		nome: "Felipe"
+	}
+
+Também pode ser criado um objeto dentro do objeto, facilitando o transporte de dados, levando vários valores dentro da mesma variável.
+	let pedido = {
+		nome: "Guilherme",
+		idade: 35,
+		produtos: {
+			0: ["mouse", 29.90],
+			1: ["teclado", 129.99],
+			2: ["monitor", 899.99]
+		}
+	}
+Assim, quando for chamar pode chamar o valor todo ou escolher que pedaço chamar, por exemplo, chamar apenas o valor do monitor.
+	console.log(pedido.produtos[2][1])
+
+ATENÇÃO: sempre colocar a vírgula na hora de informar outro identificador.
+	Exp.:
+		Com JSON:
+			let pedido = {
+				nome: "Guilherme",
+				idade: 35,
+				produtos: {
+					0: ["mouse", 29.90],
+					1: ["teclado", 129.99],
+					2: ["monitor", 899.99]
+				}
+			}
+
+			function gerarPedido (pedido){
+				console.log ("O comprador é " + pedido.nome)
+				console.log ("A idade é " + pedido.idade)
+				console.log ("-------------------")
+				console.log (`O produto é ${pedido.produtos[0][0]} de valor ${pedido.produtos[0][1]}`)
+			}
+
+			gerarPedido (pedido)
+
+Existe também o processo de DESESTRUTURAÇÃO. Quando se tenta chamar um objeto que está dentro de um objeto (console.log(pedido.produtos)) esse resultado vai voltar como "object object", sem o valor correspondente, a menos que você busque pelas coordenadas de cada valor especificando a posição no vetor.
+Porém, você optar pela desestruturação, onde você vai percorrer a lista utilizando a ferramenta FOR/IN, onde PARA (for) uma constante ou variável chamada INDEX (const/let index) PERCORRA (in) o OBJETO (informar qual objeto você quer que seja percorrido), e o INDICADOR que o segundo objeto se encontra. Dentro do ESCOPO do "for", criar uma variável (let) que guardará duas variáveis que serão criadas ao mesmo tempo dentro de colchetes ([,]) que terá de valor (=) o INDEX do objeto.indicador escolhido.
+	Exp.:
+		for(let index in pedido.produtos){
+			let [produtoNome, produtoPreco] = pedido.produtos[index]
+		}
+
+Com a desestruturação fica então:
+	let pedido = {
+				nome: "Guilherme",
+				idade: 35,
+				produtos: {
+					0: ["mouse", 29.90],
+					1: ["teclado", 129.99],
+					2: ["monitor", 899.99]
+				}
+			}
+
+			function gerarPedido (pedido){
+				console.log ("O comprador é " + pedido.nome)
+				console.log ("A idade é " + pedido.idade)
+				console.log ("-------------------")
+				
+				for(let index in pedido.produtos){
+					let [produtoNome, produtoPreco] = pedido.produtos[index]
+					console.log(`- ${produtoNome}: R$ ${produtoPreco}`)
+				}
+
+			}
+
+			gerarPedido (pedido)
+OBS.: esse FOR/IN é diferente do FOR dos condicionais. Esse é próprio pra lidar com objetos.
+
+**CLASSES E OBJETOS**
+
