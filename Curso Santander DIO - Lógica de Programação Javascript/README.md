@@ -14,30 +14,20 @@ Durante o curso, são trabalhados temas como:
 - Estruturas condicionais
 - Estruturas de repetição
 - Funções
+- Classes e Objetos
 - Resolução de problemas com JavaScript
 
 ## Tecnologias utilizadas
 - **JavaScript**
 - **Node.js** (quando necessário para executar os scripts)
 
-## Estrutura do repositório
-O repositório está organizado de forma simples, separando os conteúdos por módulos ou temas do curso.
-
-Exemplo:
-/modulo-1
-
- - exercicio1.js
-
- - exercicio2.js
-/modulo-2
-
- - desafio.js
-
- ## Objetivo
+## Objetivo
 Este repositório tem como objetivo:
 - Praticar os conceitos aprendidos no curso
 - Acompanhar minha evolução em lógica de programação
 - Servir como material de consulta futura
 - Demonstrar aprendizado em JavaScript para oportunidades na área de tecnologia
 
-
+## Certificado
+O certificado abaixo comprova a conclusão do curso **Lógica de Programação em JavaScript** pela DIO em parceria com o Santander.
+[![](./certificado.png)](./certificado.pdf)

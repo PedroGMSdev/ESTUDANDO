@@ -961,4 +961,4 @@ Ao final deve se exibir uma mensagem:
   ex: mago atacou usando magia
   guerreiro atacou usando espada
 
-  
+________________________________**CURSO FINALIZADO**________________________________

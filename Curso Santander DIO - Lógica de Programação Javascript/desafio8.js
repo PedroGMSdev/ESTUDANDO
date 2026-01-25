@@ -25,3 +25,24 @@ class personagem {
 let personagem1 = new personagem("Guilherme", 35, "guerreiro")
 
 personagem1.atacar()
+
+//No lugar do if/else, poderia ser usado switch/case para definir o tipo de ataque.
+
+//Exemplo:
+
+// switch (this.tipo) {
+// 	case "mago":
+// 		ataque = "magia" 
+// 		break;
+// 	case "guerreiro":
+// 		ataque = "espada"
+// 		break;
+// 	case "monge":
+// 		ataque = "artes marciais"
+// 		break;
+// 	case "ninja":
+// 		ataque = "shuriken"
+// 		break;
+// 	default:
+// 		ataque = "ataque desconhecido"
+// }
