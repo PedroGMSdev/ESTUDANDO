@@ -859,3 +859,106 @@ OBS.: esse FOR/IN é diferente do FOR dos condicionais. Esse é próprio pra lid
 
 **CLASSES E OBJETOS**
 
+A classe é uma padronização de formato que será aplicado a objetos, visando que esses tenham a mesma base, mesmo tendo valores diferentes.
+
+OBS.: a diferença entre um JSON e uma CLASSE e OBJETO é que eles podem ter métodos inteligentes, ou seja, funções próprias.
+	Exp.:
+		class formaDeBolo {
+		//o "constructor" é um método (ou uma função) dentro da classe que pegará os parâmetros informados e criará duas variáveis diferentes.
+			constructor(saborDaMassa, saborRecheio){
+				//o "this." substitui o "let" na criação da variável, por estar dentro da classe, e informa que a variável recem criada receberá o valor do parâmentro informado.
+				this.saborDaMassa = saborDaMassa
+				this.saborRecheio = saborRecheio
+			}
+		}
+
+ATENÇÃO: a função CONSTRUCTOR tem SEMPRE que ser nomeada como "constructor", pois na criação do novo objeto, na hora que for dar o comando "new" ele não reconhecerá o COMANDO CONTRUTOR caso ele esteja com outro nome, pois ele é um metodo (função) automático do Javascript que busca APENAS o metodo "constructor" para criar o novo objeto.
+
+OBS.: diz-se que está INSTANCIANDO UM OBJETO quando você está criando um objeto a partir do molde da classe.
+	Exp.:
+		let boloFesta = new formaDeBolo("massa de chocolate", "recheio de Nutela")
+	//você cria uma nova variável, fora da classe (let boloFesta) que receberá (=) uma sinalização de que você criará um novo objeto (new) a partir da classe (formaDeBolo) e passará os parâmetros que serão associados aos valores das variáveis criadas.
+
+	RESULTADO:
+		formaDeBolo {
+			saborDaMassa: "massa de chocolate"
+			saborRecheio: "recheio de Nutela"
+		}
+
+ATENÇÃO: para criar um método (ou função, como chamamos em Javascript), dentro de uma classe, não precisa-se colocar o nome "function" antes.
+	Exp.:
+	//criar a classe que dará base
+		class formaDeBolo {
+			constructor(saborDaMassa, saborRecheio){
+				this.saborDaMassa = saborDaMassa
+				this.saborRecheio = saborRecheio
+			}
+
+			escrever(){
+				console.log(`Um delicioso bolo de ${this.saborDaMassa} com recheio de ${this.saborRecheio}`)
+			}
+
+			assar(){
+				console.log("Assando bolo de " + this.saborDaMassa)
+			}
+		}
+
+	//criar os novos objetos a partir da classe passando os parâmetros
+
+		let boloFesta = new formaDeBolo("chocolate", "Nutela")
+		let boloPremium = new formaDeBolo("baunilha", "coco")
+
+	//chamar o objeto, identificando qual metodo você quer "utilizar"
+
+		boloFesta.escrever()
+		boloPremium.escrever()
+		boloPremium.assar()
+
+	RESULTADO:
+		Um delicioso bolo de chocolate com recheio de Nutela
+		Um delicioso bolo de baunilha com recheio de coco
+		Assando bolo de baunilha
+
+ATENÇÃO: você até pode criar uma classe sem um "constuctor", mas terá que informar variável por variável antes de exibir o conteúdo dela ou chamar a função que tiver criado dentro, senão retornará como "undefined".
+
+________________________________**DESAFIO 8: DESAFIO DE PROJETO 3**________________________________
+
+# 3️⃣ Escrevendo as classes de um Jogo
+
+**O Que deve ser utilizado**
+
+- Variáveis
+- Operadores
+- Laços de repetição
+- Estruturas de decisões
+- Funções
+- Classes e Objetos
+
+## Objetivo:
+
+Crie uma classe generica que represente um herói de uma aventura e que possua as seguintes propriedades:
+
+- nome
+- idade
+- tipo (ex: guerreiro, mago, monge, ninja )
+
+além disso, deve ter um método chamado atacar que deve atender os seguientes requisitos:
+
+- exibir a mensagem: "o {tipo} atacou usando {ataque}")
+- aonde o {tipo} deve ser concatenando o tipo que está na propriedade da classe
+- e no {ataque} deve seguir uma descrição diferente conforme o tipo, seguindo a tabela abaixo:
+
+se mago -> no ataque exibir (usou magia)
+se guerreiro -> no ataque exibir (usou espada)
+se monge -> no ataque exibir (usou artes marciais)
+se ninja -> no ataque exibir (usou shuriken)
+
+## Saída
+
+Ao final deve se exibir uma mensagem:
+
+- "o {tipo} atacou usando {ataque}"
+  ex: mago atacou usando magia
+  guerreiro atacou usando espada
+
+  
