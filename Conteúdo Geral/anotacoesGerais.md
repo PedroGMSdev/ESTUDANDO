@@ -125,4 +125,6 @@ OBS.: alguns sites gratuitos bem indicados para deploys iniciais, ou pelo menos 
             4- Clicar em "Deploy" no final da página.
         Após fazer o deploy, para vizualizar a página hospedada, você vai até a minha página inical,e (após dar umas atualizadas) procurar o projeto deployado, clicar e vai copiar o link "Domains" ou "Domínios", que será o link de envio para outras pessoa acessarem.
 
+OBS.: Caso o conteúdo do repositório for estático, ou seja, sem frameworks, colocar o arquivo index direto na raiz do repositório (solto na pasta inicial) e não dentro de outras pastas.
+
 *HOSPEDAGEM*
