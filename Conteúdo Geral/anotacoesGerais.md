@@ -116,4 +116,12 @@ OBS.: apesar de estarem ligados, DEPLOY e HOSPEDAGEM não são a mesma coisa. Po
 
 OBS.: alguns sites gratuitos bem indicados para deploys iniciais, ou pelo menos durante estudo, são GITHUB PAGES ou VERCEL.
 
+# Deploy com VERCEL
+    Segue o passo a passo para um deploy com a VERCEL.
+        Após fazer o cadastro no site da Vercel:
+            1- acessar a minha página inicial da Vercel
+            2- Procurar "Import Project" ou "Importar Projeto", que irá buscar o projeto direto do GitHub, e selecione "Import".
+            3- Selecionar o repositório que deseja e clicar em "Import", ou procurar por "Missing Git repository? Adjust GitHub App Permissions →" e buscar um novo repositório.
+            4- Clicar em "Deploy" no final da página.
+
 *HOSPEDAGEM*
