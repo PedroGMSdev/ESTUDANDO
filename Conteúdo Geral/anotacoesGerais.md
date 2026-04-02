@@ -123,5 +123,6 @@ OBS.: alguns sites gratuitos bem indicados para deploys iniciais, ou pelo menos 
             2- Procurar "Import Project" ou "Importar Projeto", que irá buscar o projeto direto do GitHub, e selecione "Import".
             3- Selecionar o repositório que deseja e clicar em "Import", ou procurar por "Missing Git repository? Adjust GitHub App Permissions →" e buscar um novo repositório.
             4- Clicar em "Deploy" no final da página.
+        Após fazer o deploy, para vizualizar a página hospedada, você vai até a minha página inical,e (após dar umas atualizadas) procurar o projeto deployado, clicar e vai copiar o link "Domains" ou "Domínios", que será o link de envio para outras pessoa acessarem.
 
 *HOSPEDAGEM*
