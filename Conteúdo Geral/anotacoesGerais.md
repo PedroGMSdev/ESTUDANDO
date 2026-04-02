@@ -1,5 +1,11 @@
+## CONCEITOS, FUNDAMENTOS E OBSERVAÇÕES
+
 *HTML*
 
+# TAGS DE TEXTO
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
 
 *CSS*
 
@@ -51,8 +57,17 @@ __ESTÁGIOS DOS STATUS__
             [   git add .gitignore
             [       Ao dar o ENTER confirmando o comando, o arquivo .gitignore subirá para o status de  "Changes to be committed", que é o mesmo status Staged, esperando para ser salvo.
 
+OBS.: você pode adicionar mais de um arquivo no mesmo comando, é só dar espaço e informar o segundo nome do próximo arquivo.
+    [Exp.:
+    [   git add package-lock.json package.json
+
 # git commit
     Comando dado no Terminal que irá salvar as alterações feitas, NO REPOSITÓRIO LOCAL. Ao confirmar esse comando, abrirá uma tela no "Vim" (editor de texto natural do computador) para que você possar nomear esse commit, de preferência com informações do que foi feito nessa modificação, que ficará salvo e quando chamado o comando de status, aparecerá na listagem.
+
+# git commit -m
+    Comando dado no Terminal que irá salvar as alterações feitas, NO REPOSITÓRIO LOCAL, mas sem abrir a janela Vim para nomear o commit. Antes de confirmar o comando, você só precisa informar o nome do commit entre " " ou ' ' e confirmar.
+        [Exp.:
+        [   git commit -m "adicionar arquivo .nvmrc"
 
 # git diff
     Comando dado no Terminal que pede para ser identificado a diferença (diff = diferença) entre o ponto inicial (último salvamento) e o ponto atual (depois das novas alterações), onde será sinalizado o arquivo que foi modificado e o conteúdo que foi alterado nele.
@@ -61,3 +76,44 @@ __ESTÁGIOS DOS STATUS__
     Comando dado no Terminal que sinaliza que o conteúdo que estiver no status Staged será emendado (amend = emendar), ou melhor, adicionado, ao repositório criado antes deste. Esse comando é utilizado caso o usuário não queira criar um novo commit com a nova alteração, apenas ACRESCENTAR ao que já fez. Porém, ao fazer esse comando a nova modificação e o commit anterior se juntarão em um novo commit, ficando com o mesmo nome do commit anterior mas criando um novo identificador, sinalizando que o commit anterior não existe mais.
 
 ATENÇÃO: usar esse comando com cuidado, de preferência apenas quando o conteúdo for uma alteração de acrescentar.
+
+OBS.: 'origin/main' é como é chamado o início do projeto, que começa ao criar o repositório no GitHub. Ao fazer um PULL, esse repositório é salvo no seu computador como 'local/main', possibilitando que você trabalhe e modifique esse repositório como quiser. As configurações feitas nesse repositório local não contabilizará no repositório de origem, podendo ser descartado ou perdido caso não seja salvo. Ao consutar o status do seu repositório, seus commits locais salvos estarão com a mensagem "YOUR BRANCH IS AHEAD OF 'ORIGIN/MAIN' BY x COMMIT", que quer dizer que sua ramificação (branch = ramificação), ou seja, as mudanças que você fez na versão salva no repositório local, está diferente do arquivo original por x commits de diferença. Caso tenha interesse de salvar as alterações, até para utilizá-las fora do repositório local.
+
+# git push
+    Comando dado no Terminal que envia o conteúdo commitado e guardado (subindo) no repositório local para a nuvem (Repositório GitHub).
+
+OBS.: o processo correto de salvamento e subida para a nuvem é seguir a ordem
+        - git add (sobe o arquivo modificado para o status Staged e sinaliza que deverá ser salvo)
+        - git commit (salva os arquivos que estão em Staged)
+        - git push (sobe os commits feitos para a nuvem)
+
+OBS.: um COMMIT é imutável. Quando você usa o AMEND em um commit, você NÃO está MODIFICANDO aquele commit, você está pegando ele e a alteração que você fez e JUNTANDO EM UM NOVO COMMIT ÚNICO, ao invés de criar um novo commit para a alteração e ficar com 2 commits.
+    [Exp.:
+    [   Situação inicial:
+    [       - commit 1abc02
+    [       - alteração desejada
+    [           comando git commit
+    [   Situação final:
+    [       - commit 1abc02
+    [       - commit 7oiu98
+    [porém, se usar o "git commit --amend":
+    [   Situação inicial:
+    [       - commit 1abc02
+    [       - alteração desejada
+    [           comando git commit --amend
+    [   Situação final:
+    [       - commit 5ghj43
+ATENÇÃO: É indicado que esse procedimento seja feito enquanto o commit ainda estiver apenas no repositório local, pois, se o commit que você deseja usar o "amend" já tiver sido subido para a nuvem, o "git push" não permitirá, pois, como UM COMMIT É IMUTÁVEL, aquele commit que está salvo no repositório GitHub não poderá mais ser mutável.
+
+# git push -f OU git push --force
+    Comando dado no Terminal para FORÇAR o push enviar o que tiver no seu repositório local, mesmo que o local esteja diferente do de origem, como na situação acima, obrigando ele a sobrepor a condição de origem.
+
+ATENÇÃO: como o "push --force" obriga o GitHub à sobrepujar o repositório da nuvem pelo conteúdo do repositório local, caso o repositório nuvem tiver conteúdos que o local não tenha, esses conteúdos serão apagados permanentemente. Então, caso você esteja trabalhando em um projeto grande ou em conjunto com outras pessoas no mesmo repositório, você pode acabar apagando permanentemente todo o trabalho já feito.
+
+*DEPLOY*
+
+OBS.: apesar de estarem ligados, DEPLOY e HOSPEDAGEM não são a mesma coisa. Podemos dizer que a hospedagem é como se fosse um terreno novo com uma casa e o deploy é a mudança que você faz para levar os seus móveis para o novo terreno.
+
+OBS.: alguns sites gratuitos bem indicados para deploys iniciais, ou pelo menos durante estudo, são GITHUB PAGES ou VERCEL.
+
+*HOSPEDAGEM*
