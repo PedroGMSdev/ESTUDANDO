@@ -2,12 +2,67 @@
 
 *HTML*
 
+## --------------- ESTRUTURA BASE HTML
+    <!DOCTYPE html>
+    <hmtl>
+        <head>
+        </head>
+
+        <body>
+        </body>
+    </html>
+
+# TAG DE IDIOMA
+Tag colocada dentro da abertura de TAG html:
+    lang="en"
+        Exp.:
+            <!DOCTYPE html>
+            <html lang="pt-br">
+                    `--->> sinaliza que idioma do site será PORTUGUÊS do BRASIL
+                <head></head>
+                <body></body>
+            </html>
+                    
+## --------------- TAGS HEAD
+A "cabeça" do site, onde ficam as configurações comportamentais, ou seja, as coisas que não aparecem na tela do site.
+
+    <meta charset="UTF-8">
+            `--->> sinaliza o PADRÃO DE CARACTERES trabalhado nesse site. Nesse caso (UTF-8), o padrão de caracteres da América Latina, onde se usa acentuações e outros caracteres.
+
+    <title></title>
+            `--->> sinaliza o TÍTULO DA PÁGINA, ou seja, o nome que ficará na aba do site.
+        Exp.:
+            <title>Curso de HTML5</title>
+
+## --------------- TAGS BODY
+As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do site.
+
 # TAGS DE TEXTO
-    <h1></h1>
-    <h2></h2>
-    <h3></h3>
+    <h1></h1>-----
+    <h2></h2>     |
+    <h3></h3>     |----->> HIERARQUIA DE TÍTULOS
+    <h4></h4>     |
+    <h5></h5>     |
+    <h6></h6>-----
+
+    <p></p> --->> PARÁGRAFO
+        
+
 
 *CSS*
+    font-family --->> estilo de fonte
+        Exp.:
+            font-family: arial;
+    font-size --->> tamanho da fonte
+        Exp.:
+            font-size: 30pt;
+    color --->> especifica a cor
+        Exp.:
+            color: blue;
+    text-shadow --->> aplica sombra no texto
+        Exp.:
+            text-shadow: 2px 2px 2px;
+
 
 
 *JAVASCRIPT*
