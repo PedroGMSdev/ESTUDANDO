@@ -14,7 +14,7 @@
 
 # TAG DE IDIOMA
 Tag colocada dentro da abertura de TAG html:
-    lang="en"
+    lang=" "
         Exp.:
             <!DOCTYPE html>
             <html lang="pt-br">
@@ -26,8 +26,11 @@ Tag colocada dentro da abertura de TAG html:
 ## --------------- TAGS HEAD
 A "cabeça" do site, onde ficam as configurações comportamentais, ou seja, as coisas que não aparecem na tela do site.
 
-    <meta charset="UTF-8">
+    <meta charset=" ">
             `--->> sinaliza o PADRÃO DE CARACTERES trabalhado nesse site. Nesse caso (UTF-8), o padrão de caracteres da América Latina, onde se usa acentuações e outros caracteres.
+    OBS.: Essa TAG não possui fechamento.
+        Exp.:
+            <meta charset="UTF-8">
 
     <title></title>
             `--->> sinaliza o TÍTULO DA PÁGINA, ou seja, o nome que ficará na aba do site.
@@ -37,7 +40,28 @@ A "cabeça" do site, onde ficam as configurações comportamentais, ou seja, as 
 ## --------------- TAGS BODY
 As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do site.
 
+    <div></div>
+            `--->> cria uma "caixa" divisória
+
+# TAGS SEMANTICAS
+Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
+
+    <header></header>
+            `--->> informa a parte do site equivalente ao CABEÇALHO.
+
+# TAGS DE MULTIMÍDIA
+
+    <img src=" ">
+            `--->> adiciona uma imagem. Entre " " será descrito a localização da imagem.
+    OBS.: Essa TAG não possui fechamento.
+        Exp.:
+            <img src="pasta/image.png">
+    OBS.: essa TAG serve para quando a imagem está salva na pasta do projeto, onde entre " " será colocado o percurso nas pastas que o site terá que percorrer para encontrar a imagem. Não esquecer de colocar a descrição do tipo de arquivo da imagem também. Caso a imagem seja tirada direto da internet, colocar entre " " link de endereço completo, copiando com um click com o botão direito do mouse e selecionando a opção "Copiar endereço da imagem".
+        Exp.:
+            <img src="https://example.com/imagem.png">
+
 # TAGS DE TEXTO
+
     <h1></h1>-----
     <h2></h2>     |
     <h3></h3>     |----->> HIERARQUIA DE TÍTULOS
@@ -45,7 +69,16 @@ As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do 
     <h5></h5>     |
     <h6></h6>-----
 
-    <p></p> --->> PARÁGRAFO
+    <hgroup></hgroup>
+            `--->> faz um agrupamento de títulos
+        Exp.:
+            <hgroup>
+                <h1></h1>
+                <h2></h2>
+            </hgroup>
+
+    <p></p>
+            ` --->> PARÁGRAFO
         
 
 
