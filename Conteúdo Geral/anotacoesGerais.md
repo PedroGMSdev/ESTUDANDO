@@ -79,8 +79,120 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
     <p></p>
             ` --->> PARÁGRAFO
-        
 
+    <br>
+            `--->> quebra de linha. A cada <br> colocado, uma linha é pulada. Você pode dar vários ENTERs, mas o html não reconhecerá nenhum.
+    OBS.: essa TAG não possui fechamento.
+
+    &nbsp;
+            `--->> aplica um espaçamento extra no local. A cada &nbsp; colocado, um espaçamento extra é colocado. Você pode dar vários espaçamentos, mas o html só reconhecerá um.
+    OBS.: essa TAG não possui fechamento e nem < >.
+
+    <wbr>
+            `--->> aplica uma quebra em palavras grandes, para melhorar a formatação de texto.
+        Exp.:
+            super-humano
+                => super-<wbr>humano
+                    => super-
+                       humano
+    OBS.: Em palavras grandes, sem hífem, o WBR quebra a palavra mas não acrescenta hífem, como o correto pela língua portuguesa.
+
+    DICA: se quiser quebrar um endereço de e-mail ou site, use WBR. Se quiser quebrar palavras, use &SHY;.
+
+    &shy;
+            `--->> aplica a quebra da palavra, assim como o WBR, mas aplica o hífem, como manda a língua portuguesa.
+        Exp.:
+            vídeoconferência
+                wbr = vídeocon
+                      ferêmcia
+                &shy; = vídeocon-
+                        ferência
+
+    <hr>
+            `--->> aplica uma quebra horizontal com uma linha de uma ponta a outra do container.
+            
+    SÍMBOLOS ESPECIAIS
+        Alguns caracteres especiais podem ser encontrados no teclado, mas alguns não conseguem ser escritos no site a menos que use códigos.
+            
+        Símbolos de Moedas:
+            &pound;
+                `--->> símbolo da moeda de Libra
+            &yen;
+                `--->> símbolo da moeda de Yene, do Japão
+            &euro;
+                `--->> símbolo da moeda de Euro
+            &copy;
+                `--->> símbolo de Copyright
+            &reg;
+                `--->> símbolo de Marca Registrada, ou Referência
+            &trade;
+                `--->> símbolo de Trade Marc
+        Símbolos Aritméticos:
+            &lt;
+                `--->> menor que
+            &gt;
+                `--->> maior que
+            &le;
+                `--->> menor ou igual a
+            &ge;
+                `--->> maior ou igual a        
+            &permil;
+                `--->> símbolo do permil, ou seja dividido por mil (assim como porcento é dividio por cem)
+            &sum;
+                `--->> símbolo de soma, ou Sigma Maiúsculo
+            &infin;
+                `--->> símbolo de infinito
+            &times;
+                `--->> símbolo de multiplicação
+            &plusmn;
+                `--->> símbolo de mais ou menos
+            &oplus;
+                `--->> símbolo de mais dentro de uma circunferência
+            &radic;
+                `---> símbolo de radiciação, ou raiz quadrada
+            &ne;
+                `--->> símbolo de diferente de
+        Letras Gregas:
+            &delta;
+                `--->> letra Delta minúscula
+            &Delta;
+                `--->> letra Delta maiúscula
+            &lambda;
+                `--->> letra Lambda minúscula
+            &Lambda;
+                `--->> letra Lambda maiúscula
+            &omega;
+                `--->> letra Ômega minúscula
+            &Omega;
+                `--->> letra Ômega maiúscula
+            &phi;
+                `--->> letra Phi minúscula
+            &Phi;
+                `--->> letra Phi maiúscula
+            &sum;
+                `--->> letra Sigma maiúsculo
+        Setas:
+            &larr;
+                `---> seta para a esquerda, ou left arrow
+            &rarr;
+                `---> seta para a direita, ou right arrow
+            &Rarr;
+                `---> seta ESPECIAL para a direita
+            &uarr;
+                `---> seta para cima, ou up arrow
+            &darr;
+                `---> seta para baixo, ou down arrow
+            &harr;
+                `---> seta para esquerda e direita, ao mesmo tempo
+        Naipes de Cartas:
+            &spades;
+                `--->> Naipe de Espadas
+            &clubs;
+                `--->> Naipe de Paus
+            &hearts;
+                `--->> Naipe de Copas
+            &diams;
+                `--->> Naipe de Ouros
 
 *CSS*
     font-family --->> estilo de fonte

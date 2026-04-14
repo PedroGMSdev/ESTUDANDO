@@ -6,4 +6,5 @@ Aula 02 - Concluída
 Aula 03 - Concluída
 Aula 04 - Concluída
 Aula 05 - Concluída
-Aula 06 - 
+Aula 06 - Concluída
+Aula 07 - 
