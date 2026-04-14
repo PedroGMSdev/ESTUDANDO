@@ -49,13 +49,24 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
     <header></header>
             `--->> informa a parte do site equivalente ao CABEÇALHO.
 
+    <figure></figure>
+            `--->> agrupa elementos visuais como imagens, gráficos, trechos de códigos, ilustrações, tabelas.
+
+    <figcaption></figcaption>
+            `--->> pode ser usada dentro de <figure> fornecendo uma legenda.
+        Exp.:
+            <figure>
+                <img src="grafico.png" alt="Gráfico de vendas">
+                <figcaption>Vendas ao longo de 2025</figcaption>
+            </figure>
+
 # TAGS DE MULTIMÍDIA
 
     <img src=" ">
             `--->> adiciona uma imagem. Entre " " será descrito a localização da imagem.
     OBS.: Essa TAG não possui fechamento.
         Exp.:
-            <img src="pasta/image.png">
+            <img src="pasta/imagem.png">
     OBS.: essa TAG serve para quando a imagem está salva na pasta do projeto, onde entre " " será colocado o percurso nas pastas que o site terá que percorrer para encontrar a imagem. Não esquecer de colocar a descrição do tipo de arquivo da imagem também. Caso a imagem seja tirada direto da internet, colocar entre " " link de endereço completo, copiando com um click com o botão direito do mouse e selecionando a opção "Copiar endereço da imagem".
         Exp.:
             <img src="https://example.com/imagem.png">
