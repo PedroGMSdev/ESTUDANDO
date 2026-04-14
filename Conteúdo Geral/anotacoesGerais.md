@@ -234,6 +234,21 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
             `--->> especifica a cor
         Exp.:
             color: blue;
+    OBS.: outra opção de especificação da cor é:
+        o hexadecimal, onde será colocado #, como #a1d3ef, onde:
+                    a1 -> sinaliza a quantidade de vermelho
+                    d3 -> sinaliza a quantidade de verde
+                    ef -> sinaliza a quantidade de azul
+        o rgb, como rgb (35, 124, 135), onde:
+                    35 -> sinaliza a quantidade de vermelho
+                    124 -> sinaliza a quantidade de verde
+                    135 -> sinaliza a quantidade de azul
+        o rgba, como rgb (35, 124, 135, 0.5), que além do mesmo padrão rgb, o "a" define a opacidade:
+                    35 -> sinaliza a quantidade de vermelho
+                    124 -> sinaliza a quantidade de verde
+                    135 -> sinaliza a quantidade de azul
+                    0.5 -> sinaliza a opacidade, indo de 0 a 1, sendo 0 totalmente transparente e 1 totalmente sem opacidade.
+            
     text-shadow 
             `--->> aplica sombra no texto
         Exp.:
