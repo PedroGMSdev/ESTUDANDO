@@ -7,4 +7,5 @@ Aula 03 - Concluída
 Aula 04 - Concluída
 Aula 05 - Concluída
 Aula 06 - Concluída
-Aula 07 - 
+Aula 07 - Concluída
+Aula 08 - 

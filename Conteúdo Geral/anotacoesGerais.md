@@ -110,6 +110,33 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
     <hr>
             `--->> aplica uma quebra horizontal com uma linha de uma ponta a outra do container.
+
+    <b></b>
+            `--->> negrito (bold).
+        
+    <i></i>
+            `--->> itálico.
+
+    <em></em>
+            `--->> além de colocar a letra em itálico, sinaliza para o html que você quer dar uma ênfase semântica na palavra.
+
+    <del></del>
+            `--->> passa um risco no meio da palavra. Antes utilizada na TAG <s></s>.
+
+    <sub></sub>
+            `--->> cria uma formatação de "subescrito"
+
+    <sup></sup>
+            `--->> cria uma formatação de "sobrescrito"
+
+    <iostream></iostream>
+            `--->> sinaliza que aquele trecho deve ser apresentado como formatação web, não como texto normal. Ou seja, se ele for escrito como um código ou TAG, não será acionado a função do código.
+
+    <code></code>
+            `--->> sinaliza que aquele trecho deve ser apresentado como código, não como texto normal. Ou seja, se ele for escrito como um código, não será acionado a função do código.
+
+    <pre></pre>
+            `--->> em conjunto com a <code>, sinaliza um local préformatado, e diz que deve ser exibido igual foi escrito.
             
     SÍMBOLOS ESPECIAIS
         Alguns caracteres especiais podem ser encontrados no teclado, mas alguns não conseguem ser escritos no site a menos que use códigos.
@@ -195,19 +222,32 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 `--->> Naipe de Ouros
 
 *CSS*
-    font-family --->> estilo de fonte
+    font-family 
+            `--->> estilo de fonte
         Exp.:
             font-family: arial;
-    font-size --->> tamanho da fonte
+    font-size 
+            `--->> tamanho da fonte
         Exp.:
             font-size: 30pt;
-    color --->> especifica a cor
+    color 
+            `--->> especifica a cor
         Exp.:
             color: blue;
-    text-shadow --->> aplica sombra no texto
+    text-shadow 
+            `--->> aplica sombra no texto
         Exp.:
             text-shadow: 2px 2px 2px;
-
+    text-decoration:
+            `--->> aplica modificações no texto, como:
+                    - underline;
+                            `--->> sublinhado
+                    - overline;
+                            `--->> linha em cima da palavra
+                    - line-through;
+                            `--->> linha riscando no meio da palavra
+                    - none;
+                            `--->> palavra sem decoração nenhuma.
 
 
 *JAVASCRIPT*
