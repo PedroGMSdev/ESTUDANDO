@@ -9,3 +9,4 @@ Aula 05 - Concluída
 Aula 06 - Concluída
 Aula 07 - Concluída
 Aula 08 - Concluída
+Aula 09 - Concluída
