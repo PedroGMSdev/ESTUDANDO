@@ -37,6 +37,9 @@ A "cabeça" do site, onde ficam as configurações comportamentais, ou seja, as 
         Exp.:
             <title>Curso de HTML5</title>
 
+    <link rel="stylesheet" href=" ">
+            `--->> linkagem com o arquivo css, que será colocado entre " ".
+
 ## --------------- TAGS BODY
 As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do site.
 
@@ -52,14 +55,6 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
     <figure></figure>
             `--->> agrupa elementos visuais como imagens, gráficos, trechos de códigos, ilustrações, tabelas.
 
-    <figcaption></figcaption>
-            `--->> pode ser usada dentro de <figure> fornecendo uma legenda.
-        Exp.:
-            <figure>
-                <img src="grafico.png" alt="Gráfico de vendas">
-                <figcaption>Vendas ao longo de 2025</figcaption>
-            </figure>
-
 # TAGS DE MULTIMÍDIA
 
     <img src=" ">
@@ -70,6 +65,14 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
     OBS.: essa TAG serve para quando a imagem está salva na pasta do projeto, onde entre " " será colocado o percurso nas pastas que o site terá que percorrer para encontrar a imagem. Não esquecer de colocar a descrição do tipo de arquivo da imagem também. Caso a imagem seja tirada direto da internet, colocar entre " " link de endereço completo, copiando com um click com o botão direito do mouse e selecionando a opção "Copiar endereço da imagem".
         Exp.:
             <img src="https://example.com/imagem.png">
+
+    <figcaption></figcaption>
+            `--->> pode ser usada dentro de <figure> fornecendo uma legenda para a imagem.
+        Exp.:
+            <figure>
+                <img src="grafico.png" alt="Gráfico de vendas">
+                <figcaption>Vendas ao longo de 2025</figcaption>
+            </figure>
 
 # TAGS DE TEXTO
 
