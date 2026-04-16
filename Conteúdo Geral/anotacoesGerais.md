@@ -55,6 +55,9 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
     <figure></figure>
             `--->> agrupa elementos visuais como imagens, gráficos, trechos de códigos, ilustrações, tabelas.
 
+    <nav></nav>
+            `--->> sinaliza um menu de navegação
+
 # TAGS DE MULTIMÍDIA
 
     <img src=" ">
@@ -73,6 +76,96 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 <img src="grafico.png" alt="Gráfico de vendas">
                 <figcaption>Vendas ao longo de 2025</figcaption>
             </figure>
+
+# TAGS DE LISTAS
+
+    <ul></ul>
+            `--->> lista não ordenada, ou unordered lists
+
+    OBS.: as listas não ordenadas tem 3 tipos diferentes de ordenação, quando colocada type=" " dentro da TAG de aberturta. Os tipos são:
+            type="square"
+                    `--->> transforma o caractere de ordenação em quadrado
+            
+            type="circle"
+                    `--->> transforma o caractere de ordenação em círculo com a borda preta e o meio branco
+                
+            type="disc"
+                    `--->> transforma o caractere de ordenação em bolinha toda preta
+
+    <ol></ol>
+            `--->> lista ordenada, ou ordered lists
+
+    OBS.: as listas ordenadas tem 3 tipos diferentes de ordenação, quando colocada type=" " dentro da TAG de aberturta. Os tipos são:
+            type="1"
+                    `--->> ordenação numérica
+                Exp.:
+                    1.Thatianny
+                    2.João
+                    3.Lucas
+                    4.Pedro
+                    5.Guilherme
+
+            type="a"
+                    `--->> ordenação alfabética minúscula
+                Exp.:
+                    a.Thatianny
+                    b.João
+                    c.Lucas
+                    d.Pedro
+                    e.Guilherme
+
+            type="A"
+                    `--->> ordenação alfabética maiúcula
+                Exp.:
+                    A.Thatianny
+                    B.João
+                    C.Lucas
+                    D.Pedro
+                    E.Guilherme
+
+            type="i"
+                    `--->> ordenação alfabética romana minúscula
+                Exp.:
+                    i.Thatianny
+                    ii.João
+                    iii.Lucas
+                    iv.Pedro
+                    v.Guilherme
+
+            type="I"
+                    `--->> ordenação alfabética romana maiúscula
+                Exp.:
+                    I.Thatianny
+                    II.João
+                    III.Lucas
+                    IV.Pedro
+                    V.Guilherme
+
+    OBS.: caso coloque um typo diferente, ou não especifique nenhum tipo, a lista tomará por padrão a ordenação numérica.
+
+    DICA: há a opção de escolher onde a lista começará utilizando START logo após o TYPE e especificando em qual posição ele irá começar.
+        Exp.:
+            <ol type="A" start="3">
+                =>  C.Pedro
+                    D.Guilherme
+                    E.Martins
+    OBS.: o START recebe apenas números, sinalizando a coloção que irá iniciar, ou seja 3 = terceira colocação = letra C.
+
+    <li></li>
+            `--->> itens da lista, ou list items
+
+    OBS.: você pode colocar uma lista dentro de outra lista:
+        Exp.:
+            <ol>
+                <li>Carros</li>
+                <li>Motos</li>
+                    <ol>
+                        <li>Titan</li>
+                        <li>Yamaha</li>
+                    </ol>
+                <li>Bicicleta</li>
+                <li>Avião</li>
+            </ol>
 
 # TAGS DE TEXTO
 
