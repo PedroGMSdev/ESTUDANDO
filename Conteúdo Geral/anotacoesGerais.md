@@ -23,7 +23,7 @@ Tag colocada dentro da abertura de TAG html:
                 <body></body>
             </html>
                     
-## --------------- TAGS HEAD
+## -------------------------------------------- TAGS HEAD --------------------------------------------
 A "cabeça" do site, onde ficam as configurações comportamentais, ou seja, as coisas que não aparecem na tela do site.
 
     <meta charset=" ">
@@ -40,11 +40,23 @@ A "cabeça" do site, onde ficam as configurações comportamentais, ou seja, as 
     <link rel="stylesheet" href=" ">
             `--->> linkagem com o arquivo css, que será colocado entre " ".
 
-## --------------- TAGS BODY
+## -------------------------------------------- TAGS BODY --------------------------------------------
 As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do site.
 
     <div></div>
             `--->> cria uma "caixa" divisória
+
+    <a></a>
+            `--->> cria uma linkagem, ou uma ancoragem. Você pode mascarar o link escrevendo algo entre as TAGs, que ficará em evidência e destacará o local onde será clicado.
+    OBS.: deve-se ser indicada na TAG de abertura a referência, ou seja, o link que será redirecionado ao clicar, através do href=" " e colocado o link desejado entre " ". Se for um link externo, ou seja, um site que já existe, não se deve esquecer de manter o http.
+        Exp.: 
+            <a href="https://www.youtube.com/watch?v=WX9vucyEcJs&list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o&index=15">Aula 12 - Curso HTML5 - Curso em Vídeo</a>
+        caso a linkagem seja com uma página própria deve-se descrever o arquivo e a pasta, caso esteja em pasta diferente da raiz.
+        Exp.:
+            <a href="pagina2.html">Página 2 do site</a>
+    DICA: ao criar um link, quando o usuário clicar no local indicado, a página será redirecionada para o link que foi especificado. Caso você tenha interesse que o usuário permaneça na sua página, e seja aberto outra aba com o link indicado, você pode, ainda na TAG de abertura, acrescentando TARGET e escolhendo a especificação "_blank" você direciona o conteúdo do link para outra aba.
+        Exp.:
+            <a href="pagina2.html" target="_blank"></a>
 
 # TAGS SEMANTICAS
 Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
@@ -76,6 +88,8 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 <img src="grafico.png" alt="Gráfico de vendas">
                 <figcaption>Vendas ao longo de 2025</figcaption>
             </figure>
+
+
 
 # TAGS DE LISTAS
 
@@ -488,5 +502,7 @@ OBS.: alguns sites gratuitos bem indicados para deploys iniciais, ou pelo menos 
         Após fazer o deploy, para vizualizar a página hospedada, você vai até a minha página inical,e (após dar umas atualizadas) procurar o projeto deployado, clicar e vai copiar o link "Domains" ou "Domínios", que será o link de envio para outras pessoa acessarem.
 
 OBS.: Caso o conteúdo do repositório for estático, ou seja, sem frameworks, colocar o arquivo index direto na raiz do repositório (solto na pasta inicial) e não dentro de outras pastas.
+
+ATENÇÃO: a Vercel procurará o arquivo "index.html" na pasta raiz para executar. Então, caso seu html principal esteja com outro nome, se subir assim dará erro "404 NOT FOUND", pois ele não encontrará o arquivo raiz. Sendo assim, SEMPRE nomear sempre o arquivo principal, que for subir, como INDEX.HTML!
 
 *HOSPEDAGEM*
