@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("arquivos/_fonts/bubblegum-sans-regular.otf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
 body {
     background-color: #dddddd;
     color: rgba (0,0,0,1);
@@ -29,7 +36,7 @@ header#cabecalho {
 }
 
 header#cabecalho h1 {
-    font-family: 'Arial Black', Arial, Helvetica, sans-serif;
+    font-family: 'FonteLogo', sans-serif;
     font-size: 30pt;
     color:#606060;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
@@ -38,7 +45,7 @@ header#cabecalho h1 {
 }
 
 header#cabecalho h2 {
-    font-family: 'Arial', Arial, Helvetica, sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 15pt;
     color:#888888;
     padding: 0px;
@@ -65,7 +72,7 @@ nav#menu ul {
     list-style: none;
     text-transform: uppercase;
     position: absolute;
-    left: 300px;
+    left: 500px;
     top: -20px;
 }
 

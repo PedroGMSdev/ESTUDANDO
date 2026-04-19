@@ -404,12 +404,28 @@ DICA: quando trabalhar com especificações lembrar que elas seguem os números 
             `--->> estilo de fonte
         Exp.:
             font-family: arial;
+    OBS.: existem mais dois jeitos de mudar a fonte.
+            - @font-face { }
+                    `--->> escolhe uma fonte que você tenha salvo na sua pasta de criação do site, evidenciando o local e o arquivo baixado.
+                        Exp.:
+                            @font-face {
+                                font-family: 'FonteLogo';
+                                src: url("pasta/fonte.otf")
+                            }
+                        OBS.: 'FonteLogo' vai ser o nome que foi estipulado para a fonte carregada, mas que você pode mudar para outro do seu agrado. Esse nome vai ser colocado no "font-family" de onde você quer mudar a fonte.
+                            Exp.:
+                                .h1 {
+                                    font-family: 'FonteLogo', sans-serif;
+                                }
+            - <link > (Linkado no head do HTML)
+                    `--->> busca uma fonte em um site externo, como o GOOGLE FONTS. Você salva a referência linkando no seu HTML e importando (@import) no CSS. Depois, é só mudar o "font-family" para o nome da fonte.
+
     font-size 
             `--->> tamanho da fonte
         Exp.:
             font-size: 30pt;
     color 
-            `--->> especifica a cor
+            `--->> especifica a cor da letra
         Exp.:
             color: blue;
     OBS.: outra opção de especificação da cor é:
