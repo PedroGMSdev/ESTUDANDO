@@ -488,6 +488,40 @@ DICA: quando trabalhar com especificações lembrar que elas seguem os números 
                     transition: background-color 1s;
                             `--->> sinaliza que quando houver uma mudança na cor do fundo, essa transição levará 1 segundo para acontecer.
 
+    border:
+            `--->> trabalha com a borda da caixa.
+                Exp.:
+                    - border-bottom;
+                            `--->> trabalha com a parte de baixo da borda da caixa.
+                                Exp.:
+                                    border-bottom: 1px #606060 solid
+                                            `--->> sinaliza que:
+                                                    - 1px = a espessura da borda será de 1 pixel
+                                                    - #606060 = a cor da borda
+                                                    - solid = o formato da borda, que pode ser:
+                                                                - solid = completa
+                                                                - dashed = tracejada
+                                                                - dotted = pontilhada
+                                                                - ...
+
+    height:
+            `--->> estipula a ALTURA.
+                Exp.:
+                    height: 150px;
+
+    background:
+            `--->> trabalha com o fundo do local indicado.
+                    - url (' '):
+                            `--->> acrescenta ao fundo uma imagem.
+    
+DICA: caso uma imagem colocada seja muito pequena, ela se repetirá até preencher todo o background. Para que ela não se repita, você pode usar o NO-REPEAT que fará ela ser usada só uma vez.
+    Exp.:
+        background: url ('imagem.jpg) no-repeat;
+    Você também pode especificar, logo após o comando, a posição que quer que a imagem fique, informando o deslocamento lateral e o deslocamento vertical.
+        Exp.:
+            background: url ('imagem.jpg) no-repeat 0px 100px;
+
+
 
 
 
