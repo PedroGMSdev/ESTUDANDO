@@ -12,4 +12,6 @@ Aula 08 - Concluída
 Aula 09 - Concluída
 Aula 10 - Concluída
 Aula 11 - Concluída
-Aula 12 - 
+Aula 12 - Concluída
+Aula 13 - Concluída
+Aula 14 - 

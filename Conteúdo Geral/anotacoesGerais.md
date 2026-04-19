@@ -343,6 +343,18 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 `--->> Naipe de Ouros
 
 *CSS*
+
+OBS.: toda vez que for trabalhar no CSS com uma classe, é colocado um ponto e o nome da classe:
+    Exp.:
+        .menu {
+
+        }
+quando o elemento trabalhado for um id, é colocado um # antes do nome do id:
+    Exp.:
+        #meuId {
+            
+        }
+
     font-family 
             `--->> estilo de fonte
         Exp.:
@@ -384,6 +396,48 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                             `--->> linha riscando no meio da palavra
                     - none;
                             `--->> palavra sem decoração nenhuma.
+
+    list-style:
+            `--->> vai pegar a lista e trabalhar os marcadores dela.
+                    - none;
+                            `--->> sinaliza que s marcadores da lista serão retirados.
+
+    text-transform:
+            `--->> transforma o texto do local indicado.
+                    - uppercase;
+                            `--->> transforma todo o texto em LETRAS MAIÚSCULAS.
+
+    display:
+            `--->> modifica a configuração de disposição dos itens na caixa em questão.
+                    - inline-block;
+                            `--->> dispõe os itens em uma unica linha, um do lado da outra.
+                    - block;
+                            `--->> dispões os itens em blocos flutuantes.
+                    - none;
+                            `--->> dispõe os itens de forma oculta.
+
+    padding:
+            `--->> aplica um espaçamento dentro da caixa indicada.
+                Exp.:
+                    padding: 10px;
+
+    margin:
+            `--->> aplica um espaçamento fora da caixa, afastando ela dos outros elementos.
+                Exp.:
+                    margin: 20px;
+
+    position:
+            `--->>trabalha com a posição do elemento.
+                    - relative;
+                            `--->> trabalha com a posição do elemento APENAS em relação ao conteúda da caixa que ele se encontra.
+                    - absolute;
+                            `--->> trabalha com a posição do elemento em relação à TODO O SITE.
+                    - fixed;
+                            `--->> prende a posição do elemento no ponto indicado e, mesmo que role a página, o elemento se manterá no mesmo local sempre.
+                    - static;
+                            `--->> prende a posição do elemento no ponto indicado, sem permitir que modifique o local dele.
+
+
 
 
 *JAVASCRIPT*
