@@ -355,6 +355,51 @@ quando o elemento trabalhado for um id, é colocado um # antes do nome do id:
             
         }
 
+DICA: quando trabalhar com especificações lembrar que elas seguem os números informados da seguinte maneira:
+    Exp.:
+        margin: 20px 10px;
+
+    - 20px; => um valor informado
+            `--->> aplica o valor aos quatro lados.
+                Exp.:
+                    topo (top) = 20px
+                    direita (right) = 20px
+                    baixo (bottom) = 20px
+                    esquerda (left) = 20px
+
+    - 20px 10px; => dois valores informados
+            `--->> aplica o primeiro valor para cima e baixo e o segundo valor aos lados.
+                Exp.:
+                    topo = 20px
+                    direita = 10px
+                    baixo = 20px
+                    esquerda = 10px
+
+    - 20px 10px 5px; => três valores informados
+            `--->> aplica o primeiro valor para cimam, o segundo valor aos lados e o terceiro valor para baixo.
+                Exp.:
+                    topo = 20px
+                    direita = 10px
+                    baixo = 5px
+                    esquerda = 10px
+
+    - 20px 10px 5px 1px; => quatro valores informados
+            `--->> aplica o primeiro valor para cimam, o segundo valor ao lado direito, o terceiro valor para baixo e o quarto valor para o lado esquerdo.
+                Exp.:
+                    topo = 20px
+                    direita = 10px
+                    baixo = 5px
+                    esquerda = 1px
+
+    - auto; => substituir o valor por auto
+            `--->> aplica um ajuste automático na tela, de acordo com que a tela for sendo diminuída.
+                Exp.:
+                    20px auto 5px auto;
+                        topo = 20px
+                        lados = ajuste automático
+                        baixo = 5px
+
+
     font-family 
             `--->> estilo de fonte
         Exp.:

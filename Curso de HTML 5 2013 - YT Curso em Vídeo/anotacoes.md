@@ -15,4 +15,4 @@ Aula 11 - Concluída
 Aula 12 - Concluída
 Aula 13 - Concluída
 Aula 14 - Concluída
-Aula 15 - 
+Aula 15 - Concluída
