@@ -427,7 +427,7 @@ quando o elemento trabalhado for um id, é colocado um # antes do nome do id:
                     margin: 20px;
 
     position:
-            `--->>trabalha com a posição do elemento.
+            `--->> trabalha com a posição do elemento.
                     - relative;
                             `--->> trabalha com a posição do elemento APENAS em relação ao conteúda da caixa que ele se encontra.
                     - absolute;
@@ -436,6 +436,12 @@ quando o elemento trabalhado for um id, é colocado um # antes do nome do id:
                             `--->> prende a posição do elemento no ponto indicado e, mesmo que role a página, o elemento se manterá no mesmo local sempre.
                     - static;
                             `--->> prende a posição do elemento no ponto indicado, sem permitir que modifique o local dele.
+
+    transition:
+            `--->> trabalha com a transição de efeitos.
+                Exp.:
+                    transition: background-color 1s;
+                            `--->> sinaliza que quando houver uma mudança na cor do fundo, essa transição levará 1 segundo para acontecer.
 
 
 
