@@ -74,6 +74,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 ### <header></header>
             `--->> informa a parte do site equivalente ao CABEÇALHO.
+    OBS.: o HEADER não obrigatoriamente precisa ser usado apenas uma vez. Ele pode ser usado também para sinalizar um cabeçalho de artigo, um cabeçalho de sessão...
 
 ### <section></section>
             `--->> informa a área principal do site.
@@ -89,6 +90,9 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 ### <nav></nav>
             `--->> sinaliza um menu de navegação
+
+### <article></article>
+            `--->> sinaliza a sessão de ARTIGO, que é onde fica especificações, artigos e notícias do site.
 
 ## TAGS DE MULTIMÍDIA
 
