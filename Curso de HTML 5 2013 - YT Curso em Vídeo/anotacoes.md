@@ -18,3 +18,4 @@ Aula 14 - Concluída
 Aula 15 - Concluída
 Aula 16 - Concluída
 Aula 17 - Concluída
+Aula 18 - Concluída

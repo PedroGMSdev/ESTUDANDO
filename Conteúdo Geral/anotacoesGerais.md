@@ -64,6 +64,15 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
     <header></header>
             `--->> informa a parte do site equivalente ao CABEÇALHO.
 
+    <section></section>
+            `--->> informa a área principal do site.
+
+    <aside></aside>
+            `--->> informa a área do conteúdo secundário do site, geralmente usado para conteúdos laterais ou periféricos.
+
+    <footer></footer>
+            `--->> informa a área de rodapé do site.
+
     <figure></figure>
             `--->> agrupa elementos visuais como imagens, gráficos, trechos de códigos, ilustrações, tabelas.
 
@@ -203,7 +212,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
     <br>
             `--->> quebra de linha. A cada <br> colocado, uma linha é pulada. Você pode dar vários ENTERs, mas o html não reconhecerá nenhum.
-    OBS.: essa TAG não possui fechamento.
+    OBS.: essa TAG não possui fechamento mas, caso aplique uma abertura e fechamento, pode-se especificar um texto entre eles.
 
     &nbsp;
             `--->> aplica um espaçamento extra no local. A cada &nbsp; colocado, um espaçamento extra é colocado. Você pode dar vários espaçamentos, mas o html só reconhecerá um.
@@ -447,6 +456,12 @@ DICA: quando trabalhar com especificações lembrar que elas seguem os números 
             `--->> aplica sombra no texto
         Exp.:
             text-shadow: 2px 2px 2px;
+
+    text-align:
+            `--->> faz o alinhamento do texto em relação à caixa.
+                    - center;
+                            `--->> alinha o texto ao centro.
+
     text-decoration:
             `--->> aplica modificações no texto, como:
                     - underline;
@@ -476,6 +491,15 @@ DICA: quando trabalhar com especificações lembrar que elas seguem os números 
                             `--->> dispões os itens em blocos flutuantes.
                     - none;
                             `--->> dispõe os itens de forma oculta.
+
+    float:
+            `--->> muito utilizado em "display: block;", aplicando o FLOAT(flutuar) você dá o comando para os BLOCOS(block) do display indicado para que fiquem flutuanto, especificando o lado que deseja que fique.
+        Exp.:
+            float: left;
+                    => flutuar, se posicionar, à esquerda.
+
+    clear: both;
+            `--->> vai limpar toda a configuração já aplicada aquele local indicado anteriormente por outras seções.
 
     padding:
             `--->> aplica um espaçamento dentro da caixa indicada.

@@ -100,3 +100,26 @@ nav#menu a {
 nav#menu a:hover {
     color: white;
 }
+
+section#corpo {
+    display: block;
+    width: 550px;
+    float: left;
+    border-right: 1px #606060 solid;
+    padding-right: 15px;
+}
+
+aside#lateral {
+    display: block;
+    width: 350px;
+    float: right;
+}
+
+footer#rodape {
+    clear: both;
+    border-top: 1px #606060 solid;
+}
+
+footer#rodape p {
+    text-align: center;
+}
