@@ -12,7 +12,7 @@
         </body>
     </html>
 
-## TAG DE IDIOMA
+### TAG DE IDIOMA
 Tag colocada dentro da abertura de TAG html:
     lang=" "
         Exp.:
@@ -26,27 +26,27 @@ Tag colocada dentro da abertura de TAG html:
 ## -------------------------------------------- TAGS HEAD --------------------------------------------
 A "cabeça" do site, onde ficam as configurações comportamentais, ou seja, as coisas que não aparecem na tela do site.
 
-    <meta charset=" ">
+### <meta charset=" ">
             `--->> sinaliza o PADRÃO DE CARACTERES trabalhado nesse site. Nesse caso (UTF-8), o padrão de caracteres da América Latina, onde se usa acentuações e outros caracteres.
     OBS.: Essa TAG não possui fechamento.
         Exp.:
             <meta charset="UTF-8">
 
-    <title></title>
+### <title></title>
             `--->> sinaliza o TÍTULO DA PÁGINA, ou seja, o nome que ficará na aba do site.
         Exp.:
             <title>Curso de HTML5</title>
 
-    <link rel="stylesheet" href=" ">
+### <link rel="stylesheet" href=" ">
             `--->> linkagem com o arquivo css, que será colocado entre " ".
 
 ## -------------------------------------------- TAGS BODY --------------------------------------------
 As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do site.
 
-    <div></div>
+### <div></div>
             `--->> cria uma "caixa" divisória
 
-    <a></a>
+### <a></a>
             `--->> cria uma linkagem, ou uma ancoragem. Você pode mascarar o link escrevendo algo entre as TAGs, que ficará em evidência e destacará o local onde será clicado.
     OBS.: deve-se ser indicada na TAG de abertura a referência, ou seja, o link que será redirecionado ao clicar, através do href=" " e colocado o link desejado entre " ". Se for um link externo, ou seja, um site que já existe, não se deve esquecer de manter o http.
         Exp.: 
@@ -58,30 +58,41 @@ As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do 
         Exp.:
             <a href="pagina2.html" target="_blank"></a>
 
+### class=" "
+        `--->> cria uma identificação para o local indicado, chamado CLASSE.
+
+### id=" "
+        `--->> cria uma identificação ÚNICA para o local indicado, chamado ID.
+
+### OBS.: uma CLASSE pode ser repetida em vários elementos, mas um ID é único, não podendo ser atribuído à outro elemento.
+
+### <span></span>
+        `--->> evidencia um local, facilitando o trabalho de modificação ou atribuição de identificadores nele.
+
 ## TAGS SEMANTICAS
 Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
-    <header></header>
+### <header></header>
             `--->> informa a parte do site equivalente ao CABEÇALHO.
 
-    <section></section>
+### <section></section>
             `--->> informa a área principal do site.
 
-    <aside></aside>
+### <aside></aside>
             `--->> informa a área do conteúdo secundário do site, geralmente usado para conteúdos laterais ou periféricos.
 
-    <footer></footer>
+### <footer></footer>
             `--->> informa a área de rodapé do site.
 
-    <figure></figure>
+### <figure></figure>
             `--->> agrupa elementos visuais como imagens, gráficos, trechos de códigos, ilustrações, tabelas.
 
-    <nav></nav>
+### <nav></nav>
             `--->> sinaliza um menu de navegação
 
 ## TAGS DE MULTIMÍDIA
 
-    <img src=" ">
+### <img src=" ">
             `--->> adiciona uma imagem. Entre " " será descrito a localização da imagem.
     OBS.: Essa TAG não possui fechamento.
         Exp.:
@@ -90,7 +101,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
         Exp.:
             <img src="https://example.com/imagem.png">
 
-    <figcaption></figcaption>
+### <figcaption></figcaption>
             `--->> pode ser usada dentro de <figure> fornecendo uma legenda para a imagem.
         Exp.:
             <figure>
@@ -100,13 +111,13 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 ## TAGS DE TABELA
 
-    <table></table> 
+### <table></table> 
             `--->> cria um local de tabela.
-    <caption></caption>
+### <caption></caption>
             `--->> indica a legenda da tabela, ou seja, o título da tabela.
-    <tr></tr>
+### <tr></tr>
             `--->> sinaliza uma linha da tabela, ou table rows.
-    <td></td>
+### <td></td>
             `--->> sinaliza uma coluna da tabela, também conhecida por CÉLULA, ou seja, em quantas partes a linha da tabela é dividida. Ou table data.
     OBS.: utilizando a opção ROWSPAN na TAG de abertura de TD e especificando quantos espaços ele pegará verticalmente na tabela, você espande a quantidade de células que será ligadas a ele.
         Exp.:
@@ -138,7 +149,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 ## TAGS DE LISTAS
 
-    <ul></ul>
+### <ul></ul>
             `--->> lista não ordenada, ou unordered lists
 
     OBS.: as listas não ordenadas tem 3 tipos diferentes de ordenação, quando colocada type=" " dentro da TAG de aberturta. Os tipos são:
@@ -151,7 +162,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
             type="disc"
                     `--->> transforma o caractere de ordenação em bolinha toda preta
 
-    <ol></ol>
+### <ol></ol>
             `--->> lista ordenada, ou ordered lists
 
     OBS.: as listas ordenadas tem 3 tipos diferentes de ordenação, quando colocada type=" " dentro da TAG de aberturta. Os tipos são:
@@ -210,7 +221,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                     E.Martins
     OBS.: o START recebe apenas números, sinalizando a coloção que irá iniciar, ou seja 3 = terceira colocação = letra C.
 
-    <li></li>
+### <li></li>
             `--->> itens da lista, ou list items
 
     OBS.: você pode colocar uma lista dentro de outra lista:
@@ -228,14 +239,15 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 ## TAGS DE TEXTO
 
+### <h> - TÍTULOS
+
     <h1></h1>-----
     <h2></h2>     |
     <h3></h3>     |----->> HIERARQUIA DE TÍTULOS
     <h4></h4>     |
     <h5></h5>     |
     <h6></h6>-----
-
-    <hgroup></hgroup>
+### <hgroup></hgroup>
             `--->> faz um agrupamento de títulos
         Exp.:
             <hgroup>
@@ -243,18 +255,18 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 <h2></h2>
             </hgroup>
 
-    <p></p>
+### <p></p>
             ` --->> PARÁGRAFO
 
-    <br>
+### <br>
             `--->> quebra de linha. A cada <br> colocado, uma linha é pulada. Você pode dar vários ENTERs, mas o html não reconhecerá nenhum.
     OBS.: essa TAG não possui fechamento mas, caso aplique uma abertura e fechamento, pode-se especificar um texto entre eles.
 
-    &nbsp;
+### &nbsp;
             `--->> aplica um espaçamento extra no local. A cada &nbsp; colocado, um espaçamento extra é colocado. Você pode dar vários espaçamentos, mas o html só reconhecerá um.
     OBS.: essa TAG não possui fechamento e nem < >.
 
-    <wbr>
+### <wbr>
             `--->> aplica uma quebra em palavras grandes, para melhorar a formatação de texto.
         Exp.:
             super-humano
@@ -265,7 +277,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
     DICA: se quiser quebrar um endereço de e-mail ou site, use WBR. Se quiser quebrar palavras, use &SHY;.
 
-    &shy;
+### &shy;
             `--->> aplica a quebra da palavra, assim como o WBR, mas aplica o hífem, como manda a língua portuguesa.
         Exp.:
             vídeoconferência
@@ -274,40 +286,40 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 &shy; = vídeocon-
                         ferência
 
-    <hr>
+### <hr>
             `--->> aplica uma quebra horizontal com uma linha de uma ponta a outra do container.
 
-    <b></b>
+### <b></b>
             `--->> negrito (bold).
         
-    <i></i>
+### <i></i>
             `--->> itálico.
 
-    <em></em>
+### <em></em>
             `--->> além de colocar a letra em itálico, sinaliza para o html que você quer dar uma ênfase semântica na palavra.
 
-    <del></del>
+### <del></del>
             `--->> passa um risco no meio da palavra. Antes utilizada na TAG <s></s>.
 
-    <sub></sub>
+### <sub></sub>
             `--->> cria uma formatação de "subescrito"
 
-    <sup></sup>
+### <sup></sup>
             `--->> cria uma formatação de "sobrescrito"
 
-    <iostream></iostream>
+### <iostream></iostream>
             `--->> sinaliza que aquele trecho deve ser apresentado como formatação web, não como texto normal. Ou seja, se ele for escrito como um código ou TAG, não será acionado a função do código.
 
-    <code></code>
+### <code></code>
             `--->> sinaliza que aquele trecho deve ser apresentado como código, não como texto normal. Ou seja, se ele for escrito como um código, não será acionado a função do código.
 
-    <pre></pre>
+### <pre></pre>
             `--->> em conjunto com a <code>, sinaliza um local préformatado, e diz que deve ser exibido igual foi escrito.
             
-    SÍMBOLOS ESPECIAIS
+### SÍMBOLOS ESPECIAIS
         Alguns caracteres especiais podem ser encontrados no teclado, mas alguns não conseguem ser escritos no site a menos que use códigos.
             
-        Símbolos de Moedas:
+#### Símbolos de Moedas:
             &pound;
                 `--->> símbolo da moeda de Libra
             &yen;
@@ -320,7 +332,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 `--->> símbolo de Marca Registrada, ou Referência
             &trade;
                 `--->> símbolo de Trade Marc
-        Símbolos Aritméticos:
+#### Símbolos Aritméticos:
             &lt;
                 `--->> menor que
             &gt;
@@ -345,7 +357,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 `---> símbolo de radiciação, ou raiz quadrada
             &ne;
                 `--->> símbolo de diferente de
-        Letras Gregas:
+#### Letras Gregas:
             &delta;
                 `--->> letra Delta minúscula
             &Delta;
@@ -364,7 +376,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 `--->> letra Phi maiúscula
             &sum;
                 `--->> letra Sigma maiúsculo
-        Setas:
+#### Setas:
             &larr;
                 `---> seta para a esquerda, ou left arrow
             &rarr;
@@ -377,7 +389,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 `---> seta para baixo, ou down arrow
             &harr;
                 `---> seta para esquerda e direita, ao mesmo tempo
-        Naipes de Cartas:
+#### Naipes de Cartas:
             &spades;
                 `--->> Naipe de Espadas
             &clubs;
@@ -389,19 +401,18 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 # *CSS*
 
-OBS.: toda vez que for trabalhar no CSS com uma classe, é colocado um ponto e o nome da classe:
+## OBS.: toda vez que for trabalhar no CSS com uma classe, é colocado um ponto e o nome da classe:
     Exp.:
         .menu {
 
         }
-
-quando o elemento trabalhado for um id, é colocado um # antes do nome do id:
+    quando o elemento trabalhado for um id, é colocado um # antes do nome do id:
     Exp.:
         #meuId {
             
         }
 
-DICA: quando trabalhar com especificações lembrar que elas seguem os números informados da seguinte maneira:
+## DICA: quando trabalhar com especificações lembrar que elas seguem os números informados da seguinte maneira:
     Exp.:
         margin: 20px 10px;
 
@@ -443,10 +454,9 @@ DICA: quando trabalhar com especificações lembrar que elas seguem os números 
                     20px auto 5px auto;
                         topo = 20px
                         lados = ajuste automático
-                        baixo = 5px
+                        baixo = 5px            
 
-
-font-family 
+## font-family: 
             `--->> estilo de fonte
         Exp.:
             font-family: arial;
@@ -466,12 +476,19 @@ font-family
             - <link href=" "> (Linkado no head do HTML)
                     `--->> busca uma fonte em um site externo, como o GOOGLE FONTS. Você salva a referência linkando no seu HTML e importando (@import) no CSS. Depois, é só mudar o "font-family" para o nome da fonte.
 
-font-size 
+## font-weight:
+        `--->> espessura da letra.
+                - bold;
+                        `--->> aplica um negrito.
+                - bolder;
+                        `--->> aplica algo mais espesso que o negrito.
+
+## font-size: 
             `--->> tamanho da fonte
         Exp.:
             font-size: 30pt;
 
-## color 
+## color: 
             `--->> especifica a cor da letra
         Exp.:
             color: blue;
