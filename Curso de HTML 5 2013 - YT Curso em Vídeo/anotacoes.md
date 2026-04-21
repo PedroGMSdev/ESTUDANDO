@@ -19,3 +19,4 @@ Aula 15 - Concluída
 Aula 16 - Concluída
 Aula 17 - Concluída
 Aula 18 - Concluída
+Aula 19 - Concluída
