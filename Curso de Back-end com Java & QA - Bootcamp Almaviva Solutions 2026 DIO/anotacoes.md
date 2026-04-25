@@ -1,1 +1,1 @@
-    
+- quando você cria uma class, você pode estipular argumentos (args) onde serão informados valores.
