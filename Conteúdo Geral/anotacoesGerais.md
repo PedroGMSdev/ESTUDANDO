@@ -653,13 +653,69 @@ DICA: caso uma imagem colocada seja muito pequena, ela se repetirá até preench
 
 # *GIT*
 
+## clear (Ctrl + L)
+    Comando dado no terminal para limpar a tela.
+
+## apertar tecla da seta para cima
+    Copia o comando dado acima.
+
+## CONFIGURAÇÕES INICIAIS
+Abrir o Git Bash apertando com o botão direito em alguma pasta.
+
+### git config --list
+    Comando dado no Git Bash que mostra todas as configurações da ferramenta.
+
+### git config --global
+    Comando dado no Git Bash que configura o servidor geral.
+#### git config --global user.name "Pedro Guilherme Martins"
+    Comando para cadastrar o nome do usuário geral, que será atribuído à TODOS os commits feitos, onde será nomeado com o nome que for cadastrado entre " ".
+#### git config --global user.email pedroguilherme_ms@yahoo.com.br
+    Comando para cadastrar o e-mail do usuário geral, que será atribuídos à TODOS os commits feitos, onde será informado após o comando 'USER.EMAIL'. 
+      
+### git config user.name
+    Comando que mostra o nome de usuário cadastrado.
+
+### git config user.email
+    Comando que mostra o e-mail de usuário cadastrado.
+
+### git config init.defaultBranch
+    Comando que mostra a Branch padrão.
+#### git config init.defaultBranch main
+    Comando que muda o nome da Branch padrão, onde o novo nome será o informado após o comando 'defaultBranch'.
+#### git config --global init.defaultBranch main
+    Comando que muda o nome da Branch padrão a nível geral.
+
+## git init
+    Cria um novo repositório local.
+ATENÇÃO: Se não especificar a pasta antes de criar um repositório, pode criar um repositório na USER do PC que irá classificar como "conteúdo do repositório" TUDO o que estiver no computador.
+
+## git clone
+    Comando dado no terminal para COPIAR um repositório do GitHub. Para clonar o repositório, você deve ir no GitHub, escolher o repositório e copiar o URL e colar no final do comando.
+        Exp.: 
+            git clone URL-escolhido
+    OBS.: Caso o repositório seja um repositório público: PRONTO! CLONE FEITO. Mas, caso o repositório seja privado, precisa:
+        - se for seu:
+            > informar seu usuário
+            > ir em 'Configurações' (Settings), depois no final da página no menu lateral em 'Configurações do Desenvolvedor' (Developer Settings), 'Tokens de Acesso Pessoal' (Personal Access Tokens) também no menu lateral, depois em 'Fichas (clássicas)' (Tokens (classic)), depois 'Gerar Novo Token' (Generete New Token), onde você escolherá 'Gerar Novo Token (clássico)' (Generate New Token (Classic)), que após utilizar sua senha pra validar, será gerado um token que servirá como senha de autorização para copiar o repositório privado.
+        - se for de outra pessoa:
+            > essa pessoa precisa ir no repositório dela e lhe cadastrar como 'Colaborador'.
+            > seguir o processo de informar usuário do repositório e gerar o token.
+    ATENÇÃO: Uma vez clonado o repositório, não precisa mais ser clonado na mesma máquina. Caso você volte a trabalhar com aquele repositório, basta utilizar o 'git pull' para puxar as atualizações que não tem na sua máquina. CASO SEJA CLONADO MAIS DE UMA VEZ O MESMO REPOSITÓRIO, A PASTA SERÁ DUPLICADA.
+
+## DIRECIONANDO PARA A PASTA DESEJADA
+    Caso o terminal não esteja na pasta que você quer trabalhar, você pode:
+        - ir na pasta que deseja trabalhar, selecionar a pasta que deseja trabalhar ou criar o novo repositório, ou criar a nova pasta, e dentro dela clicar com o botão direito e escolher "Abrir Git Bash Aqui".
+        - ou...
+### cd ~
+    Usar o comando CD, direcionando para a pasta que você deseja trabalhar.
+        Exp.:
+            cd ~/Desktop/DEV/PROJETOS/meu-projeto
+
 ## git log
     Comando dado no Terminal (log = registro) que mostra todos os commits registrados no repositório.
-
-## git log --stat
+### git log --stat
     Comando dado no Terminal que, além de mostrar todos os commits registrados no repositório, também mostra o que foi feito nele.
-
-## git log --oneline
+### git log --oneline
     Comando dado no Terminal que mostra todos os commits registrados no repositório, mas de uma forma mais simplificada, monstrando quase que apenas o identificador do commit e o nome do commit.
 
 ## git status
