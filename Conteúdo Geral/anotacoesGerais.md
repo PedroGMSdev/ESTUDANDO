@@ -688,6 +688,8 @@ Abrir o Git Bash apertando com o botão direito em alguma pasta.
 ## git init
     Cria um novo repositório local.
 ATENÇÃO: Se não especificar a pasta antes de criar um repositório, pode criar um repositório na USER do PC que irá classificar como "conteúdo do repositório" TUDO o que estiver no computador.
+### rm -rf .git
+    Caso você tenha criado um repositório na pasta errada, você pode estar usando esse comando para apagar o repositório.
 
 ## git clone
     Comando dado no terminal para COPIAR um repositório do GitHub. Para clonar o repositório, você deve ir no GitHub, escolher o repositório e copiar o URL e colar no final do comando.
@@ -701,6 +703,16 @@ ATENÇÃO: Se não especificar a pasta antes de criar um repositório, pode cria
             > essa pessoa precisa ir no repositório dela e lhe cadastrar como 'Colaborador'.
             > seguir o processo de informar usuário do repositório e gerar o token.
     ATENÇÃO: Uma vez clonado o repositório, não precisa mais ser clonado na mesma máquina. Caso você volte a trabalhar com aquele repositório, basta utilizar o 'git pull' para puxar as atualizações que não tem na sua máquina. CASO SEJA CLONADO MAIS DE UMA VEZ O MESMO REPOSITÓRIO, A PASTA SERÁ DUPLICADA.
+OBS.: outra forma de autenticação é atravéz da chave SSH, que cria uma "chave" e uma "fechadura" oficial, onde a fechadura será o GitHub e a chave será "deixada" no seu computador, logo, toda vez que precisar fazer um clone daquele GitHub (fechadura) por aquele computador (chave) já estará permitido. Para criar essa chave, você deve:
+    1: acessar o 'Configurações' (Settings) do GitHub;
+    2: procurar no menu lateral a parte de 'Acesso' (Access);
+    3: em 'Acesso', selecionar 'Chaves SSh e GPG';
+DICA: você pode conferir se no seu computador já possui chaves SSH, indo em Chave SSH, e procurando por 'generating SSH keys' (conectar-se ao GitHub usando chaves SSH) abaixo do nome, selecionando, e procurando por 'Verificar se há chaves SSH'. Após seguir todo o procedimento nna documentação, caso não tenha nenhuma chave cadastrada, você pode gerar uma nova.
+    4: em 'Gerando uma nova chave SSH', ainda no 'Conectar-se ao GitHub usando chaves SSH' e seguindo toda a documentação, você cria e utiliza a chave.
+    5: após todo o processo de geração e cadastro da chave SSH, quando for clonar o repositório, não copiar mais por HTTP, e sim pela aba de SSH.
+DICA: caso você queira mudar o nome do repositório que está clonando, é só, após o comando, informar o novo nome que gostaria de dar.
+    Exp.:   
+        git clone http://github.com/pedrogmsdev/hello-world.git novo-nome
 
 ## DIRECIONANDO PARA A PASTA DESEJADA
     Caso o terminal não esteja na pasta que você quer trabalhar, você pode:
@@ -717,6 +729,8 @@ ATENÇÃO: Se não especificar a pasta antes de criar um repositório, pode cria
     Comando dado no Terminal que, além de mostrar todos os commits registrados no repositório, também mostra o que foi feito nele.
 ### git log --oneline
     Comando dado no Terminal que mostra todos os commits registrados no repositório, mas de uma forma mais simplificada, monstrando quase que apenas o identificador do commit e o nome do commit.
+### git reflog
+    Mostra um relatório mais detalhados dos commits do repositório, mostrando os feitos, os apagados...
 
 ## git status
     Comando dado no Terminal que vai mostrar a comparação de tudo o que tinha antes, no status inicial, e o depois das modificações feitas no momento atual.
@@ -794,6 +808,66 @@ ATENÇÃO: É indicado que esse procedimento seja feito enquanto o commit ainda 
     Comando dado no Terminal para FORÇAR o push enviar o que tiver no seu repositório local, mesmo que o local esteja diferente do de origem, como na situação acima, obrigando ele a sobrepor a condição de origem.
 
 ATENÇÃO: como o "push --force" obriga o GitHub à sobrepujar o repositório da nuvem pelo conteúdo do repositório local, caso o repositório nuvem tiver conteúdos que o local não tenha, esses conteúdos serão apagados permanentemente. Então, caso você esteja trabalhando em um projeto grande ou em conjunto com outras pessoas no mesmo repositório, você pode acabar apagando permanentemente todo o trabalho já feito.
+
+## git pull
+    Comando dado no Terminal para "puxar" as atualizações feitas no repositório origin que não está no seu reposiório local.
+
+## git restore
+    Caso você tenha feito alguma alteração não desejada, ou desista da que fez, você pode usar esse comando para restaurar para o último salvamento feito.
+ATENÇÃO: tenha cuidado ao usar esse comando, pois ele ignora TODA mudança que você fez, ou seja, caso você quisesse aproveitar algo da modificação, não será possível.
+
+## git reset
+    Comando dado no Terminal que descarta o último commit feito.
+    DICA: você pode informar quantos commits deseja descartar utilizando, após o comando, o  HEAD~ e informando quantos dos ultimos commits deseja descartar.
+        Exp.:
+            git reset HEAD~1 => remove o último commit
+            git reset HEAD~2 => remove os dois últimos commits
+    ou, você pode informar o hash ("chave" indicadora do commit).
+ATENÇÃO: caso a chave do commit for a de 10 commits atrás, os 10 últimos commits serão removidos, então, CUIDADO.
+### git reset --soft
+    Remove os commits indicados, mantendo os arquivos em STAGING, prontos para um novo commit. O commit informado some, mas todas as mudanças ficam em STAGING, esperando serem commitadas.
+### git reset --mixed
+    Remove os commits indicados, mantendo os arquivos no local, mas ainda para que você escolha qual será subido para STAGING. O commit informado some, mas todas as munças ficam no ARQUIVO, esperando ser subido para STAGING, depois ser commitado.
+### git reset --hard
+    Remove os commits indicados POR COMPLETO. O commit informado some, e todos as mudanças são apagadas do disco, não sobrando nenhum resquício. CUIDADO!
+OBS.: o comando "git reset" sem especificação, aciona por padrão o --mixed.
+DICA: você pode informar no git reset apenas o ARQUIVO que quer remover do STAGING, informando apenas o nome do arquivo.
+    Exp.:
+        git reset arquivo-desejado.md
+
+## BRANCHES
+    Você pode criar BRANCHES (ramificações) do seu projeto (MAIN) para traballhar sem afetar o projeto. A Branch herda o conteúdo que o Main possui no momento da criação da Branch. Assim, você pode modificar a vontade sem medo de que a Main seja perdida.
+### CRIANDO UMA BRANCH
+#### git checkout -b
+    Comando dado no Git Bash que informa que será trabalhado com uma nova Branch. Após o comando, você informa o nome da nova branch.
+        Exp.:
+            git checkout -b teste
+
+### git branch
+    Comando que lista todas as branches existentes.
+#### git branch -v
+    Comando que lista o último commit feito em cada uma das branches existentes.
+
+### JUNTAR AS BRANCHES
+#### git merge
+    Comando que junta o conteúdo das branches, especificando de qual branch você deseja trazer as atualizações.
+        Exp.:
+            git merge teste
+
+### EXCLUINDO UMA BRANCH
+#### git branch -d
+    Comando que apaga uma branch. Após o comando, deve-se informar o nome da branch que deseja excluir.
+        Exp.:
+            git branch -d teste
+
+### COPIANDO APENAS UMA BRANCH
+    Utilizando o comando "git clone", colocando o URL do repositório desejado, pode-se informar o que deseja copiar apenas uma branch colocando "--branch" e o nome da branch desejada e informar com "--single-branch" que apenas aquela branch deve ser clonada.
+        Exp.: 
+            git clone http://github.com... --branch teste --single-branch
+
+## git fetch
+    Comando parecido com o "git pull", mas o "fetch" apenas puxa as atualizações do remoto origin, sem salvar no local. Quando trabalhado com muitas pessoas, onde todos atualizam o código a qualquer momento, usar o FETCH pode lhe garantir que você veja as atualizações que foram feitas (utilizando o "git diff main origin/main" que vai informar o que tem de diferente entre os dois, ou seja entre o MAIN e o ORIGIN/MAIN), sem precisar correr o risco de perder o que atualizou. E então, depois de vizualizado, se optar por sobrepor, você pode usar o "git merge" para unir as atualizações.
+
 
 # *DEPLOY*
 
