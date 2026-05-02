@@ -108,6 +108,66 @@ ATENÇÃO: os nomes dados a variáveis não podem ser nome de palavras chaves (K
         > OR ou OU (||): pelo menos uma das opções precisa ser verdadeira.
         > Negação (!)
 
+**TRABALHANDO COM OPERADORES ARITMÉTICOS**
+- Adição (+)
+- Subtração (-)
+- Multiplicação (*)
+- Divisão (/)
+- Resto (%)
+- Raiz Quadrada (Math.sqrt())
+        Exp.:
+                a raiz quadrade de 144 =
+                `--->>> Math.sqrt(12);
+- Exponencial (Math.pow())
+        Exp.:
+                10 elevado a 2 =
+                `--->>> Math.pow(10,2)
+
+OBS.: existe a opção de usar a variável diretamente na operação:
+        Exp.: 
+                variável += 12
+                        `-> mesmo que
+                                `-> variável = variável + 12
+essa pode ser aplicada com qualquer operador:
+        - +=
+        - -=
+        - *=
+        - /=
+        - ...
+
+OBS.: existe a posibilidade, muito usada em contadores, de utilizar "++", que significa que será somado +1 no valor da variável.
+        Exp.:
+                ++variável
+                        `-> mesmo que
+                                `-> variável += 1
+                                        `-> mesmo que
+                                                `-> variável = variável + 1
+essa fórmula de chama INCREMENTO. Ela também pode ser usada com "--", chamada de DECREMENTO. Porém, não pode ser usada com os demais operadores.
+
+ATENÇÃO: caso você use o operador depois da variável (variável++), estará indicando para o sistema que ele:
+        - PRIMEIRO: lerá e apresentará o valor da variável.
+        - SEGUNDO: só depois ele somará o +1.
+isso, em contadores, pode gerar um erro, pois ele apresentará duas vezes o valor inicial.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.equals --->>> pode substituir o == em um if/else para caso a comparação for de strings. É interessante deixar o "==" para quando for comparado números.
+
 
 
 

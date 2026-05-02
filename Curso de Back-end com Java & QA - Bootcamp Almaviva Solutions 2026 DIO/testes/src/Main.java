@@ -39,7 +39,30 @@ public class Main {
         }
 
          */
-        // AULA - TRABALHANDO COM OPERADORES ARITMÉTICOS
+        /** AULA - TRABALHANDO COM OPERADORES ARITMÉTICOS
+
+        System.out.println("Qual operação deseja fazer?");
+        var operacao = scanner.next();
+        System.out.println("Informe o primeiro número:");
+        var numero1 = scanner.nextInt();
+        System.out.println("Informe o segundo número:");
+        var numero2 = scanner.nextInt();
+
+        if (operacao.equals("+")){
+            System.out.printf("%s %s %s = %s", numero1, operacao, numero2, numero1 + numero2);
+        } else if (operacao.equals("-")){
+            System.out.printf("%s %s %s = %s", numero1, operacao, numero2, numero1 - numero2);
+        } else if (operacao.equals("*")) {
+            System.out.printf("%s %s %s = %s", numero1, operacao, numero2, numero1 * numero2);
+        } else if (operacao.equals("/")) {
+            System.out.printf("%s %s %s = %s", numero1, operacao, numero2, numero1 / numero2);
+        } else {
+            System.out.println("Operação inválida!");
+        }
+
+         */
+        // AULA - TRABALHANDO COM OPERADORES BITWISE (Bit-a-Bit)
+
     }
 
 }
