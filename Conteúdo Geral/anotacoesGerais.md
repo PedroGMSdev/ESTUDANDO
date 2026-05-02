@@ -647,6 +647,24 @@ DICA: caso uma imagem colocada seja muito pequena, ela se repetirá até preench
 
 # *JAVA*
 
+## System.out
+        `--->>> comando de saída, que indica o que vai ser mostrado na tela.
+### System.out.print()
+        `--->>> comando de saída. Diz que será informado algo e colocado na tela.
+### System.out.println()
+        `--->>> comando de saída com quebra de linha. Além de informar algo na tela, ele pula uma linha.
+OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
+    Exp.:
+        System.out.println("Essa frase vai na primeira linha \n" + "e essa vai ficar na segunda linha.");
+### System.out.printf
+        `--->> comando de saída que permite intercalar argumentos através do %s. Consegue informar texto e variáveis juntas, cocatenando os resultados que aplicar %s, apenas informando as variáveis (argumentos) em respectivas posições que serão apresentadas, no final do informe.
+            Exp.:
+                System.out.printf("%s, %s anos é uma idade muito boa!", nome, idade);
+        OBS.: assim como o PRINT simples, o PRINTF não quebra linha. Então, caso vá usá-lo e deseje pular uma linha, aplicar o \n no final.
+            Exp.:
+                System.out.printf("%s, %s anos é uma idade muito boa!\n", nome, idade);
+
+
 
 # *BANCO DE DADOS*
 
