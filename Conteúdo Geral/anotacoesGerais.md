@@ -664,7 +664,12 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
             Exp.:
                 System.out.printf("%s, %s anos é uma idade muito boa!\n", nome, idade);
 
-
+## OffsetDateTime
+        `--->>> classe que trabalha com tempo, utilizando os dados reais e sendo atualizado automaticamente, por conta própria.
+### OffserDateTime.now()
+        `--->>> sinaliza que será trabalhado com os dados reais de AGORA.
+#### OffsetDateTime.now().getYear()
+        `--->>> sinaliza que será pego o ANO ATUAL para ser trabalhado com ele.
 
 # *BANCO DE DADOS*
 

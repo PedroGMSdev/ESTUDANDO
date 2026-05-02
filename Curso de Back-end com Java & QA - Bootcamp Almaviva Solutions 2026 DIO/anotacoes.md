@@ -149,6 +149,7 @@ ATENÇÃO: caso você use o operador depois da variável (variável++), estará 
         - SEGUNDO: só depois ele somará o +1.
 isso, em contadores, pode gerar um erro, pois ele apresentará duas vezes o valor inicial.
 
+**TRABALHANDO COM OPERADORES BITWISE (Bit-a-Bit)**
 
 
 
@@ -206,5 +207,4 @@ isso, em contadores, pode gerar um erro, pois ele apresentará duas vezes o valo
 - quando você cria uma class, você pode estipular argumentos (args) onde serão informados valores.
 
 - Continuar de:
-        => Fundamentos de Java
-                => Trabalhando com Operadores Aritméticos
+        => Estruturas de Controle em Java
