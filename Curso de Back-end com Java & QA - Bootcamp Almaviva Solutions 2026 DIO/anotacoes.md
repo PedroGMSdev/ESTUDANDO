@@ -149,7 +149,139 @@ ATENÇÃO: caso você use o operador depois da variável (variável++), estará 
         - SEGUNDO: só depois ele somará o +1.
 isso, em contadores, pode gerar um erro, pois ele apresentará duas vezes o valor inicial.
 
-**TRABALHANDO COM OPERADORES BITWISE (Bit-a-Bit)**
+__________________________________**ESTRUTURAS DE CONTROLE EM JAVA**__________________________________
+
+**ESTRUTURA CONDICIONAL IF / ELSE / ELSE IF**
+- if = se
+- else = senão
+- else if = senão, se
+
+if (variável e condição){
+        apresentar...
+} else if (variável e condição){
+        apresentar...
+} else {
+        apresentar...
+}
+
+OBS.: melhor usado quando se tem poucas condições, ou uma lógica direta, de sim/não ou poucas variações. Melhor para validações e regras rápidas, e ruim quando começa a virar vários "else if" encadeados.
+
+ATENÇÃO: o ELSE não precisa de uma condição especificada, pois, se todas as outras condições apresentadas falhar ele será apresentado. Sendo assim, é interessante, um programa profissional, que o else seja usado para uma mensagem de erro, já que ele considera todas as outras opções possíveis que não esteja listada nas outras condições.
+
+OBS.: ".equals" pode substituir o "==" em um if/else para caso a comparação for de strings. É interessante deixar o "==" para quando for comparado números.
+        Exp.:
+                if (variável == 2){}
+                        ou
+                if (variável.equals("valor")){}
+
+DICA: existe uma ferramenta em if/else que se chama ELVIS OPERATOR, que pode ser usada caso tenha apenas duas opções. Essa ferramenta consiste em colocar "?" uma opção ":" outra opção.
+        Exp.:
+                var day = option == 1 ? "Domingo" : "Sábado";
+                ou seja, vai ser atribuído à variável "day" o valor de "Domingo" se for igual a opção 1, senão, vai ser atribuído o valor "Sábado", se for qualquer coisa diferente da opção 1.
+                Então, ou uma coisa ou outra, apenas!
+
+**ESTRUTURA CONDICIONAL SWITH / CASE**
+- swith = dependendo de
+- case = caso
+
+swith (variável){
+        case valor1:
+                apresentar...;
+        caso valor2:
+                apresentar...;
+}
+
+OBS.: Mais indicado quando você compara uma variável só, com vários valores possíveis. Melhor para menus, status, enums... ruim para lógicas complexas, condições compostas.
+
+OBS.: quando rodar o SWITH, o programa identificará o caso indicado e rodará a partir dele, até que tenha passado por todos os outros CASEs. Para que isso não aconteça, para que ele rode APENAS o caso que você desejava, você pode indicar um BREAK, que fará ele encerrar o swith.
+        Exp.:
+                swith (fruta){
+                        case 1:
+                                System.out.println("Maçã");
+                                break;
+                        case 2:
+                                System.out.println("Banana");
+                                break;
+                }
+
+OBS.: outra ferramenta no SWITH é o DEFAULT, que indica que se a ação foi qualquer outra diferente das ações informadas, ela também terá sua ação.
+        Exp.:
+                swith (escolha){
+                        case 1:
+                                System.out.println("Sim");
+                                break;
+                        case 2:
+                                System.out.println("Não");
+                                break;
+                        default:
+                                System.out.println("Escolha errada");
+
+                }
+
+OBS.: você pode agrupar casos para o mesmo resultado.
+        Exp.:
+                swith (jutsuNinja){
+                        case 1:
+                        case 2:
+                                System.out.println("Naruto");
+                                break;
+                        case 3:
+                        case 4:
+                                System.out.println("Sasuke");
+                                break;
+                }
+
+OBS.: a configuração do CASE no Swith pode ser escrita atravéz de "->" para sinalizar a ação.
+        Exp.:
+                swith (semana){
+                        case 1 -> System.out.println("Domingo");
+                        case 2 -> System.out.println("Segunda");
+                        case 3 -> System.out.println("Terça");
+                        case 4 -> System.out.println("Quarta");
+                        case 5 -> System.out.println("Quinta");
+                        case 6 -> System.out.println("Sexta");
+                        case 7 -> System.out.println("Sábado");
+                        default -> System.out.println("Opção Inválida");
+                }
+DICA: essa forma també, pode ser agrupada:
+        Exp.:
+                case 1, 7 ->{}
+
+OBS.: você pode utilizar um swith para atribuir valor à uma variável.
+        Exp.:
+                var variavel = swith (option){
+                        case 1 -> "Pedro"
+                        case 2 -> "Guilherme"
+                }
+
+**ESTRUTURA DE REPETIÇÃO FOR**
+- for = para
+
+OBS.: indicado para quando você sabe quantas vezes vai repetir. Melhor para listas, arrays, loops contados... forçar FOR quando não sabe quantas vezes vai repetir, não sabe o limite, fica um código feio.
+
+OBS.: em JAVA, as condições do FOR precisam ser divididas por ";".
+        Exp.:
+                for (var i = 1; i < 10; i++){
+                        System.out.println(i);
+                }
+
+**ESTRUTURA DE REPETIÇÃO WHILE / DO WHILE**
+- while = enquanto
+- do while = faça enquanto
+
+while (condição){
+        execute...
+}
+ou seja, enquanto a condição não for atendida, será repetido a execução.
+
+OBS.: WHILE é muito usado quando você não sabe quantas vezes vai rodar. Melhor para esperar algo acontecer, mas pode virar um loop infinito se vacilar.
+
+do {
+        execução...
+} while (condição);
+ou seja, faça PELO MENOS UMA VEZ e depois repita até atingir a condição.
+
+OBS.: use DO WHILE quando a ação precisa acontecer antes da verificação. Melhor para menus e input de usuário, mas quase sempre é subtituível por WHILE, então, só use quando fizer sentido.
 
 
 
@@ -158,16 +290,6 @@ isso, em contadores, pode gerar um erro, pois ele apresentará duas vezes o valo
 
 
 
-
-
-
-
-
-
-
-
-
-.equals --->>> pode substituir o == em um if/else para caso a comparação for de strings. É interessante deixar o "==" para quando for comparado números.
 
 
 
@@ -208,3 +330,4 @@ isso, em contadores, pode gerar um erro, pois ele apresentará duas vezes o valo
 
 - Continuar de:
         => Estruturas de Controle em Java
+                => Exercícios
