@@ -1,5 +1,5 @@
 
-import java.time.OffsetDateTime;
+//import java.time.OffsetDateTime;
 import java.util.Scanner;
 
 public class Main {
@@ -105,8 +105,88 @@ public class Main {
                 var diferenca = idade1 - idade2;
                 System.out.printf("%s e %s, a diferença de idade entre vocês é de %s anos.", nome1, nome2, diferenca);
      */
-    // MÓDULO - ESTRUTURAS DE CONTROLE EM JAVA
+    /** MÓDULO - ESTRUTURAS DE CONTROLE EM JAVA
 
+        //EXERCÍCIO 1
+            //Escreva um código onde o usuário entra com um número e seja gerada a tabuada de 1 a 10 desse número.
+                System.out.println("A tabuada de:");
+                var numero = scanner.nextInt();
+                for (var i = 1; i <= 10; i++){
+                    var resultado = numero * i;
+                    System.out.printf("%s x %s = %s \n", numero, i, resultado);
+                }
+
+        //EXERCÍCIO 2
+            //Escreva um código onde o usuário entra com sua altura e peso, seja feito o cálculo do seu IMC e seja exibida a mensagem de acordo com seu resultado.
+            //fórmula = peso / (altura * altura)
+                System.out.println("Qual seu peso? (Kg)");
+                var peso = scanner.nextDouble();
+                System.out.println("Qual sua altura? (m)");
+                var altura = scanner.nextDouble();
+                var imc = peso / (altura * altura);
+
+                if (imc <= 18){
+                    System.out.println("Abaixo do peso");
+                } else if (imc <25) {
+                    System.out.println("Peso ideal");
+                } else if (imc <30) {
+                    System.out.println("Levemente acima do peso");
+                } else if (imc <35) {
+                    System.out.println("Obesidade Grau I");
+                } else if (imc <40) {
+                    System.out.println("Obesidade Grau II | Severa");
+                } else {
+                    System.out.println("Obesidade Grau III | Mórbida");
+                }
+
+        //EXERCÍCIO 3
+            //Escreva um código que o usuário entre com um primeiro número, um segundo número
+            //maior que o primeiro e escolhe entre as opções impar ou par, com isso o código
+            //deve informar todos os números pares ou impares (de acordo com a seleção inicial)
+            //no intervalo de números informados, incluindo os números informados e em ordem decrecente.
+                System.out.println("Informe um número:");
+                var num1 = scanner.nextInt();
+                System.out.println("Agora escolha um número maior que este:");
+                var num2 = scanner.nextInt();
+                System.out.println("Impar ou par?");
+                var tipo = scanner.next();
+
+                if (tipo.equalsIgnoreCase("impar")){
+                    for (int i = num2; i >= num1; i--){
+                        if (i % 2 != 0){
+                         System.out.println(i);
+                        }
+                    }
+                } else if (tipo.equalsIgnoreCase("par")){
+                    for (int i = num2; i >= num1; i--){
+                        if (i % 2 == 0){
+                            System.out.println(i);
+                        }
+                    }
+                } else {
+                    System.out.println("Operação Inválida");
+                }
+
+        //EXERCÍCIO 4
+            //Escreva um código onde o usuário informe um número inicial, posteriormente irá informar
+            //outros N números, a execução do código irá continuar até que o número informado dividido
+            //pelo número tenha resto diferente de 0 na divisão, números menores que o primeiro número
+            //devem ser ignorados.
+                System.out.println("Informe o número inicial:");
+                int numeroInicial = scanner.nextInt();
+
+                int numero;
+
+                 do {
+                      System.out.println("Informe um número:");
+                      numero = scanner.nextInt();
+
+                      if (numero < numeroInicial) {
+                            System.out.println("Número ignorado (menor que o inicial)");
+                      }
+
+                 } while (numero < numeroInicial || numero % numeroInicial == 0);
+
+        */
     }
-
 }
