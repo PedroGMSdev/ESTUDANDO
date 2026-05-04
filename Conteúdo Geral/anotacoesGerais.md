@@ -671,11 +671,21 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
 #### OffsetDateTime.now().getYear()
         `--->>> sinaliza que será pego o ANO ATUAL para ser trabalhado com ele.
 
-## IgnoreCase
+## IgnoreCase();
         `--->>> sinaliza que deve ser ignorado a diferença entre maiúscula e minúscula.
             Exp.:
                 scanner.next().equalsIgnoreCase("sim");
                         `--->>> ou seja, mesmo que o usuário informe "SIM", com letra maiúscula, o código reconhecerá como igual.
+
+## .toUpperCase();
+        `--->>> transforma todas as letras para maiúcula.
+
+## .trim();
+        `--->>> remove os espaços do começo e do final, do conteúdo informado pelo usuário.
+
+## .isEmpty()
+        `--->>> sinaliza que algo irá acontecer se o local estiver vazio.
+
 
 # *BANCO DE DADOS*
 

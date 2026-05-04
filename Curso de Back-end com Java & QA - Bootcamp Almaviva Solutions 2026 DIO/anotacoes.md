@@ -283,6 +283,39 @@ ou seja, faça PELO MENOS UMA VEZ e depois repita até atingir a condição.
 
 OBS.: use DO WHILE quando a ação precisa acontecer antes da verificação. Melhor para menus e input de usuário, mas quase sempre é subtituível por WHILE, então, só use quando fizer sentido.
 
+# PROGRAMAÇÃO ORIENTADA A OBJETO
+
+__________________________________**JAVA E A ARTE DE ABSTRAÇÃO COM CLASSES E ENCAPSULAMENTO**__________________________________
+
+**CRIANDO A PRIMEIRA CLASSE**
+
+CLASSE: base para criar objetos a partir dela. É como se fosse uma forma que você vai utilizar para fazer vários bolos de sabores diferentes, com o mesmo formato.
+Após criar a classe, você pode informar o molde que os objetos terão.
+        Exp.:
+                public class Pessoa { ----------------->>> quando criar uma nova "Pessoa"
+                        public String nome; ----------->>> essa pessoa deverá ter uma string para nome
+                        public int idade; ------------->>> essa pessoa deverá ter um inteiro pra idade
+                        public String sexo; ----------->>> essa pessoa deverá ter uma string para sexo
+                }
+
+Na Main...
+                var pessoa1 = new Pessoa ();
+                pessoa1.nome = "Pedro"
+                pessoa1.idade = 35
+                pessoa1.sexo = "Masculino"
+
+OBS.: você pode deixar os dados da classe privado, mas quando for chamar, deverá solicitar com ".get".
+        Exp.:
+                Na Pessoa.java, você vai colocar os elementos da classe como "private" e acrescentar:
+                        public String.getName{
+                                return nome;
+                        }
+                        public int.getAge{
+                                return idade;
+                        }
+
+                Na Main.java, quando for solicitar a exibição dos dados deverá chamar .get...
+                        System.out.println("Seu nome é " + pessoa1.getName());
 
 
 

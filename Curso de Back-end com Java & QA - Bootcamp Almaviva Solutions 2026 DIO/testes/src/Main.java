@@ -188,5 +188,18 @@ public class Main {
                  } while (numero < numeroInicial || numero % numeroInicial == 0);
 
         */
+
+    /** MÓDULO - ABSTRAÇÃO COM CLASSE E ENCAPSULAMENTO*/
+
+        //AULA - CRIANDO UMA CLASSE
+            var homem = new Pessoa();
+            homem.nome = "Pedro";
+            homem.idade = 35;
+
+            var mulher = new Pessoa();
+            mulher.nome = "Thatiany";
+            mulher.idade = 37;
+
+            System.out.printf("O homem se chama %s e a mulher %s, de idades %s e %s anos.", homem.nome, mulher.nome, homem.idade, mulher.idade);
     }
 }
