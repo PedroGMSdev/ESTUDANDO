@@ -564,6 +564,13 @@ list-style:
                     - none;
                             `--->> dispõe os itens de forma oculta.
 
+### flex-direction: --->>> direcionamento dentro do flex
+            `--->>> sinaliza em qual direção os itens do "display: flex;" vão ser dispostos:
+                    - column:
+                            `--->>> organiza os itens em coluna, um abaixo do outro.
+                    - row:
+                            `--->>> organiza os itens em linha, um ao lado do outro.
+
 float:
             `--->> muito utilizado em "display: block;", aplicando o FLOAT(flutuar) você dá o comando para os BLOCOS(block) do display indicado para que fiquem flutuanto, especificando o lado que deseja que fique.
         Exp.:
@@ -573,15 +580,16 @@ float:
 clear: both;
             `--->> vai limpar toda a configuração já aplicada aquele local indicado anteriormente por outras seções.
 
-padding:
-            `--->> aplica um espaçamento dentro da caixa indicada.
-                Exp.:
-                    padding: 10px;
 
-## margin:
-            `--->> aplica um espaçamento fora da caixa, afastando ela dos outros elementos.
+## margin: --->>> distanciamente externo
+            `--->> trabalha o espaçamento fora da caixa, afastando a caixa dos outros elementos que estão fora da caixa, como outras caixas, botões, textos...
                 Exp.:
                     margin: 20px;
+
+## padding: --->>> distanciamento interno
+        `--->>> trabalha o espaçamento de dentro da caixa, afastando o conteúdo de dentro das bordas da caixa, como o nome, a largura que a caixa vai tomar...
+                Exp.: 
+                    padding: 20px;
 
 ## position:
             `--->> trabalha com a posição do elemento.
