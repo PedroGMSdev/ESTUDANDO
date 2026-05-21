@@ -69,3 +69,38 @@ OBS.: caso o pacote de dados chegue à uma fila, que no caso tem uma capacidade 
     `--->>> refere-se ao volume de dados que são transmitidos ao mesmo tempo.
 
 #### ARQUITETURA DE CAMADAS
+    `--->>> divide as atividades da internet em PROTOCOLOS que definem o formato e a ordem das mensagens trocadas e também as ações realizadas na transmissão e/ou recebimento de uma mensagem ou evento.
+
+OBS.: Protocolos TCP e IP são um conjunto de protocolos criados pela Arquitetura de Camadas, onde o TCP é o protocolo da camada de transporte e IP o protrocolo da camada de rede.
+
+##### MODELO DE REFERÊNCIA OSI
+    `--->>> organiza as redes de computadores em camadas, onde cada camada fica responsável por um determinado serviço. Essas camadas, na ordem, são:
+        - Aplicação
+        - Apresentação
+        - Sessão
+        - Transporte
+        - Rede
+        - Enlace
+        - Físico
+
+##### ARQUITETURA TCP/IP ou INTERNET
+    `--->>> emprega quatro camadas:
+        - Aplicação
+        - Transporte
+        - Inter-rede
+        - Intrarrede
+    podendo dizer também:
+        - Aplicação
+        - Transporte
+        - Rede
+        - Enlace
+        - Físico
+    onde a camada "intrarrede" é dividida em ENLACE e FÍSICO.
+
+OBS.: o protocolo IP foi criado na década de 1980, facilitando o envio de pacotes entre redes.
+
+OBS.: a primeira rede de internet foi a ARPANet.
+
+## MODELO DE REFERÊNCIA OSI E ARQUITETURA TCP/IP´
+
+### DIVISÃO DA ESTRUTURA DAS REDES EM CAMADAS
