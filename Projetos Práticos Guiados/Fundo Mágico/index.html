@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundo Mágico</title>
-    
+
 </head>
+
 <body>
-    
+    <header class="cabecalho">
+        <h1>Fundo Mágico</h1>
+        <p class="subtitulo">Transforme suas ideias em backgrounds incríveis com o poder da IA. Descreva o que você
+            imagina e veja a magia acontecer.</p>
+    </header>
+    <main class="conteudo">
+        <section class="card main-card">
+            <h2 class="card-header">Descreva o background que você deseja</h2>
+            <form action="">
+                <textarea id="descricao" >Ex: um gradiente </textarea>
+            </form>
+            <button>Gerar Background Mágico</button>
+        </section>
+
+        <section class="preview-card" id="preview-section"></section>
+
+        <section class="code-grid" id="resultado">
+            <div class="codigoHTML"></div>
+            <div class="codigoCSS"></div>
+        </section>
+    </main>
 </body>
+
 </html>

@@ -58,6 +58,17 @@ As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do 
         Exp.:
             <a href="pagina2.html" target="_blank"></a>
 
+### <span></span>
+        `--->> evidencia um local, facilitando o trabalho de modificação ou atribuição de identificadores nele.
+
+### <label></label>
+        `--->> anexa uma informação ao local informado, geralmente para identificar para quê serve aquele campo.
+            Exp.:
+                <label>E-mail</label>
+
+## ATRIBUTOS
+        `--->> informação extra que você coloca dentro da TAG para configurar ou modificar o comportamento dela.
+
 ### class=" "
         `--->> cria uma identificação para o local indicado, chamado CLASSE.
 
@@ -66,8 +77,72 @@ As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do 
 
 ### OBS.: uma CLASSE pode ser repetida em vários elementos, mas um ID é único, não podendo ser atribuído à outro elemento.
 
-### <span></span>
-        `--->> evidencia um local, facilitando o trabalho de modificação ou atribuição de identificadores nele.
+### action=" "
+        `--->> usado principalmente na TAG <form>, define para onde os dados do formulário serão enviados, que é o local informado entre " ".
+            Exp.:
+                <form action="/login">
+                    `--->> informa que esse formulário vai pegar os dados (action) e enviará para "/login".
+
+### placeholder=" "
+        `--->> geralmente usado em <textarea> ou <input>, ele mostra um texto de dica dentro do campo, antes do usuário digitar algo. Quando o usuário começa a digitar, este texto some. Serve para dar uma sugestão rápida do que deve ser escrito naquele local.
+
+### type=" "
+        `--->> mais usado em input, define o tipo/comportamento de um elemento, ou seja, identifica que tipo de informação será informada naquele local, podendo ser:
+            - text:
+                `--->> texto.
+            - email:
+                `--->> entende que aquilo é um e-mail, e pode até validar automaticamente.
+            - password:
+                `--->> sinaliza que será um local de informar senha, e esconde os caracteres.
+            - button:
+                `--->> botão.
+            - submit:
+                `--->> aquele local servirá para envio de formulários Quando o usuário clica no botão, o formulário é enviado e os dados vão para o ACTION do <form>. O navegador pega os inputs, coleta os valores e envia para o backend.
+                    Exp.:
+                        <form action="/login" method="POST">
+                            <input type="email" name="email">
+                            <input type="password" name="senha">
+
+                            <input type="submit" value="Entrar">
+                        </form>
+                            `
+                              `--->> informa que ao clicar o e-mail e a senha serão enviados para "/login" usando POST.
+                DICA: hoje em dia, em projetos modernos, geralmente é usado <button type="submit"> porque é mais flexível que <input type="submit">.
+            - checkbox:
+                `--->> é utilizado quando o usuário pode marcar várias opções ao mesmo tempo. Muito usado em "Aceitar Termos", selecionar interesses, filtros, multiplas escolhas...
+                    Exp.:
+                        <input type="checkbox"> Músicas
+                        <input type="checkbox"> Filmes
+                        <input type="checkbox"> Jogos
+            - radio:
+                `--->> diferente do CHECKBOX, o usuário só pode escolher UMA das opções.
+                    Exp.:
+                        <input type="radio" name="pagamento">
+                            Pix
+                        <input type="radio" name="pagamento">
+                            Cartão
+                        <input type="radio" name="pagamento">
+                            Boleto
+                                `
+                                  `--->> OU escolhe pix OU cartão OU boleto, nunca vários ao mesmo tempo.
+                DICA: o segredo do RADIO é o atributo NAME. Se o NAME for o mesmo (Exp.: name="pagamento") para todos o navegador entende que eles competem entre si.
+
+### OBS.: informar o TYPE é importante pois muda o comportamento, validação, teclado no celular e acessibilidade. Por exemplo, no celular, informar TYPE como EMAIL já faz o teclado abrir com @, para facilitar.
+
+### name=" "
+
+### value=" "
+
+### method=" "
+
+### for=" "
+        `--->> geralmente usado em IMPUT, ele conecta a LABEL ao INPUT, para quando o usuário clicar no texto "E-mail" o INPUT receber foco automaticamente, melhorando a acessibilidade, facilitando a navegação, aumentando a área clicável e ajuda leitores de tela.
+
+    OBS.: o FOR deve ser igual ao ID do input.
+            Exp.:
+                <label for="email"> E-mail </label>
+                <input id="email" type="email">
+
 
 ## TAGS SEMANTICAS
 Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
@@ -76,8 +151,11 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
             `--->> informa a parte do site equivalente ao CABEÇALHO.
     OBS.: o HEADER não obrigatoriamente precisa ser usado apenas uma vez. Ele pode ser usado também para sinalizar um cabeçalho de artigo, um cabeçalho de sessão...
 
+### <main></main>
+            `--->> informa a área principal do site, sinalizando a área mais importante.
+
 ### <section></section>
-            `--->> informa a área principal do site.
+            `--->> informa a um agrupamento de sessão do site, colocando junto um conteúdo relacionado com outro. Pode haver mais de uma SECTION no código, e cada uma representa um assunto diferente.
 
 ### <aside></aside>
             `--->> informa a área do conteúdo secundário do site, geralmente usado para conteúdos laterais ou periféricos.
