@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 4. Fazer uma requisição HTTP (POST) para a API do n8n, enviando o texto do formulário no corpo da requisição em formato JSON.
     // OBS.: muito usado para tratamento de erro
             try{
-                const response = fetch('', {
+                const response = fetch('https://pedrogms.app.n8n.cloud/webhook/1b63ab2b-0b8c-4fdf-a7e9-f129a951e18e', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({descricaoValor})
