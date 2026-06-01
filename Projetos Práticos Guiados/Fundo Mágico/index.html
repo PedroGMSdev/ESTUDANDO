@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundo Mágico</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -17,19 +22,31 @@
     <main class="conteudo">
         <section class="card main-card">
             <h2 class="card-header">Descreva o background que você deseja</h2>
-            <form action="">
-                <textarea id="descricao" >Ex: um gradiente </textarea>
+            <form action="" class="form-group">
+                <textarea id="descricao"
+                    placeholder="Ex: crie um background animado que muda de cor do azul suave para o azul escuro">
+                </textarea>
+
+                <button id="botaoGerar" class="botaoMagico">
+                    <span id="textoBotao">Gerar Background Mágico</span>
+                </button>
             </form>
-            <button>Gerar Background Mágico</button>
         </section>
 
         <section class="preview-card" id="preview-section"></section>
 
         <section class="code-grid" id="resultado">
-            <div class="codigoHTML"></div>
-            <div class="codigoCSS"></div>
+            <div class="card code-card">
+                <h3 class="code-titulo">Código HTML</h3>
+                <pre id="codigoHTML" class="code-block"></pre>
+            </div>
+            <div class="card code-card">
+                <h3 class="code-titulo">Código CSS</h3>
+                <pre id="codigoCSS" class="code-block"></pre>
+            </div>
         </section>
     </main>
 </body>
 
+<script src="script.js"></script>
 </html>

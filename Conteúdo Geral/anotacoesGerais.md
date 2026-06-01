@@ -483,16 +483,50 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 # *CSS*
 
-## OBS.: toda vez que for trabalhar no CSS com uma classe, é colocado um ponto e o nome da classe:
-    Exp.:
-        .menu {
+## SELETORES
+            `--->> indicador de qual área será modificada.
+### Seletor de TAG
+            `--->> usado para modificar elementos de um mesmo grupo de TAGs.
+                Exp.:
+                    p {
 
-        }
-    quando o elemento trabalhado for um id, é colocado um # antes do nome do id:
-    Exp.:
-        #meuId {
-            
-        }
+                    }
+                    `--->> vai modificar todas as TAGs <p>.
+### Seletor de Classe
+            `--->> usado para modificar apenas elementos com mesma CLASSE, usando um "." antes do nome da classe escolhida.
+                Exp.:
+                    .classe {
+
+                    }
+                    `--->> vai modificar todos elementos com class="classe".
+### Seletor de Id
+            `--->> usado para modificar apenas elementos com o ID (identificador) informado, usando "#" antes do ID escolhido.
+                Exp.:
+                    #idEscolhido {
+
+                    }
+                    `--->> vai modificar o elemento com id="idEscolhido".
+            ATENÇÃO: o ID é algo único, apenas UM elemento pode possuir um id escolhido, diferente da CLASSE que pode ser atribuída à vários elementos.
+### Seletor Universal
+            `--->> usado no começo do CSS, é usado para aplicar modificação À TUDO na página, exceto ao que for criado modificações especificas logo depois, sendo utilizado apenas o "*" como seletor. Geralmente chamado de RESET DAS CONFIGURAÇÕES DOS NAVEGADORES, onde vai aplicar aquelas modificações ao seu site, independente do navegador que o usuário for usar.
+                Exp.:
+                    * {
+
+                    }
+### Seletor Descendente
+            `--->> usado para modificar o elemento informando a localização indicada.
+                Exp.:
+                    ul li {
+
+                    }
+                    `--->> vai aplicar a modificação nos itens da lista.
+### Seletor Múltiplo
+            `--->> usado para aplicar as modificações indicadas à mais de um grupo de elemento, informando os seletores separados por um espaço.
+                Exp.:
+                    p h1 {
+
+                    }
+                    `--->> vai modificar todas as TAGs <p> e <h1> com as mesmas modificações informadas.
 
 ## DICA: quando trabalhar com especificações lembrar que elas seguem os números informados da seguinte maneira:
     Exp.:
