@@ -10,6 +10,12 @@ __**ANÁLISE E DESENVOLVIMENTO DE SISTEMAS**__
 ### INTERNET
     `--->>> é um conjunto de rede de computadores que opera, basicamente, utilizando o protocolos TCP e IP, que interconecta bilhões de dispositivos de computação ao redor do mundo. Basicamente, uma rede conectada à outras redes.
 
+**COMPONENTES**
+    `--->>> pode-se definir a Internet de acordo com seus componentes de Software e Hardware que a formam. Pode-se dizer que ela é formada por três grandes partes:
+        1 - Sistemas finais: na qual se encontram hosts, ou os nós.
+        2 - Núcleo da Rede: na qual se encontram tecnologias para acesso dos nós aos roteadores.
+        3 - Redes de Acesso: na qual se encontram os roteadores.
+
 #### BORDA DA REDE ou SISTEMAS FINAIS
     `--->>> dispositivos que vão executar algum tipo de aplicação ou serviço que a internet oferece.
         Exp.:
@@ -24,6 +30,10 @@ __**ANÁLISE E DESENVOLVIMENTO DE SISTEMAS**__
             - roteadores
             - switches
             - enlaces
+
+**ISP - Provedor de Serviço de Internet**
+    `--->>> organizam os Núcleos de Rede pelos quais os usuários contratam serviços para se conectar à Internet.
+        Um exemplo é o ISP REGIONAL, que atua em uma região relativamente pequena (não mais que um município) conectando usuários ou provedores dessa região.
 
 #### REDE DE ACESSO
     `--->>> pontos de comunicação que permitirão acesso ao núcleo da rede.
@@ -65,6 +75,13 @@ OBS.: caso o pacote de dados chegue à uma fila, que no caso tem uma capacidade 
 ##### ATRASO FIM A FIM
     `--->>> são aquelas aplicações que eu dependo de uma resposta rápida, como mandar uma mensagem e ser respondido na hora, como uma transmissão ao vivo ou um bate-papo, onde se demorar para receber o pacote de dados influencia na fluidez.
 
+**TIPOS DE ATRASO**
+    `--->>> existem 4 tipos de atraso:
+        - de Processamento: tempo gasto em um dispositivo para examinar o cabeçalho do pacote e determinar por qual saída deve encaminhá-lo.
+        - de Fila: tempo que o pacote passa esperando ser transmitido no ENLACE, ou seja, quanto mais pacotes tem na fila para serem enviados maior será o atraso.
+        - de Transmissão: tempo que demora durante o processo de transmissão para ser empurrado (enviado) todo o conteúdo ATÉ O ENLACE, mas não contando com a distância entre os roteadores, e mais com o tamanho do pacote.
+        - de Propagação: tempo que demora entre o envio do ENLACE até o NÓ, levando em conta a velocidade do meio físico, como fibra ótica, fios de cobre... esse atraso diz mais em relação à distância percorrida entre os roteadores que o tamanho do pacote enviado.
+
 ##### VAZÃO
     `--->>> refere-se ao volume de dados que são transmitidos ao mesmo tempo.
 
@@ -100,6 +117,17 @@ OBS.: Protocolos TCP e IP são um conjunto de protocolos criados pela Arquitetur
 OBS.: o protocolo IP foi criado na década de 1980, facilitando o envio de pacotes entre redes.
 
 OBS.: a primeira rede de internet foi a ARPANet.
+
+#### ENCAPSULAMENTO
+    `--->>> é a compactação de informações de camada por camada, onde cada camada fará a criação de um cabeçalho e a compactação de privacidade do conteúdo para que apenas a camada recebedora igual possa receber aqueles dados, evitando vasamento de informações para outras camadas diferentes.
+        Exp.:
+            Camada de Aplicação para Camada de Aplicação
+            Camada de Transporte para Camada de Transporte
+
+#### HISTÓRICO DA INTERNET
+
+##### PROTOCOLO IP
+    `--->>> implementado 
 
 ## MODELO DE REFERÊNCIA OSI E ARQUITETURA TCP/IP´
 
