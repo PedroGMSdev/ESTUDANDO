@@ -4,10 +4,12 @@ __**ANÁLISE E DESENVOLVIMENTO DE SISTEMAS**__
 
 ## REDES DE COMPUTADORES E A INTERNET
 
-### REDES DE COMPUTADORES
+### CONCEITOS BÁSICOS
+
+#### REDES DE COMPUTADORES
     `--->>> podem ser definidas como um conjunto de módulos processadores interligados por um sistema de comunicação, capazes de trocar informações e compartilhar recursos.
 
-### INTERNET
+#### INTERNET
     `--->>> é um conjunto de rede de computadores que opera, basicamente, utilizando o protocolos TCP e IP, que interconecta bilhões de dispositivos de computação ao redor do mundo. Basicamente, uma rede conectada à outras redes.
 
 **COMPONENTES**
@@ -42,6 +44,8 @@ __**ANÁLISE E DESENVOLVIMENTO DE SISTEMAS**__
 
 DICA: sempre que desenvolver uma aplicação, informar para o cliente o mínimo de conexão que ele precisa para o funcionamento esperado do serviço.
 
+### PARÂMETROS DE AVALIAÇÃO
+
 #### ATRASO ou RETARDO
     `--->>> tempo que demora pra uma informação chegar de um local A para o local B. Entre a máquina A e a máquina B existem vários fatores que podem causar o retardo, como a propagação da internet, servidores, as configurações da própria máquina...
 
@@ -57,7 +61,14 @@ DICA: sempre que desenvolver uma aplicação, informar para o cliente o mínimo 
     - Propagação:
         `--->>> diretamente ligado à distância entre o ponto inicial e o ponto final, podendo ser influenciado também pelo tipo de cabo de transmissão.
 
-##### PERDA
+**TIPOS DE ATRASO**
+    `--->>> existem 4 tipos de atraso:
+        - de Processamento: tempo gasto em um dispositivo para examinar o cabeçalho do pacote e determinar por qual saída deve encaminhá-lo.
+        - de Fila: tempo que o pacote passa esperando ser transmitido no ENLACE, ou seja, quanto mais pacotes tem na fila para serem enviados maior será o atraso.
+        - de Transmissão: tempo que demora durante o processo de transmissão para ser empurrado (enviado) todo o conteúdo ATÉ O ENLACE, mas não contando com a distância entre os roteadores, e mais com o tamanho do pacote.
+        - de Propagação: tempo que demora entre o envio do ENLACE até o NÓ, levando em conta a velocidade do meio físico, como fibra ótica, fios de cobre... esse atraso diz mais em relação à distância percorrida entre os roteadores que o tamanho do pacote enviado.
+
+#### PERDA
     `--->>> quando no decorrer da transmissão você term perda de dados do total. Você pode classificar essa perda quando, separando mentalmente esse arquivo completo em seguimentos, você analisa:
         - não se admite perda:
             `--->>> quando não se pode perder nenhum desses segmentos, senão algo não funcionará como esperado.
@@ -72,18 +83,13 @@ DICA: sempre que desenvolver uma aplicação, informar para o cliente o mínimo 
 
 OBS.: caso o pacote de dados chegue à uma fila, que no caso tem uma capacidade finita para receber, e essa fila esteja cheia, sem espaço para armazenar o pacote, esse pacote será descartado e perdido.
 
-##### ATRASO FIM A FIM
+#### ATRASO FIM A FIM
     `--->>> são aquelas aplicações que eu dependo de uma resposta rápida, como mandar uma mensagem e ser respondido na hora, como uma transmissão ao vivo ou um bate-papo, onde se demorar para receber o pacote de dados influencia na fluidez.
 
-**TIPOS DE ATRASO**
-    `--->>> existem 4 tipos de atraso:
-        - de Processamento: tempo gasto em um dispositivo para examinar o cabeçalho do pacote e determinar por qual saída deve encaminhá-lo.
-        - de Fila: tempo que o pacote passa esperando ser transmitido no ENLACE, ou seja, quanto mais pacotes tem na fila para serem enviados maior será o atraso.
-        - de Transmissão: tempo que demora durante o processo de transmissão para ser empurrado (enviado) todo o conteúdo ATÉ O ENLACE, mas não contando com a distância entre os roteadores, e mais com o tamanho do pacote.
-        - de Propagação: tempo que demora entre o envio do ENLACE até o NÓ, levando em conta a velocidade do meio físico, como fibra ótica, fios de cobre... esse atraso diz mais em relação à distância percorrida entre os roteadores que o tamanho do pacote enviado.
-
-##### VAZÃO
+#### VAZÃO
     `--->>> refere-se ao volume de dados que são transmitidos ao mesmo tempo.
+
+### CAMADAS DE PROTOCOLO E MODELOS DE SERVIÇO
 
 #### ARQUITETURA DE CAMADAS
     `--->>> divide as atividades da internet em PROTOCOLOS que definem o formato e a ordem das mensagens trocadas e também as ações realizadas na transmissão e/ou recebimento de uma mensagem ou evento.
@@ -124,11 +130,33 @@ OBS.: a primeira rede de internet foi a ARPANet.
             Camada de Aplicação para Camada de Aplicação
             Camada de Transporte para Camada de Transporte
 
-#### HISTÓRICO DA INTERNET
+### HISTÓRICO DA INTERNET
 
-##### PROTOCOLO IP
-    `--->>> implementado 
+#### ARPAnet, A PRIMEIRA INTERNET
+    `--->>> surgida nos anos de 1960, criada para o exercito, a ARPAnet durou até os anos 90.
 
-## MODELO DE REFERÊNCIA OSI E ARQUITETURA TCP/IP´
+#### PROTOCOLO IP
+    `--->>> implementado em 1983, o protocolo TCP/IP se tornou o novo padrão de protocolo de máquinas.
+
+## MODELO DE REFERÊNCIA OSI E ARQUITETURA TCP/IP
 
 ### DIVISÃO DA ESTRUTURA DAS REDES EM CAMADAS
+
+#### MODELO EM CAMADAS
+    `--->>> por ser uma tarefa complexa e que envolve várias funções que precisam ser executadas para garantir uma comunicação eficiente, a estrutura da transmissão de dados foi dividida em camadas que são responsáveis por realizar um conjunto de atividades, tornando o precesso algo menos complexo e tornando a comunicação uma tarefa realizável.
+
+#### ELEMENTOS DA CAMADA
+    `--->>> cada camada de arquitetura de redes possui três "elementos" básicos que permitem que as tarefas necessárias para a transmissão de dados sejam corretamente divididas e executadas, sendo eles:
+        - Serviço: conjunto de funcionalidades que uma certa camada oferece, como a camada responsável pela verificação de erros de transmissão, ou a camada responsável por determinar o endereço do computador... o serviço diz O QUE a camada faz e NÃO COMO ela faz.
+        - Protocolo: responsável por COMO A CAMADA FAZ, sendo assim a implementação do serviço da camada, ou seja, executa o que a camada se propôs a fazer.
+        - Interface: ponto de comunicação entre camadas que permite que uma camada acessa imediatamente a inferior, podendo assim utilizar os serviços da outra camada vizinha.
+
+### CAMADAS DO MODELO OSI
+    `--->>> o modelo de referência OSI organiza a estrutura de rede em sete camadas e define o que cada uma faz, sem definir COMO faz. As camadas podem ser agrupadas em três subgrupos:
+        - AS TRÊS CAMADAS MAIS ALTAS (Aplicação, Apresentação e Sessão): estão relacionadas as funções que dão SUPORTE AOS USUÁRIOS para que possão acessar os diversos serviços de redes.
+        - AS TRÊS CAMADAS MAIS BAIXAS (Rede, Enlace e Física): estão relacionadas as operações ligadas aos ASPECTOS DA MOVIMENTAÇÃO DOS DADOS de um dispositivo para outro, dando SUPORTE ÀS OPERAÇÕES DE REDE.
+        - CAMADAS DE TRANSPORTE (Transporte): faz a interligação entre o SUPORTE AO USUÁRIO e o SUPORTE À REDE, permitindo que os dados que chegaram das camadas mais baixas estejam em condições de serem utilizados pelas camadas mais altas.
+
+#### FUNCIONALIDADES DAS CAMADAS
+    `--->>> o modelo OSI define funcionalidades de cada camada do modelo, sendo elas:
+        - 
