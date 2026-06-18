@@ -181,12 +181,29 @@ OBS.: a primeira rede de internet foi a ARPANet.
 
         - Transporte: que mantém as mesmas funcionalidades, associado ao PROTOCOLO TPC, e confere confiabilidade.
 
-        - Internet: que é a mesma camada de REDE e permite que os dados injetados na rede pela máquina de origem possam alcançar o destino, associado ao PROTOCOLO IP.
+        - Internet: que é a mesma camada de REDE e permite que os dados injetados na rede pela máquina de origem possam alcançar o destino, associado ao PROTOCOLO IP. Essa camada também pode vir dividida em duas camadas, como:
+            > rede
+            > inter-rede
 
-        - Acesso à Rede: que englobou as camadas de ENLACE e FÍSICA, se ligando à qualquer coisa que pudesse ligar o dispositivo ao elace de tranmissão, associados à protocolos definidos pelas rede subjacentes (HOST-REDE).
+        - Acesso à Rede: que englobou as camadas de ENLACE e FÍSICA, se ligando à qualquer coisa que pudesse ligar o dispositivo ao elace de tranmissão, associados à protocolos definidos pelas rede subjacentes (HOST-REDE). Essa camada também pode vir nomeada como CAMADA DE ENLACE, HOST-REDE, INTRARREDE ou HOST-NETWORK.
 
 #### PROTOCOLOS
-
-    - TCP: conf
-    - UDP
-    - IP
+    `--->>> a arquitetuta TCP/IP tem foco principal na definição dos protocolos que devem ser empregados em cada uma das camadas, conhecido como PILHA DE PROTOCOLOS. Esses protocolos são:
+        
+        - CAMADA DE APLICAÇÃO, implemetados por meio de softwares que são executados nos diversos dispositivos computacionais. São eles:
+            > Web: HTTP, HTTPS
+            > Correio ELetrônico: SMTP, POP e IMAP
+            > Nomes: DNS
+            > Transferência de Arquivos: FTP, TFTP
+            > Áudio e Vídeo em Tempo Real: RTP
+            > Configuração Automática de Estações: DHCP
+        
+        - CAMADA DE TRANSPORTE, garantindo a entrega de processo a processo de todos os dados enviados pelo usuário. Os dois principais são:
+            > TCP: CONFERE CONFIABILIDADE, orientado a CONEXÃO, com controle de erros, de congestionamento e de fluxo. Define endereços das portas e define a mensagem da camada de aplicação em segmentos.
+            > UDP: NÃO CONFERE CONFIABILIDADE, NÃO orientado a CONEXÃO, não faz a maioria das funções da camada de rede. Existe, praticamente, apenas para permitir que uma mensagem seja encapsulada em um datagrama e entregue para o processo de destino correto, já que utiliza a porta para fazer a correta entrega na máquina de destino. IMPORTANTE para aplicações que demandam tempo de resposta baixo na comunicação.
+        
+        - CAMADA DE INTERNET, que permitem que os dados injetados na REDE pela máquina de origem possam alcançar o destino. O principal protocolo é:
+            > IP: tem por objetivo definir o endereço lógico e permitir o tratamento de datagramas para que possam ser roteados da origem até o destino. Ele é encontrado em duas versões principais que tem em comum o fato de NÃO serem orientados à conexão e NÃO TEREM CONFIABILIDADE, pois não realizam o tratamento de erros e os datagramas são enviados de forma independente, podendo chegar em ordem diferente de que foi enviado. Eles são:
+                * IP versão 4 (IPv4)
+                * IP versão 6 (IPv6)
+            > 
