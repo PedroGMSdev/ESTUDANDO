@@ -211,3 +211,32 @@ OBS.: a primeira rede de internet foi a ARPANet.
             > IGMP (Internet Group Message Protocol): o chamado comunicação multicast, que permite o envio de dados para um grupo de estações.
 
 ## CAMADAS DE APLICAÇÃO E TRANSPORTE
+
+### CAMADA DE APLICAÇÃO
+    `--->>> onde os softwares serão rodados quando as redes de comunicações começarem a usá-los. Como por exemplo, um software de pagamento, que recebe as confirmações se o pagamento no cartão foi aprovado ou não, é rodado na camada de aplicação.
+    
+#### ARQUITETURA DAS APLICAÇÕES
+    `--->>> aplicadas à CAMADA DE APLICAÇÃO, essas arquiteturas descrevem como os processos das aplicações se organizam e se comunicam. Essa arquitetura NÃO TRATAM de como os dados são transportados fisicamente pela rede. Entre as mais conhecidas estão:
+        - Cliente/Servidor:
+        - Peer-to-Peer:
+
+**-----------------------------------------------------------------------------------------------**
+- serviço web
+- serviço de nomes
+- serviço de correio
+- serviço de mensagens instantaneas
+
+-arquiteturas
+    - cliente/servidor:
+            - 
+    - pier to pier (compartilhamento de arquivos) (torrent) (pier = par):
+            - máquina conversando com máquina em tempo real
+            - vantagens e desvantagens
+    - hibrido
+
+- protocolos
+        - http e https
+        - dns
+        - correio eletronico
+                - smtp
+
