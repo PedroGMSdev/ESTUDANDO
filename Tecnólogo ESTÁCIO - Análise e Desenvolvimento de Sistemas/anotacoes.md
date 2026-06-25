@@ -253,17 +253,34 @@ OBS.: a primeira rede de internet foi a ARPANet.
 
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
+## FUNDAMENTOS DE REDES DE COMPUTADORES
+### CAMADA DE APLICAÇÃO
+#### ARQUITETURA DE CAMADA DE APLICAÇÃO
+##### CLIENTE/SERVIDOR
+    - Na arquitetura CLIENTE/SERVIDOR, o cliente faz a requisição, o servidor recebe e devolve a resposta.
+    - Os papeis do CLIENTE e do SERVIDOR são DISTINTOS, porém um mesmo PROCESSO ou aplicação PODE desempenhas ambos os papéis, dependendo do contexto.
+    - Na arquitetura Cliente/Servidor, o que define se uma entidade é cliente ou servidor não é o hardware, o sistema operacional ou a máquina em si, mas a função que o SOFTWARE, ou ALGORITMO EXECUTADO, está desempenhando na comunicação. Se o software SOLICITA um serviço ele atua como CLIENTE, se ele FORNECE ou RESPONDE ao serviço ele atua como SERVIDOR.
+    - Na arquitetura CLIENTE/SERVIDOR tradicional, o servidor já está em execução, aguardando requisições dos clientes. Então, quando chega uma requisição do cliente, o sistema operacional NÃO INICIA O SERVIDOR, ele apenas entrega a conexão ou mensagem ao processo servidor que já está rodando.
 
-## ARQUITETURA DE CAMADA DE APLICAÇÃO
-### CLIENTE/SERVIDOR
-- Na arquitetura CLIENTE/SERVIDOR, o cliente faz a requisição, o servidor recebe e devolve a resposta.
-- Os papeis do CLIENTE e do SERVIDOR são DISTINTOS, porém um mesmo PROCESSO ou aplicação PODE desempenhas ambos os papéis, dependendo do contexto.
-- Na arquitetura Cliente/Servidor, o que define se uma entidade é cliente ou servidor não é o hardware, o sistema operacional ou a máquina em si, mas a função que o SOFTWARE, ou ALGORITMO EXECUTADO, está desempenhando na comunicação. Se o software SOLICITA um serviço ele atua como CLIENTE, se ele FORNECE ou RESPONDE ao serviço ele atua como SERVIDOR.
-- Na arquitetura CLIENTE/SERVIDOR tradicional, o servidor já está em execução, aguardando requisições dos clientes. Então, quando chega uma requisição do cliente, o sistema operacional NÃO INICIA O SERVIDOR, ele apenas entrega a conexão ou mensagem ao processo servidor que já está rodando.
+##### PEER-TO-PEER (P2P)
+    - Na arquitetura P2P, não existe necessariamente um servidor central responsável por armazenar todas as informações. Os dados podem ficar DISTRIBUÍDOS entre os PRÓPRIOS NÓS (peers) da rede. Além disso, muitos sistemas P2P distribuem não apenas os arquivos dos usuários, mas também informações necessárias para o funcionamento da rede, como localização dos recursos, tabelas de roteamento, índice de busca e metadados do sistema. Então, SIM, a DISTRIBUIÇÃO DE DADOS E INFORMAÇOES DE CONTROLE é uma das características marcante da arquitetura P2P, permitindo assim uma FORMA DE ARMAZENAMENTO distribuída desde as INFORMAÇÕES DO SISTEMA.
+    - Uma característica importante nessa arquitetura é que os participantes costumam ter FUNÇÕES SEMELHANTES, e não funções rigidamente separadas como ocorre em cliente/servidor. Em uma rede P2P, cada NÓ (peer) pode fornecer recursos, solicitar recursos, armazenar dados e encaminhar informações.
+    - Uma das grandes VANTAGENS da P2P é a ALTA ESCALABILIDADE. À medida que novos NÓS entram na rede, eles não apenas consomem recursos, mas também podem contribuir com processamento, armazenamento e largura de banda, ajudando a rede a crescer sem depender de um único servidor central.
+    - Os DESAFIOS mais comuns são segurança, gerenciamento da rede, disponibilidade dos peers, consistência dos dados, controle e monitoramento. Essas coisas costumam ser PROBLEMA no P2P.
+    - Na arquitetura P2P, os processos (peers) podem se comunicar DIRETAMENTE ENTRE SI, sem a necessidade de um servidor central intermediando todas as comunicações, compartilhando as responsabilidades de PROCESSAMENTO, ARMAZENAMENTO, COMUNICAÇÃO e FORNECIMENTO DE RECURSOS. Alguns sistemas P2P podem utilizar servidores para funções auxiliares como descoberta de peers, autenticação ou indexação de recursos, mas a TRANSFERÊCIA DE DADOS entre peers continua diretamente, sem que o servidor precise intermediar toda a comunicação.
 
-### PEER-TO-PEER (P2P)
-- Na arquitetura P2P, não existe necessariamente um servidor central responsável por armazenar todas as informações. Os dados podem ficar DISTRIBUÍDOS entre os PRÓPRIOS NÓS (peers) da rede. Além disso, muitos sistemas P2P distribuem não apenas os arquivos dos usuários, mas também informações necessárias para o funcionamento da rede, como localização dos recursos, tabelas de roteamento, índice de busca e metadados do sistema. Então, SIM, a DISTRIBUIÇÃO DE DADOS E INFORMAÇOES DE CONTROLE é uma das características marcante da arquitetura P2P, permitindo assim uma FORMA DE ARMAZENAMENTO distribuída desde as INFORMAÇÕES DO SISTEMA.
-- Uma característica importante nessa arquitetura é que os participantes costumam ter FUNÇÕES SEMELHANTES, e não funções rigidamente separadas como ocorre em cliente/servidor. Em uma rede P2P, cada NÓ (peer) pode fornecer recursos, solicitar recursos, armazenar dados e encaminhar informações.
-- Uma das grandes VANTAGENS da P2P é a ALTA ESCALABILIDADE. À medida que novos NÓS entram na rede, eles não apenas consomem recursos, mas também podem contribuir com processamento, armazenamento e largura de banda, ajudando a rede a crescer sem depender de um único servidor central.
-- Os DESAFIOS mais comuns são segurança, gerenciamento da rede, disponibilidade dos peers, consistência dos dados, controle e monitoramento. Essas coisas costumam ser PROBLEMA no P2P.
-- Na arquitetura P2P, os processos (peers) podem se comunicar DIRETAMENTE ENTRE SI, sem a necessidade de um servidor central intermediando todas as comunicações, compartilhando as responsabilidades de PROCESSAMENTO, ARMAZENAMENTO, COMUNICAÇÃO e FORNECIMENTO DE RECURSOS. Alguns sistemas P2P podem utilizar servidores para funções auxiliares como descoberta de peers, autenticação ou indexação de recursos, mas a TRANSFERÊCIA DE DADOS entre peers continua diretamente, sem que o servidor precise intermediar toda a comunicação.
+##### PROTOCOLOS DA CAMADA DE APLICAÇÃO
+    - Cabe ao protocolo da camada de aplicação definir como funcionam os processos de uma aplicação.
+    - Os protocolos da camada de aplicação tem FUNÇÕES que DEFINEM, entre outras coisas:
+        > Os TIPOS DE MENSAGENS que serão trocadas, como por exemplo, requisição e resposta no HTTP.
+        > A SINTAXE das mensagens, como os campos são organizados, as regras de formatação e estrutura das mensagens trocadas entre cliente e servidor.
+        > A SEMÂNTICA dos campos, como o SIGNIFICADO das informações contidas.
+        > As REGRAS DE ENVIO e RECEBIMENTO das mensagens, ou seja, quando um processo pode enviar e responder mensagens.
+
+###### SISTEMA DE CORREIO ELETRÔNICO
+    - Um sistema de correio eletrônico é um exemplo de sistema implementado com base em uma séries de protocolos. Dentre esses protocolos encontramos:
+        > SMTP
+        > IMAP
+        > POP3
+
+### CAMADA DE TRANSPORTE
