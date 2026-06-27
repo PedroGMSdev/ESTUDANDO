@@ -284,3 +284,40 @@ OBS.: a primeira rede de internet foi a ARPANet.
         > POP3
 
 ### CAMADA DE TRANSPORTE
+    - As APLICAÇÕES devem utilizar os serviços da camada de transporte, que pode ser um serviço com ou sem conexão. Alguns exemplos de aplicações que utilizam serviço de transporte, são:
+        > COM conexão: 
+            - SERVIÇO DE CORREIO ELETRÔNICO (SMTP, POP3 e IMAP), utilizando o protocolo TCP.
+            - SERVIÇO WEB (HTTP e HTTPS), utilizando o protocolo TCP.
+            - SERVIÇO DE TRANSFERÊNCIA DE ARQUIVOS (FTP), utilizando o protocolo TCP
+        > SEM conexão:
+            - SERVIÇO DE NOMES (DNS), geralmente utilizando o protocolo UDP.
+            - SERVIÇO DE TELEFONIA (VoIP), normalmente utiliza o protocolo UDP.
+
+#### ENDEREÇAMENTO DO NÍVEL DE TRANSPORTE
+    - No nível (camada) de transporte, o endereçamento é feito por números de porta, que identificam qual aplicação ou processo deve receber os dados.
+    - A correção de erros NÃO é a função do ENDEREÇAMENTO na camada de transporte. A CORREÇÃO DE ERROS é uma função do PROTOCOLO, não do endereçamento.
+    - Apesar de ser uma função do protocolo TCP, o ENCERRAMENTO DA CONEXÃO NÃO TEM RELAÇÃO com o ENDEREÇAMENTO.
+    - A DEMULTIPLEXAÇÃO é uma função da camada de transporte que consiste em entregar os dados recebidos à aplicação correta, utilizando os NÚMEROS DE PORTA, ou seja, ENDEREÇAMENTO da camada de transporte, assim também como a MULTIPLEXAÇÃO. Assim, mesmo que vários programas estejam usando a rede ao mesmo tempo, cada segmento é encaminhado ao processo correspondente.
+    - A SEGMENTAÇÃO DAS MENSAGENS também é uma função da camada de transporte, mas NÃO é realizada pelo ENDEREÇAMENTO.
+
+#### PROTOCOLO UDP
+    - O UDP possui um CHECKSUM que VERIFICA SE HOUVE ERROS durante a transmissão dos dados. Se NÃO HOUVER ERROS o datagrama é entregue à aplicação, se forem DETECTADOS ERROS o datagrama é DESCARTADO. Porém, diferente do TCP, o UDP NÃO CORRIGE ERROS NEM RETRANSMITE os dados perdidos ou corrompidos, ele apenas DETECTA erros.
+    - O UDP é um protocolo sem conexão e não confiável, ou seja, NÃO GARANTE ENTREGA, NÃO CONFIRMA RECEBIMENTO e NÃO FAZ RETRANSMISSÃO de pacotes perdidos.
+    - O UDP realiza MULTIPLEXAÇÃO e DEMULTIPLEXAÇÃO através do ENDEREÇAMENTO usando NÚMEROS DE PORTA, sendo:
+            > Multiplexação: várias aplicações podem enviar dados pela rede AO MESMO TEMPO.
+            > Demultiplexação: o sistema entrega os dados recebidos à aplicação correta com base na porta de destino.
+        O que muda em relação à TCP é que na UDP há uma falta de confiabilidade, sem garantia de entrega, sem controle de erros avançados, etc.
+    - Um datagrama UDP tem um limite máximo definido pelo protocolo que pode ter até 65.535 bytes no total, incluindo cabeçalho e dados. Na prática, o tamanho útil de dados é menor, por cauda do cabeçalho IP e UDP, e limitações de rede.
+    - UDP NÃO REALIZA CONTROLE DE FLUXO, NÃO AJUSTA TAXA DE ENVIO e NÃO GARANTE CONFIABILIDADE. Ele apenas envia os datagramas de forma simples e rápida.
+
+#### PROTOCOLO TCP
+    - CORRIGE ERROS e RETRANSMITE pacotes perdidos.
+    - Garante uma entrega confiável.
+    - TCP realiza CONTROLE DE FLUXO, usado para evitar que o emissor envie dados mais rápido do que o receptor consegue processar. Essa funcionalidade é utilizada para ajustar a taxa de envio conforme a capacidade do destino.
+    - No TCP, o campo número de confirmação (ACK number) carrega o NÚMERO do PRÓXIMO BYTE que o receptor espera receber do emissor. Ele confirma os dados já recebidos corretamente, mas não indica "o que chegou" e sim QUAL É O PRÓXIMO DADO ESPERADO. Esse campo serve para controle de entrega confiável e ordenada.
+
+    
+
+### CAMADA DE REDE
+    - A IDENTIFICAÇÃO DO HOSPEDEIRO (host) é realizada na CAMADA DE REDE, por meio do ENDEREÇO DE IP.
+    - Quando um pacote chega a um roteador para ser encaminhado, o processo responsável pelo repasse (encaminhamento) deve ANALISAR O ENDEREÇO IP de destino e DECIDIR PARA QUAL INTERFACE ou próximo salto ENVIAR O PACOTE. Ele lê o IP de destino do pacote, consulta a tabela de roteamento, escolhe o melhor caminho (next hop) e encaminha o pacote pela interface correta. O roteador NÃO "ENTENDE" O CONTEÚDO do pacote, ele só verifica o IP de destino, consulta a tabela de rotas e encaminha para o próximo destino.
