@@ -331,6 +331,60 @@ OBS.: a primeira rede de internet foi a ARPANet.
     - Quando a rede cresce a ponto de ser necessário alterar o esquema de roteamento para diminuir o tamanho das tabelas, deve-se utilizar o ROTEAMENTO HIERÁRQUICO. O roteamento hierárquico foi criado para resolver os problemas de armazenamento das tabelas de roteamento quando as redes crescem muito. Com sua utilização, não é necessário que os roteadores conheçam a topologia de toda a rede para tomar suas decisões de roteamento, bastando saber como rotear dentro de sua região e como chegar às outras regiões.
 
 ### CAMADA DE ENLACE
+    - O ENQUADRAMENTO (Delimitação de Quadros) é um mecanismo da Camada de Enlace utilizado PARA DELIMITAR O INÍCIO E O FIM DE CADA QUADRO (frame) transmitido. Assim, o receptor consegue identificar corretamente onde cada quadro começa e termina. As técnicas de enquadramento são:
+        > por Contagem de Caractere
+            - esse método informa o tamanho do quadro por meio de um campo de comprimento. Ele NÃO GARANTE O SINCRONISMO entre transmissor e receptor; se esse campo for corrompido, o receptor pode perder a delimitação dos quadros.
+        > por Enquadramento de Caractere
+            - nesse método, o TRANSMISSOR insere um caractere DLE extra para cada DLE que aparecer no campo de DADOS. O RECEPTOR apenas REMOVE o DLE adicional ao receber os dados.
+        > por Enquadramento de Bit
+            - esse método continua sendo utilizado em diversos protocolos de comunicação, como o HDLC.
+        > por Violação de Códigos do Nível Físico
+            - esse método utiliza padrões ou símbolos inválidos na codificação normal do nível físico para indicar o início ou fim de um quadro.
+            - A técnica de enquadramento por violação de códigos no nível físico utiliza sinais especiais não empregados na codificação dos bits. Essa técnica de enquadramento se aplica quando o nível físico apresenta redundância da codificação, ou seja, além dos códigos que representam os bits "0" e "1" existem outros códigos não utilizados para representar a informação. Desta forma, esses códigos redundantes podem ser empregados para delimitar o início e o fim dos quadros (enquadramento).
+    - A função do enquadramento é DELIMITAR OS QUADROS, NÃO fazendo a DETECÇÃO e CORREÇÃO de erros. A detecção e a correção de erros são realizadas por mecanismos específicos, como bits de paridade, CRC e códigos de correção.
+    - O protocolo STOP-AND-WAIT ARQ foi desenvolvido de forma incremental, adicionando mecanismos para garantir uma transmissão confiável:
+        > Stop-and-Wait Básico: o transmissor envia um quadro e aguarda a confirmação (ACK) antes de enviar o próximo.
+        > Inclusão de Temporizador (TIMEOUT): caso o ACK não chegue dentro do tempo esperado, o quadro é retransmitido.
+            - O timeout deve ser MAIOR QUE O TEMPO NECESSÁRIO PARA ENVIAR O QUADRO, propagá-lo até o receptor, processá-lo e receber o ACK. Se for muito curto, ocorrerão retransmissões desnecessárias.
+        > Numeração dos Quadros (0 e 1): evita que os quadros retransmitidos sejam aceitos como novos quando um ACK é perdido.
+        > Numeração dos ACKs: permite ao transmissor saber exatamente qual quadro foi confirmado, evitando ambiguidades.
+    - O campo necessário para numerar os quadros é de apenas um bit. Como apenas um quadro pode estar pendente de confirmação por vez, basta alternar entre os números 0 e 1, necessitando de apenas 1 BIT.
+    - No Stop-and-Wait ARQ, os ACKs são numerados para indicar qual quadro foi recebido corretamente e evitar ambiguidades em caso de perdas ou retransmissões, sendo assim necessária a numeração para garantir confiabilidade do protocolo.
+    - Stop-and-Wait ARQ possui BAIXO DESEMPENHO, principalmente em enlaces com grande atraso de propagação (alta latência), pois o transmissor permanece ocioso aguardando um ACK após cada quadro.
+    - O protocolo requer COMUNICAÇÃO BIDIRECIONAL para que os ACKs possam ser enviados ao transmissor. O protocolo depende do envio de ACKs do receptor para o transmissor. Portanto, é necessário um canal com comunicação nos dois sentidos (FULL-DUPLEX ou DOIS CANAIS SIMPLEX, um em cada direção).
+    - O protocolo ALOHA é um protocolo de ACESSO AO MEIO (MAC) de ALOCAÇÃO DINÂMICA, no qual uma estação transmite sempre que tem dados para enviar. Se ocorrer colisão, a estação espera um tempo ALEATÓRIO e tenta transmitir novamente.
+        - O ALOHA possui BAIXO DESEMPENHO, pois permite muitas colisões. Sua eficiência máxima é de aproximadamente 18% (ALOHA puro) e 37% (ALOHA com intervalos de tempo - Slotted ALOHA).
+        - O ALOHA não garante acesso ordenado ao meio, pois as transmissões ocorres de forma aleatória.
+        - O ALOHA NÃO REALIZA DETECÇÃO NEM CORREÇÃO DE ERROS. Essas funções são desempenhadas por mecanismos específicos, como o CRC para detecção de erros. Ele é utilizado para controlar o acesso ao meio de transmissão.
+        - No ALOHA, as colisões ocorrem e são previstas pela própria construção do protocolo.
+    - Os protocolos CSMA (Carrier Sense Multiple Access) verificam se o MEIO ESTÁ LIVRE antes de transmitir. Isso REDUZ a probabilidade de COLISÕES em relação ao ALOHA, mas NÃO AS ELIMINA COMPLETAMENTE.
+        - Como as estações escutam o meio antes de transmitir, há menos colisões tornando o desempenho do CSMA superior ao do ALOHA.
+        - Também é uma técnica de ALOCAÇÃO DINÂMICA.
+        - CSMA/CD foi utilizado nas redes Ethernet com meio compartilhado, e o CSMA/CA é empregado nas redes Wi-Fi atuais.
+        - O acesso ao meio é feito por CONTENÇÃO (DISPUTA). Não existe uma ordem fixa ou garantida para que as estações transmitam, NÃO GARANTINDO ACESSO ORDENADO AO MEIO.
 
 
 ### CAMADA FÍSICA
+    - O ruído branco pode estar presente EM QUALQUER CANAL DE COMUNICAÇÃO, indepedentemente da largura da BANDA. Sua potencia total aumenta com a largura da banda considerada.
+    - Quanto MAIOR O PERÍODO de um sinal periódico, MENOR será sua FREQUÊNCIA. O período (T) e a frequência (f) são grandezas inversamente proporcionais, então, se o período aumenta a frequência diminui, se o período diminui a frequência aumenta.
+    - Sinais DIGITAIS não são imunes ao ruído branco, mas são mais resistentes a ele do que os sinais analógicos. A vantagem dos sinais digitais é que pequenas interferências geralmente não alteram os bits recebidos, pois o receptor consegue distinguir entre os níveis de tensão correspondentes a 0 a 1. Entretanto, se o ruído for intenso, ele pode provocar erros na interpretação dos bits, causando falhas na comunicação.
+    - Os meios de transmissão podem ser classificados como GUIADOS e NÃO GUIADOS e cada um tem características próprias que influenciam na transmissão dos sinais. Esses meios são:
+        > Guiados:
+            * Fibra Óptica
+                - A fibra óptica apresenta uma largura de banda muito superior ao par trançado, permitindo transmitir muito mais dados por segundo e por distâncias maiores, com menor perda de sinal.
+                - Possibilita altas taxas de transmissão de dados (elevada banda passante), apresenta baixa atenuação com a distância, é imune a interferências eletromagnéticas e possui baixo peso.
+                - Pouca flexibilidade, custos mais elevados e conectorização mais difícil.
+            * Par Trançado
+                - Mais flexível e barato.
+                - Enfrenta em maior escala o problema de interferências eletromagnéticas.
+            * Cabo Coaxial
+                - O sinal fica mais protegido de interferências quando comparado ao par trançado. Não precisa de nenhum componente eletro-óptico (caso da fibra óptica).
+                - Menos flexível e mais pesado que o par trançado. Menos capacidade de transmissão de informação que a fibra óptica.
+        > Não Guiados:
+            * Ondas de Rádio
+            * Micro-ondas
+                - Os enlaces de micro-ondas operam em faixas de frequência superiores às dos enlaces de rádio convencionais. As micro-ondas fazem parte das ondas de rádio, porém operam em FREQUÊNCIAS MAIS ALTAS, normalmente entre 1 GHz e 300 GHz.
+                - Os enlaces terrestres de micro-ondas NECESSITAM DE LINHA DE VISADA entre as antenas, pois obstáculos como prédios, árvores e montanhas bloqueiam o sinal.
+            * Infravermelho
+
+### FUNDAMENTOS DE ADMINISTRAÇÃO E SEGURANÇA EM REDE DE COMPUTADORES
