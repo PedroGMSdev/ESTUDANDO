@@ -388,3 +388,25 @@ OBS.: a primeira rede de internet foi a ARPANet.
             * Infravermelho
 
 ### FUNDAMENTOS DE ADMINISTRAÇÃO E SEGURANÇA EM REDE DE COMPUTADORES
+    - Os ATAQUES podem ser classificadps de diversas formas:
+        > Ativo ou Passivo
+            - Os ataques passivos são os de interceptação.
+            - Os ataques ativos são os de modificação, interrupção, personificação ou repetição.
+                > Repetição:
+                    - Considere que você esteja realizando a compra online de uma caneta. Ao verificar o extrato da sua conta, percebe que havia duas cobranças do mesmo valor. Esse tipo de evento pode ser associado ao ataque de repetição, pois o atacante capturou os pacotes com as informações de pagamento e os enviou novamente para a cobrança no banco. O ataque de repetição permitiu que fosse debitado duas vezes o mesmo valor de sua conta. Como o atacante capturou os pacotes que realizaram a transação financeira, ele pôde modificar a conta de destino e - considerando que os dados da transação estivessem presentes no pacote - receber o valor cobrado. Esse mesmo ataque pode ser utilizado quando um atacante captura pacotes de autenticação, permitindo o acesso a determinada rede ou sistema.
+        > Interno ou Externo
+        > Direto ou Indireto
+    - Uma das grandes ameaças exitentes na internet é a chamada APT (Advanced Persisten Threat). Ela se refere à ataques direcionados de organizações a determinadas organizações e empresas. Imagine que você, após ser convocado para analisar as ações de uma APT, tenha percebido que ela estava ENVIANDO E-MAILS a determinada empresa com um anexo possivelmente malicioso. A estapa de ataque identificada está relacionada com ENTREGA, já que a APT utilizou um meio de entregar a arma a seu alvo. O entendimento das fases dos ataques é de suma importância na segurança de rede. Quanto mais cedo o ataque foi detectado e interrompido, menos danos ele causará, porque o ataque (no caso ilustrado, uma APT) terá tido uma menor penetração na rede e comprometido menos o ambiente.
+    - O objetivo dos mecanismos de controle físico é proteger as instalações físicas, ou seja, a destruição, o roubo ou a paralisação de serviços. Os mecaniscmos físicos podem incluir desde o uso de portões, grades e cadeados até a manutenção do ambiente dentro de condições climáticas adequadas, como a utilização de equipamentos de refrigeração e o fornecimento de energia ininterruptos graças ao emprego de fontes de energia redundantes (geradores e no-breaks).
+    - A segurança de um ambiente pode ser considerada completa quando ela emprega um conjunto de mecanismos de controle físico e lógico com o objetivo de garantir CID. Afinal, os mecanismos de controle lógicos, firewalls, IDS, criptografia, controle de acesso e antivírus são soluções que devem atuar em conjunto. Os antivírus, por exemplo, são os responsáveis pela detecção dos malwares como o WannaCry, que causou uma grande infecção em diversas empresas no Brasil e no mundo, sequestrando os dados dos usuários  exigindo uma recompensa para que eles fossem disponibilizados novamente.
+    - Por meio dos sistemas de gerenciamento é possível monitorar o seu uso e planejar os investimentos necessários para que as demandas da rede sejam atendidas, garantindo um nível de satisfação elevado para os seus usuários.
+    - Uma arquitetura de gerenciamento de rede é composta por quatro componentes básicos:
+        > estação de gerenciamento
+        > dispositivo gerenciado
+        > base de informações gerenciais
+        > protocolo de gerenciamento
+        Tais componentes trabalham em conjunto para permitir que a rede possa ser monitorada e controlada. Para isso a base de informações gerenciais mantém informações do estado dos diversos objetos existentes em um dispositivo.
+        - A arquitetura de gerenciamento de redes é genérica, mas os sistemas de gerenciamento existentes são baseados nos componentes apresentados. A entidade gerenciadora ou de gerenciamento monitora e controla os dispositivos da rede por intermédio do software gerente. No dispositivo gerenciado, o software agente recebe os comandos do gerente por meio do protocolo de comunicação. Já o conjunto de objetos existentes compõe a base de informações gerenciais.
+
+## INTRODUÇÃO À SEGURANÇA DA INFORMAÇÃO
+### 
