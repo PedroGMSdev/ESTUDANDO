@@ -434,3 +434,24 @@ OBS.: a primeira rede de internet foi a ARPANet.
     - São ameaças mais comuns às rede de computadores o acesso não autorizado, o reconhecimento (ex.: PortScan) e a negação de serviço (ex.: DoS ou DDoS).
     - O TRIPÉ da segurança da informação é CONFIDENCIALIDADE, INTEGRIDADE e DISPONIBILIDADE. PESSOAS, PROCESSOS e TECNOLOGIA é outro modelo bastante utilizada em governança e gestão de segurança da informação. Algumas referências também destacam AS POLÍTICAS DE SEGURANÇA como parte dos PROCESSOS DE GESTÃO, mas NÃO SUBSTITUI O TRIPÉ (C.I.D.) clássico da segurança da informação.
     - De nada adianta uma política de segurança se as pessoas e os processos forem considerados. Isso faz parte do PRINCÍPIO DE GESTÃO. Uma política de segurança só funciona se houver pessoas treinadas e processos adequados para aplicá-la.
+    - Os dispositivos de autenticação biométrica são itens capazes de oferecer controle ou proteção no âmbito da SEGURANÇA FÍSICA PREVENTIVA. A segurança física está relacionada ao acesso às dependências das instalações. A segurança lógica está relacionada aos algoritmos que protegem dados.
+    - Convém que sejam utilizados PERÍMETROS DE SEGURANÇA (barreiras, como paredes, portões de entrada controlados por cartão ou balcões de recepção com recepcionistas) para proteger as áreas que contenham informações e instalações de processamento da informação. Além disso, que sejam levadas em consideração e implementadas as seguintes diretrizes para perímetro de segurança física, quando apropriado:
+        > Os perímetros de segurança devem ser claramente definidos, assim como a localização e capacidade de resistência de cada perímetro precisam depender dos requisitos de segurança dos ativos existentes no interior do perímetro e dos resultados da análise/avaliação de riscos.
+        > Os perímetros de um edifício ou de um local que contenha instalações de processamento da informação precisam ser fisicamente sólidos, ou seja, o perímetro não deve ter brechas nem pontos onde poderia ocorrer facilmente uma invasão.
+        > Deve-se implantar uma área de recepção ou outro meio para controlar o acesso físico ao local ou edifício. Esse acesso deve ficar restrito somete ao pessoal autorizado.
+        > Devem ser construídas barreiras físicas para impedir o acesso físico não autorizado e a contaminação do meio ambiente.
+        - As instalações físicas devem possuir seguranças justapostar de forma que a fraqueza de uma camada possa ser recoberta por outra. Essa lógica fica clara na funcionamento de guaritas, cancelas e sensores biométricos.
+        - Ao projetar uma rede, é comum adotar um firewall para proteger uma rede interna. O FIREWALL é um tipo de SEGURANÇA LÓGICA. O firewall é um importante ATIVO DE REDE. Desse modo, encontrá-lo em um projeto de rede torna-se imprescindível. Ele protege uma rede interna analisando e bloqueando, por meio de algoritmos proprietários de cada marca, o acesso e o transporte de dados para dentro dela. Por manipulá-los, este ativo é classificado como segurança lógica.
+        - Um sistema de acesso, independentemente do tipo de chave (senha) criado, permite o bloqueio físico a determinado local. Esta chave, com o passar do tempo, vem evoluindo bastante: cartões com códigos de barra, tarja magnética, digital, veias da mão e, agora, o reconhecimento facial.
+        - O FIREWALL usa as regras para criar barreiras e políticas relacionadas. Para proteger as redes de dados, as empresas criam perímetros de segurança formados por componentes que avaliam o tráfego de ingresso e egresso. O FIREWALL é o componente que utiliza de lista de controle de acesso formadas por regras que determinam se um pacote pode ou não atravessar a barreira.
+
+### AMEAÇAS E VULNERABILIDADES À SEGURANÇA DE INFORMAÇÃO
+    - A VULNERABILIDADE é uma FRAQUEZA de um ativo ou grupo de ativos que pode ser explorada por uma ou mais ameaças. VULNERABILIDADE e FRAQUEZA são conceitos que estão intimamente relacionados.
+    - Keylogger é um software nocivo do tipo SPYRARE, cuja a finalidade é registrar tudo o que é digitado, quase sempre a fim de capturar senhas, números de cartão de crédito e afins.
+    - RANSONMWARE é o código malicioso que visa criptografar os dados das vítimas e cobrar pagamento de resgate pela chave e pelo código de decriptação.
+    - WORM é um malware que se prolifera sozinho através de compartilhamentos de rede.
+    - SPYWARE captura o comportamento do usuário e envia para um atacante.
+    - CAVALO DE TROIA, ou Trojan Horse, é uma técnica em que um software malicioso se faz passar por outro software.
+
+### NORMAS DE SEGURANÇA DA INFORMAÇÃO
+
