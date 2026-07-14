@@ -251,6 +251,12 @@ OBS.: a primeira rede de internet foi a ARPANet.
 
 
 
+# INTRODUÇÃO À PROGRAMAÇÃO DE COMPUTADORES
+
+## SUPER TRUNFO EM C: FUNDAMENTOS E TÉCNICAS AVANÇADAS
+
+
+
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
 ## FUNDAMENTOS DE REDES DE COMPUTADORES
