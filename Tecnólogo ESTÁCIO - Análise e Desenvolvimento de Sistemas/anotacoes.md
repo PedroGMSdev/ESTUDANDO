@@ -414,6 +414,61 @@ OBS.: a primeira rede de internet foi a ARPANet.
         Tais componentes trabalham em conjunto para permitir que a rede possa ser monitorada e controlada. Para isso a base de informações gerenciais mantém informações do estado dos diversos objetos existentes em um dispositivo.
         - A arquitetura de gerenciamento de redes é genérica, mas os sistemas de gerenciamento existentes são baseados nos componentes apresentados. A entidade gerenciadora ou de gerenciamento monitora e controla os dispositivos da rede por intermédio do software gerente. No dispositivo gerenciado, o software agente recebe os comandos do gerente por meio do protocolo de comunicação. Já o conjunto de objetos existentes compõe a base de informações gerenciais.
 
+### EXERCÍCIOS
+#### REDES DE COMPUTADORES E A INTERNET
+    - As sete camadas do modelo de referência OSI são:
+        > Aplicação
+        > Apresentação
+        > Sessão
+        > Transporte
+        > Rede
+        > Enlace
+        > Física
+    A TRANSMISSÃO DE BITS por um canal de comunicação sem preocupação com o significado e arranjo dos mesmos é FUNÇÃO da camada FÍSICA, como o caso de transportar de um ponto a outro por meio de um cabo (como Fibra Óptica) ou ondas. A camada física, como o próprio nome faz referência, agrupa os aspectos físicos (não lógicos) relacionados às redes de computadores, como os cabos, as portas físicas.
+    - O conhecimento sistema .edu, .gov, .com, .mil, .org, .net e .int para nomear sites é mais fácil de lembrar do que a designação anterior para sites, como o endereço IP 123.456.789.10. O DNS é o nome do sistema que converte nomes de domínio legíveis por humanos (por exemplo, www.amazon.com) em endereços de IP legíveis por máquina. Na década de 1980, foi desenvolvido o SISTEMA DE NOMES DE DOMÍNIOS (DNS) utilizado para mapear nomes da Internet fáceis de entender.
+    - Em cada camada, uma Unidade de Dados de Protocolo, ou PDU (Protocol Dara Unit) possui campos de cabeçalho e um campo de carga útil.
+        > O nome do PDU do protocolo IP é DATAGRAMA.
+        > O nome do PDU do protocolo TCP é SEGUIMENTO, que é um pacote da camada de transporte, usando o protocolo TCP.
+    - A camada de transporte carrega mensagens da camada de aplicação entre os lados do cliente e servidor de uma aplicação. Há dois protocolos de transporte na Internet:
+        > TCP, provê serviços orientados à conexão para suas aplicações, e fragmenta mensagens longas em segmentos mais curtos. Alguns serviços oferecidos consistem na entrega garantida de mensagens, controle de fluxo (compatibilização das velocidades do remetente e do receptor), controle de congestionamento (uma origem reduz sua velocidade de transmissão quando a rede está congestionada).
+            - transferencia de dadoS CONFIÁVEL
+            - serviço ORIENTADO à conexão
+            - FRAGMENTAÇÃO em segmentos.
+        > UDP, que é um protocolo que provê serviço não orientado a conexão para suas aplicações, é um serviço econômico, sem controle de fluxo e de congestionamento, onde um pacote da camada de transporte é denominado SEGUIMENTO.
+            - serviço NÃO ORIENTADO a conexão
+            - NÃO FAZ detecção de erros
+            - transferência de dados NÃO CONFIÁVEL.
+    - A radiação eletromagnética consiste em ondas do campo eletromagnético, que se propagam pelo espaço e carregam energia eletromagnética radiante. A luz visível que vem de uma lâmpada em sua casa e as ONDAS DE RÁDIO que vêm de uma estação de rádio são dois tipos de radiação eletromagnética, assim também como a MICRO-ONDAS, que é utilizada em REDES NÃO GUIADAS. As redes não guiadas não utilizam um meio físico para "guiar" a propagação dos sinais. Em vez disso, elas utilizam o ar para espalhar o sinal na forma de sinais eletromagnéticos. Essas ondas se propagam pelo ar, sendo amplamente utilizada em redes sem fio, ou seja, redes não guiadas. As outras alternativas apresentadas, como fibra ótica, cabo coaxial, cabo de par trançado e cabo USB, são exemplos de meios guiados, pois necessitam de um meio físico para a transmissão de dados.
+    - Na literatura, as redes de computadores podem ser classificadas de várias formas, sempre com base em fundamentos confiáveis e validados. Formalmente, os elementos para a classificação de redes de computadores são:
+        > Meio de Transmissão
+        > Arquitetura de Rede
+    CRITÉRIOS RELATIVOS E SUBJETIVOS não são considerados confiáveis ou validados na literatura formal. A ARQUITETURA DE COMPUTADORES não pode ser usada para a classificação de redes.
+    - Todas as atividade na Internet que envolvem duas ou mais entidades remotas que se comunicam são governadas por um elemento, chamado PROTOCOLO, que define o formato e a ordem das mensagens trocadas entre duas ou mais entidades comunicantes, bem como as ações realizadas na transmissão e/ou no recebimento de uma mensagem ou outro evento. Para que uma tarefa seja realizada, é necessário que as entidades comunicantes executem o mesmo protocolo. Dentro de uma arquitetura em camadas, dois nós se comunicam entre si utilizando o mesmo protocolo, em um processo conhecido como COMUNICAÇÃO HORIZONTAL.
+    - Um sistema de comunicação é um conjunto de entidades (ou partes) coordenadas, que concorrem para a realização de um determinado objetivo - que, usualmente, dá nome ao sistema. O termo REDES DE COMPUTADORES está relacionado à definição: "Conjunto de módulos processadores interligados por um sistema de comunicação capazes de trocar informações e compartilhar recursos". Uma rede de computadores é um conjunto de sistemas computacionais interconectados que permitem a troca de informações e o compartilhamento de recursos. É importante ressaltar qua a Internet é um tipo de rede de computadores, mas não são sinônimos. A Internet é uma rede global de computadores, enquanto as redes de computadores podem ser de diferentes tipos e tamanhos, incluindo redes locais (LANs), redes metropolitanas (MANs) e redes de longa distância (WANs).
+
+#### MODELO DE REFERÊNCIA OSI E ARQUITETURA TCP/IP
+    - 
+
+#### CAMADAS DE APLICAÇÃO E TRANSPORTE
+    - O correio eletrônico, também conhecido como e-mail, é um serviço de comunicação baseado em tecnologia de rede que permite a troca de mensagens eletrônicas entre usuários conectados à Internet. O e-mail revolucionou a forma como as pessoas se comunicam, possibilitando o envio de mensagens instantâneas e a comunicação em tempo real em qualquer lugar do mundo, independentemente da distância geográfica. O IMAP (Internet Message Access Protocol) é um protocolo padrão da Internet que permite o acesso a mensagens de e-mail armazenadas em um servidor. Ele é amplamente utilizado por clientes de e-mail para recuperar mensagens de e-mail de servidores de e-mail remotos.
+    - O modelo de referência TCP/IP é um modele de protocolo de rede que define como as informações são transmitidas através de rede de computadores. Sua camada de transporte possui extrema importância na comunicação entre dois equipamentos. O fluxo nessa camada somente se comunica com seu fluxo par do dispositivo destino. Lida com questões de QoS, controle de fluxo, controle de sequência e correção de erros. O TCP é um protocolo orientado à conexão que garante a entrega dos dados na ordem correta e sem erros.
+    - Uma das funções dos números de porta incluídos nos segmentos TCP e UDP é identificar aplicações em um mesmo HOST permitindo que os dados sejam encaminhados à aplicação correta. Os números de porta são utilizados para identificar aplicações distintas em um mesmo host. Quando um segmento chega a um host, o número de porta de destino é usado para determinar a qual aplicação o segmento deve ser entregue. Portanto, os números de porta atuam como um meio de identificar aplicações em um host, permitindo que os dados sejam direcionados para a aplicação correta.
+    - Os protocolos de transporte da Internet utilizam números de porta para realizar a multiplexação. Isso ocorre porque, ao receber mensagens das aplicações para envio, o protocolo de transporte as identifica por seus respectivos números de porta. Isso permite que várias aplicações possam utilizá-los simultaneamente, otimizando o processo de transmissão de dados. Esse processo é conhecido como multiplexação, que é fundamental para o funcionamento eficiente das redes de computadores.
+    - A arquitetura de protocolos da Internet prevê que a camada de Aplicação é responsável por fornecer os serviços aos usuários por intermédio de protocolos específicos. O suporte à camada de Aplicação é fornecido pela camada de Transporte, cuja responsabilidade é a de controlar a comunicação fim-a-fim entre processos de aplicação. O suporte à camada de Transporte, por sua vez, é fornecida pela camada imediatamente inferior, denominada camada inter-redes. A arquitetura de protocolos da Internet segue o modelo de referência TCP/IP, composto por quatro camadas (aplicação, transporte, internet e enlace de dados). HTTP é um protocolo da camada de aplicação, UDP é um protocolo da camada de transporte e IP é um protocolo da camda de Internet.
+    - O protocolo UDP apresenta um cabeçalho extremamente simples utilizado primordialmente por aplicações como DNS, SNMP e TFTP. Umas das características do protocolo é que ele NÃO ESTABELECE CONEXÕES PARA TROCA DE DADOS. Ele é caracterizado por sua simplicidade e por não estabelecer conexões para a troca de dados. Ele é um protocolo da camada de transporte, sem estado e não orientado à conexão. Isso significa que ele não garante a entrega de todos os pacotes, não realiza retransmissões para garantir a entrega de dados e NÃO É RESPONSÁVEL PELA ORDENAÇÃO DOS BITS na camada física.
+    - Quando deseja acessar uma página web, um usuário utiliza um browser (navegador) que busca a página solicitada em um servidor web. Na interação entre navegador e servidor web, OS SERVIDORES WEB ATENDEM TIPICAMENTE NA PORTA 80. Isso ocorre poeque a porta 80 é a porta padrão para o protocolo HTTP, que é o protocolo utilizado para a transferência de páginas web. A ARQUITETURA DO SOFTWARE é CLIENTE/SERVIDOR. O protocolo DNS NÃO É UTILIZADO PARA A TRANSFERÊNCIA DE PÁGINAS WEB, mas sim para CONVERTER NOMES de domínio em endereços IP. Servidores web NÃO EXECUTAM NA CAMADA DE TRANSPORTE DO MODELO OSI, mas sim na CAMADA DE APLICAÇÃO. O protocolo www NÃO EXISTE. O protocolo utilizado para acessar páginas da web é o HTTP.
+
+#### CAMADA DE REDE
+    - Sobre as técnicas de comutação:
+        > Diferentes pacotes podem seguir caminhos distintos na comutação de pacotes implementadas por datagramas.
+        > A comutação de circuitos utiliza a transmissão STORE-AND-FORWARD, desde o transmissor até o receptor.
+        > Em um circuito virtual, os dados são entregues NA ORDEM em que foram enviados. O circuito virtual é estabelecido antes da transmissão dos dados, garantindo a que sejam entregues na ordem correta.
+    - O IPv$ é uma versão do Protocolo de Internet que:
+        > Possui um limite de endereçamento, que é de 32 bits. Isso significa que existem cerca de 4 bilhões de endereços IPv$ possíveis.
+        > 
+    - O endereçamento IP é essencial para que os dispositivos possam se comunicar através da internet ou de uma rede local. O protocolo que permite a alocação dinâmica de IP públicos é o DHCP (Dynamic Host Configuration Protocol).
+    
+
 ## INTRODUÇÃO À SEGURANÇA DA INFORMAÇÃO
 ### PRINCIPIOS DA SEGURANÇA E O CICLO DE VIDA DA INFORMAÇÃO
     - A segurança da informação está relacionada à proteção de um conjunto de dados no sentido de preservar os valores que possuem para um indivíduo ou uma organização. O conceito se aplica a todos os aspectos de proteção de informações e dados. O conceito de segurança informática ou segurança de computadores está intimamente relacionado com ele, incluindo não apenas a segurança dos dados/informação, mas também a dos sistemas em si.
