@@ -254,7 +254,33 @@ OBS.: a primeira rede de internet foi a ARPANet.
 # INTRODUÇÃO À PROGRAMAÇÃO DE COMPUTADORES
 
 ## SUPER TRUNFO EM C: FUNDAMENTOS E TÉCNICAS AVANÇADAS
+### ORGANIZAÇÃO E CLAREZA NO CÓDIGO
+    `--->>> Para uma melhor organização e clareza no código, algumas práticas são indicadas, como:
+        - Indentação: espaçamento, ou tabulação, entre cada linha, facilitando a identificação da hierarquia.
+        - Comentários: utilizados para identificar funções, explicar tarefas ou fazer notas de lembranças.
+        - Nomes Significativos: que facilita a identificação posterior do que se faz, através da nomeação clara do local.
 
+### PROCESSO DE PROGRAMAÇÃO
+    `--->>> A ordem de um processo de programação é:
+        1. Entendimento do Problema
+        2. Planejamento da Solução
+        3. Codificação
+        4. Compilação (Tradução)
+        5. Teste
+        6. Depuração
+        7. Manutenção
+
+### PASSOS PARA EXECUTAR UM PROGRAMA EM C
+    1. Escrita do código-fonte
+    2. Compilação
+    3. Ligação (Linking)
+    4. Execução
+
+### CARACTERÍSTICAS DA LINGUAGEM C
+    1. Sintaxe Simples
+    2. Portabilidade
+    3. Controle de Baixo Nível
+    4. Bibliotecas Ricas
 
 
 # QUESTÕES
