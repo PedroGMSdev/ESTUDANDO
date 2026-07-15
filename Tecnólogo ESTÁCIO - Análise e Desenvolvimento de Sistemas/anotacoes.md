@@ -542,3 +542,8 @@ OBS.: a primeira rede de internet foi a ARPANet.
 
 ### NORMAS DE SEGURANÇA DA INFORMAÇÃO
 
+## COMPUTAÇÃO EM NUVEM
+
+### FUNDAMENTOS DA COMPUTAÇÃO EM NUVEM
+    - 
+
