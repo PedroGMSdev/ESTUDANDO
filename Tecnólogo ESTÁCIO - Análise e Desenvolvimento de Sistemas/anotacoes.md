@@ -545,5 +545,42 @@ OBS.: a primeira rede de internet foi a ARPANet.
 ## COMPUTAÇÃO EM NUVEM
 
 ### FUNDAMENTOS DA COMPUTAÇÃO EM NUVEM
-    - Questão
+    - O CONCEITO de VIRTUALIZAÇÃO descreve a utilização de um servidor físico hospedando um ou mais servidores virtuais, compartilhando o mesmo hardware do servidor físico, permitindo o uso de vários tipos de sistemas operacionais, simulando a estrutura de um servidor físico.
+    - Entre os serviços de computação em nuvem mais comuns está a capacidade de computação e armazenamento. A capacidade de computação e armazenamento são os serviços mais comuns em relação à computação em nuvem. Na verdade, a computação em nuvem nasceu da evolução de várias tecnologias, entre elas a virtualização, isto é, a capacidade de computação dos provedores em executar serviços por meio de máquinas virtuais em algum servidor físico em um dos datacenters do provedor, geralmente, compartilhando esse servidor com outras máquinas virtuais isoladas e seguras. Outro serviço comum é o armazenamento, pois os provedores de nuvem oferecem serviços para todos os tipos de dados, além de expandir ou contrair o espaço de armazenamento de acordo com o que foi usado.
+    - Entre os modelos de serviço na nuvem, o modelo SOFTWARE COMO SERVIÇO (SaaS) é uma forma de disponibilizar softwares e soluções de tecnologia por meio de internet. Algumas vantagens desse serviço são:
+        > Melhor controle
+        > Redução de custo de licenciamento
+        > Diminuição no custo de manutenção do software
+        > Diminuição no custo de atualização de software
+        > Menor dependência de infraestrutura
+    No modelo SaaS, manutenção, atualização e segurança do software são atendidas pelo provedor de serviços. Dessa maneira, há redução do custo de manutenção, atualização e principalmente no licenciamento do software, pois é responsabilidade do provedor de serviço.
+    - Os modelos de implantação de nuvem definem para quem os serviços são oferecidos. Quando uma nuvem oferece serviços de forma exclusiva para um usuário, dizemos que estamos utilizando uma NUVEM PRIVADA. O modelo de nuvens privadas é composto por nuvens contruídas exclusivamente para um único usuário, ou uma única empresa, por exemplo, normalmente usadas por organizações com foco na segurança de dados.
+    - Tanto a virtualização como a conteinerização permitem melhor portabilidade, menor conflito de ambientes, aumento da segurança e manutenção mais fácil. A CONTEINERIZAÇÃO é semelhante às máquinas virtuais, a DIFERENÇA está no fato de não precisar de um sistema operacional convidado. A VIRTUALIZAÇÃO cria um ambiente virtual em um servidor físico, o que permite vários sistemas operacionais e aplicativos compartilharem um único hardware. Isso ajuda a economizar tempo, espaço e dinheiro, pois não é preciso comprar vários sistemas físicos para executar diversos sistemas operacionais. Um CONTÊINER é uma tecnologia que fornece um ambiente isolado e consistente contido em um servidor, é semelhante às máquinas virtuais, porém, não precisa de um sistema operacional convidado. O aplicativo e todas as suas dependências são empacotadas em um contêiner que usa um ambiente de runtime padrão para executar o aplicativo.
+    - COMPUTAÇÃO SEM SERVIDOR ou SERVERLESS COMPUTING é a tecnologia que permite hospedarmos funções, como a Plataforma de FUNÇÃO COMO SERVIÇO (FaaS), sem a preocupação de configuração do servidor, pois todo o ambiente (hardware e software) já está pronto para execução da função desenvolvida. Serverless computing é um paradigma de computação distribiída que permite computação distribuída, escalabilidade e computação baseada na web sem a necessidade de um servidor central. Em vez disso, os serviços são executados em diversos dispositivos, incluindo computadores, tablets, smartphones, dispositivos embarcados, etc. Essa abordagem cria uma plataforma de computação mais livre, flexível e escalável para aplicativos da web. Algumas das principais tecnologias usadas na computação sem servidor incluem:
+        > serviços de nuvem
+        > computação em nuvem
+        > computação em borda
+        > computação distribuída
+        > computação de alto desempenho
+        > computação de dispositivo móvel
+        > computação de objeto
+        > computação de borda
+
+### ARQUITETURA DE COMPUTAÇÃO EM NUVEM
+    - A empresa Blashell, que opera diversas refinarias de petróleo, possui um departamento de informática, cujo diretor decidiu migrar para um serviço de computação em nuvem. Por se tratar de uma empresa com ativos sensíveis e estrategicamente importantes, a decisão foi usar o provedor do serviço de forma dedicada, executando seus aplicativos LOCALMENTE. Os aplicativos da Blashell devem ser executados, então, na parte da arquitetura de computação em nuvem chamada de FRONT END. Como os ativos são sensíveis e importantes para a empresa, é importante que os dados não fiquem dispostos no back end.
+    - A arquitetura de nuvem é composta por duas grandes partes: FRONT END e BACK END. O front end é a parte executada na área do usuário e o back end é onde está composta a maior parte dos elementos da nuvem. Os componentes do back end podem variar de acordo com o tipo de nuvem, entretanto, alguns componentes comuns são:
+        > Cloud Runtime (Execução na Nuvem)
+        > Aplicação
+        > Serviços
+        > Armazenamento
+        > Infraestrutura
+        > Gerenciamento
+        > Segurança
+    O back end pode ser compreendido como a nuvem em si. Os componentes existentes são administrados e gerenciados pelo provedor de nuvem e podem variar de acordo com o tipo e modelo de nuvem.
+    - A empresa CONT-H se especializou em contabilidade de grandes corporações e possui um parque computacional que vem impactando negativamente seu desempenho devido ao crescente fluxo de trabalho por conta de novos clientes. A diretoria da CONT-H analisou diversas estratégias para solucionar a questão, optando pela contratação de computação em nuvem. Um dos fatores que contribuíram para a decisão foi a constatação de que, com a nuvem, não precisariam se preocupar e consumir recursos crescentes devido ao aumento da demanda de computação em decorrência dos novos clientes. O requisito referente a essa situação que a computação em nuvem pode auxiliar é a ESCALABILIDADE. A escalabilidade significa a capacidade de crescer conforme a demanda, podendo o cliente obter maior capacidade de processamento de dados e armazenamento conforme necessário.
+    - Um dos pilares da computação em nuvem é a possibilidade de o sistema tratar diferentes necessidades de cada cliente, pois a nuvem é capaz de realizar esse compartilhamento de uso. Para isso, são empregados diversos componentes no back end com o objetivo de permitir o oferecimento de variados serviços. Dentre os diversos componentes, podemos dizer que o CLOUD RUNTIME é o componente no qual o serviço é EXECUTADO. Nele está contido o monitor de máquinas virtuais, conhecido como HYPERVISOR, que permitirá a virtualização em si.
+    - O BALANCEAMENTO DE CARGA na nuvem é um processo que ajuda a distribuir o tráfego de uma aplicação entre vários servidores para garantir que todas as solicitações sejam servidas de forma eficiente. O balanceamento de carga ajuda a garantir que nenhum servidor seja sobrecarregado, o que pode levar a tempo de respostas lentos ou mesmo ao colapso do sistema. O balanceamento de carga também ajuda a garantir que os servidores sejam usados de forma eficiente, o que pode levar a custos mais baixos para a empresa.
+    - A estratégia de REPLATAFORMA é a mais indicada em virtude de malha de sistemas legados, como quando uma empresa está em processo de migração dos seus serviços para a nuvem, mas possui muitos sistemas legados estruturados e incompatíveis com novas tecnologias. Para esse caso, o ideal é investir em uma estratégia de emulação utilizando máquinas virtuais e assim garantindo a continuidade do funcionamento do sistema, além de se tornar compatível com as novas tecnologias de nuvem.
+
+### SEGURANÇA EM COMPUTAÇÃO EM NUVEM
 
