@@ -281,6 +281,7 @@ OBS.: a primeira rede de internet foi a ARPANet.
     2. Portabilidade
     3. Controle de Baixo Nível
     4. Bibliotecas Ricas
+    
 
 
 # QUESTÕES
@@ -583,4 +584,41 @@ OBS.: a primeira rede de internet foi a ARPANet.
     - A estratégia de REPLATAFORMA é a mais indicada em virtude de malha de sistemas legados, como quando uma empresa está em processo de migração dos seus serviços para a nuvem, mas possui muitos sistemas legados estruturados e incompatíveis com novas tecnologias. Para esse caso, o ideal é investir em uma estratégia de emulação utilizando máquinas virtuais e assim garantindo a continuidade do funcionamento do sistema, além de se tornar compatível com as novas tecnologias de nuvem.
 
 ### SEGURANÇA EM COMPUTAÇÃO EM NUVEM
+    - De acordo com um novo paradigma de computação, uma empresa que oferece serviços de computação deve possuir cinco características essenciais para ser caracterizada como um provedora de serviços em nuvem. Alguns deles são:
+        > Measured Service
+        > Rapid Elastic
+        > Resource Polling
+        > On-demand Self-service
+        > Broad Network Access
+    - Entre os modelos de serviço de nuvem, existe um para o qual grandes players de mercado oferecem máquinas virtuais cobradas apenas pelo uso específico dos recursos provisionados, sendo possível até mesmo para pessoas comuns a sua contratação. Este modelo é conhecido como IaaS. Os três provedores de serviços mais famosos oferecem serviços de contratação de máquinas virtuais a preço acessíveis a pessoas comuns. Para cada uma das empresas podemos citar:
+        > Amazon EC2
+        > Azure Virtual Machine
+        > Google Compute Engine
+    - De forma ampla, o ramo do conhecimento chamado de segurança da nuvem deve se preocupar fundamentalmente em manter os mesmo princípios gerais da segurança da informação, que são:
+        > Confidencialidade, que garante que as informações serão acessadas apenas por quem detém direito para tal.
+        > Integridade, que garante que as informações não sejam modificadas em alguma etapa da transmissão e do armazenamento.
+        > Disponibilidade, que garante que as informações estejam disponíveis sempre que necessário.
+    - De forma geral, podemos ordenar os modelos de serviço em ordem crescente de aumento de responsabilidade sobre a segrança para o cliente da seguinte maneira:
+        1º: SaaS -> menos responsabilidade para o cliente
+        2º: PaaS -> responsabilidade intermediária
+        3º: IaaS -> maior responsabilidade para o cliente
+    - Contêiners são estruturas similares às máquinas vituais, porém muito mais enxutas. A abordagem serveless emprega funções como serviço, deixando a cargo do provedor do serviço cuidar da infraestrutura de computação. A opção do cliente pelo uso da base de dados gerenciada o libera dos cuidades com a segurança do sistema gerenciador do banco de dados em si. Os contêiner tendem a ser menores e mais rápidos que as máquinas virtuais. Na abordagem serveless, o cliente do serviço da nuvem não possui encargo sobre a infraestrutura de computação. Quando o cliente usa uma base de dados gerenciada, o provedor supervisiona não apenas o sistema operacional como também a manutenção do banco de dados (incluindo hardening, backup, gerenciamento de patches e monitoramento). O espaço ocupado por contêineres tende a ser MENOR do que o ocupado pelas máquinas virtuais, pois aqueles NÃO PRECISAM guardar todos os binários e bibliotecas.
+    - O serviço de armazenamento em nuvem pode ser categorizado em:
+        > Armazenamento de Arquivis
+        > Armazenamento de Blocos
+        > Armazenamento de Objetos
+        > Armazenamento de Contêineres
+    - De acordo com as orientações do CSA, os CONCEITOS que, conjuntamente, compõem a MULTILOCAÇÃO são SEGREGAÇÃO e ISOLAMENTO. A multilocação, funcionalidade utilizada para dividir recursos entre diferentes unidades em uma única empresa ou organização ou em diferentes organizações, é composta pelos conceitos de segregação e isolamento.
+    - De acordo com as orientações do CSA, os dois grupos de domínio, além do conceitual, são GOVERNANÇA e OPERAÇÃO. Além do domínio conceitual, que se preocupa com os fundamentos, existem dois grupos de domínios de acordo com as orientações dp CSA: governança e operações.
+
+### AMBIENTES DE COMPUTAÇÃO EM NUVEM - AZURE
+    - O modelo de NUVEM HIBRIDA usa alguns datacenters focado em fornecer serviços de nuvem para quem quiser e alguns datacenters que estão focados em um único cliente. O modelo de nuvem hibrida é uma combinação de nuvem pública e nuvem privada, usando datacenters dedicados exclusivamente a um cliente (como acontece na nuvem privada, quando os recursos são dedicados a um cliente e hospedados em um datacenter externo) e datacenters que são compartilhados com o público (como ocorre a nuvem pública).
+    - O SaaS é um tipo de serviço de nuvem que geralmente estaria uma solução de controle de finanças e despesas, de maneira que os recursos atuais herdam a configuração, mas os recursos futuros não. O SaaS oferece acesso a soluções de software, como controle de despesas e finanças, e-mail ou sistemas de tíquete.
+    - Um recurso só pode pertencer à UM GRUPO DE RECURSOS ao mesmo tempo, pois não é permitido ter o mesmo recurso em vários grupos de recursos.
+    - O ARMAZENAMENTO COM REDUNDÂNCIA GEOGRÁFICA (GRS) e o ARMAZENAMENTO COM REDUNDÃNCIA DE ZONA GEOGRÁFICA (GZRS) fornecem o maior grau de durabilidade, contando com 16 noves de durabilidade, pois possuem redudância entre regiões, o que evita que sejam interrompidos por catástrofes naturais, como enchentes e incêndios.
+    - As MARCAS (tags) permitem associar metadados a um recurso para ajudar a controlar o gerenciamento de recursos, os custos e a otimização, a segurança, etc... Este recurso do AZURE pode ajudar a manter a organização e acompanhar o uso com base nos metadados associados aos recursos.
+    - Com a INTEGRIDADE DE RECURSOS você recebe uma notificação por e-mail de que as VMs (Máquinas Virtuais) em uma região do AZURE em que estão implantadas enfrentam uma interrupção. O Resource Health é uma exibição persolizada dos recursos reias do AZURE. Ele oferece informações sobre a integridade dos recursos de nuvem individuais.
+    - O Azure Active Directory (AZURA AD) é um recurso que não pode ser migrado, pois está vinculado a conta do Azure e não está dentro de um grupo de recursos.
+    - Umas das vantagens de utilizar o serviço de aplicativo no Azure é um serviço totalmente gerenciado com manutenção de infraestrutura. O serviço totalmente gerenciado com manutenção de infraestrutura é uma das vantagens do Azure, assim como a aplicação de patch de segurança e dimensionamento internos. O custo. o uso de máquinas virtuais e a personalização de sistemas operacionais como o Linux e o Windows não estão relacionados à utilização de aplicativos no Azure.
+    
 
