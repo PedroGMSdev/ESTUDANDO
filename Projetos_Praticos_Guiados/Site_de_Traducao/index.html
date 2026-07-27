@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/pgFavicon.ico" type="image/x-icon">
+    <title>Tradutor</title>
+</head>
+
+<body>
+
+    <img src="img/pgLogo.jpeg" class="logo">
+
+    <h1 class="tituloPrincipal">SOLUÇÕES</h1>
+
+    <div class="areaDePreenchimento">
+        <textarea class="informarTexto"></textarea><!--1*-->
+
+        <div class="areaDeComandos">
+            <select class="escolherIdioma">
+                <option value="en">Inglês</option><!--3*-->
+                <option value="de">Alemão</option>
+                <option value="es">Espanhol</option>
+                <option value="ja">Japones</option>
+            </select><!--2*-->
+
+            <button class="botaoTraduzir" onclick="traduzirTexto()">Traduzir</button>
+            <button class="botaoMicrofone" onclick="ouvirVoz()">
+                <img src="img/microfone.jpg">
+            </button>
+        </div>
+
+        <div class="areaDeResultado">
+            <h3 class="localDaTraducao">Tradução:</h3>
+            <p class="resultadoDaTraducao">Aguardando tradução...</p>
+        </div>
+    </div>
+</body>
+
+<script src="scripts.js"></script>
+
+</html>
