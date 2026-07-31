@@ -815,16 +815,64 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
 ## int main(){}
         `--->>> abertura da classe. Todo programa em C ocorre dentro de uma classe MAIN.
 
-## printf();
+## return 0;
+        `--->>> informa que o programa terminou. Informa que o programa terminou com sucesso.
+
+## VARIÁVEIS
+    tipo NOME = valor;
+
+### TIPO DE VARIÁVEL
+    - int (Números Inteiros)
+        Exp.:
+            int idade = 25;
+    - float (Números Decimais)
+        Exp.:
+            float altura = 1.75;
+    - double (Números Decimais - Mais Casas Decimais)
+        Exp.:
+            double peso = 90.3;
+    - char (Letra/Caracteres)
+        Exp.:
+            char letra = 'A';
+        OBS.: sempre colocar o valor entre ASPAS SIMPLES (' ')
+    - char [] (Nome/String/Array)
+        Exp.:
+            char nome[20] = "Pedro";
+        OBS.: Sempre expecificar a quantidade de caracteres que terá na string ([20]) e no valor colocar entre ASPAS DUPLAS (" ")
+
+## ENTRADA E SAÍDA DE DADOS
+
+### printf();
         `--->>> saída de dados. Imprime uma mensagem na tela.
-### \n
+#### \n
         `--->>> adiciona uma nova linha no final de uma mensagem.
             Exp.:
                 printf("Olá mundo!\n);
                         `--->>> vai escrever "Olá mundo!" e pular para a linha de baixo.
 
-## return 0;
-        `--->>> informa que o programa terminou. Informa que o programa terminou com sucesso.
+### OUTRAS FUNÇÕES DE ENTRADA (Para Interação Com Usuários)
+#### putc
+#### puts
+#### fputs
+#### putchar
+
+### OUTRAS FUNÇÕES DE ESCRITA (Para Manipulação de Arquivos)
+#### fprintf
+#### fputs
+
+### scanf();
+        `--->>> entrada de dados Usado para capturar o valor informado.
+
+### OUTRAS FUNÇÕES DE ENTRADA (Para Interação Com Usuários)
+#### gets
+#### fgets
+#### getc
+#### getch
+
+### OUTRAS FUNÇÕES DE LEITURA (Para Manipulação de Arquivos)
+#### fscanf
+#### fgets
+
 
 # *BANCO DE DADOS*
 

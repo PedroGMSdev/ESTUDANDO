@@ -305,7 +305,34 @@ OBS.: a primeira rede de internet foi a ARPANet.
         OBS.: Sempre expecificar a quantidade de caracteres que terá na string ([20]) e no valor colocar entre ASPAS DUPLAS (" ")
 
 ### ENTRADA E SAÍDA DE DADOS
-    
+    - printf (Saída)
+        Exp.:
+            printf("Olá , ", nome);
+        OBS.: O especificador pode interpolar junto com as variáveis usando "%" e a letra indicadora da variável e acordo com seu tipo, como:
+            - %d (imprime um inteiro no formato decimal)
+            - %i (equivale a %d, também imprime um inteiro no formato decimal)
+            - %f (imprime um número de ponto flutuante no formato padrão)
+            - %e (imprime um número de ponto flutuante na notação científica)
+            - %c (imprime um único caractere)
+            - %s (imprime uma cadeia de caractere/string)
+                Exp.:
+                    printf("A idade do %s é: %d\n", nome, idade);
+
+        OBS.: caso você tenha um número decimal muito grande, e queira restringir a quantidade de caracteres que apareceram depois da vírgula, você coloca "." e a quantidade de casas que quer apresentar, entre o "%" e o "f".
+            Exp.:
+                printf("O valor da divisão de X e Y é de %.2f", divisao);
+
+    - scanf (Entrada)
+        Exp.:
+            scanf("%d", &idade);
+                `--->>> vai pegar o valor informado no formato "%d" e associará à variável "idade".
+        OBS.: tirando o formato %s (string), quando for associar um valor escaneado à uma variável, deve-se colocar o "&" antes da informação da variável, para que seja ligada.
+
+        OBS.: as opções de string e caractere tem peculiaridades que podem gerar erros:
+            - string: o "scanf" identifica, quando informado uma string, o uso do espaço para finalizar um informe. Então, caso precise ler um nome composto, ela pegará apenas o primeiro nome informado. A saída para isso é usar uma outra função de leitura, tipo a de leitura de arquivos "get".
+            - caractere: assim como a string, o leitor de caractere reconhece o espaço e o ENTER como caractere informativo. Então, caso antes do informe do caractere tenha outro informativo (como "informe idade", depois "informe letra"), você der um ENTER pra validar a informação do anterior, esse ENTER será lido como o valor informado para %c. A saída para isso é utilizar uma função, assim como na string, ou utilizar um ESPAÇO no informativo do formato do "scanf".
+                Exp.:
+                    scanf(" %c", letra);
 
 
 # QUESTÕES
