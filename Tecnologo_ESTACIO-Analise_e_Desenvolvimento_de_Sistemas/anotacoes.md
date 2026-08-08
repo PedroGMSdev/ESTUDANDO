@@ -334,6 +334,52 @@ OBS.: a primeira rede de internet foi a ARPANet.
                 Exp.:
                     scanf(" %c", letra);
 
+### SOLUÇÃO ESTRUTURADA
+
+#### FERRAMENTAS PARA ESTRUTURAÇÃO
+        `--->>> usa uma linguagem natural, muito útil para:
+                    - planejamento eficiente
+                    - visualização da lógica
+                    - identificação de problemas
+                    - comunicação clara
+##### FLUXOGRAMA
+        `--->>> representação gráfica de um algorítmo. 
+##### PSEUDOCÓDIGO
+        `--->>> Algorítmo escrito em palavras. Algumas vantagens do pseudocódigo, como o PORTUGOL, são:
+                    - simplicidade
+                    - clareza
+                    - foco na lógica
+
+#### MODULARIDADE
+        `--->>> criar funções ou módulos para facilitar a solução de problemas, dividindo em subproblemas menores.
+
+#### ABSTRAÇÃO
+        `--->>> foca em aspectos mais importantes de um problema, ignorando os detalhes irrelevantes.
+
+### OPERADORES MATEMÁTICOS EM C
+        `--->>> os operadores básicos da linguagem C, são:
+                    - soma (+)
+                    - subtração (-)
+                    - multiplicação (*)
+                    - divisão (/)
+
+### OPERADORES DE ATRIBUIÇÃO EM C
+        `--->>> utilizados para atribuir valores simples ou com algum tipo de operação em conjunto às variáveis, os operadores de atribuição da linguagem C, são:
+                    - atribuição simples (=)
+                    - atribuição com soma (+=)
+                    - atribuição com subtração (-=)
+                    - atribuição com multiplicação (*=)
+                    - atribuição com divisão (/=)
+
+### OPERADORES DE INCREMENTO E DECREMENTO
+        `--->>> utilizados para modificar uma variável em 1, de acordo com a intenção, e muito utilizados em contadores, esses operadores são:
+                    - incremento (++): soma +1 ao valor.
+                    - decremento (--): diminui -1 ao valor.
+                    - pré-incremento (++variavel): quando você quer fazer o encremento antes de utilizar o valor da variável.
+                    - pré-decremento (--variavel): quando você quer fazer o decremento antes de utilizar o valor da variável.
+
+
+
 
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
