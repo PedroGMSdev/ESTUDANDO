@@ -378,7 +378,31 @@ OBS.: a primeira rede de internet foi a ARPANet.
                     - pré-incremento (++variavel): quando você quer fazer o encremento antes de utilizar o valor da variável.
                     - pré-decremento (--variavel): quando você quer fazer o decremento antes de utilizar o valor da variável.
 
+### MODIFICADORES DE TIPOS DE DADOS EM C
+        `--->>> melhoram como controlar, armazenar e manipular os dados. Eles são:
+            - unsigned: podem armazenar apenas valores positivos, incluindo o zero. Por não considerar os negativos, ele aumenta a quantidade que se pode ser armazenada de valores positivos em duas vezes.
+                Exp.:
+                    - int numeroPositivo = 3000000000 (três milhões)
+                        `--->>> valor excede o limite de um "int" normal.
+                    - unsigned int numeroPositivo = 3000000000
+                        `--->>> agora aceito pois ignorou os números negativos e dobrou a capacidade de armazenamento positivo.
+                OBS.: ao usar esse modificador, para sinalizá-lo passa a usar "%u" ao invés de "%d".
+            - long: aumenta a capacidade de armazenamento dos tipos de dados primitivos. Há também o "long long" que duplica a capacidade do long.
+                Ex.:
+                    - int numero = 2147483647;
+                        `--->>> valor máximo de um inteiro
+                    - long int numero = 2147483647;
+                        `--->>> valor que excederia ao limite normal, porém, o "long" para o "int" passou a não servir mais, pois nos últimos anos o "int" passou a ter o mesmo armazenamento de "long int" (4 bytes).
+                    - long long int numero = 2147483648;
+                        `--->>> após a atualização do "int" o "long long" passou a representar o aumento para números inteiros.
+                OBS.: o especificador é o "%l" e o especificador do primitivo usado, ou o "%ll" + primitivo.
+                    Exp:
+                        - long int -> %ld
+                        - long long double -> %llf
+            - short: quando você trabalha com valores menores.
+            - signed: indica que a variável trabalha com valores positivos e negativos. Esse é basicamente o padrão já trabalhado nas variáveis.
 
+### OPERADORES RELACIONAIS
 
 
 # QUESTÕES
