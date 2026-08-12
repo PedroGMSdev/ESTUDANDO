@@ -402,8 +402,23 @@ OBS.: a primeira rede de internet foi a ARPANet.
             - short: quando você trabalha com valores menores.
             - signed: indica que a variável trabalha com valores positivos e negativos. Esse é basicamente o padrão já trabalhado nas variáveis.
 
-### OPERADORES RELACIONAIS
+### OPERADORES RELACIONAIS (OU COMPARATIVOS)
+        `--->>> permitem comparar variáveis ou valores, e estabelecer relações em diferentes condições. Retornam valores booleanos (Verdadeiro ou Falso), com base nas estruturas que foram testadas. Os principais deles são:
+            - maior que (>)
+            - menor que (<)
+            - maior ou igual a (>=)
+            - menor ou igual a (<=)
+            - igual a (==)
+            - diferente de (!=)
+        OBS.: em C, ao invés de retornar "true" e "false", a linguagem retorna os números "0" para FALSO e "1" para VERDADEIRO.
 
+OBS.: a CONVERSÃO IMPLÍCITA faz a conversão de um tipo para outro automaticamente para poder trabalhar os dois juntos, como o exemplo de um manuseio de um variável "int" e uma "float", que comumente transforma a "int" para "float" para fazer algum cálculo, comparação ou junção de valores.
+
+OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado intencionalmento, chamado de CONVERSÃO EXPLÍCITA, onde ao adicionar o tipo antes do valor, ele será convertido.
+    Exp.: 
+        printf("%d > %f", numero1, (int)numero2);
+                `--->>> ao colocar o "(int)" antes de "numero2", está indicando que essa variável deverá ser convertida para o tipo inteiro antes de ser trabalhada.
+                
 
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
