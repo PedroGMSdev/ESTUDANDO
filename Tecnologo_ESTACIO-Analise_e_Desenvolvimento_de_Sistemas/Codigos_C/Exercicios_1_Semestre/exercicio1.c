@@ -1,4 +1,5 @@
 // cadastro de aluno
+// código para que o terminal leia caracteres especiais, como acentos e cedilha: chcp 65001
 #include <stdio.h>
 
 int main() {
