@@ -418,6 +418,9 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
     Exp.: 
         printf("%d > %f", numero1, (int)numero2);
                 `--->>> ao colocar o "(int)" antes de "numero2", está indicando que essa variável deverá ser convertida para o tipo inteiro antes de ser trabalhada.
+
+## SUPER TRUNFO EM C: DESENVOLVENDO A LÓGICA DO JOGO
+### ESTRUTURAS DE DECISÃO
                 
 
 # QUESTÕES

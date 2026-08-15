@@ -75,8 +75,8 @@ int main(){
     float densidadePopulacional2 = populacao2 / areaKM2;
     float pibPerCapita1 = pib1 / populacao1;
     float pibPerCapita2 = pib2 / populacao2;
-    float superPoder1 = (float) estado1 + codigoCarta1 + nomeCidade1 + populacao1 + areaKM1 + pib1 + pontosTuristicos1 + densidadePopulacional1 + pibPerCapita1;
-    float superPoder2 = (float) estado2 + codigoCarta2 + nomeCidade2 + populacao2 + areaKM2 + pib2 + pontosTuristicos2 + densidadePopulacional2 + pibPerCapita2;
+    float superPoder1 = (float) populacao1 + areaKM1 + pib1 + pontosTuristicos1 + densidadePopulacional1 + pibPerCapita1;
+    float superPoder2 = (float) populacao2 + areaKM2 + pib2 + pontosTuristicos2 + densidadePopulacional2 + pibPerCapita2;
 
     printf("---------------------------------------------\n");
     printf("Dados da carta 1:\n");
@@ -89,7 +89,7 @@ int main(){
     printf("Pontos Turísticos: %d\n", pontosTuristicos1);
     printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
     printf("PIB Per Capita: %.2f reais\n", pibPerCapita1);
-    printf("Super Poder: %.2f", superPoder1);
+    printf("Super Poder: %.2f\n", superPoder1);
     printf("---------------------------------------------\n");
     printf("Dados da carta 2:\n");
     printf("Estado: %c\n", estado2);
@@ -101,19 +101,19 @@ int main(){
     printf("Pontos Turísticos: %d\n", pontosTuristicos2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
     printf("PIB Per Capita: %.2f reais\n", pibPerCapita2);
-    printf("Super Poder: %.2f", superPoder1);
+    printf("Super Poder: %.2f\n", superPoder2);
     printf("---------------------------------------------\n");
     printf("COMPARAÇÃO DAS CARTAS\n");
-    printf("Resultado 1 = Vitória Carta 1");
-    printf("Resultado 0 = Vitória Carta 2");
+    printf("Resultado 1 = Vitória Carta 1\n");
+    printf("Resultado 0 = Vitória Carta 2\n");
     printf("---------------------------------------------\n");
-    printf("População: %lu", populacao1 > populacao2);
-    printf("Área: %f", areaKM1 > areaKM2);
-    printf("PIB: %f", pib1 > pib2);
-    printf("Pontos Turísticos: %d", pontosTuristicos1 > pontosTuristicos2);
-    printf("Densidade Populacional: %f", densidadePopulacional1 > densidadePopulacional2);
-    printf("PIB Per Capita: %f", pibPerCapita1 > pibPerCapita2);
-    printf("Super Poder: %f", superPoder1 > superPoder2);
+    printf("População: %lu\n", populacao1 > populacao2);
+    printf("Área: %.2f\n", areaKM1 > areaKM2);
+    printf("PIB: %.2f\n", pib1 > pib2);
+    printf("Pontos Turísticos: %d\n", pontosTuristicos1 > pontosTuristicos2);
+    printf("Densidade Populacional: %.2f\n", densidadePopulacional1 > densidadePopulacional2);
+    printf("PIB Per Capita: %.2f\n", pibPerCapita1 > pibPerCapita2);
+    printf("Super Poder: %.2f\n", superPoder1 > superPoder2);
 
 
 
