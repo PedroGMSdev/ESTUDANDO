@@ -421,6 +421,17 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
 
 ## SUPER TRUNFO EM C: DESENVOLVENDO A LÓGICA DO JOGO
 ### ESTRUTURAS DE DECISÃO
+
+#### DECISÃO SIMPLES
+        `--->>> quando se tem apenas uma alternativa para ver se é verdadeira, e se não for apenas segue o fluxo.
+            Exp.:
+                se idade for menor que 18, bloquear conteúdo.
+
+#### DECISÃO COMPOSTA
+        `--->>> quando apresenta mais de uma alternativa para verificar se é verdadeira, e mais de uma ação a ser executada.
+
+#### IF/ELSE (SE/SENÃO)
+        `--->>>  
                 
 
 # QUESTÕES
