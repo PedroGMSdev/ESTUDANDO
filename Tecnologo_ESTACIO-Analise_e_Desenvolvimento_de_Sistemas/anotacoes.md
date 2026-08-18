@@ -431,8 +431,13 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
         `--->>> quando apresenta mais de uma alternativa para verificar se é verdadeira, e mais de uma ação a ser executada.
 
 #### IF/ELSE (SE/SENÃO)
-        `--->>>  
+        `--->>> muito usado quando não se tem um número exato de possibilidades.
                 
+### OPERADORES LÓGICOS
+        `--->>> permitem comparar mais de um critério na condição. Eles são:
+            - E (&&): quando dois critérios precisam ser verdadeiros para que a condição seja ativada.
+            - OU (||): quando pelo menos uma dos critérios precisam ser verdadeiros para que a condição seja ativada.
+            - NÃO (!-)
 
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
