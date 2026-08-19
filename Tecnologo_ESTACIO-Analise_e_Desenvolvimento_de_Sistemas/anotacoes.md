@@ -437,7 +437,41 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
         `--->>> permitem comparar mais de um critério na condição. Eles são:
             - E (&&): quando dois critérios precisam ser verdadeiros para que a condição seja ativada.
             - OU (||): quando pelo menos uma dos critérios precisam ser verdadeiros para que a condição seja ativada.
-            - NÃO (!-)
+            - NÃO (!): inverte o valor da variável, para considerar se é verdadeiro. Se for falso passa a ser verdadeiro, e se for verdadeiro passa a se falso.
+        OBs.: em C, "FALSE" é representado pelo número zero, e "TRUE", normalmente, pelo número 1. Mas, às vezes pode ser representado por algum outro número diferente de zero, nas inversões de "NOT".
+
+#### PRECEDENCIA DE OPERADORES
+        `--->>> informa a ordem de resolução e comparação dos operadores. Segue a ordem de prioridade:
+            1º: --> "()" e "[]" (resolvendo o primeiro da esquerda para a direita)
+            2º: "!", "-" e "++" "--" <-- (resolvendo o primeiro da direita para a esquerda)
+            3º: --> "*", "/" e "%" (resolvendo o primeiro da esquerda para a direita)
+            4º: --> "+" e "-" ->  resolvendo o primeiro da esquerda para a direita
+            5º: --> "<", "<=", ">" e ">=" (resolvendo o primeiro da esquerda para a direita)
+            6º: --> "==" e "!=" (resolvendo o primeiro da esquerda para a direita)
+            7º: --> "&&" (resolvendo primeiro da esquerda para a direita)
+            8º: --> "||" (resolvendo primeiro da esquerda para a direita)
+            9º: "=", "+=", "-=", "*=", "/=" e "%=" <-- (resolvendo primeiro da direita para a esquerda)
+            10º: --> "," (resolvendo primeiro da esquerda para a direita)
+
+### CONDIÇÕES ANINHADAS
+        `--->>> quando uma condição está dentro de outra, criando uma hierarquia de verificações.
+            Exp.: 
+                if (condicao1){
+                    if (condicao2){
+                        
+                    }
+                }
+
+### ESTRUTURAS DE DECISÃO ENCADEADAS
+        `--->>> verificam várias condições sequencialmente, usando "if/else" sem estar uma dento da outra. Essa é, por assim dizer, a estrutura mais usada de "if/else", onde se uma condição não for verdadeira, tenta a outra, e se nenhuma das demais forem, a última é executada.
+            Exp.:
+                if (condicao1){
+
+                } else if (condicao2){
+
+                } else {
+
+                }
 
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
