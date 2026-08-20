@@ -453,7 +453,7 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
             9º: "=", "+=", "-=", "*=", "/=" e "%=" <-- (resolvendo primeiro da direita para a esquerda)
             10º: --> "," (resolvendo primeiro da esquerda para a direita)
 
-### CONDIÇÕES ANINHADAS
+#### CONDIÇÕES ANINHADAS
         `--->>> quando uma condição está dentro de outra, criando uma hierarquia de verificações.
             Exp.: 
                 if (condicao1){
@@ -462,7 +462,7 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
                     }
                 }
 
-### ESTRUTURAS DE DECISÃO ENCADEADAS
+#### ESTRUTURAS DE DECISÃO ENCADEADAS
         `--->>> verificam várias condições sequencialmente, usando "if/else" sem estar uma dento da outra. Essa é, por assim dizer, a estrutura mais usada de "if/else", onde se uma condição não for verdadeira, tenta a outra, e se nenhuma das demais forem, a última é executada.
             Exp.:
                 if (condicao1){
@@ -472,6 +472,27 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
                 } else {
 
                 }
+
+#### SWITCH/CASE
+        `--->>> muito utilizada quando se sabe a quantidade de possibilidade a se levar em conta.
+            Exp.:
+                switch (variavel){
+                    case valor1:
+                        Executar...
+                    break;
+                    case valor2:
+                        Executar...
+                    break;
+                    default:
+                        Executar...
+                }
+        OBS.: se a variável for uma string ou caractere, não se pode esquecer de colocar os valores esperados entre aspas.
+
+##### BREAK
+        `--->>> utilizado para informar que, se aquela opção for executada, deve-se encerrar o "switch" ali e continuar o fluxo. Sem o "break", os demais comandos das outras opções também serão executados.
+
+##### DEFAULT
+        `--->>> utilizado como uma alternativa para caso nenhuma das possibilidades anteriores tenham sido executadas.
 
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
