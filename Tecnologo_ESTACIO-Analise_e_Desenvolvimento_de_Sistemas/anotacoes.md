@@ -494,6 +494,17 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
 ##### DEFAULT
         `--->>> utilizado como uma alternativa para caso nenhuma das possibilidades anteriores tenham sido executadas.
 
+### OPERADOR TERNÁRIO EM C
+        `--->>> é uma forma de escrever if/else de uma forma compacta, sem mudar sua funcionalidade, baseando-se em uma única condição. É chamado de ternário porquê envolve 3 partes:
+            - uma condição
+            - um valor se a condição for verdadeira
+            - um valor se a condição for falsa
+                Como:
+                    condição ? valor-se-verdadeiro : valor-se-falso;
+                Exp.:
+                    idade >= 18 ? printf("Maior de idade.\n") : printf("Menor de idade.\n");
+                        `--->>> se  condição for verdadeira, primeira ação, senão, segunda ação.
+
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
 ## FUNDAMENTOS DE REDES DE COMPUTADORES

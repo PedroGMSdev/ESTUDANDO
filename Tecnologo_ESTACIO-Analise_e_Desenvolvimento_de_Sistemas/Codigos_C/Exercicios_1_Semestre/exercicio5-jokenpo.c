@@ -4,11 +4,10 @@
 
 int main(){
     int escolhaJogador, escolhaComputador;
-    srand(time());
 
-    printf("---------------------------------");
-    printf("PEDRA, PAPEL E TESOURA");
-    printf("---------------------------------");
+    printf("---------------------------------\n");
+    printf("PEDRA, PAPEL E TESOURA\n");
+    printf("---------------------------------\n");
     printf("Escolha uma oção: \n");
     printf("1 - Pedra\n");
     printf("2 - Papel\n");
@@ -16,7 +15,10 @@ int main(){
     printf("Digite sua escolha: ");
     scanf("%d", &escolhaJogador);
 
+    srand(time(0)); // inicializa o gerador de números aleatórios com base no tempo atual
     escolhaComputador = rand() % 3 + 1; // ao dividir o número aleatório gerado por "srand" por 3, o resto da divisão será 0, 1 ou 2. Ao somar 1, o resultado final será 1, 2 ou 3.
+
+    printf("---------------------------------\n");
 
     switch (escolhaJogador) {
         case 1:
@@ -44,6 +46,8 @@ int main(){
             printf("O computador escolheu Tesoura\n");
             break;
     }
+
+    printf("---------------------------------\n");
 
     if (escolhaJogador == escolhaComputador){
         printf("Empate!\n");
