@@ -92,9 +92,8 @@ int main()
     int nAtributos;
     scanf("%d", &nAtributos);
 
-    switch (nAtributos)
-    {
-    case 1:
+    switch (nAtributos){
+        case 1:
         printf("Escolha que atributo deseja comparar:\n");
         printf("1 - POPULAÇÃO\n");
         printf("2 - ÁREA\n");
@@ -239,291 +238,150 @@ int main()
             printf("Opção inválida!\n");
         }
         break;
-    case 2:
-        printf("Escolha que atributo deseja comparar:\n");
-        printf("1 - POPULAÇÃO\n");
-        printf("2 - ÁREA\n");
-        printf("3 - PIB\n");
-        printf("4 - PONTOS TURÍSTICOS\n");
-        printf("5 - DENSIDADE POPULACIONAL\n");
-        printf("6 - PIB PER CAPITA\n");
-        printf("7 - SUPER PODER\n");
-        int escolha1;
-        printf("Escolha o primeiro atributo:\n");
-        scanf("%d", &escolha1);
-    
-            switch (escolha1){
+        case 2:
+            int escolha1;
+            int escolha2;
+
+            float valor1Carta1;
+            float valor1Carta2;
+            float valor2Carta1;
+            float valor2Carta2;
+
+            printf("\nEscolha o primeiro atributo:\n");
+            printf("1 - População\n");
+            printf("2 - Área\n");
+            printf("3 - PIB\n");
+            printf("4 - Pontos turísticos\n");
+            printf("5 - Densidade populacional\n");
+            printf("6 - PIB per capita\n");
+
+            scanf("%d", &escolha1);
+            printf("\nEscolha o segundo atributo:\n");
+
+            switch (escolha1) {
                 case 1:
-                    printf("Escolha que atributo deseja comparar:\n");
-                    printf("2 - ÁREA\n");
+                    printf("2 - Área\n");
                     printf("3 - PIB\n");
-                    printf("4 - PONTOS TURÍSTICOS\n");
-                    printf("5 - DENSIDADE POPULACIONAL\n");
-                    printf("6 - PIB PER CAPITA\n");
-                    printf("7 - SUPER PODER\n");
-                    int escolha2;
-                    printf("Escolha o segundo atributo:\n");
-                    scanf("%d", &escolha2);
-                    if (escolha1 != escolha2){
-                        switch (escolha2){
-                            case 2:
-                                printf("---------------------------------------------\n");
-                                printf("Os atributos escolhidos foram POPULAÇÃO e ÁREA\n");
-                                printf("POPULAÇÃO:\n");
-                                printf("Atributo: POPULAÇÃO\n");
-                                printf("Carta 1 - %s: %lu\n", nomeCidade1, populacao1);
-                                printf("Carta 2 - %s: %lu\n", nomeCidade2, populacao2);
-                                    if (populacao1 > populacao2)
-                                    {
-                                    printf("Resultado: Carta 1 (%s) venceu!\n", nomeCidade1);
-            }
-            else if (populacao2 > populacao1)
-            {
-                printf("Resultado: Carta 2 (%s) venceu!\n", nomeCidade2);
-            }
-            else
-            {
-                printf("Resultado: Empate!\n");
-            }
-                                printf("ÁREA:\n");
-                                            printf("Carta 1 - %s: %f\n", nomeCidade1, areaKM1);
-            printf("Carta 2 - %s: %f\n", nomeCidade2, areaKM2);
-            if (areaKM1 > areaKM2)
-            {
-                printf("Resultado: Carta 1 (%s) venceu!\n", nomeCidade1);
-            }
-            else if (areaKM2 > areaKM1)
-            {
-                printf("Resultado: Carta 2 (%s) venceu!\n", nomeCidade2);
-            }
-            else
-            {
-                printf("Resultado: Empate!\n");
-            }
-                                float total1, total2;
-                                total1 = (float) populacao1 + areaKM1;
-                                total2 = (float) populacao2 + areaKM2;
-
-                                total1 > total2 ? printf("Carta")
-                            break;
-                            case 3:
-                                printf("---------------------------------------------\n");
-                            break;
-                            case 4:
-                                
-                            break;
-                            case 5:
-                            break;
-                            case 6:
-                            break;
-                            case 7:
-                            break;
-                            default:
-                                printf("Escolha Inválida!");
-                        }
-                    } else {
-                        printf("Opção inválida! Você não pode escolher o mesmo atributo duas vezes.\n");
-                    }
+                    printf("4 - Pontos turísticos\n");
+                    printf("5 - Densidade populacional\n");
+                    printf("6 - PIB per capita\n");
                 break;
+
                 case 2:
-                    printf("Escolha que atributo deseja comparar:\n");
-                    printf("1 - POPULAÇÃO\n");
+                    printf("1 - População\n");
                     printf("3 - PIB\n");
-                    printf("4 - PONTOS TURÍSTICOS\n");
-                    printf("5 - DENSIDADE POPULACIONAL\n");
-                    printf("6 - PIB PER CAPITA\n");
-                    printf("7 - SUPER PODER\n");
-                    int escolha2;
-                    printf("Escolha o segundo atributo:\n");
-                    scanf("%d", &escolha2);
-                    if (escolha1 != escolha2){
-                        switch (escolha2){
-                            case 1:
-                            break;
-                            case 3:
-                            break;
-                            case 4:
-                            break;
-                            case 5:
-                            break;
-                            case 6:
-                            break;
-                            case 7:
-                            break;
-                            default:
-                                printf("Escolha Inválida!");
-                        }
-                    } else {
-                        printf("Opção inválida! Você não pode escolher o mesmo atributo duas vezes.\n");
-                    }
+                    printf("4 - Pontos turísticos\n");
+                    printf("5 - Densidade populacional\n");
+                    printf("6 - PIB per capita\n");
                 break;
+
                 case 3:
-                    printf("Escolha que atributo deseja comparar:\n");
-                    printf("1 - POPULAÇÃO\n");
-                    printf("2 - ÁREA\n");
-                    printf("4 - PONTOS TURÍSTICOS\n");
-                    printf("5 - DENSIDADE POPULACIONAL\n");
-                    printf("6 - PIB PER CAPITA\n");
-                    printf("7 - SUPER PODER\n");
-                    int escolha2;
-                    printf("Escolha o segundo atributo:\n");
-                    scanf("%d", &escolha2);
-                    if (escolha1 != escolha2){
-                        switch (escolha2){
-                            case 1:
-                            break;
-                            case 2:
-                            break;
-                            case 4:
-                            break;
-                            case 5:
-                            break;
-                            case 6:
-                            break;
-                            case 7:
-                            break;
-                            default:
-                                printf("Escolha Inválida!");
-                        }
-                    } else {
-                        printf("Opção inválida! Você não pode escolher o mesmo atributo duas vezes.\n");
-                    }
+                    printf("1 - População\n");
+                    printf("2 - Área\n");
+                    printf("4 - Pontos turísticos\n");
+                    printf("5 - Densidade populacional\n");
+                    printf("6 - PIB per capita\n");
                 break;
+
                 case 4:
-                    printf("Escolha que atributo deseja comparar:\n");
-                    printf("1 - POPULAÇÃO\n");
-                    printf("2 - ÁREA\n");
+                    printf("1 - População\n");
+                    printf("2 - Área\n");
                     printf("3 - PIB\n");
-                    printf("5 - DENSIDADE POPULACIONAL\n");
-                    printf("6 - PIB PER CAPITA\n");
-                    printf("7 - SUPER PODER\n");
-                    int escolha2;
-                    printf("Escolha o segundo atributo:\n");
-                    scanf("%d", &escolha2);
-                    if (escolha1 != escolha2){
-                        switch (escolha2){
-                            case 1:
-                            break;
-                            case 2:
-                            break;
-                            case 3:
-                            break;
-                            case 5:
-                            break;
-                            case 6:
-                            break;
-                            case 7:
-                            break;
-                            default:
-                                printf("Escolha Inválida!");
-                        }
-                    } else {
-                        printf("Opção inválida! Você não pode escolher o mesmo atributo duas vezes.\n");
-                    }
+                    printf("5 - Densidade populacional\n");
+                    printf("6 - PIB per capita\n");
                 break;
+
                 case 5:
-                    printf("Escolha que atributo deseja comparar:\n");
-                    printf("1 - POPULAÇÃO\n");
-                    printf("2 - ÁREA\n");
+                    printf("1 - População\n");
+                    printf("2 - Área\n");
                     printf("3 - PIB\n");
-                    printf("4 - PONTOS TURÍSTICOS\n");
-                    printf("6 - PIB PER CAPITA\n");
-                    printf("7 - SUPER PODER\n");
-                    int escolha2;
-                    printf("Escolha o segundo atributo:\n");
-                    scanf("%d", &escolha2);
-                    if (escolha1 != escolha2){
-                        switch (escolha2){
-                            case 1:
-                            break;
-                            case 2:
-                            break;
-                            case 3:
-                            break;
-                            case 4:
-                            break;
-                            case 6:
-                            break;
-                            case 7:
-                            break;
-                            default:
-                                printf("Escolha Inválida!");
-                        }
-                    } else {
-                        printf("Opção inválida! Você não pode escolher o mesmo atributo duas vezes.\n");
-                    }
+                    printf("4 - Pontos turísticos\n");
+                    printf("6 - PIB per capita\n");
                 break;
+
                 case 6:
-                    printf("Escolha que atributo deseja comparar:\n");
-                    printf("1 - POPULAÇÃO\n");
-                    printf("2 - ÁREA\n");
+                    printf("1 - População\n");
+                    printf("2 - Área\n");
                     printf("3 - PIB\n");
-                    printf("4 - PONTOS TURÍSTICOS\n");
-                    printf("5 - DENSIDADE POPULACIONAL\n");
-                    printf("7 - SUPER PODER\n");
-                    int escolha2;
-                    printf("Escolha o segundo atributo:\n");
-                    scanf("%d", &escolha2);
-                    if (escolha1 != escolha2){
-                        switch (escolha2){
-                            case 1:
-                            break;
-                            case 2:
-                            break;
-                            case 3:
-                            break;
-                            case 4:
-                            break;
-                            case 5:
-                            break;
-                            case 7:
-                            break;
-                            default:
-                                printf("Escolha Inválida!");
-                        }
-                    } else {
-                        printf("Opção inválida! Você não pode escolher o mesmo atributo duas vezes.\n");
-                    }
+                    printf("4 - Pontos turísticos\n");
+                    printf("5 - Densidade populacional\n");
                 break;
-                case 7:
-                    printf("Escolha que atributo deseja comparar:\n");
-                    printf("1 - POPULAÇÃO\n");
-                    printf("2 - ÁREA\n");
-                    printf("3 - PIB\n");
-                    printf("4 - PONTOS TURÍSTICOS\n");
-                    printf("5 - DENSIDADE POPULACIONAL\n");
-                    printf("6 - PIB PER CAPITA\n");
-                    int escolha2;
-                    printf("Escolha o segundo atributo:\n");
-                    scanf("%d", &escolha2);
-                    if (escolha1 != escolha2){
-                        switch (escolha2){
-                            case 1:
-                            break;
-                            case 2:
-                            break;
-                            case 3:
-                            break;
-                            case 4:
-                            break;
-                            case 5:
-                            break;
-                            case 6:
-                            break;
-                            default:
-                                printf("Escolha Inválida!");
-                        }
-                    } else {
-                        printf("Opção inválida! Você não pode escolher o mesmo atributo duas vezes.\n");
-                    }
-                break;
+
                 default:
-                    printf("Escolha inválida!");
+                    printf("Opção inválida!\n");
             }
 
+            scanf("%d", &escolha2);
+
+            switch (escolha1) {
+                case 1:
+                    valor1Carta1 = populacao1;
+                    valor1Carta2 = populacao2;
+                break;
+
+                case 2:
+                    valor1Carta1 = areaKM1;
+                    valor1Carta2 = areaKM2;
+                break;
+
+    case 3:
+        valor1Carta1 = pib1;
+        valor1Carta2 = pib2;
         break;
-    default:
-        printf("Opção inválida!\n");
+
+    case 4:
+        valor1Carta1 = pontosTuristicos1;
+        valor1Carta2 = pontosTuristicos2;
+        break;
+
+    case 5:
+        valor1Carta1 = densidadePopulacional1;
+        valor1Carta2 = densidadePopulacional2;
+        break;
+
+    case 6:
+        valor1Carta1 = pibPerCapita1;
+        valor1Carta2 = pibPerCapita2;
+        break;
+            }
+
+            switch (escolha2) {
+
+    case 1:
+        valor2Carta1 = populacao1;
+        valor2Carta2 = populacao2;
+        break;
+
+    case 2:
+        valor2Carta1 = areaKM1;
+        valor2Carta2 = areaKM2;
+        break;
+
+    case 3:
+        valor2Carta1 = pib1;
+        valor2Carta2 = pib2;
+        break;
+
+    case 4:
+        valor2Carta1 = pontosTuristicos1;
+        valor2Carta2 = pontosTuristicos2;
+        break;
+
+    case 5:
+        valor2Carta1 = densidadePopulacional1;
+        valor2Carta2 = densidadePopulacional2;
+        break;
+
+    case 6:
+        valor2Carta1 = pibPerCapita1;
+        valor2Carta2 = pibPerCapita2;
+        break;
+            }
+
+//-------------------------------------------------------------------------------------------------------
+        break;
+        default:
+            printf("Opção inválida!\n");
     }
 
     return 0;
