@@ -1,5 +1,12 @@
 ## CONCEITOS, FUNDAMENTOS E OBSERVAÇÕES
 
+# *VSCODE*
+## COMPLETIONS GITHUB COPILOT
+        `--->>> uma sugestão de completação do código que você está escrevendo.
+        Para Habilitar/Desabilitar:
+            Ctrl+Shift+P
+                `-> Digite: GitHub Copilot: Disable Colpetions
+
 # *HTML*
 
 ## --------------- ESTRUTURA BASE HTML
