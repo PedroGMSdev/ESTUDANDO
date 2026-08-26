@@ -277,6 +277,11 @@ int main()
 
             scanf("%d", &escolha2);
 
+            if(escolha1 == escolha2){
+                printf("---------------------------------------------\n");
+                printf("------------OPA! OPÇÃO INVÁLIDA!-------------\n");
+                printf("Você não pode escolher o mesmo atributo duas vezes!");
+            }else{
             switch (escolha1){
                 case 1:
                     valor1Carta1 = populacao1;
@@ -477,6 +482,7 @@ int main()
 
             printf("---------------------------------------------\n");
             total1 > total2 ? printf("SUPER CAMPEÃO: Carta 1 - %s", nomeCidade1) : printf("SUPER CAMPEÃO: Carta 2 - %s", nomeCidade2);
+            }
         break;
         default:
         printf("Opção inválida!\n");
