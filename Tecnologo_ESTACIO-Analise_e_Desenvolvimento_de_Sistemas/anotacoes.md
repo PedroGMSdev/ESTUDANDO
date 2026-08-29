@@ -531,7 +531,7 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
 
                 }while (condição);
 
-####rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr FOR
+#### FOR
         `--->>> o "for" é uma estrutura que tem começo, meio e fim, tendo sempre um tamanho expecificado.
         DICA: se você não souber exatamente quantas vezes será repetida, não deve realizar o "for".
             Estrutura:
@@ -544,6 +544,13 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
                     printf("%d", i);
                 }
                  `--->>> para "i" que é igual a 1, enquanto "i" for menor ou igual a 5, execute o "printf", e ao final, acrescente +1.
+
+### LOOPS ANINHADOS
+        `--->>> quando é colocado um loop dentro de outro loop, muito usado para:
+            - algorítmos de força bruta (como nos algorítmos de ordenação)
+            - matrizes
+            - criptografia e segurança
+    OBS.: para cada loop externo (loop da primeira estrutura) será executado por completo o loop interno (loop da segunda extrutura). Ou seja, se a primeira estrutura precisar se repetir 5 vezes e a segunda estrutura 4 vezes, a cada 1 repetição do externo o de dentro se repetirá 4, totalizando 5 repetições do externo e 20 do interno.
 
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
