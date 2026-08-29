@@ -505,6 +505,46 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
                     idade >= 18 ? printf("Maior de idade.\n") : printf("Menor de idade.\n");
                         `--->>> se  condição for verdadeira, primeira ação, senão, segunda ação.
 
+## MOVIMENTAÇÃO DE PEÇAS DE XADREZ
+
+### ESTRUTURAS DE REPETIÇÃO
+        `--->>> permitem execução repetidas de instuções, cruciais para programas eficazes e de fácil manutenção, evitando retrabalho ou milhares de linhas repetidas no código.
+
+#### WHILE
+        `--->>> ENQUANTO uma condição verdadeira (a condição é booleana) para ser executada, e termina quando essa condição se torne falsa.
+            Estrutura:
+                while (condição){
+
+                }
+            Exp.:
+                int i = 1;
+                while (i <= 5){
+                    printf("%d\n", i);
+                    i++; ----->>> INCREMENTO
+                }
+    OBS.: para evitar o loop infinito, dentro das repetições precisa ter um modificador da variável, senão aquele bloco nunca parará de se repetir. No caso acima, o INCREMENTO está sendo usado para aumentar um valor até que a variável fique diferente da condição.
+        
+#### DO/WHILE
+        `--->>> essa variação do "while" diz que, mesmo que a condição seja falsa, a funcionalidade será executada, pelo menos uma vez, ENQUANTO a condição for verdadeira.
+            Estrutura:
+                do {
+
+                }while (condição);
+
+####rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr FOR
+        `--->>> o "for" é uma estrutura que tem começo, meio e fim, tendo sempre um tamanho expecificado.
+        DICA: se você não souber exatamente quantas vezes será repetida, não deve realizar o "for".
+            Estrutura:
+                for (inicialização;condição;incremento){
+
+                }
+                 `--->>> a estrutua define o valor inicial (inicialização), define a condição booleana a ser alcançada e indica o incremento ou decremento para que o loop infinito não seja atingido.
+            Exp.:
+                for (int i = 1; i <= 5; i++){
+                    printf("%d", i);
+                }
+                 `--->>> para "i" que é igual a 1, enquanto "i" for menor ou igual a 5, execute o "printf", e ao final, acrescente +1.
+
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
 ## FUNDAMENTOS DE REDES DE COMPUTADORES
