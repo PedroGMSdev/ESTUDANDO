@@ -8,8 +8,8 @@
 Aprender a pensar como programador.
 
 #### Checklist
-* [ ] Variáveis
-* [ ] Condições (`if`, `else`)
+* [X] Variáveis
+* [X] Condições (`if`, `else`)
 * [ ] Loops (`for`, `while`)
 * [ ] Funções
 * [ ] Arrays
