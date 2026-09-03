@@ -586,6 +586,32 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
                             `--->>> sai do loop quando o "i" é "8", terminando o loop.
                 }
 
+#### PROCEDIMENTOS
+        `--->>> assim como as funções em Javascript, os "Procedimentos" são um bloco de código que é criado para, quando for chamado, executar o conteúdo já pré-definido, ajudando a reutilizar código.
+            Exp.:
+                void imprimirMensagem(){
+                    printf("Olá, mundo!\n");
+                }
+                int main(){
+                    imprimirMensagem();
+                    
+                    return 0;
+                }
+                        `--->>> criado fora do "int main(){ }", quando for chamado vai executar esse código.
+        OBS.: os Procedimentos são blocos que NÃO RETORNAM resultado, apenas imprimem ou executam algo.
+
+#### RECURSIVIDADE
+        `--->>> diz-se quando a função chama a si mesmo.
+            Exp.:
+                void recursivo(int numero){
+                    if (numero > 0){
+                        printf("%d \n", numero);
+                        
+                        recursivo(numero - 1);
+                                `------>>> aqui, a função chama a si mesma de novo, dentro da própria função, ou seja, a função vai chamar o comando pra executar a função. Isso pode se tornar um loop, mesmo que não usando as estruturas de loop.
+                    }
+                }
+
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
 ## FUNDAMENTOS DE REDES DE COMPUTADORES
