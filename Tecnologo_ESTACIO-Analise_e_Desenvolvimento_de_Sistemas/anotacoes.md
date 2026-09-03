@@ -552,6 +552,40 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
             - criptografia e segurança
     OBS.: para cada loop externo (loop da primeira estrutura) será executado por completo o loop interno (loop da segunda extrutura). Ou seja, se a primeira estrutura precisar se repetir 5 vezes e a segunda estrutura 4 vezes, a cada 1 repetição do externo o de dentro se repetirá 4, totalizando 5 repetições do externo e 20 do interno.
 
+### LOOPS AVANÇADOS
+        `--->>> loops onde muitas variáveis são inicializadas, testadas e atualizadas ao mesmo tempo, dentro de um único loop.
+            Exp.:
+                for (int i = 0, j = 10; i++, j--){
+
+                }
+
+#### LOOPS COM CONDIÇÕES MULTIPLAS
+        `--->>> loops que utilizam mais de uma condição para determinar quando devem continuar ou parar.
+            Exp.:
+                for (int i = 0, j = 0; i < 5 && j > 5; i++, j--){
+
+                }
+
+#### LOOPS COM ATUALIZAÇÕES COMPLEXAS
+        `--->>> loops em que a variável de controle é modificada de maneira mais sofisticada, não apenas por encremento ou decremento. Esses loops frequentemente utilizam expressõs condicionais, cálculos matemáticos ou funções para alterar o valor da variável de controle a cada iteração.
+            Exp.:
+                for (int i = 0; i < 100; i+= (i % 2 ==0) ? 1 : 2){
+
+                }
+
+##### CONTINUE
+        `--->>> faz a iteração continuar, mesmo que a condição tenha sido atingida. Muito usado quando há duas condições no mesmo loop.
+
+##### BREAK
+        `--->>> faz encerrar imediatamente a iteração assim que a condição for atingida, mesmo que haja outras condiçõe a serem testadas.
+            Exp.:
+                for (int i = 0; i < 10; i++){
+                    if (i == 5) continue;
+                            `--->>> pula a iteração quando "i" é "5". Nesse caso, quando "i" é "5", o "continue" pula a impressão.
+                    if (i == 8) break;
+                            `--->>> sai do loop quando o "i" é "8", terminando o loop.
+                }
+
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
 ## FUNDAMENTOS DE REDES DE COMPUTADORES
