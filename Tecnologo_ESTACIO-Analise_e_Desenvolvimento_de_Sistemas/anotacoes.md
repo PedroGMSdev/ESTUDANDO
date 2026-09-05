@@ -621,6 +621,7 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
         `--->>> Pode-se dizer que, se uma variável é uma caixa, um "vetor" é um armário horizontal com vários espaços.
             Exp.:
                 int numeros[5] = {10,20,30,40,50};
+                        `--->>> o "[5]" informa que esse vetor terá 5 casas.
 
 #### MATRIZES
         `--->>> uma "matriz", assim como os vetores, podem ser vistos como armários, porém multimensional, ou seja, com linhas e colunas de armários.
@@ -630,6 +631,24 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
                     {4, 5, 6},
                     {7, 8, 9}
                 };
+                        `--->>> o "[3][3]" informa que essa matriz terá 3 casas na horizontal e 3 casas na vertical.
+
+##### CHAMANDO UM ARRAY
+        `--->>> quando você vai chamar o array, deve-se informar o nome e a posição que deseja buscar.
+                Exp.:
+                    nome[3][0];
+
+    OBS.: a busca por um valor em um array começa da posição "0", então, quando você buscar uma colocação pode usar a base de:
+        VALOR QUE DESEJA - 1 = VALOR INFORMADO PARA BUSCAR POSIÇÃO.
+                Exp.:
+                    int numeros[10] = {1,2,3,4,5,6,7,8,9,10};
+
+                    printf("%d", numeros[5]);
+                            `--->>> o resultado retornará 6, pois as posições começam do 0.
+
+    OBS.: ao criar um array de strings, em C, deve-se colocar um "*" na frente do nome do array, para diferenciar de um array de char.
+            Exp.:
+                char *nomesAlunos[5]
 
 
 # QUESTÕES
