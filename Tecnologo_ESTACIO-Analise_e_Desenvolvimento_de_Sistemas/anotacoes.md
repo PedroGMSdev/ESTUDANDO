@@ -574,7 +574,7 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
                 }
 
 ##### CONTINUE
-        `--->>> faz a iteração continuar, mesmo que a condição tenha sido atingida. Muito usado quando há duas condições no mesmo loop.
+        `--->>> quando chega na iteração informada, a execução é pulada, indo para a próxima execução.
 
 ##### BREAK
         `--->>> faz encerrar imediatamente a iteração assim que a condição for atingida, mesmo que haja outras condiçõe a serem testadas.
@@ -611,6 +611,26 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
                                 `------>>> aqui, a função chama a si mesma de novo, dentro da própria função, ou seja, a função vai chamar o comando pra executar a função. Isso pode se tornar um loop, mesmo que não usando as estruturas de loop.
                     }
                 }
+
+## JOGO DE BATALHA NAVAL
+
+### ARRAYS
+        `--->>> vetores são um modo de armazenar uma coleção de elementos do mesmo tipo em locais de memória, lado a lado.
+        
+#### VETORES
+        `--->>> Pode-se dizer que, se uma variável é uma caixa, um "vetor" é um armário horizontal com vários espaços.
+            Exp.:
+                int numeros[5] = {10,20,30,40,50};
+
+#### MATRIZES
+        `--->>> uma "matriz", assim como os vetores, podem ser vistos como armários, porém multimensional, ou seja, com linhas e colunas de armários.
+            Exp.:
+                int tabela[3][3] = {
+                    {1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}
+                };
+
 
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
