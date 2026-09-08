@@ -4,61 +4,60 @@
 
 #include<stdio.h>
 
+#define TABULEIRO 10
+#define NAVIO 3
+
 int main(){
 
-    int tabuleiro[10][10] = {
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-    };
+    int tabuleiro[TABULEIRO][TABULEIRO];
+    int agua = 0;
 
-    int navio1 = 3;
-    int navio2 = 3;
-    int navio3 = 3;
-    int navio4 = 3;
+    int navio1[NAVIO] = {3, 3, 3};
+    int navio2[NAVIO] = {3, 3, 3};
+    int navio3[NAVIO] = {3, 3, 3};
+    int navio4[NAVIO] = {3, 3, 3};
 
-    tabuleiro[7][6] = navio1;
-    tabuleiro[7][7] = navio1;
-    tabuleiro[7][8] = navio1;
+    for (int i = 0; i < TABULEIRO; i++){
+        for (int j = 0; j < TABULEIRO; j++){
+            tabuleiro[i][j] = agua;
+        }
+    }
 
-    tabuleiro[4][2] = navio2;
-    tabuleiro[5][2] = navio2;
-    tabuleiro[6][2] = navio2;
+    for (int i = 0; i < NAVIO; i++){
+        tabuleiro[7][6 + i] = navio1[i];
+    }
 
-    tabuleiro[0][9] = navio3;
-    tabuleiro[1][8] = navio3;
-    tabuleiro[2][7] = navio3;
+    for (int i = 0; i < NAVIO; i++){
+        tabuleiro[4 + i][2] = navio2[i];
+    }
 
-    tabuleiro[6][1] = navio4;
-    tabuleiro[7][2] = navio4;
-    tabuleiro[8][3] = navio4;
+    for (int i = 0; i < NAVIO; i++){
+        tabuleiro[7 + i][i] = navio3[i];
+    }
 
-    int linha = 0;
-    int coluna = 0;
+    for (int i = 0; i < NAVIO; i++){
+        tabuleiro[i][9 - i] = navio4[i];
+    }
+
     int numeroLinha = 1;
+
 
     printf("TABULEIRO DE BATALHA NAVAL\n");
     printf("--------------------------\n");
     printf("A - B - C - D - E - F - G - H - I - J\n");
     printf("|   |   |   |   |   |   |   |   |   |\n");
 
-    for (int i = 0; i < 10; i++){
-
-        for (int j = 0; j < 10; j++){
-            printf("%d - ", tabuleiro[linha][coluna]);
-            coluna++;
+    for (int i = 0; i < TABULEIRO; i++){
+        for (int j = 0; j < TABULEIRO; j++){
+            printf("%d - ", tabuleiro[i][j]);
         }
-
         printf(" (%d)", numeroLinha);
         numeroLinha++;
         printf("\n");
     }
+    
+    
+    printf("\n");
+    
 
 }
