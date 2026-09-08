@@ -650,6 +650,31 @@ OBS.: "fazer um CASH" é a ação de transformar (converter) um tipo de dado int
             Exp.:
                 char *nomesAlunos[5]
 
+### MATRIZES E LOOPS DE REPETIÇÃO
+        `--->>> muito utilizado para resolver problemas complexos e ajudar a criar as tabelas, diminuindo o trabalho manual.
+
+#### INFORMANDO CONSTANTES DE QUANTIDADE (#DEFINE)
+        `--->>> ao utilizar o comando "#define" no começo do códifo, você cria um valor reutilizável para chamar sempre que quizer. Você pode usar essa ferramenta para fixar um valor padrão para as colunas e linhas das matrizes, e chamá-las depois.
+            Exp.:
+                #include <stdio.h>
+
+                #define LINHAS 5
+                #define COLUNAS 5
+                        `--->>> aqui você está criando duas constantes (uma chamada LINHAS e a outra COLUNAS) e atribuindo o valor "5" para cada uma delas.
+
+                int main(){
+                    int matriz[LINHAS][COLUNAS];
+                            `--->>> aqui você está chamando a constante, então o "LINHAS" e "COLUNAS" serão substituídos pelos valores informados na criação da constante, transformando a matriz em "matriz[5][5];".
+
+                    for (int i = 0; i < LINHAS; i++){
+                                `--->>> aqui foi atribuído a condição o valor estipulado em "LINHAS".
+                    }
+
+                    return 0;
+                }
+
+### MATRIZES E CONDICIONAIS
+        `--->>> melhoram a eficiência do código, além de permitir aplicar diferentes lógicas na matriz. Condicionais ajudam a evitar erros, como acessar índices fora dos limites. Nos loops aninhados, simplificam a manipulação de dados, como modificação, contagem e substituição dos valores da matriz.
 
 # QUESTÕES
 **----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
