@@ -816,14 +816,29 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
 
 # *C*
 
-## #include <stdio.h>
-        `--->>> inclusão da biblioteca. Inclui a biblioteca padrão de entrada e saída, necessária para usar a função "printf".
+## BIBLIOTECAS
+### #include <stdio.h> (Standard Input/Output)
+        `--->>> inclusão de biblioteca. Inclui a biblioteca padrão de ENTRADA e SAÍDA, necessária para usar a função "printf" e "scanf".
+#### printf();
+        `--->>> saída de dados. Imprime uma mensagem na tela.
+##### \n
+        `--->>> adiciona uma nova linha no final de uma mensagem.
+            Exp.:
+                printf("Olá mundo!\n);
+                        `--->>> vai escrever "Olá mundo!" e pular para a linha de baixo.
+#### scanf();
+        `--->>> entrada de dados Usado para capturar o valor informado.
+
+### #include <stdlib.h>
+        `--->>> biblioteca de utilidades gerais, como "malloc()", "free()", "rand()"...
+#### rand()
+        `--->>> inclui a função de randonização, que é a geração de número aleatório.
 
 ## int main(){}
-        `--->>> abertura da classe. Todo programa em C ocorre dentro de uma classe MAIN.
+        `--->>> abertura da função principal e inicialização do programa. Todo programa em C ocorre dentro de uma classe MAIN.
 
 ## return 0;
-        `--->>> informa que o programa terminou. Informa que o programa terminou com sucesso.
+        `--->>> finalização do programa. Informa que o programa terminou com sucesso.
 
 ## VARIÁVEIS
     tipo NOME = valor;
@@ -849,13 +864,7 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
 
 ## ENTRADA E SAÍDA DE DADOS
 
-### printf();
-        `--->>> saída de dados. Imprime uma mensagem na tela.
-#### \n
-        `--->>> adiciona uma nova linha no final de uma mensagem.
-            Exp.:
-                printf("Olá mundo!\n);
-                        `--->>> vai escrever "Olá mundo!" e pular para a linha de baixo.
+
 
 ### OUTRAS FUNÇÕES DE ENTRADA (Para Interação Com Usuários)
 #### putc
@@ -866,9 +875,6 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
 ### OUTRAS FUNÇÕES DE ESCRITA (Para Manipulação de Arquivos)
 #### fprintf
 #### fputs
-
-### scanf();
-        `--->>> entrada de dados Usado para capturar o valor informado.
 
 ### OUTRAS FUNÇÕES DE ENTRADA (Para Interação Com Usuários)
 #### gets
