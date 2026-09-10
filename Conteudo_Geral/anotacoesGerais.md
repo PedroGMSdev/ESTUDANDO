@@ -834,6 +834,18 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
 #### rand()
         `--->>> inclui a função de randonização, que é a geração de número aleatório.
 
+### #include <string.h>
+        `--->>> biblioteca que trabalha com textos, como "strlen()", "strcpy()"...
+
+### #include <math.h>
+        `--->>> biblioteca que trabalha com matemática, como "sqrt()", "pow()"...
+
+### #include <time.h>
+        `--->>> biblioteca que trabalha com data e hora, como "time()"...
+
+### #include <ctype.h>
+        `--->>> biblioteca que manipula caracteres, como "toupper()", "isdigit()"...
+
 ## int main(){}
         `--->>> abertura da função principal e inicialização do programa. Todo programa em C ocorre dentro de uma classe MAIN.
 
