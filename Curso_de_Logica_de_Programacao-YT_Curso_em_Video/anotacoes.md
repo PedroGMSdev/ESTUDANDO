@@ -1,9 +1,9 @@
 #        CURSO EM VÍDEO
 ## CURSO DE LÓGICA DE PROGRAMAÇÃO
 
-__________________________________**ALGORÍTMOS**__________________________________
+## ALGORÍTMOS
 
-**COMANDO DE SÁIDA**
+### COMANDO DE SÁIDA
 Servem para EXIBIR informações na tela.
 
 - escreva(" ") = escreve o comando na tela
@@ -21,7 +21,7 @@ O comando de saída pode exibir um mensagem desejada entre aspas, exibir uma var
         - escreva(variavel)
         - escreva("mensagem", variavel)
 
-**VARIÁVEIS**
+### VARIÁVEIS
 Espaço para colocar um valor, como se fosse um armário.
 
 Para nomear uma variável deve se ter:
@@ -35,7 +35,7 @@ O IDENTIFICADOR deve:
 - NÃO pode conter letras com acentos.
 - NÃO pode ser uma PALAVRA RESERVADA, ou seja, palavras que o programa já use como padrão. Exp.: Algoritmo, Finalgoritmo, Var...
 
-**TIPOS DE VARIÁVEIS**
+### TIPOS DE VARIÁVEIS
 No PORTUGOL, existem 4 TIPOS PRIMITIVOS DE VARIÁVEIS:
 - Inteiro
     Exp.: 1, 3, -5, 198, 0...
@@ -53,7 +53,7 @@ OBS.: são conhecidos como STRING.
     Exp.: Verdadeiro ou Falso
 OBS.: conhecidos como booleanos, ou "boolean"
 
-**DECLARAÇÃO E ATRIBUIÇÃO**
+### DECLARAÇÃO E ATRIBUIÇÃO
 Ao declarar no local de variáveis, coloca-se o nome desejado para a varíavel, dois pontos e o tipo dela.
     Exp.:
         var
@@ -63,7 +63,7 @@ E então, no local de aplicação da lógica, coloca-se o nome da variável cria
         Inicio
             nome <- "Guilherme"
 
-**COMANDO DE ENTRADA**
+### COMANDO DE ENTRADA
 Servem para RECEBER algum tipo de dado do usuário e salvá-lo para ser reutilizado depois.
 
 - leia () = recebe o conteúdo que o usuário digitar e salva dentro da variável que foi informada dentro dos parenteses.
@@ -80,7 +80,7 @@ Servem para RECEBER algum tipo de dado do usuário e salvá-lo para ser reutiliz
             System.out.print("Digite seu nome:");
             String nome = scanNome.nextLine();
 
-__________________________________**OPERADORES ARITMÉTICOS**__________________________________
+## OPERADORES ARITMÉTICOS
 
 - Adição (+)
     Exp.:
@@ -111,7 +111,7 @@ OBS.: Assim como na matemática, os operadores são resolvidos com base nas prio
         3° - Multiplicação e Divisão * e /
         4° - Adição e Subtração + e -
 
-**FUNÇÕES ARITMÉTICAS**
+### FUNÇÕES ARITMÉTICAS
 
 - Abs = retorna o Valor Absoluto, ou seja, o número sem sinal.
     Exp.:
@@ -203,4 +203,4 @@ OBS.: como PI é um valor constante, não se coloca entre parenteses.
             Math.toRadians(30);
 OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí sim pode aplicar as funções de Seno, Cosseno e Tangente.
 
-__________________________________**OPERADORES RELACIONAIS**__________________________________
+## OPERADORES RELACIONAIS
