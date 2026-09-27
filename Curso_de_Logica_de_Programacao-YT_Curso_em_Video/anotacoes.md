@@ -6,16 +6,20 @@
 ### COMANDO DE SÁIDA
 Servem para EXIBIR informações na tela.
 
-- escreva(" ") = escreve o comando na tela
+#### escreva(" ")
+        `--->>> escreve o comando na tela
     igual à:
         - System.out.print(" ") em JAVA
+        - printf(" ") em C
 
-- escreval(" ") = escreve o comando e salta uma linha
+#### escreval(" ")
+        `--->>> escreve o comando e salta uma linha
     igual à:
         - System.out.println(" ") em JAVA
         - console.log(" ") em JAVASCRIPT
+        - printf("\n") em C, onde o "\n" sinaliza que será quebrado a linha e pulado para a próxima
 
-O comando de saída pode exibir um mensagem desejada entre aspas, exibir uma variável sem precisar das aspas, ou a CONCATENAÇÃO que é a junção das duas.
+OBS.: O comando de saída pode exibir um mensagem desejada entre aspas, exibir uma variável sem precisar das aspas, ou a CONCATENAÇÃO que é a junção das duas.
     Exp.:
         - escreva("mensagem")
         - escreva(variavel)
@@ -66,7 +70,8 @@ E então, no local de aplicação da lógica, coloca-se o nome da variável cria
 ### COMANDO DE ENTRADA
 Servem para RECEBER algum tipo de dado do usuário e salvá-lo para ser reutilizado depois.
 
-- leia () = recebe o conteúdo que o usuário digitar e salva dentro da variável que foi informada dentro dos parenteses.
+#### leia ()
+        `--->>> recebe o conteúdo que o usuário digitar e salva dentro da variável que foi informada dentro dos parenteses.
     Exp.:
         escreva ("Qual seu nome?")
         leia (nome)
@@ -79,6 +84,9 @@ Servem para RECEBER algum tipo de dado do usuário e salvá-lo para ser reutiliz
 
             System.out.print("Digite seu nome:");
             String nome = scanNome.nextLine();
+        em C:
+            scanf("%d", nome);
+                    `--->>> onde o %d vai mudar de acordo com o tipo de dado.
 
 ## OPERADORES ARITMÉTICOS
 
