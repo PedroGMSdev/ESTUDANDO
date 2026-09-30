@@ -212,3 +212,30 @@ OBS.: como PI é um valor constante, não se coloca entre parenteses.
 OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí sim pode aplicar as funções de Seno, Cosseno e Tangente.
 
 ## OPERADORES RELACIONAIS
+        `--->>> servem para comparar variáveis ou expressões. Eles são:
+            - maior que (>)
+            - menor que (<)
+            - maior ou igual a (>=)
+            - menor ou igual a (<=)
+            - igual a (=)
+            - diferente de (<>)
+
+## OPERADORES LÓGICOS
+        `--->>> servem para comparar valores lógicos.
+            - E/AND
+            - OU/OR
+            - NÃO/NOT
+
+## ORDEM DE PRECEDÊNCIA
+        `--->>> é a ordem que segue para ser resolvidos os operadores:
+                1°: Aritiméticos
+                        1°: ( ) (entre parenteses)
+                        2°: ^ (exponencial)
+                        3°: * e / (multiplicação e divisão)
+                        4°: + e - (adição e subtração)
+                2°: Relacionais
+                        TODOS
+                3°: Lógicos
+                        1°: E
+                        2°: OU
+                        3°: NÂO
