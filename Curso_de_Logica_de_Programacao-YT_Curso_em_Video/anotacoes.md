@@ -1,5 +1,5 @@
-#        CURSO EM VÍDEO
-## CURSO DE LÓGICA DE PROGRAMAÇÃO
+________________**CURSO EM VÍDEO**___________________
+# CURSO DE LÓGICA DE PROGRAMAÇÃO
 
 ## ALGORÍTMOS
 
@@ -239,3 +239,5 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
                         1°: E
                         2°: OU
                         3°: NÂO
+
+## 
