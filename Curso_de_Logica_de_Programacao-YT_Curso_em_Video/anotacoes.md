@@ -308,3 +308,26 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
             - switch/case
 
     OBS.: Essa estrutura não serve para uso com estruturas de comparação.
+
+## ESTRUTURAS DE REPETIÇÃO
+        `--->>> usada para repetir um bloco de código de acordo com uma ou mais condições.
+
+### ENQUANTO/FAÇA
+        `--->>> escolhe uma condição e, ENQUANTO essa condição for verdadeira, o código estipulado será realizado, caso contrário, a repetição se encerrará e voltará ao código.
+            Exp.: 
+                Enquanto (expressão) faça
+                    Código...
+                FimEnquanto
+
+    Igual à:
+        em C:
+            - while(){}
+
+    OBS.: para evitar repetição (loop) infinita, acrescente dentro do bloco de código algo que faça mudar o valor da condição, senão ela nunca ficará falsa.
+            Exp.: 
+                quantidade <- 0
+                Enquanto (quantidade < 5) faça
+                    Código...
+                    quantidade <- quantidade + 1
+                FimEnquanto
+                        `--->>> a "quantidade" começa em zero, mas a cada repetição é acrescentado +1, e quando ela chegar à 5, que não é "< 5", a repetição irá se encerrar.
