@@ -243,7 +243,10 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
 ## ESTRUTURAS CONDICIONAIS
         `--->>> estipulam blocos de códigos que serão executados a partir de escolhas ou condições.
 
-### SE (se)
+### ESTRUTURA SIMPLES
+        `--->>> quando a estrutura de repetição possui apenas UMA única condição.
+
+#### SE (se)
         `--->>> informa o que acontecerá SE condição informada for verdadeira.
     Igual à:
         em Java, C e Javascript:
@@ -254,19 +257,7 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
             se (idade >= 18) entao
                 escreva ("Maior de idade")
 
-### SENÃO (senao)
-        `--->>> informa o que acontecerá caso a condição informada não for verdadeira. Diferente do "se", o "senao" não precisa ser atribuído uma condição, pois será executada em qualquer resultado que não seja a escolhida em "se".
-    Igual à:
-        em Java, C e Javascript:
-            - else
-
-#### SENÃO SE (senao se)
-        `--->>> quando há mais de uma condição, pode se informar com o "senao se". Assim como o "se", o "senao se" precisa ser atribuído uma condição.
-    Igual à:
-        em Java, C e Javascript:
-            - else if
-
-### ENTÃO e FIMSE (entao/fimSe)
+#### ENTÃO e FIMSE (entao/fimSe)
         `--->>> sinaliza o começo e o final do processo de condicional.
                 Exp.:
                     se (idade >= 18) entao
@@ -282,3 +273,38 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
     Igual à:
         em Java, C e Javascript:
             - são utilizados "{ }" para informar onde começa e onde termina.
+
+### ESTRUTURA COMPOSTA
+        `--->>> quando a estrutura de repetição possui MAIS DE UMA condição alvo e uma saída para caso essa condição não seja verdadeira.
+
+#### SENÃO (senao)
+        `--->>> informa o que acontecerá caso a condição informada não for verdadeira. Diferente do "se", o "senao" não precisa ser atribuído uma condição, pois será executada em qualquer resultado que não seja a escolhida em "se".
+    Igual à:
+        em Java, C e Javascript:
+            - else
+
+### ESTRUTURA ANINHADA
+        `--->>> quando há uma estrutura de repetição DENTRO de outra estrutura de repetição.
+
+#### SENÃO SE (senao se)
+        `--->>> quando há mais de uma condição, pode se informar com o "senao se". Assim como o "se", o "senao se" precisa ser atribuído uma condição.
+    Igual à:
+        em Java, C e Javascript:
+            - else if
+
+### ESTRUTURA CONDICIONAL ESCOLHA/CASO
+        `--->>> quando o número de escolhas é utilizada quando há muitos testes com valores numéricos simples.
+            Exp.:
+                Escolha (variável)
+                    Caso valor
+                        Executar...
+                    Caso valor
+                        Executar...
+                    Outro caso ------>>> usado para caso nenhum dos casos citados acima aconteçam.
+                        Executar...
+                FimEscolha
+    Igua à:
+        em C:
+            - switch/case
+
+    OBS.: Essa estrutura não serve para uso com estruturas de comparação.
