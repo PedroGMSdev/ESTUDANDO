@@ -240,4 +240,45 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
                         2°: OU
                         3°: NÂO
 
-## 
+## ESTRUTURAS CONDICIONAIS
+        `--->>> estipulam blocos de códigos que serão executados a partir de escolhas ou condições.
+
+### SE (se)
+        `--->>> informa o que acontecerá SE condição informada for verdadeira.
+    Igual à:
+        em Java, C e Javascript:
+            - if
+
+    Quando vai inserir uma condição, deve-se informar a condição esperada entre "( )".
+        Exp.:
+            se (idade >= 18) entao
+                escreva ("Maior de idade")
+
+### SENÃO (senao)
+        `--->>> informa o que acontecerá caso a condição informada não for verdadeira. Diferente do "se", o "senao" não precisa ser atribuído uma condição, pois será executada em qualquer resultado que não seja a escolhida em "se".
+    Igual à:
+        em Java, C e Javascript:
+            - else
+
+#### SENÃO SE (senao se)
+        `--->>> quando há mais de uma condição, pode se informar com o "senao se". Assim como o "se", o "senao se" precisa ser atribuído uma condição.
+    Igual à:
+        em Java, C e Javascript:
+            - else if
+
+### ENTÃO e FIMSE (entao/fimSe)
+        `--->>> sinaliza o começo e o final do processo de condicional.
+                Exp.:
+                    se (idade >= 18) entao
+                        escreva ("Maior de idade e pode votar")
+                    fimSe
+                    senao se ((idade < 18) e (idade >=16)) entao
+                        escreva ("Menor de idade mas pode votar")
+                    fimSE
+                    senao
+                        escreve ("Menor de idade e não pode votar")
+                    fimSe
+        OBS.: além da identação, que é muito importante para organizar o código, o "entao" e o "fimSe" não podem deixar de ser usados pois são o que informam onde começa e onde termina as condições. Cada "se", "senao se" e "senao" precisam ter seu "fimSe".
+    Igual à:
+        em Java, C e Javascript:
+            - são utilizados "{ }" para informar onde começa e onde termina.
