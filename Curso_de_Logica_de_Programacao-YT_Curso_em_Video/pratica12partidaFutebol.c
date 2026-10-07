@@ -1,3 +1,5 @@
+//Estrutura Condicionais SWITCH/CASE (escolha/caso)
+
 #include<stdio.h>
 #include<stdlib.h>
 
