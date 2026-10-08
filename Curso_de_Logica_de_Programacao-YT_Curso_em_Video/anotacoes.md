@@ -321,7 +321,7 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
 
     Igual à:
         em C:
-            - while(){}
+            - while
 
     OBS.: para evitar repetição (loop) infinita, acrescente dentro do bloco de código algo que faça mudar o valor da condição, senão ela nunca ficará falsa.
             Exp.: 
@@ -331,3 +331,14 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
                     quantidade <- quantidade + 1
                 FimEnquanto
                         `--->>> a "quantidade" começa em zero, mas a cada repetição é acrescentado +1, e quando ela chegar à 5, que não é "< 5", a repetição irá se encerrar.
+
+### REPITA/ATÉ
+        `--->>> o bloco de código informado será executado, pelo menos uma vez, até que a condição seja verdadeira.
+            Exp.:
+                Repita
+                    Código...
+                Ate (expressão)
+
+    Igual à:
+        em C:
+            - do/while
