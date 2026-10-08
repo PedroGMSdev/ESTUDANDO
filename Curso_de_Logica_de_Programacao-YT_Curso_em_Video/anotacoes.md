@@ -1,6 +1,11 @@
 ________________**CURSO EM VÍDEO**___________________
 # CURSO DE LÓGICA DE PROGRAMAÇÃO
 
+## COMANDOS EXTRAS
+        `--->>> comandos do Visualg e suas finalidades
+### limpaTela
+        `--->>> como o nome diz, limpa toda a tela de execução.
+
 ## ALGORÍTMOS
 
 ### COMANDO DE SÁIDA
