@@ -1,0 +1,97 @@
+# **CADEIRA**: COMPUTAÇÃO EM REDE
+
+# QUESTÕES
+**----------------------------------CORRIGINDO QUESTÕES--------------------------------------------**
+## FUNDAMENTOS DA COMPUTAÇÃO EM NUVEM
+    - O CONCEITO de VIRTUALIZAÇÃO descreve a utilização de um servidor físico hospedando um ou mais servidores virtuais, compartilhando o mesmo hardware do servidor físico, permitindo o uso de vários tipos de sistemas operacionais, simulando a estrutura de um servidor físico.
+    - Entre os serviços de computação em nuvem mais comuns está a capacidade de computação e armazenamento. A capacidade de computação e armazenamento são os serviços mais comuns em relação à computação em nuvem. Na verdade, a computação em nuvem nasceu da evolução de várias tecnologias, entre elas a virtualização, isto é, a capacidade de computação dos provedores em executar serviços por meio de máquinas virtuais em algum servidor físico em um dos datacenters do provedor, geralmente, compartilhando esse servidor com outras máquinas virtuais isoladas e seguras. Outro serviço comum é o armazenamento, pois os provedores de nuvem oferecem serviços para todos os tipos de dados, além de expandir ou contrair o espaço de armazenamento de acordo com o que foi usado.
+    - Entre os modelos de serviço na nuvem, o modelo SOFTWARE COMO SERVIÇO (SaaS) é uma forma de disponibilizar softwares e soluções de tecnologia por meio de internet. Algumas vantagens desse serviço são:
+        > Melhor controle
+        > Redução de custo de licenciamento
+        > Diminuição no custo de manutenção do software
+        > Diminuição no custo de atualização de software
+        > Menor dependência de infraestrutura
+    No modelo SaaS, manutenção, atualização e segurança do software são atendidas pelo provedor de serviços. Dessa maneira, há redução do custo de manutenção, atualização e principalmente no licenciamento do software, pois é responsabilidade do provedor de serviço.
+    - Os modelos de implantação de nuvem definem para quem os serviços são oferecidos. Quando uma nuvem oferece serviços de forma exclusiva para um usuário, dizemos que estamos utilizando uma NUVEM PRIVADA. O modelo de nuvens privadas é composto por nuvens contruídas exclusivamente para um único usuário, ou uma única empresa, por exemplo, normalmente usadas por organizações com foco na segurança de dados.
+    - Tanto a virtualização como a conteinerização permitem melhor portabilidade, menor conflito de ambientes, aumento da segurança e manutenção mais fácil. A CONTEINERIZAÇÃO é semelhante às máquinas virtuais, a DIFERENÇA está no fato de não precisar de um sistema operacional convidado. A VIRTUALIZAÇÃO cria um ambiente virtual em um servidor físico, o que permite vários sistemas operacionais e aplicativos compartilharem um único hardware. Isso ajuda a economizar tempo, espaço e dinheiro, pois não é preciso comprar vários sistemas físicos para executar diversos sistemas operacionais. Um CONTÊINER é uma tecnologia que fornece um ambiente isolado e consistente contido em um servidor, é semelhante às máquinas virtuais, porém, não precisa de um sistema operacional convidado. O aplicativo e todas as suas dependências são empacotadas em um contêiner que usa um ambiente de runtime padrão para executar o aplicativo.
+    - COMPUTAÇÃO SEM SERVIDOR ou SERVERLESS COMPUTING é a tecnologia que permite hospedarmos funções, como a Plataforma de FUNÇÃO COMO SERVIÇO (FaaS), sem a preocupação de configuração do servidor, pois todo o ambiente (hardware e software) já está pronto para execução da função desenvolvida. Serverless computing é um paradigma de computação distribiída que permite computação distribuída, escalabilidade e computação baseada na web sem a necessidade de um servidor central. Em vez disso, os serviços são executados em diversos dispositivos, incluindo computadores, tablets, smartphones, dispositivos embarcados, etc. Essa abordagem cria uma plataforma de computação mais livre, flexível e escalável para aplicativos da web. Algumas das principais tecnologias usadas na computação sem servidor incluem:
+        > serviços de nuvem
+        > computação em nuvem
+        > computação em borda
+        > computação distribuída
+        > computação de alto desempenho
+        > computação de dispositivo móvel
+        > computação de objeto
+        > computação de borda
+
+## ARQUITETURA DE COMPUTAÇÃO EM NUVEM
+    - A empresa Blashell, que opera diversas refinarias de petróleo, possui um departamento de informática, cujo diretor decidiu migrar para um serviço de computação em nuvem. Por se tratar de uma empresa com ativos sensíveis e estrategicamente importantes, a decisão foi usar o provedor do serviço de forma dedicada, executando seus aplicativos LOCALMENTE. Os aplicativos da Blashell devem ser executados, então, na parte da arquitetura de computação em nuvem chamada de FRONT END. Como os ativos são sensíveis e importantes para a empresa, é importante que os dados não fiquem dispostos no back end.
+    - A arquitetura de nuvem é composta por duas grandes partes: FRONT END e BACK END. O front end é a parte executada na área do usuário e o back end é onde está composta a maior parte dos elementos da nuvem. Os componentes do back end podem variar de acordo com o tipo de nuvem, entretanto, alguns componentes comuns são:
+        > Cloud Runtime (Execução na Nuvem)
+        > Aplicação
+        > Serviços
+        > Armazenamento
+        > Infraestrutura
+        > Gerenciamento
+        > Segurança
+    O back end pode ser compreendido como a nuvem em si. Os componentes existentes são administrados e gerenciados pelo provedor de nuvem e podem variar de acordo com o tipo e modelo de nuvem.
+    - A empresa CONT-H se especializou em contabilidade de grandes corporações e possui um parque computacional que vem impactando negativamente seu desempenho devido ao crescente fluxo de trabalho por conta de novos clientes. A diretoria da CONT-H analisou diversas estratégias para solucionar a questão, optando pela contratação de computação em nuvem. Um dos fatores que contribuíram para a decisão foi a constatação de que, com a nuvem, não precisariam se preocupar e consumir recursos crescentes devido ao aumento da demanda de computação em decorrência dos novos clientes. O requisito referente a essa situação que a computação em nuvem pode auxiliar é a ESCALABILIDADE. A escalabilidade significa a capacidade de crescer conforme a demanda, podendo o cliente obter maior capacidade de processamento de dados e armazenamento conforme necessário.
+    - Um dos pilares da computação em nuvem é a possibilidade de o sistema tratar diferentes necessidades de cada cliente, pois a nuvem é capaz de realizar esse compartilhamento de uso. Para isso, são empregados diversos componentes no back end com o objetivo de permitir o oferecimento de variados serviços. Dentre os diversos componentes, podemos dizer que o CLOUD RUNTIME é o componente no qual o serviço é EXECUTADO. Nele está contido o monitor de máquinas virtuais, conhecido como HYPERVISOR, que permitirá a virtualização em si.
+    - O BALANCEAMENTO DE CARGA na nuvem é um processo que ajuda a distribuir o tráfego de uma aplicação entre vários servidores para garantir que todas as solicitações sejam servidas de forma eficiente. O balanceamento de carga ajuda a garantir que nenhum servidor seja sobrecarregado, o que pode levar a tempo de respostas lentos ou mesmo ao colapso do sistema. O balanceamento de carga também ajuda a garantir que os servidores sejam usados de forma eficiente, o que pode levar a custos mais baixos para a empresa.
+    - A estratégia de REPLATAFORMA é a mais indicada em virtude de malha de sistemas legados, como quando uma empresa está em processo de migração dos seus serviços para a nuvem, mas possui muitos sistemas legados estruturados e incompatíveis com novas tecnologias. Para esse caso, o ideal é investir em uma estratégia de emulação utilizando máquinas virtuais e assim garantindo a continuidade do funcionamento do sistema, além de se tornar compatível com as novas tecnologias de nuvem.
+
+## SEGURANÇA EM COMPUTAÇÃO EM NUVEM
+    - De acordo com um novo paradigma de computação, uma empresa que oferece serviços de computação deve possuir cinco características essenciais para ser caracterizada como um provedora de serviços em nuvem. Alguns deles são:
+        > Measured Service
+        > Rapid Elastic
+        > Resource Polling
+        > On-demand Self-service
+        > Broad Network Access
+    - Entre os modelos de serviço de nuvem, existe um para o qual grandes players de mercado oferecem máquinas virtuais cobradas apenas pelo uso específico dos recursos provisionados, sendo possível até mesmo para pessoas comuns a sua contratação. Este modelo é conhecido como IaaS. Os três provedores de serviços mais famosos oferecem serviços de contratação de máquinas virtuais a preço acessíveis a pessoas comuns. Para cada uma das empresas podemos citar:
+        > Amazon EC2
+        > Azure Virtual Machine
+        > Google Compute Engine
+    - De forma ampla, o ramo do conhecimento chamado de segurança da nuvem deve se preocupar fundamentalmente em manter os mesmo princípios gerais da segurança da informação, que são:
+        > Confidencialidade, que garante que as informações serão acessadas apenas por quem detém direito para tal.
+        > Integridade, que garante que as informações não sejam modificadas em alguma etapa da transmissão e do armazenamento.
+        > Disponibilidade, que garante que as informações estejam disponíveis sempre que necessário.
+    - De forma geral, podemos ordenar os modelos de serviço em ordem crescente de aumento de responsabilidade sobre a segrança para o cliente da seguinte maneira:
+        1º: SaaS -> menos responsabilidade para o cliente
+        2º: PaaS -> responsabilidade intermediária
+        3º: IaaS -> maior responsabilidade para o cliente
+    - Contêiners são estruturas similares às máquinas vituais, porém muito mais enxutas. A abordagem serveless emprega funções como serviço, deixando a cargo do provedor do serviço cuidar da infraestrutura de computação. A opção do cliente pelo uso da base de dados gerenciada o libera dos cuidades com a segurança do sistema gerenciador do banco de dados em si. Os contêiner tendem a ser menores e mais rápidos que as máquinas virtuais. Na abordagem serveless, o cliente do serviço da nuvem não possui encargo sobre a infraestrutura de computação. Quando o cliente usa uma base de dados gerenciada, o provedor supervisiona não apenas o sistema operacional como também a manutenção do banco de dados (incluindo hardening, backup, gerenciamento de patches e monitoramento). O espaço ocupado por contêineres tende a ser MENOR do que o ocupado pelas máquinas virtuais, pois aqueles NÃO PRECISAM guardar todos os binários e bibliotecas.
+    - O serviço de armazenamento em nuvem pode ser categorizado em:
+        > Armazenamento de Arquivis
+        > Armazenamento de Blocos
+        > Armazenamento de Objetos
+        > Armazenamento de Contêineres
+    - De acordo com as orientações do CSA, os CONCEITOS que, conjuntamente, compõem a MULTILOCAÇÃO são SEGREGAÇÃO e ISOLAMENTO. A multilocação, funcionalidade utilizada para dividir recursos entre diferentes unidades em uma única empresa ou organização ou em diferentes organizações, é composta pelos conceitos de segregação e isolamento.
+    - De acordo com as orientações do CSA, os dois grupos de domínio, além do conceitual, são GOVERNANÇA e OPERAÇÃO. Além do domínio conceitual, que se preocupa com os fundamentos, existem dois grupos de domínios de acordo com as orientações dp CSA: governança e operações.
+
+## AMBIENTES DE COMPUTAÇÃO EM NUVEM - AZURE
+    - O modelo de NUVEM HIBRIDA usa alguns datacenters focado em fornecer serviços de nuvem para quem quiser e alguns datacenters que estão focados em um único cliente. O modelo de nuvem hibrida é uma combinação de nuvem pública e nuvem privada, usando datacenters dedicados exclusivamente a um cliente (como acontece na nuvem privada, quando os recursos são dedicados a um cliente e hospedados em um datacenter externo) e datacenters que são compartilhados com o público (como ocorre a nuvem pública).
+    - O SaaS é um tipo de serviço de nuvem que geralmente estaria uma solução de controle de finanças e despesas, de maneira que os recursos atuais herdam a configuração, mas os recursos futuros não. O SaaS oferece acesso a soluções de software, como controle de despesas e finanças, e-mail ou sistemas de tíquete.
+    - Um recurso só pode pertencer à UM GRUPO DE RECURSOS ao mesmo tempo, pois não é permitido ter o mesmo recurso em vários grupos de recursos.
+    - O ARMAZENAMENTO COM REDUNDÂNCIA GEOGRÁFICA (GRS) e o ARMAZENAMENTO COM REDUNDÃNCIA DE ZONA GEOGRÁFICA (GZRS) fornecem o maior grau de durabilidade, contando com 16 noves de durabilidade, pois possuem redudância entre regiões, o que evita que sejam interrompidos por catástrofes naturais, como enchentes e incêndios.
+    - As MARCAS (tags) permitem associar metadados a um recurso para ajudar a controlar o gerenciamento de recursos, os custos e a otimização, a segurança, etc... Este recurso do AZURE pode ajudar a manter a organização e acompanhar o uso com base nos metadados associados aos recursos.
+    - Com a INTEGRIDADE DE RECURSOS você recebe uma notificação por e-mail de que as VMs (Máquinas Virtuais) em uma região do AZURE em que estão implantadas enfrentam uma interrupção. O Resource Health é uma exibição persolizada dos recursos reias do AZURE. Ele oferece informações sobre a integridade dos recursos de nuvem individuais.
+    - O Azure Active Directory (AZURA AD) é um recurso que não pode ser migrado, pois está vinculado a conta do Azure e não está dentro de um grupo de recursos.
+    - Umas das vantagens de utilizar o serviço de aplicativo no Azure é um serviço totalmente gerenciado com manutenção de infraestrutura. O serviço totalmente gerenciado com manutenção de infraestrutura é uma das vantagens do Azure, assim como a aplicação de patch de segurança e dimensionamento internos. O custo. o uso de máquinas virtuais e a personalização de sistemas operacionais como o Linux e o Windows não estão relacionados à utilização de aplicativos no Azure.
+    
+## AMBIENTE DE COMPUTAÇÃO EM NUVEM - AWS
+    - Máquinas do tipo "t" e "m" são de uso geral, pois são instâncias ideais para a maioria dos aplicativos que não exigem recursos especiais de hardware, como aceleração de GPU, e possuem um bom equilíbrio de quantidade de CPU e memória.
+    - Amazon Machine Image (AMI) é um tipo de imagem de máquina virtual que pode ser usada para instalar e executar sistemas operacionais e aplicativos em máquinas virtuais na nuvem da Amazon Web Services (AWS). AMIs são usadas para criar instâncias EC2, que são máquinas virtuais na nuvem da AWS, de maneira que contêm tudo o que é necessário para iniciar uma instância EC2, incluindo o sistema operacional, aplicativos e configurações.
+    - O gp3 é o tipo de EBS mais recomendado para os casos de volumes de boot, aplicativos interativos de baixa latência, desenvolvimento e teste. Volumes gp3 possuem boa performance de I/O e baica latência o que torna ideal para uso para volume de boot, aplicativos de baixa latência e pode ser utilizado até bancos de dados, seja relacional ou não relacional, porém os tipos io1 ou io2 possuem melhor performance para o caso de uso de bancos de dados relacionais e não relacionais.
+    - O SLA de durabilidade se refere à capacidade de um sistema de armazenar dados de maneira segura e confiável ao longo do tempo. Isso inclui a capacidade de um sistema de proteger os dados contra perda ou corrupção e garantir que eles estejam sempre disponíveis para acesso. No S3 esse SLA é composto por "11 noves", ou seja, 99,999999999% em um ano. Já o SLA de disponibilidade se refere a capacidade de um sistema de estar disponível para uso pelos usuários. Isso inclui a capacidade de um sistema de estar sempre disponível para acesso e uso, mesmo em caso de falhas ou problemas. No Amazon S3, o SLA de disponibilidade em um ano é de 99,99%.
+    - Em uma sub-rede 10.0.0.0/24, de uma VPC na AWS, o endereço privado 10.0.0.254 pode ser uma instânca EC2, ou seja, não seria reservado. O 10.0.0.1 é endereço de gateway padrão da rede (roteador) reservado para esse uso. O endereço 10.0.0.2 é reservado para DNS e o 10.0.0.3 é reservado para uso especial futuro O endereço 10.0.0.255 é o endereço de broadcast da rede. Dessa forma, apenas o 10.0.0.254 dentre as opções listadas está livre para uso em um EC2.
+    - Para ter alta disponibilidade em um VPC, é recomendável usar ao menos duas AZs (Availability Zones). Isso permite que o sistema continue funcionando mesmo se uma delas falhar ou ficar indisponível por algum motivo. Por exemplo, se você tiver instâncias EC2 em duas AZs diferentes, elas poderão continuar funcionando mesmo se uma das AZs ficar indisponível devido a um problema de hadware ou a um desastre natural.
+    - Os buckets no Amazon S3 não possuem capacidade de rodar sites dinâmicos de nenhum tipo de linguagem e podem funcionar apenas como hospedagem de sites estáticos, em HTML.
+    - A verificação de fornecedores de AMIs é uma garantia que a AWS dá a parceiros que se qualificam, conferindo confiabilidade de origem, pois são de origem confiável.
+
+## AMBIENTE DE COMPUTAÇÃO EM NUVEM - GOOGLE CLOUD
+    - A computação em nuvem trouxe um novo modelo de utilizar recursos computacionais, no qual os recursos como CPU e memória são alugados e pagos somente pelo que é utilizado. A computação em nuvem trouxe o modelo de pagar apenas pelo que se é utilizado. Todo o recurso computacional, como CPU e memória, é alugado, podendo adquirir mais ou "devolver" conforme necessário.
+    - Utilizar o Google Cloud possibilita usurfruir de tecnologias como serviço, por exemplo, o PaaS (PLATAFORM AS A SERVICE) e IaaS (INFRASTRUCTURE AS A SERVICE). O Google Cloud. assim como outros provedores de nuvem, disponibiliza tecnologias como serviço, entre elas a PaaS (PLATAFORMA como serviço) e a IaaS (INFRAESTRUTURA como serviço), além do SaaS (SOTWARE como serviço).
+    - A sigla e o nome dado à rede virtual em ambiente de nuvem do Google Cloud é o VPC que quer dizer VIRTUAL PRIVATE CLOUD (Nuvem Virtual Privada), que é responsável por ser uma interface do ambiente Google Cloud com componentes externos.
+    - O nome dado para o ambiente em nuvem virtualizado em hardware físico é VIRTUAL MACHINE (Máquina Virtual). VM e o ambiente em nuvem no qual virtualiza-se um servidor com recursos de CPU, memória e armazenamento, sendo utilizado para hospedagem de aplicação.
+    - Quando uma empresa está criando um projeto novo para desenvolver sua aplicação em VMs ela deve criar uma VPC, selecionar uma região, criar as subnets e vincular a VM a essa subnet, para disponibilização correta da infraestrutura com redes nesse projeto. Dessa forma, as máquinas virtuais ficam vinculadas a uma subnet com IPs que podem ser utilizados.
+    - Mensageria ASSINCRONA, na qual não é necessário sincronicidade entre os sistemas para facilitar uma tarefa. A ideia principal é utilizar uma tecnologia intermediando as comunicações, de maneira que essa tecnologia fica responsável por notificar cada sistema que depende dessas informações. Esse processo visa intermediar mensagens e entregá-las conforme os sistemas fiquem disponíveis.
