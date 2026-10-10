@@ -369,3 +369,5 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
                 Código...
             FimPara
 
+## PROCEDIMENTOS
+
