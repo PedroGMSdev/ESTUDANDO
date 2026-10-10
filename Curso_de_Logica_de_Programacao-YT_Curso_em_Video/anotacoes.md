@@ -253,6 +253,10 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
 
 #### SE (se)
         `--->>> informa o que acontecerá SE condição informada for verdadeira.
+            Estrutura:
+                se (condição) então
+                    Código...
+                FimSe
     Igual à:
         em Java, C e Javascript:
             - if
@@ -319,14 +323,14 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
 
 ### ENQUANTO/FAÇA
         `--->>> escolhe uma condição e, ENQUANTO essa condição for verdadeira, o código estipulado será realizado, caso contrário, a repetição se encerrará e voltará ao código.
-            Exp.: 
+            Estrutura: 
                 Enquanto (expressão) faça
                     Código...
                 FimEnquanto
 
     Igual à:
         em C:
-            - while
+            - while(){}
 
     OBS.: para evitar repetição (loop) infinita, acrescente dentro do bloco de código algo que faça mudar o valor da condição, senão ela nunca ficará falsa.
             Exp.: 
@@ -346,4 +350,22 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
 
     Igual à:
         em C:
-            - do/while
+            - do{}while();
+
+### ESTRUTURA DE REPETIÇÃO COM VARIÁVEL DE CONTROLE
+        `--->>> utilizada quando se sabe exatamente a quantidade de vezes que será repetida.
+
+#### PARA/ATÉ
+        Estrutura:
+            Para variável <- iniciação (da variável) até fim [passo salto] faça
+                Código...
+            FimPara
+    Igual à:
+        em C:
+            - for (){}
+        
+        Exp.:
+            Para C <- 1 ate 10 passo 1 faca
+                Código...
+            FimPara
+
