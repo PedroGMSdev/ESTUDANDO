@@ -369,5 +369,64 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
                 Código...
             FimPara
 
-## PROCEDIMENTOS
+## ROTINAS
+        `--->>> quando algo é executado frequentemente, da mesma maneira.
+
+### PROCEDIMENTOS
+        `--->>> criado fora da execução do algoritmo, você cria um grupo de comandos que, toda vez que esse procedimento for solicitado execução, executará a os códigos que estão dentro, sem precisar reescrever várias vezes.
+            Estrutura:
+                Procedimento NomeDoProcedimento
+                Inicio
+                    Código...
+                FimProcedimento
+
+                Algoritmo
+                    NomeDoProcedimento
+                FimAlgoritmo
+
+#### PASSAGEM DE PARÂMETROS
+        `--->>> quando você cria um procedimento e informa, entre os "( )" os parâmetros que serão usados dentro do procedimento.
+
+##### POR VALOR
+        `--->>> quando você informa valores que serão utilizados dentro do procedimento.
+            Exp.:
+                Procedimento Soma(A, B: inteiro)
+                Inicio
+                    Escreval("Recebi o valor", A)
+                    Escreval("Recebi o valor", B)
+                    Escreval("A soma vale", A+B)
+                FimProcedimento
+
+                Inicio
+                    variavel1 <- 3
+                    variavel2 <- 5
+
+                    Soma(variavel1, variavel2)
+                FimAlgoritmo
+                        `
+                         `--->>> aqui, quando chamar o procedimento "Soma", os valores "A" e "B" vão ser, respectivamente, trocados por "variavel1" e "variavel2", que foram os parametros informados dentro dos "( )".
+
+##### POR REFERÊNCIA
+        `--->>> ao colocar o "var" antes do parâmetro de criação do procedimento, significa que você está passando o parâmetro POR REFERÊNCIA, que é quando o parâmetro informado assume o valor da variável de dentro do procedimento.
+                Exp.: 
+                    Procedimento Soma(var A, B: inteiro)
+                    Inicio
+                        A <- A + 1
+                        B <- B + 2
+                        EscrevaL("A soma vale", A+B)
+                    FimProcedimento
+
+                    Inicio
+                        X <- 4
+                        Y <- 8
+                        Soma(X,Y)
+                        EscrevaL(X, Y)
+                    FimAlgoritmo
+                            `
+                             `--->>> diferente de quando passado os parâmetros por valor, que o X e Y emprestam o valor pra A e B, no passado por referência os valores de X e Y se transformam no valor que assumiram dentro do procedimento, que no caso acima inicialmente eram 4 e 8, mas após passar por referência se tornam 5 e 10.
+
+
+### FUNÇÕES
+
+
 
