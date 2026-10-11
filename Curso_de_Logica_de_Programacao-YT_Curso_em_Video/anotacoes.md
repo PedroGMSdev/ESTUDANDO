@@ -425,8 +425,10 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
                             `
                              `--->>> diferente de quando passado os parâmetros por valor, que o X e Y emprestam o valor pra A e B, no passado por referência os valores de X e Y se transformam no valor que assumiram dentro do procedimento, que no caso acima inicialmente eram 4 e 8, mas após passar por referência se tornam 5 e 10.
 
-
 ### FUNÇÕES
+        `--->>> assim como o procedimento, a função é uma pré-definição de uma ação que será executada muitas vezes, mas a diferença é que a função retorna algum valor para ser utilizado em outro lugar, não só resolvido ou mostrado. Enquanto o procedimento é criado com "void", a função é criada com um tipo de dado, de acordo com o tipo que será retornado.
+                Exp.:
+            
 
 
 
