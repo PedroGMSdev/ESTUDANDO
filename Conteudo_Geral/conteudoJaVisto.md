@@ -21,6 +21,7 @@
 - Loops com Condições Multiplas
 - Loops com Atualizações Complexas
 - Procedimento
+- Função
 - Recursividade
 - Vetores
 - Matrizes

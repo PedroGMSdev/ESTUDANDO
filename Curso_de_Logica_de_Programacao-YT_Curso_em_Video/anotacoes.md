@@ -384,6 +384,13 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
                     NomeDoProcedimento
                 FimAlgoritmo
 
+    
+    Igual à:
+        em C:
+            - void soma(int x, int y){
+                Código...
+            }
+
 #### PASSAGEM DE PARÂMETROS
         `--->>> quando você cria um procedimento e informa, entre os "( )" os parâmetros que serão usados dentro do procedimento.
 
@@ -426,9 +433,85 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
                              `--->>> diferente de quando passado os parâmetros por valor, que o X e Y emprestam o valor pra A e B, no passado por referência os valores de X e Y se transformam no valor que assumiram dentro do procedimento, que no caso acima inicialmente eram 4 e 8, mas após passar por referência se tornam 5 e 10.
 
 ### FUNÇÕES
-        `--->>> assim como o procedimento, a função é uma pré-definição de uma ação que será executada muitas vezes, mas a diferença é que a função retorna algum valor para ser utilizado em outro lugar, não só resolvido ou mostrado. Enquanto o procedimento é criado com "void", a função é criada com um tipo de dado, de acordo com o tipo que será retornado.
-                Exp.:
-            
+        `--->>> assim como o procedimento, a função é uma pré-definição de uma ação que será executada muitas vezes, mas a diferença é que a função retorna algum valor para ser utilizado em outro lugar, não só resolvido ou mostrado. Enquanto o procedimento, em C, é criado com "void", a função é criada com um tipo de dado, de acordo com o tipo que será retornado.
+                Estrutura:
+                    Função nomeDaFunção(A, B: inteiro): inteiro (tipo de dado que a função retornará)
+                        var
+                            Soma: inteiro
+                        Inicio
+                            Soma <- A + B
+                            Retorne Soma
+                    FimFunção
+
+                    Inicio
+                        N1 <- 5
+                        N2 <- 4
+                        Resposta <- Soma(N1, N2)
+                        EscrevaL(Soma)
+                    FimAlgoritmo
+                            `
+                             `--->>> aqui, o final esperado da função é arquivado no valor da variável Resposta, para ser utilizada como quiser depois.
+
+    Igual à:
+        em C:
+            - int soma(int x, int y){
+                Código...
+                return ...;
+            }
+
+#### FUNÇÕES PRÉ-DEFINIDAS
+        `--->>> são funções que a linguagem já tem pré-definidas, cada uma com sua finalidade. Você coloca ela com a variável que será tratada dentro de "( )".
+
+##### MANIPULAÇÃO DE STRING
+        `--->>> essas funções são usadas para tratar e manipular strings:
+                - Compr(): informa o comprimento da string, ou seja, a quantidade de caracteres que tem nessa string.
+                    Igual à:
+                        em C:
+                            - strlen() (biblioteca #include <string.h>)
+                                Exp.:
+                                    
+                                    printf("%zu", strlen());
+                - Copia( , , ): uma função que recebe três parametros, e que serve para imprimir um intervalo escolhido da string. O primeiro é a variável string que será manipulada, o segundo é o número que informa em qual caractere se iniciará o recorte, e o terceiro o número de casas que serão exibidas a partir da casa inicial.
+                        Exp.:
+                            nome: caractere
+
+                            nome <- "Pedro Guilherme Martins"
+
+                            Copia(nome, 7, 9)
+                                \______ Guilherme
+                                        `--->>> vai selecionar a string nome, percorrer a string até a casa 7 e exibir as próximas 9 casas.
+                    Igual à:
+                        em C:
+                            - strncpy() (biblioteca #include <string.h>)
+                - Maiusc(): faz com que todo o conteúdo da string seja colocado em letras maiúsculas.
+                    Igual à:
+                        em C:
+                            - toupper() (biblioteca #include <ctype.h>)
+                                OBS.: também pode ser adicionado "(unsigned char)" que evita problemas com valores negativos ao passar os caracteres para "toupper()".
+                                    Exp.: 
+                                        toupper((unsigned char) string[])
+                                ATENÇÃO: o "toupper" não consegue converter as letras acentuadas ou cedilhas, como "á", "ç"...
+                - Minusc(): faz com que todo o conteúdo da string seja colocado em letras minúsculas.
+                    Igual à:
+                        em C:
+                            - toupper() (biblioteca #include <ctype.h>)
+                - Pos(" ", ): uma função que recebe dois parâmetros. O primeiro é um pedaço de dentro da string e o segundo é o nome dessa string. Essa função vai buscar o pedaço que foi informado e retornar a posição, em que altura da string, se encontra esse pedaço.
+                        Exp.:
+                            nome: caractere
+                            nome <- "CursoEmVideo"
+
+                            Pos("Video", nome)
+                                    \________ 8
+                                            `--->>> aqui ele retorna 8, que é a posição onde o "Video" começou na string.
+                    Igual à:
+                        em C:
+                            - strstr() (biblioteca #include <string.h>)
+                                OBS.: no Visualg, "Pos()" retorna a posição do em que a cadeia informada se encontra, no "strstr()" restorna um ponteiro para o trecho encontrado. Diferente de "Pos()", que é colocado o trecho primeiro e a string depois, o "strstr()" é colocado primeiro a string e depois o trecho.
+                - Asc(): retorna o código da letra que será informada dentro dos parênteses.
+                        Exp.: 
+                            Asc("C")
+                                \____ 67 (correspondencia da letra C na tabela ASC) 
+
 
 
 
