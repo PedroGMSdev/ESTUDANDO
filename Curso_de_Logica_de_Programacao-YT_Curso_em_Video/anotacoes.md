@@ -530,6 +530,19 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
                                         printf("%c", (char)codigo);
                                             \_____________ 'A'
 
+## VARIÁVEIS COMPOSTAS
+        `--->>> uma variável que armazena mais de um valor.
+
+### VETOR
+        `--->>> uma variável que armazena mais de um valor, de forma unidimensionalmente, em formato de linha.
+                Estrutura:
+                    nomeVariavel: vetor[1..4] de inteiro
+                                         \___tamanho    \
+                                                         \_______ tipo da variável
+
+
+
+
 
 
 
