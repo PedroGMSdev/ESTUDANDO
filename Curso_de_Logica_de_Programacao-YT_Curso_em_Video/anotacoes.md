@@ -510,7 +510,27 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
                 - Asc(): retorna o código da letra que será informada dentro dos parênteses.
                         Exp.: 
                             Asc("C")
-                                \____ 67 (correspondencia da letra C na tabela ASC) 
+                                \____ 67 (correspondencia da letra C na tabela ASCII)
+                    Igual à:
+                        em C:
+                            - não se precisa de uma função para isso, basta usar o próprio caractere e convertê-lo para interiro(int).
+                                    Exp.:
+                                        char caractere = 'A';
+                                        printf("%d", (int)caractere);
+                                                \____________ 65 (que é a posição equivalente à "A" maiúsculo na tabela ASCII)
+                - Carac(): contrário da função "Asc()", você informa um número e ele retorna o caractere correspodente.
+                        Exp.:
+                            Carac(67)
+                                \_____ 'C'
+                    Igual à:
+                        em C:
+                            - assim como o "Asc()", o "Carac()" pode ser substituído pela conversão do inteiro para caractere (char).
+                                    Exp.:
+                                        int codigo = 65;
+                                        printf("%c", (char)codigo);
+                                            \_____________ 'A'
+
+
 
 
 
