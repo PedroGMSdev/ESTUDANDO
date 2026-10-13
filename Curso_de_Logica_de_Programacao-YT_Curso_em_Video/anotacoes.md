@@ -539,6 +539,9 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
                     nomeVariavel: vetor[1..4] de inteiro
                                          \___tamanho    \
                                                          \_______ tipo da variável
+    Igual à:
+        em C:
+            - int vetor[4];
 
 
 
