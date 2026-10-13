@@ -11,18 +11,18 @@ int main(){
     printf("---------------------\n");
 
     for(int i = 0; i < 3; i++){
-        printf("Nome do [%d]º time: ", i+1);
+        printf("Nome do %dº time: ", i+1);
         scanf(" %s", &times[i]);
     }    
 
-    printf("---------------------\n");
-    printf(" TABELA DE PARTIDAS  \n");
-    printf("---------------------\n");
+    printf("----------------------\n");
+    printf("  TABELA DE PARTIDAS  \n");
+    printf("----------------------\n");
 
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
             if (i != j){
-                printf("%s [ ] X [ ] %s\n", times[i], times[j]);
+                printf("%12s [ ] X [ ] %s\n", times[i], times[j]);
             }
         }
     }
