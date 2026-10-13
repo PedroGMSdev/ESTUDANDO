@@ -4,7 +4,7 @@
 #include<stdio.h>
 
 int main(){
-    char times[15];
+    char times[3][15];
 
     printf("---------------------\n");
     printf("CAMPEONATO DE FUTEBOL\n");
@@ -21,7 +21,9 @@ int main(){
 
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
-            printf("%s [ ] X [ ] %s\n", times[i], times[i+1]);
+            if (i != j){
+                printf("%s [ ] X [ ] %s\n", times[i], times[j]);
+            }
         }
     }
 
