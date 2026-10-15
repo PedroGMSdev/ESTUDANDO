@@ -828,6 +828,13 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
                         `--->>> vai escrever "Olá mundo!" e pular para a linha de baixo.
 #### scanf();
         `--->>> entrada de dados Usado para capturar o valor informado.
+#### sprintf()
+        `--->>> função para ler valores e armazená-la em uma string (cadeia de caracteres) quando ela irá armazenar mais que um tipo de atribuição. Em C, o "scanf()" serve para todos os tipos de recebimento de dados, incluindo string. Porém, caso precise atribuir o valor de alguma variável + alguma cadeia de caractere, pode-se usar "sprintf()", colocando o nome da string onde será feita a atribuição + o informe da variável que será associada.
+            Exp.:
+                Se quer que seja atribuída à string a letra "B" + o valor de uma variável:
+                    \______ sprintf(cadeira, "B%d", variavelNumeroCadeira);
+                                    `--->>> supondo que cadeira tem o valor 5
+                                                \________ valor será = "B5".
 
 ### #include <stdlib.h>
         `--->>> biblioteca de utilidades gerais, como "malloc()", "free()", "rand()"...
@@ -836,6 +843,10 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
 
 ### #include <string.h>
         `--->>> biblioteca que trabalha com textos, como "strlen()", "strcpy()"...
+#### strcpy()
+        `--->>> função usada para substituir o valor de uma string. Em C, os valores atribuídos de uma string (cadeia de caracteres), não podem ser trocados apenas por "=", para isso pode ser usado "strcpy()".
+#### strcmp()
+        `--->>> função usada para comparar valores de uma string. Em C, os valores atribuídos de uma string, não podem ser comparados apenas com "==", pra isso pode ser usado "strcmp()".
 
 ### #include <math.h>
         `--->>> biblioteca que trabalha com matemática, como "sqrt()", "pow()"...
@@ -845,6 +856,12 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
 
 ### #include <ctype.h>
         `--->>> biblioteca que manipula caracteres, como "toupper()", "isdigit()"...
+#### toupper()
+        `--->>> função que converte o conteúdo para letra maiúscula.
+                    OBS.: também pode ser adicionado "(unsigned char)" que evita problemas com valores negativos ao passar os caracteres para "toupper()".
+                        Exp.: 
+                            toupper((unsigned char) string[])
+                    ATENÇÃO: o "toupper" não consegue converter as letras acentuadas ou cedilhas, como "á", "ç"...
 
 ## int main(){}
         `--->>> abertura da função principal e inicialização do programa. Todo programa em C ocorre dentro de uma classe MAIN.
