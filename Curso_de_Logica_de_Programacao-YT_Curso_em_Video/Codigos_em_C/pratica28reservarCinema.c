@@ -41,7 +41,7 @@ int main(){
         }
 
         if(encontrada == 0){
-            printf("Cadeira Inválida!\n");
+            printf("Reserva Inválida!\n");
         }
 
         printf("Deseja reservar outra cadeira? [S/N] ");

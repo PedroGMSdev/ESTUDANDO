@@ -534,7 +534,7 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
         `--->>> uma variável que armazena mais de um valor.
 
 ### VETOR
-        `--->>> uma variável que armazena mais de um valor, de forma unidimensionalmente, em formato de linha.
+        `--->>> uma variável composta que armazena mais de um valor, de forma unidimensionalmente, em formato de linha.
                 Estrutura:
                     nomeVariavel: vetor[1..4] de inteiro
                                          \___tamanho    \
@@ -542,6 +542,9 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
     Igual à:
         em C:
             - int vetor[4];
+
+## MATRIZ
+        `--->>> uma variável composta que armazena mais de um valor, de forma multidimensionalmente, em formato de linhas e colunas.
 
 
 
