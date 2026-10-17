@@ -537,14 +537,22 @@ OBS.: após aplicar a fórmula de transformação de Graus para Radianos, aí si
         `--->>> uma variável composta que armazena mais de um valor, de forma unidimensionalmente, em formato de linha.
                 Estrutura:
                     nomeVariavel: vetor[1..4] de inteiro
-                                         \___tamanho    \
+                                         \___ tamanho   \
                                                          \_______ tipo da variável
     Igual à:
         em C:
-            - int vetor[4];
+            - int nomeVariavel[4];
 
 ## MATRIZ
         `--->>> uma variável composta que armazena mais de um valor, de forma multidimensionalmente, em formato de linhas e colunas.
+                Estrutura:
+                    nomeVariavel: vetor[1..3, 1..2] de inteiro
+                                         \      \           \________ tipo da variável
+                                          \      \___________________ quantidade de colunas que vai ter
+                                           \_________________________ quantidade de linhas que vai ter
+    Igual à:
+        em C:
+            - int nomeVariavel[3][2];
 
 
 
