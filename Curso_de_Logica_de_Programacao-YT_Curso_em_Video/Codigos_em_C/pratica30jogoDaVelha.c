@@ -31,12 +31,10 @@ int main(){
     char posicao;
     int jogoAtivo = 1;
     int jogadas = 0;
+    int campeao = 0;
 
-    //criar tabuleiro
-
-    //imprimir tabuleiro
     do{
-        
+        do{
             criarTabuleiro(tabuleiro);
 
             while (jogadas < 9){
@@ -68,8 +66,12 @@ int main(){
                     }
                 }
             }
+            jogadas = 0;
             mostrarTabuleiro(tabuleiro);
-
+            printf("\n===============================\n");
+            printf("|       NINGUÉM GANHOU!       |\n");
+            printf("===============================\n\n");
+        } while (campeao == 0);
         jogoAtivo = 0;
     } while(jogoAtivo == 1);
 
