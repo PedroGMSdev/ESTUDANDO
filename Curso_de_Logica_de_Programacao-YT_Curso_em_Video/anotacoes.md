@@ -1,5 +1,5 @@
 ________________**CURSO EM VÍDEO**___________________
-# CURSO DE LÓGICA DE PROGRAMAÇÃO
+# CURSO DE LÓGICA DE PROGRAMAÇÃO **CONCLUÍDO**
 
 ## COMANDOS EXTRAS
         `--->>> comandos do Visualg e suas finalidades

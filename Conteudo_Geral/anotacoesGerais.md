@@ -39,6 +39,10 @@ A "cabeça" do site, onde ficam as configurações comportamentais, ou seja, as 
         Exp.:
             <meta charset="UTF-8">
 
+### <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            `--->> sinaliza a acessibilidade em que o site é compatível, ou seja, onde ele está adaptado para abrir. O caso acima sinaliza que ele foi feito para ser aberto em computadores e smartphones.
+    OBS.: Essa TAG não possui fechamento.
+
 ### <title></title>
             `--->> sinaliza o TÍTULO DA PÁGINA, ou seja, o nome que ficará na aba do site.
         Exp.:
@@ -52,6 +56,9 @@ As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do 
 
 ### <div></div>
             `--->> cria uma "caixa" divisória
+
+### <button></button>
+            `--->> cria um botão na página
 
 ### <a></a>
             `--->> cria uma linkagem, ou uma ancoragem. Você pode mascarar o link escrevendo algo entre as TAGs, que ficará em evidência e destacará o local onde será clicado.
