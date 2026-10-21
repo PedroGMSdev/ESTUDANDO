@@ -542,7 +542,29 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                     }
                     `--->> vai modificar todas as TAGs <p> e <h1> com as mesmas modificações informadas.
 
-## DICA: quando trabalhar com especificações lembrar que elas seguem os números informados da seguinte maneira:
+## PROPRIEDADE
+        `--->> é o que será mudado, como cor, tamanho...
+
+### color: 
+            `--->> especifica a cor da letra
+        Exp.:
+            color: blue;
+    OBS.: outra opção de especificação da cor é:
+        o hexadecimal, onde será colocado #, como #a1d3ef, onde:
+                    a1 -> sinaliza a quantidade de vermelho
+                    d3 -> sinaliza a quantidade de verde
+                    ef -> sinaliza a quantidade de azul
+        o rgb, como rgb (35, 124, 135), onde:
+                    35 -> sinaliza a quantidade de vermelho
+                    124 -> sinaliza a quantidade de verde
+                    135 -> sinaliza a quantidade de azul
+        o rgba, como rgb (35, 124, 135, 0.5), que além do mesmo padrão rgb, o "a" define a opacidade:
+                    35 -> sinaliza a quantidade de vermelho
+                    124 -> sinaliza a quantidade de verde
+                    135 -> sinaliza a quantidade de azul
+                    0.5 -> sinaliza a opacidade, indo de 0 a 1, sendo 0 totalmente transparente e 1 totalmente sem opacidade.
+     
+DICA: quando trabalhar com especificações lembrar que elas seguem os números informados da seguinte maneira:
     Exp.:
         margin: 20px 10px;
 
@@ -586,7 +608,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                         lados = ajuste automático
                         baixo = 5px            
 
-## font-family: 
+### font-family: 
             `--->> estilo de fonte
         Exp.:
             font-family: arial;
@@ -606,43 +628,25 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
             - <link href=" "> (Linkado no head do HTML)
                     `--->> busca uma fonte em um site externo, como o GOOGLE FONTS. Você salva a referência linkando no seu HTML e importando (@import) no CSS. Depois, é só mudar o "font-family" para o nome da fonte.
 
-## font-weight:
+### font-weight:
         `--->> espessura da letra.
                 - bold;
                         `--->> aplica um negrito.
                 - bolder;
                         `--->> aplica algo mais espesso que o negrito.
 
-## font-size: 
+### font-size: 
             `--->> tamanho da fonte
         Exp.:
             font-size: 30pt;
 
-## color: 
-            `--->> especifica a cor da letra
-        Exp.:
-            color: blue;
-    OBS.: outra opção de especificação da cor é:
-        o hexadecimal, onde será colocado #, como #a1d3ef, onde:
-                    a1 -> sinaliza a quantidade de vermelho
-                    d3 -> sinaliza a quantidade de verde
-                    ef -> sinaliza a quantidade de azul
-        o rgb, como rgb (35, 124, 135), onde:
-                    35 -> sinaliza a quantidade de vermelho
-                    124 -> sinaliza a quantidade de verde
-                    135 -> sinaliza a quantidade de azul
-        o rgba, como rgb (35, 124, 135, 0.5), que além do mesmo padrão rgb, o "a" define a opacidade:
-                    35 -> sinaliza a quantidade de vermelho
-                    124 -> sinaliza a quantidade de verde
-                    135 -> sinaliza a quantidade de azul
-                    0.5 -> sinaliza a opacidade, indo de 0 a 1, sendo 0 totalmente transparente e 1 totalmente sem opacidade.
-            
-text-shadow 
+       
+### text-shadow 
             `--->> aplica sombra no texto
         Exp.:
             text-shadow: 2px 2px 2px;
 
-## text-align:
+### text-align:
             `--->> faz o alinhamento do texto em relação à caixa.
                     - center;
                             `--->> alinha o texto ao centro.
@@ -651,7 +655,7 @@ text-shadow
                     - right;
                             `--->> alinha o texto à direita.
 
-## vertical-align:
+### vertical-align:
             `--->> faz o alinhamento vertical do texto.
                     - top;
                            `--->> alinha o texto mais para cima.
@@ -660,7 +664,7 @@ text-shadow
                     - bottom;
                             `---> alinha o texto mais para baixo.
 
-## text-decoration:
+### text-decoration:
             `--->> aplica modificações no texto, como:
                     - underline;
                             `--->> sublinhado
@@ -676,12 +680,12 @@ list-style:
                     - none;
                             `--->> sinaliza que s marcadores da lista serão retirados.
 
-## text-transform:
+### text-transform:
             `--->> transforma o texto do local indicado.
                     - uppercase;
                             `--->> transforma todo o texto em LETRAS MAIÚSCULAS.
 
-## display:
+### display:
             `--->> modifica a configuração de disposição dos itens na caixa em questão.
                     - inline-block;
                             `--->> dispõe os itens em uma unica linha, um do lado da outra.
@@ -707,17 +711,17 @@ clear: both;
             `--->> vai limpar toda a configuração já aplicada aquele local indicado anteriormente por outras seções.
 
 
-## margin: --->>> distanciamente externo
+### margin: --->>> distanciamente externo
             `--->> trabalha o espaçamento fora da caixa, afastando a caixa dos outros elementos que estão fora da caixa, como outras caixas, botões, textos...
                 Exp.:
                     margin: 20px;
 
-## padding: --->>> distanciamento interno
+### padding: --->>> distanciamento interno
         `--->>> trabalha o espaçamento de dentro da caixa, afastando o conteúdo de dentro das bordas da caixa, como o nome, a largura que a caixa vai tomar...
                 Exp.: 
                     padding: 20px;
 
-## position:
+### position:
             `--->> trabalha com a posição do elemento.
                     - relative;
                             `--->> trabalha com a posição do elemento APENAS em relação ao conteúda da caixa que ele se encontra.
@@ -728,13 +732,13 @@ clear: both;
                     - static;
                             `--->> prende a posição do elemento no ponto indicado, sem permitir que modifique o local dele.
 
-## transition:
+### transition:
             `--->> trabalha com a transição de efeitos.
                 Exp.:
                     transition: background-color 1s;
                             `--->> sinaliza que quando houver uma mudança na cor do fundo, essa transição levará 1 segundo para acontecer.
 
-## border:
+### border:
             `--->> trabalha com a borda da caixa.
                 Exp.:
                     - border-bottom:
