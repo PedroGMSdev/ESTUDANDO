@@ -55,10 +55,10 @@ A "cabeça" do site, onde ficam as configurações comportamentais, ou seja, as 
 As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do site.
 
 ### <div></div>
-            `--->> cria uma "caixa" divisória
+            `--->> cria uma "caixa" divisória.
 
 ### <button></button>
-            `--->> cria um botão na página
+            `--->> cria um botão na página.
 
 ### <a></a>
             `--->> cria uma linkagem, ou uma ancoragem. Você pode mascarar o link escrevendo algo entre as TAGs, que ficará em evidência e destacará o local onde será clicado.
@@ -564,8 +564,8 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                     135 -> sinaliza a quantidade de azul
                     0.5 -> sinaliza a opacidade, indo de 0 a 1, sendo 0 totalmente transparente e 1 totalmente sem opacidade.
      
-DICA: quando trabalhar com especificações lembrar que elas seguem os números informados da seguinte maneira:
-    Exp.:
+### DICA: APLICAÇÃO DE ATRIBUIÇÕES E VALORES NOS ARREDORES - quando trabalhar com especificações lembrar que elas seguem os números informados da seguinte maneira:
+    Exp.: 
         margin: 20px 10px;
 
     - 20px; => um valor informado
@@ -606,7 +606,102 @@ DICA: quando trabalhar com especificações lembrar que elas seguem os números 
                     20px auto 5px auto;
                         topo = 20px
                         lados = ajuste automático
-                        baixo = 5px            
+                        baixo = 5px         
+
+### DICA: TIPOS DE UNIDADES DE TAMANHOS - quando for especificar o tamanho, pode-se trabalhar com tipos diferentes, como:
+    - px (pixel) => trabalha em pixels
+
+### background:
+            `--->> trabalha com o fundo da página.
+#### background-color:
+            `--->> especificações ligadas à cor de fundo da página.
+                    Exp.:
+                        background-color: blue;
+                                `--->> preenche de azul todo o fundo da página.
+#### background-image:
+            `--->> atribui uma imagem ao fundo da página.
+        - url (" ");
+                    `--->> usando "url (" ");" você identifica o endereço de origem sendo ele a pasta que a imagem se localiza ou o endereço url, direto do site que a imagem se encontra.
+        - linear-gradient( , );
+                    `--->> define um degradê como fundo.
+                            Exp.:
+                                background-image: linear-gradient(red, blue);
+                                            `--->> cria um degradê do vermelho para o azul.
+#### background-size:
+            `--->> regula o tamanho da imagem de fundo.
+        - cover;
+                `--->> cobre toda a área, podendo cortar partes da imagem.
+        - contain;
+                `--->> mostra a imagem inteira, podendo deixar espaços vazios.
+        - auto;
+                `--->> mantém o tamanho original da imagem.
+        - 100% 100%;
+                `--->> estica a imagem para preencher toda a área.
+#### background-position:
+            `--->> define onde fica posicionada a imagem.
+        - center;
+                `--->> centro.
+        - top;
+                `--->> cima.
+        - bottom;
+                `--->> baixo.
+        - left;
+                `--->> à esquerda.
+        - right;
+                `--->> à direita.
+        - 20px 50px;
+                `--->> atribui coordenadas.
+#### background-repeat:
+            `--->> define se a imagem de fundo se repete.
+        - no-repeat;
+                `--->> não repete.
+        - repeat;
+                `--->> repete horizontal e verticalmente.
+        - repeat-x;
+                `--->> repete apenas na horizontal.
+        - repeat-y;
+                `--->> repete apenas na vertical.
+#### background-attachment:
+            `--->> define como a imagem de fundo se comportará em relação à rolagem.
+        - fixed;
+                `--->> fica fixa em relação a janela de vizualização, nos contextos em que esse comportamento é suportado.
+        - scroll;
+                `--->> acompanha a rolagem normal do elemento.
+        - local;
+                `--->> acompanha a rolagem do conteúdo do próprio elemento.
+#### background-clip:
+            `--->> define até onde o fundo pode ser desenhado, ou seja, os limites do fundo.
+        - border-box;
+                `--->> inclui a área da borda.
+        - padding-box;
+                `--->> vai até a borda interna, sem pintar a área da borda.
+        - content-box;
+                `--->> limita o fundo à área do conteúdo.
+#### background-origin:
+            `--->> define a área usada como referência para posicionar a imagem.
+#### background-blend-mode:
+            `--->> controla como as camadas do fundo se misturam.
+
+### box-sizing:
+            `--->> define como o navegador calcula altura (HEIGHT) e largura (WIDHT) de um elemento. Ou seja, o tamanho que o elemento vai poder ocupar na página.
+        - content-box;
+                    `--->> nesse modo (PADRÃO), o "widht" define apenas a largura do conteúdo. O "padding" e a "border" são somados ao tamanho final.
+        - border-box;
+                    `--->> nesse modo, o "width" já inclui o conteúdo, o "padding" e o "border".
+
+### margin:
+            `--->> cria espaço EXTERNO ao redor de um elemento, afastando-o de outros elementos.
+        Exp.:
+            margin: 20px;
+        - margin-top:
+                    `--->> trabalha apenas com a margem de cima do elemento.
+        - margin-right:
+                    `--->> trabalha apenas com a margem da direita do elemento.
+        - margin-bottom:
+                    `--->> trabalha apenas com a margem de baixo do elemento.
+        - margin-left:
+                    `--->> trabalha apenas com a margem da esquerda do elemento.
+
 
 ### font-family: 
             `--->> estilo de fonte
