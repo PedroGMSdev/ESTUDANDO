@@ -609,7 +609,9 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                         baixo = 5px         
 
 ### DICA: TIPOS DE UNIDADES DE TAMANHOS - quando for especificar o tamanho, pode-se trabalhar com tipos diferentes, como:
-    - px (pixel) => trabalha em pixels
+    - px (pixel)
+            `--->> trabalha em pixels
+    - pt
 
 ### background:
             `--->> trabalha com o fundo da página.
@@ -689,10 +691,35 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
         - border-box;
                     `--->> nesse modo, o "width" já inclui o conteúdo, o "padding" e o "border".
 
+### font-family: 
+            `--->> estilo de fonte
+        Exp.:
+            font-family: arial;
+    OBS.: existem mais dois jeitos de mudar a fonte.
+            - @font-face { }
+                    `--->> escolhe uma fonte que você tenha salvo na sua pasta de criação do site, evidenciando o local e o arquivo baixado.
+                        Exp.:
+                            @font-face {
+                                font-family: 'FonteLogo';
+                                src: url("pasta/fonte.otf")
+                            }
+                        OBS.: 'FonteLogo' vai ser o nome que foi estipulado para a fonte carregada, mas que você pode mudar para outro do seu agrado. Esse nome vai ser colocado no "font-family" de onde você quer mudar a fonte.
+                            Exp.:
+                                .h1 {
+                                    font-family: 'FonteLogo', sans-serif;
+                                }
+            - <link href=" "> (Linkado no head do HTML)
+                    `--->> busca uma fonte em um site externo, como o GOOGLE FONTS. Você salva a referência linkando no seu HTML e importando (@import) no CSS. Depois, é só mudar o "font-family" para o nome da fonte.
+
 ### font-size: 
             `--->> tamanho da fonte
         Exp.:
             font-size: 30pt;
+
+### height:
+            `--->> define a altura do elemento.
+                    Exp.:
+                        height: 100px;
 
 ### margin:
             `--->> cria espaço EXTERNO ao redor de um elemento, afastando-o de outros elementos.
@@ -757,26 +784,21 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
             - "right" (direita)
                     `--->> sinaliza que será deslocada em relação à parte da direita, INDO PARA ESQUERDA.
 
+### text-align:
+            `--->> faz o alinhamento horizontal do texto em relação à caixa.
+            - center;
+                    `--->> alinha o texto ao centro.
+            - left;
+                    `--->> alinha o texto à esquerda.
+            - right;
+                    `--->> alinha o texto à direita.
+            - justify;
+                    `--->> justifica o texto, alinhando as duas margens.
 
-### font-family: 
-            `--->> estilo de fonte
-        Exp.:
-            font-family: arial;
-    OBS.: existem mais dois jeitos de mudar a fonte.
-            - @font-face { }
-                    `--->> escolhe uma fonte que você tenha salvo na sua pasta de criação do site, evidenciando o local e o arquivo baixado.
-                        Exp.:
-                            @font-face {
-                                font-family: 'FonteLogo';
-                                src: url("pasta/fonte.otf")
-                            }
-                        OBS.: 'FonteLogo' vai ser o nome que foi estipulado para a fonte carregada, mas que você pode mudar para outro do seu agrado. Esse nome vai ser colocado no "font-family" de onde você quer mudar a fonte.
-                            Exp.:
-                                .h1 {
-                                    font-family: 'FonteLogo', sans-serif;
-                                }
-            - <link href=" "> (Linkado no head do HTML)
-                    `--->> busca uma fonte em um site externo, como o GOOGLE FONTS. Você salva a referência linkando no seu HTML e importando (@import) no CSS. Depois, é só mudar o "font-family" para o nome da fonte.
+### width:
+            `--->> define a largura de um elemento, ou a largura que ele irá ocupar.
+                    Exp.: 
+                        width: 100px;
 
 ### font-weight:
         `--->> espessura da letra.
@@ -792,15 +814,6 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
             `--->> aplica sombra no texto
         Exp.:
             text-shadow: 2px 2px 2px;
-
-### text-align:
-            `--->> faz o alinhamento do texto em relação à caixa.
-                    - center;
-                            `--->> alinha o texto ao centro.
-                    - left;
-                            `--->> alinha o texto à esquerda.
-                    - right;
-                            `--->> alinha o texto à direita.
 
 ### vertical-align:
             `--->> faz o alinhamento vertical do texto.

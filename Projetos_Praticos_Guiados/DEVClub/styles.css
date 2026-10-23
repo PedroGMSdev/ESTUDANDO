@@ -13,4 +13,6 @@ body{
     color: goldenrod;
     font-size: 360px;
     position: absolute;
+    bottom: 400px;
+    text-align: center;
 }
