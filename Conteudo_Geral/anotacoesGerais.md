@@ -689,6 +689,11 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
         - border-box;
                     `--->> nesse modo, o "width" já inclui o conteúdo, o "padding" e o "border".
 
+### font-size: 
+            `--->> tamanho da fonte
+        Exp.:
+            font-size: 30pt;
+
 ### margin:
             `--->> cria espaço EXTERNO ao redor de um elemento, afastando-o de outros elementos.
         Exp.:
@@ -701,6 +706,56 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                     `--->> trabalha apenas com a margem de baixo do elemento.
         - margin-left:
                     `--->> trabalha apenas com a margem da esquerda do elemento.
+
+### position:
+            `--->> define como um elemento vai ser posicionado na página, podendo ficar na posição normal do documento, se pode ser deslocado ou se fica fixo em algum lugar da tela.
+        - absolute;
+                `--->> posiciona-se em relação a uma referência, permitindo posicionar o elemento usando referências como "top:", "bottom:", "left:" e "right:", logo depois do "position:", e informando os valores que deverá ser assumido. Normalmente ele se posiciona em relação ao ancestral mais próximo que tenha "position", diferente de "static". Esse sai do fluxo normal da página, ou seja, não reserva seu espaço original. O elemento pode ficar sobre outros elementos e ser posicionado dentro de um contêiner de referência.
+                        Exp.:
+                            .div{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                            }
+        - relative;
+                `--->> desloca-se a partir da posição original, movendo o elemento em relação a sua posição inicial. O espaço original dele continua reservado na página.
+                        Exp.:
+                            .div{
+                                position: relative;
+                                top: 20px;
+                                left: 10px;
+                            }
+                                    `--->> nesse exemplo, ele se desloca 20 pixel para baixo e 10 para a direita.
+        - static; 
+                `--->> POSIÇÃO PADRÃO, onde o elemento segue o fluxo normal da página. As propriedades "top", "left", "bottom" e "right" não funcionam nele.
+                        Exp.:
+                            .div{
+                                position: static;
+                            }
+        - fixed;
+                `--->> posição fixa na tela. Ele continua no mesmo lugar da tela enquanto você rola a página. Mais usado em botões flutuantes e barras fixas.
+                        Exp.:
+                            .div{
+                                position: fixed;
+                                bottom: 0;
+                                left: 0;
+                            }
+        - sticky;
+                `--->> posição aderente, aderindo à um limite durante a rolagem, onde o elemento se comporta normalmente até atingir o limite definido. Depois, fica preso nessa posição durante a rolagem, dentro dos limites do seu contêiner. Bastante usado em cabeçalhos de tabelas e menus.
+                        Exp.:
+                            h2{
+                                position: sticky;
+                                top: 0;
+                            }
+    OBS.: as propriedades "top", "left", "right" e "bottom" indicam a distância ou o deslocamento em relação à referência de posicionamento. Quando você coloca uma propriedade dessa, sigfica que quer que se desloque em relação à ela, ou seja:
+            - "top" (cima)
+                    `--->> sinaliza que será deslocada em relação à parte de cima, INDO PARA BAIXO.
+            - "bottom" (baixo)
+                    `--->> sinaliza que será deslocada em relação à parte de baixo, INDO PARA CIMA.
+            - "left" (esquerda)
+                    `--->> sinaliza que será deslocada em relação à parte da esquerda, INDO PARA DIREITA.
+            - "right" (direita)
+                    `--->> sinaliza que será deslocada em relação à parte da direita, INDO PARA ESQUERDA.
 
 
 ### font-family: 
@@ -730,10 +785,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 - bolder;
                         `--->> aplica algo mais espesso que o negrito.
 
-### font-size: 
-            `--->> tamanho da fonte
-        Exp.:
-            font-size: 30pt;
+
 
        
 ### text-shadow 

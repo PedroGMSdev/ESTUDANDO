@@ -12,4 +12,5 @@ body{
 .nomePersonagem{
     color: goldenrod;
     font-size: 360px;
+    position: absolute;
 }
