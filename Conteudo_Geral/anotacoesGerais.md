@@ -736,6 +736,21 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                     Exp.:
                         height: 100px;
 
+### justify-content:
+            `--->> usada para distribuir e posicionar elementos dentro de um contêiner ao longo do eixo principal. Muito usada no "display: flex;" e "display: grid;".
+        - flex-start;
+                `--->> os elementos ficam agrupados no início de eixo principal.
+        - center;
+                `--->> os elementos ficam agrupados no centro do eixo principal.
+        - flex-end;
+                `--->> os elementos ficam agrupados no final do eixo principal.
+        - space-between;
+                `--->> o primeiro elemento fica no início, o último no final, e o restante é distribuído entre eles.
+        - space-around;
+                `--->> cada elemento recebe espaços ao seu redor. Os espaços nas extremidades ficam menores que os espaços entre os elementos.
+        - space-evenly;
+                `--->> os espaços entre os elementos e nas duas extremidades são iguais.
+
 ### margin:
             `--->> cria espaço EXTERNO ao redor de um elemento, afastando-o de outros elementos.
         Exp.:
@@ -819,6 +834,8 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 
 ------------------------------------------------------------------------------------------------------------------------
+
+align-itens
 
 ### font-weight:
         `--->> espessura da letra.
