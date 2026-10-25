@@ -691,6 +691,21 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
         - border-box;
                     `--->> nesse modo, o "width" já inclui o conteúdo, o "padding" e o "border".
 
+### display:
+            `--->> modifica a configuração de disposição dos itens na caixa em questão. Define como um elemento aparece na página e como ele ocupa espaço em relação aos outros elementos.
+                    - inline;
+                            `--->> o elemento ocupa apenas o espaço necessário para o seu conteúdo e fica na mesma linha que os outros elementos, se houver espaço, dispondo os itens em uma única linha, um do lado da outra.
+                    - block;
+                            `--->> o elemento ocupa uma linha inteira por padrão, mesmo que seu conteúdo seja pequeno. Dispõe os itens em blocos flutuantes e esse blocos ficam cada um em uma linha diferente.
+                    - inline-block;
+                            `--->> combina característica dos dois anteriores, ficando na mesma linha como o "inline" e permite definir altura e largura como o "block". Se esses elementos recebem "inline-block", poderão ficar um do lado do outro e ter dimensões definidas.
+                    - none;
+                            `--->> dispõe os itens de forma oculta. O elemento desaparece da página e não ocupa espaço no layout. O elemento continua existindo no HTML, mas não aparece na página.
+                    - grid;
+                            `--->> permite organizar os elementos em linhas E colunas, como uma grade ou tabela.
+                    - flex;
+                            `--->> permite organizar os elementos filhos de um contêiner com facilidade, geralmente em uma linha OU coluna.
+                            
 ### font-family: 
             `--->> estilo de fonte
         Exp.:
@@ -800,6 +815,11 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                     Exp.: 
                         width: 100px;
 
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
 ### font-weight:
         `--->> espessura da letra.
                 - bold;
@@ -845,14 +865,7 @@ list-style:
                     - uppercase;
                             `--->> transforma todo o texto em LETRAS MAIÚSCULAS.
 
-### display:
-            `--->> modifica a configuração de disposição dos itens na caixa em questão.
-                    - inline-block;
-                            `--->> dispõe os itens em uma unica linha, um do lado da outra.
-                    - block;
-                            `--->> dispões os itens em blocos flutuantes.
-                    - none;
-                            `--->> dispõe os itens de forma oculta.
+
 
 ### flex-direction: --->>> direcionamento dentro do flex
             `--->>> sinaliza em qual direção os itens do "display: flex;" vão ser dispostos:
@@ -870,11 +883,6 @@ float:
 clear: both;
             `--->> vai limpar toda a configuração já aplicada aquele local indicado anteriormente por outras seções.
 
-
-### margin: --->>> distanciamente externo
-            `--->> trabalha o espaçamento fora da caixa, afastando a caixa dos outros elementos que estão fora da caixa, como outras caixas, botões, textos...
-                Exp.:
-                    margin: 20px;
 
 ### padding: --->>> distanciamento interno
         `--->>> trabalha o espaçamento de dentro da caixa, afastando o conteúdo de dentro das bordas da caixa, como o nome, a largura que a caixa vai tomar...
