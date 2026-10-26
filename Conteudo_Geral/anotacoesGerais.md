@@ -609,9 +609,105 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                         baixo = 5px         
 
 ### DICA: TIPOS DE UNIDADES DE TAMANHOS - quando for especificar o tamanho, pode-se trabalhar com tipos diferentes, como:
-    - px (pixel)
-            `--->> trabalha em pixels
-    - pt
+#### Unidades ABSOLUTAS
+            `--->> representam medidas com um tamanho definido. São unidades que não dependem diretamente de outro elemento do CSS. Porém, isso não significa que todas terão o mesmo tamanho físico em qualquer tela: o navegador pode mapear essas medidas de acordo com o dispositivo.
+        - px (pixel)
+                `--->> trabalha em pixels, serve para definir fontes, bordas, espaçamentos, larguras e alturas. Muito utilizado em desenvolvimento Web. Utilizar em bordas finas, sombras, pequenos detalhes e tamanhos que você quer controlar diretamente.
+                        Exp.:
+                            .caixa{
+                                width: 300px;
+                                padding: 20px;
+                            }
+        - pt (ponto tipográfico)
+                `--->> é uma unidade tradicional da tipografia. Um ponto (pt) corresponde a 1/72 de uma polegada. Utilizar principalmente em documentos e contextos de impressão. Para interfaces de sites, geralmente é mais conveniente usar "rem" ou "px".
+                        Exp.:
+                            p{
+                                font-size: 12pt;
+                            }
+        - in (polegada)
+                `--->> trabalha em polegadas. Uma polegada equivale a 2,54 centímetros. Utilizar em layouts voltados à impressão ou quando a medida física for relevante.
+                        Exp.:
+                            .folha{
+                                width: 8.5in;
+                            }
+        - cm (centímetros)
+                `--->> trabalha em centímetros, principalmente utilizado em impressão e documentos com dimensões físicas definidas.
+                        Exp.:
+                            .folha{
+                                width: 21cm;
+                            }
+        - mm (milímetro)
+                `--->> trabalhado em milímetros. Um milímetro corresponde a 1/10 de um centímetro. Utilizar em impressões e medidas físicas pequenas.
+                        Exp.:
+                            .margem{
+                                margin: 5mm;
+                            }
+        - pc (pica tipográfica)
+                `--->> uma pica equivale à 12 pontos tipográficos (pt). Utilizar em contextos tipográficos especializados. É pouco comum no CSS do dia a dia.
+                        Exp.:
+                            p{
+                                margin-bottom: 1pc;
+                            }
+    POR PADRÃO, A RELAÇAO ENTRE AS UNIDADES É:
+            - 1 in = 96 px
+            - 1 in = 72 pt
+            - 1 pt = 1,333... px
+            - 1 pc = 16 px
+#### Unidades RELATIVAS
+            `--->> essas são especialmente importantes para criar sites responsivos, ou seja, sites que se adaptam a celulares, tablets e computadores. Leva em conta a medida do contêiner onde está localizado.
+        - % (porcentagem)
+                `--->> trabalha em porcentagem, representando uma proporção em relação a uma referência definida pelo contexto da propriedade. Utilizar em larguras proporcionais, imagens fluidas e elementos que precisam acompanhar o tamanho do contêiner.
+                        Exp.:
+                            .pai{
+                                width: 400px;
+                            }
+                            .filho{
+                                width: 50%;
+                            }   
+                                    `--->> nesse exemplo, a largura de ".filho" será de 200px, pois corresponde à 50% da largura do ".pai".
+            ATENÇÃO: a referência do % muda conforme a propriedade. Por exemplo, "width: 50%" normalmente considera a largura do contêiner, enquanto "height: 50%" depende de uma altura de referência definida adequadamente.
+        - em (relativa ao tamanho da fonte)
+                `--->> o "em" depende do tamanho da fonte do elemento ou do contexto de tipografia aplicável à propriedade. Utilizado para espaçamentos e tamanhos que devem acompanhar a tipografia de um componente.
+                        Exp.:
+                            .pai{
+                                font-size: 20px;
+                            }
+                            .filho{
+                                font-size: 1.5em;
+                                margin-bottom: 1em;
+                            }
+                                    `--->> nesse caso, o ".pai" tem fonte de "20px", e a fonte do ".filho" será de "30px" (1.5 x 20px, do ".pai"). A margem inferior do ".filho" será de "30px", pois o "1em" dessa margem considera o tamanho da fonte do próprio ".filho".
+            ATENÇÃO: quando você define "font-size" com "em" em elementos aninhados, os valores podem se acumular. Isso pode tornar o tamanho final menos previsível.
+        - rem (relativa à fonte raiz)
+                `--->> o "rem" é semelhante ao "em", mas utiliza como referência o tamanho da fonte do elemento raiz do documento, normalmente o "<html>". É uma excelente escolha fontes, margens, paddings e dimensões de interfaces. Também facilita ampliar a interface de maneira concistente.
+                        Exp.:
+                            html{
+                                font-size: 16px;
+                            }
+                            h1{
+                                font-size: 2rem;
+                            }
+                            p{
+                                font-size: 1rem;
+                            }
+                                        `--->> nesse exemplo, o "h1" será "32px" (2 x tamanho da font do html) e "p" será "16px".
+            DICA: normalmente, o tamanho inicial da fonte raiz é de "16px", mas ele pode ser alterado pelo CSS ou pelas preferências do navegador.
+        - vw (viewport width)
+                `--->> representa 1% da largura da área visível da página, chamada viewport. Utilizar com elementos que precisam variar de acordo com a largura da tela.
+                        Exp.:
+                            .banner{
+                                width: 80vw;
+                            }
+                                    `--->> se a viewport tiver 1000px de largura, o ".banner" terá 800px.
+        - vh (viewport height)
+                `--->> representa 1% da altura da viewport. Utilizar com seções que ocupam a tela inteira, como páginas de apresentação e telas inicias.
+                        Exp.:
+                            .secao{
+                                height: 100vh;
+                            }   
+                                    `--->> se a viewport tiver 800px de altura, a ".secao" terá 800px.
+    ATENÇÃO: NO CELULAR, a interface do navegador pode alterar a área visível disponível. Por isso, para seções que precisam acompanhar melhor a altura visível em dispositivos móveis, também existem "svh", "lvh" e "dvh".
+        - 
 
 ### background:
             `--->> trabalha com o fundo da página.
