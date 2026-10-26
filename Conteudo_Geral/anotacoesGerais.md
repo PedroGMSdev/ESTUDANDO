@@ -931,6 +931,14 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 ------------------------------------------------------------------------------------------------------------------------
 
+border-radius
+
+object-fit: cover;
+
+object-position: top;
+
+gap:
+
 align-itens
 
 ### font-weight:
