@@ -19,3 +19,25 @@ Projeto cria uma página web que serve para criar agentes de IA, com criação d
             `--->>> ajuda a testar "online" o código, em tempo real
 
 **HTML**
+**HTML**
+
+# onclick
+        `--->> o que deve acontecer quando clicar.
+
+
+
+**JAVASCRIPT**
+
+# alert (" ")
+        `--->> mensagem que aparece como alerta na barra superior do navegador.
+
+# .innerHTML
+        `--->> coloca algo dentro do HTML.
+                Exp.:
+                    nome.innerHTML = "Pedro"
+
+# .src  
+        `--->> troca no HTML o "src".
+                Exp.:
+                    personagem.src = "imagem.webp"
+
