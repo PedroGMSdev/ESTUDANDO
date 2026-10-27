@@ -707,7 +707,64 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                             }   
                                     `--->> se a viewport tiver 800px de altura, a ".secao" terá 800px.
     ATENÇÃO: NO CELULAR, a interface do navegador pode alterar a área visível disponível. Por isso, para seções que precisam acompanhar melhor a altura visível em dispositivos móveis, também existem "svh", "lvh" e "dvh".
-        - 
+                - vmin
+                        `--->> calculado com base nas dimensões da viewport, 1% da menor dimensão entre largura e altura. Utilizar em elementos que precisam considerar as proporções gerais da tela, independentemente de ela estar na horizontal ou na vertical.
+                - vmax
+                        `--->> calculado com base nas dimensões da viewport, 1% da maior dimensão entre largura e altura. Utilizar em elementos que precisam considerar as proporções gerais da tela, independentemente de ela estar na horizontal ou na vertical.
+                                Exp.:
+                                    .quadrado{
+                                        width: 50vmin;
+                                        height: 50vmin;
+                                    }
+                - svh e svw
+                        `--->> usam a viewport pequena. Muito utilizadas para ajudar a lidar com barras do navegador, principalmente em celulares.
+                - lvh e lvw
+                        `--->> usam a viewport grande. Muito utilizadas para ajudar a lidar com barras do navegador, principalmente em celulares.
+                - dvh e dvw
+                        `--->> acompanham a viewport dinâmica, que pode mudar conforme a interface do navegador aparece ou desaparece. Utilizada em layouts que precisam acompanhar a área visível do navegador, especialmente em dispositivos móveis.
+                                Exp.:
+                                    .hero{
+                                        min-height: 100dvh;
+                                    }
+        - ch
+                `--->> relativo à largura do caractere 0 da fonte utilizada, muito útil para limitar a largura de um texto.
+                        Exp.:
+                            .caixa{
+                                max-width: 50ch;
+                            }
+        - ex
+                `--->> relativa à altura-x da fonte, quando disponível. Utilizada em ajustes tipográficos.
+        - cap
+                `--->> relativa à altura das letras maiúsculas da fonte. Utilizado em alinhamento tipográfico.
+        - ic    
+                `--->> relativa à largura do caractere ideográfico de referência. Utilizado em textos em idiomas como chinês e japonês.
+        - lh    
+                `--->> relativa à altura da linha do próprio elemento. Utilizada em espaçamentos relacionados às linhas de texto.
+        - rlh
+                `--->> relativa à altura da linha do elemento raiz. Utilizado em espaçamentos globais ligados à tipografia.
+##### Unidades de CONTÊINER
+            `--->> algumas unidades permitem dimensionar elementos em função de um contêiner específico, em vez de considerar a tela inteira. São utilizados em componentes reutilizáveis, cards e layouts em que um elemento precisa se adaptar ao espaço disponível dentro de outro elemento.
+                - cqw
+                    `--->> 1% da largura do contêiner de referência.
+                - cqh
+                    `--->> 1% da altura do contêiner de referência.
+                - cqi
+                    `--->> 1% do tamanho do contêiner no eixo em linha.
+                            Exp.:
+                                .card-container{
+                                    container-type: inline-size;
+                                }
+                                .card h2{
+                                    font-size: 5cqi;
+                                }
+                                        `--->> nesse exemplo, o tamanho do título pode acompanhar a largura do contêiner da própria card, em vez de acompanhar a largura da tela.
+                - cqb
+                    `--->> 1% do tamanho do contêiner no eixo em bloco.
+                - cqmin
+                    `--->> 1% da menor da dimensão relevante do contêiner.
+                - cqmax
+                    `--->> 1% da maior dimensão relevante do contêiner.
+
 
 ### background:
             `--->> trabalha com o fundo da página.
