@@ -19,7 +19,6 @@ Projeto cria uma página web que serve para criar agentes de IA, com criação d
             `--->>> ajuda a testar "online" o código, em tempo real
 
 **HTML**
-**HTML**
 
 # onclick
         `--->> o que deve acontecer quando clicar.
@@ -41,3 +40,7 @@ Projeto cria uma página web que serve para criar agentes de IA, com criação d
                 Exp.:
                     personagem.src = "imagem.webp"
 
+# .style.color
+        `--->> vai procurar no CSS e mudar a cor
+                Exp.:
+                        nome.style.cor = 
