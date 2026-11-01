@@ -23,10 +23,13 @@
     <img onclick="escolherPersonagem('Lucia', 'img/iconF.webp', '#ff3cac')" class="avatar" src="img/iconF.webp">
     <img onclick="escolherPersonagem('Jason', 'img/iconM.webp', '#00B2C9')" class="avatar" src="img/iconM.webp">
     <img onclick="escolherPersonagem('CJ', 'img/iconM.webp', '#7ED37E')" class="avatar" src="img/iconM.webp">
-    <button class="voce">📷</button>
+    <label class="voce">📷
+        <input type="file" accept="image/*" hidden onchange="lerFoto(this)">
+    </label>
     </div>
 
 
 </body>
+<script src="https://js.puter.com/v2/"></script> <!--API do Puter IA-->
 <script src="script.js"></script>
 </html>
