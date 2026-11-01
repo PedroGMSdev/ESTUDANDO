@@ -10,7 +10,7 @@ Aprender a pensar como programador.
 #### Checklist
 * [X] Variáveis
 * [X] Condições (`if`, `else`)
-* [ ] Loops (`for`, `while`)
+* [X] Loops (`for`, `while`)
 * [ ] Funções
 * [ ] Arrays
 * [ ] Objetos
