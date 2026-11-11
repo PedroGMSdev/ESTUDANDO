@@ -51,6 +51,19 @@ A "cabeça" do site, onde ficam as configurações comportamentais, ou seja, as 
 ### <link rel="stylesheet" href=" ">
             `--->> linkagem com o arquivo css, que será colocado entre " ".
 
+### <style></style>
+            `--->> sinaliza a manipulação do CSS sem precisar criar um arquivo a parte, diretamente no HTML.
+
+### <script></script>
+        `--->> indica a inclusão ou execução de um código javascript direto no html, sem precisar criar um arquivo a parte.
+    OBS.: em um arquivo html pode haver mais de uma tag "<script>", podendo ser colocada à uma altura preferida da diagramação da página. Na parte HEAD ficam a denominações das funções.
+            Exp.:
+                <script>
+                    function acendeLampada(){
+
+                    }
+                </script>
+
 ## -------------------------------------------- TAGS BODY --------------------------------------------
 As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do site.
 
@@ -79,6 +92,10 @@ As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do 
         `--->> anexa uma informação ao local informado, geralmente para identificar para quê serve aquele campo.
             Exp.:
                 <label>E-mail</label>
+
+### <script></script>
+        `--->> indica a inclusão ou execução de um código javascript direto no html, sem precisar criar um arquivo a parte.
+    OBS.: em um arquivo html pode haver mais de uma tag "<script>", podendo ser colocada à uma altura preferida da diagramação da página.
 
 ## ATRIBUTOS
         `--->> informação extra que você coloca dentro da TAG para configurar ou modificar o comportamento dela.
@@ -1125,6 +1142,48 @@ DICA: caso uma imagem colocada seja muito pequena, ela se repetirá até preench
 
 # *JAVASCRIPT*
 
+## alert();
+        `--->>> exibe na barra de navegação do navegador uma mensagem, como um alerta.
+                Exp.:
+                    alert("Olá Mundo!");
+
+## document
+        `--->>> como é feita a interação entre JAVASCRIPT e HTML. Para o JS, o html é conhecido como "document", então quando ele quer dizer algo do tipo "vá até o html e faça..." será utilizado "document." para indicar isso.
+### document.write();
+        `--->>> esse método dá um comando para escrever algo diretamente na página html, no corpo do navegador.
+                Exp.:
+                    document.write("Olá Mundo!");
+### document.getElementById();
+        `--->>> esse método dá um comando para buscar um elemento pelo seu Id.
+                Exp.:
+                    document.getElementById("luz")
+    OBS.: após buscar o elemento, você pode trabalhar com alterações nele.
+#### document.getElementById().src=" "
+        `--->>> faz alterações no src do elemento, como trocar a imagem dando a ela um novo endereço de imagem, que será especificado entre " ".
+                Exp.:
+                    document.getElementById("luz").src="imagem/foto2.jpg";
+
+## on
+        `--->>> chamada de execução atravéz de uma ação esperada. O que será chamado estará especificado entre " ", como por exemplo uma função.
+### onclick=" "
+        `--->>> chamada em caso de click no local indicado.
+                Exp.:
+                    <img onclick="funcaoAcenderLuz()">
+### onmousemove=" "
+        `--->>> chamada em caso de movimentação do mouse sobre o local indicado.
+                Exp.:
+                    <img onmousemove="funcaoAcenderLuz()">
+### onmouseout=" "
+        `--->>> geralmente utilizado em conjunto com o "onmousemove", atribui outra ação caso o mouse seja retirado de cima do local indicado.
+                Exp.:
+                    <img onmouseout="funcaoApagarLuz()">
+
+## FUNÇÕES PRÉ-DEFINIDAS
+### Date()
+        `--->>> trabalha com a data atual.
+                Exp.
+                    document.write(Date());
+                            `--->>> mostraria no html a data atual.
 
 # *TYPESCRIPT*
 
