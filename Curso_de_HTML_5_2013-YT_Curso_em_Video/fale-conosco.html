@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso HTML5</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<script>
+    function mudaFoto(foto){
+        document.getElementById("icone").src=foto;
+    }
+</script>
+
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+
+            <img id="icone" src="arquivos/_imagens/contato.png">
+
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li onmousemove="mudaFoto('arquivos/_imagens/home.png')" onmouseout="mudaFoto('arquivos/_imagens/contato.png')"><a href="index.html">Home</a></li>
+                    <li onmousemove="mudaFoto('arquivos/_imagens/especificacoes.png')" onmouseout="mudaFoto('arquivos/_imagens/contato.png')"><a href="especificacoes.html">Especificações</a></li>
+                    <li onmousemove="mudaFoto('arquivos/_imagens/fotos.png')" onmouseout="mudaFoto('arquivos/_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+                    <li onmousemove="mudaFoto('arquivos/_imagens/multimidia.png')" onmouseout="mudaFoto('arquivos/_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                    <li onmousemove="mudaFoto('arquivos/_imagens/contato.png')" onmouseout="mudaFoto('arquivos/_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+
+Fale Conosco > Contato
+Formulário de Contato
+por Gustavo Guanabara
+Atualizado em 01/Maio/2013
+
+Identificação do Usuário
+    Nome:
+    Senha:
+    E-mail:
+    Sexo:
+        - Masculino
+        - Feminino
+    Data de Nascimento:
+
+Endereço do Usuário
+    Logradouro:
+    Número:
+    Estado:
+    Cidade:
+
+Mensagem do Usuário
+    Grau de Urgência:
+    Mensagem:
+
+Quero um Google Glass
+    Gostaria de adquirir um Google Glass quando disponível
+    Cor:
+    Quantidade:
+    Preço Total: R$
+
+
+[BOTÃO ENVIAR]
+
+        <footer id="rodape">
+            <p><br>Copyright &copy; 2013 - by Gustavo Guanabara</br>
+                Facebook | Twitter</p>
+        </footer>
+    </div>
+</body>
+
+</html>
