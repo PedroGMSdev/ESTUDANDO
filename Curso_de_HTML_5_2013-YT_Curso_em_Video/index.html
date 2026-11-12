@@ -13,6 +13,12 @@
         rel="stylesheet">
 </head>
 
+<script>
+    function mudaFoto(foto){
+        document.getElementById("icone").src=foto;
+    }
+</script>
+
 <body>
     <div id="interface">
         <header id="cabecalho">
@@ -24,7 +30,7 @@
             <nav id="menu">
                 <h1>Menu Principal</h1>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li onmousemove="mudaFoto('arquivos/_imagens/home.png')"><a href="index.html">Home</a></li>
                     <li><a href="especificacoes.html">Especificações</a></li>
                     <li><a href="fotos.html">Fotos</a></li>
                     <li><a href="multimidia.html">Multimídia</a></li>
