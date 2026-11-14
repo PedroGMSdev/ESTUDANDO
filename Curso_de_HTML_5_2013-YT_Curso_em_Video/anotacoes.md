@@ -25,4 +25,5 @@ Aula 21 - Concluída
 Aula 22 - Concluída
 Aula 23 - Concluída
 Aula 24 - Concluída
-Aula 25 - 
+Aula 25 - Concluída
+Aula 26 - Concluída

@@ -9,7 +9,7 @@
 
 # *HTML*
 
-## --------------- ESTRUTURA BASE HTML
+## -------------------------------------------- ESTRUTURA BASE HTML -------------------------------------------- 
     <!DOCTYPE html>
     <hmtl>
         <head>
@@ -100,6 +100,17 @@ As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do 
 ## ATRIBUTOS
         `--->> informação extra que você coloca dentro da TAG para configurar ou modificar o comportamento dela.
 
+### action=" "
+        `--->> usado principalmente na TAG <form>, define para onde os dados do formulário serão enviados, que é o local informado entre " ".
+            Exp.:
+                <form action="/login">
+                    `--->> informa que esse formulário vai pegar os dados (action) e enviará para "/login".
+
+### alt=" "
+        `--->> usado dentro da TAG <img>, descreve a imagem em formato de texto. Muito importante para acessibilidade e para situações não consegue ser carregada.
+            Exp.:
+                <img alt="Duas mão dadas">
+
 ### class=" "
         `--->> cria uma identificação para o local indicado, chamado CLASSE.
 
@@ -108,11 +119,17 @@ As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do 
 
 ### OBS.: uma CLASSE pode ser repetida em vários elementos, mas um ID é único, não podendo ser atribuído à outro elemento.
 
-### action=" "
-        `--->> usado principalmente na TAG <form>, define para onde os dados do formulário serão enviados, que é o local informado entre " ".
+### for=" "
+        `--->> geralmente usado em IMPUT, ele conecta a LABEL ao INPUT, para quando o usuário clicar no texto "E-mail" o INPUT receber foco automaticamente, melhorando a acessibilidade, facilitando a navegação, aumentando a área clicável e ajuda leitores de tela.
+
+    OBS.: o FOR deve ser igual ao ID do input.
             Exp.:
-                <form action="/login">
-                    `--->> informa que esse formulário vai pegar os dados (action) e enviará para "/login".
+                <label for="email"> E-mail </label>
+                <input id="email" type="email">
+
+### method=" "
+
+### name=" "
 
 ### placeholder=" "
         `--->> geralmente usado em <textarea> ou <input>, ele mostra um texto de dica dentro do campo, antes do usuário digitar algo. Quando o usuário começa a digitar, este texto some. Serve para dar uma sugestão rápida do que deve ser escrito naquele local.
@@ -160,22 +177,9 @@ As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do 
 
 ### OBS.: informar o TYPE é importante pois muda o comportamento, validação, teclado no celular e acessibilidade. Por exemplo, no celular, informar TYPE como EMAIL já faz o teclado abrir com @, para facilitar.
 
-### name=" "
-
 ### value=" "
 
-### method=" "
-
-### for=" "
-        `--->> geralmente usado em IMPUT, ele conecta a LABEL ao INPUT, para quando o usuário clicar no texto "E-mail" o INPUT receber foco automaticamente, melhorando a acessibilidade, facilitando a navegação, aumentando a área clicável e ajuda leitores de tela.
-
-    OBS.: o FOR deve ser igual ao ID do input.
-            Exp.:
-                <label for="email"> E-mail </label>
-                <input id="email" type="email">
-
-
-## TAGS SEMANTICAS
+## -------------------------------------------- TAGS SEMANTICAS -------------------------------------------- 
 Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 ### <header></header>
@@ -203,7 +207,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 ### <article></article>
             `--->> sinaliza a sessão de ARTIGO, que é onde fica especificações, artigos e notícias do site.
 
-## TAGS DE MULTIMÍDIA
+## -------------------------------------------- TAGS DE MULTIMÍDIA -------------------------------------------- 
 
 ### <img src=" ">
             `--->> adiciona uma imagem. Entre " " será descrito a localização da imagem.
@@ -222,7 +226,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 <figcaption>Vendas ao longo de 2025</figcaption>
             </figure>
 
-## TAGS DE TABELA
+## -------------------------------------------- TAGS DE TABELA -------------------------------------------- 
 
 ### <table></table> 
             `--->> cria um local de tabela.
@@ -260,7 +264,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                     --------------------------
 
 
-## TAGS DE LISTAS
+## -------------------------------------------- TAGS DE LISTAS -------------------------------------------- 
 
 ### <ul></ul>
             `--->> lista não ordenada, ou unordered lists
@@ -350,7 +354,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 <li>Avião</li>
             </ol>
 
-## TAGS DE TEXTO
+## -------------------------------------------- TAGS DE TEXTO -------------------------------------------- 
 
 ### <h> - TÍTULOS
 
@@ -994,6 +998,9 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                     `--->> alinha o texto à direita.
             - justify;
                     `--->> justifica o texto, alinhando as duas margens.
+
+### text-indent:
+            `--->> usado para definir um recuo na primeira linha de um texto, ou seja, criar aquele espaço na primeira linha de um parágrafo, como nos livros.
 
 ### width:
             `--->> define a largura de um elemento, ou a largura que ele irá ocupar.
