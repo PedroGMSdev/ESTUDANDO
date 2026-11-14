@@ -67,12 +67,6 @@ A "cabeça" do site, onde ficam as configurações comportamentais, ou seja, as 
 ## -------------------------------------------- TAGS BODY --------------------------------------------
 As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do site.
 
-### <div></div>
-            `--->> cria uma "caixa" divisória.
-
-### <button></button>
-            `--->> cria um botão na página.
-
 ### <a></a>
             `--->> cria uma linkagem, ou uma ancoragem. Você pode mascarar o link escrevendo algo entre as TAGs, que ficará em evidência e destacará o local onde será clicado.
     OBS.: deve-se ser indicada na TAG de abertura a referência, ou seja, o link que será redirecionado ao clicar, através do href=" " e colocado o link desejado entre " ". Se for um link externo, ou seja, um site que já existe, não se deve esquecer de manter o http.
@@ -85,8 +79,14 @@ As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do 
         Exp.:
             <a href="pagina2.html" target="_blank"></a>
 
-### <span></span>
-        `--->> evidencia um local, facilitando o trabalho de modificação ou atribuição de identificadores nele.
+### <button></button>
+            `--->> cria um botão na página.
+
+### <div></div>
+            `--->> cria uma "caixa" divisória.
+
+### <iframe></iframe>
+            `--->> cria um elemento usado para incorporar outra página ou conteúdo externo dentro da página atual. Não é uma TAG multimídia mas pode ser utilizada para incorporar vídeos do Youtube, mapas e players de áudios.
 
 ### <label></label>
         `--->> anexa uma informação ao local informado, geralmente para identificar para quê serve aquele campo.
@@ -96,6 +96,10 @@ As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do 
 ### <script></script>
         `--->> indica a inclusão ou execução de um código javascript direto no html, sem precisar criar um arquivo a parte.
     OBS.: em um arquivo html pode haver mais de uma tag "<script>", podendo ser colocada à uma altura preferida da diagramação da página.
+
+### <span></span>
+        `--->> evidencia um local, facilitando o trabalho de modificação ou atribuição de identificadores nele.
+
 
 ## ATRIBUTOS
         `--->> informação extra que você coloca dentro da TAG para configurar ou modificar o comportamento dela.
