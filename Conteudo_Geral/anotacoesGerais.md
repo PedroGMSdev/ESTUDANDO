@@ -567,6 +567,37 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                     }
                     `--->> vai modificar todas as TAGs <p> e <h1> com as mesmas modificações informadas.
 
+### Pseudo-Elemento
+            `--->> permite estilizar uma parte específica de um elemento HTML ou adicionar conteúdo visual sem precisar criar uma nova TAG no HTML. Para isso, usa-se "::" no local desejado. Existem inúmeros tipos, como:
+#### ::after
+            `--->> adiciona conteúdo depois do conteúdo do elemento.
+                    Exp.:
+                        h1::after{
+                            content: "!"
+                        }
+                                `--->> vai acrescentar esse ponto de exclamação depois do conteúdo do "h1".
+#### ::before
+            `--->> adiciona conteúdo antes do conteúdo do elemento.
+#### ::first-letter
+            `--->> estiliza a primeira letra de um texto.
+#### ::first-line
+            `--->> estiliza a primeira linha de um texto.
+#### ::placeholder
+            `--->> estiliza o texto de exemplo de um "input".
+#### ::selection
+            `--->> estiliza o texto quando o usuário seleciona alguma parte dele.
+#### ::-webkit-scrollbar
+            `--->> personaliza a aparência da barra de rolagem de um elemento.
+##### ::-webkit-scrollbar-track
+            `--->> personaliza o fundo por onde a barra desliza.
+##### ::-webkit-scrollbar-thumb
+            `--->> personaliza a parte que você arrasta.
+##### ::-webkit-scrollbar-thumb:hover
+            `--->> personaliza a barra quando o mouse passa por cima.
+##### ::-webkit-scrollbar-corner
+            `--->> personaliza o canto entre as barras horizontal e vertical.
+
+
 ## PROPRIEDADE
         `--->> é o que será mudado, como cor, tamanho...
 
@@ -941,6 +972,21 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                     `--->> trabalha apenas com a margem de baixo do elemento.
         - margin-left:
                     `--->> trabalha apenas com a margem da esquerda do elemento.
+
+### overflow:
+            `--->> controla o que acontece quando o conteúdo de um elemento é maior que o espaço disponível dentro dele.
+        - visible;
+                `--->> o conteúdo que ultrapassa os limites da caixa continua aparecendo.
+        - hidden;
+                `--->> esconde tudo que ultrapassar os limites da caixa.
+        - scroll;
+                `--->> adiciona barras de rolagem, mesmo quando não são necessárias.
+        - auto;
+                `--->> adiciona barras de rolagem, mas apenas quando são necessárias.
+#### overflow-x:
+            `--->> controla o conteúdo que ultrapassa horizontalmente.
+#### overflow-y:
+            `--->> controla o conteúdo que ultrapassa verticalmente.
 
 ### position:
             `--->> define como um elemento vai ser posicionado na página, podendo ficar na posição normal do documento, se pode ser deslocado ou se fica fixo em algum lugar da tela.
