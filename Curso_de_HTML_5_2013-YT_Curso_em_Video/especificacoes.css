@@ -5,13 +5,13 @@ section#conteudo{
     margin: auto;
 }
 
-inframe#frame-especificacoes{
-    width: 380px;
+iframe#frame-especificacoes{
+    width: 410px;
     height: 280px;
     border: none;
     overflow: hidden;
 }
 
-inframe#frame-especificacoes::-webkit-scrollbar{
+iframe#frame-especificacoes::-webkit-scrollbar{
     display: none;
 }
