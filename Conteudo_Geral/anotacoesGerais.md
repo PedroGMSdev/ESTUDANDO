@@ -93,6 +93,69 @@ As TAGs que fazem parte do visual do site, ou seja, tudo que aparece na tela do 
             Exp.:
                 <label>E-mail</label>
 
+### <map></map>
+        `--->> cria um mapa de imagem (image map), permitindo definir diferentes áreas clicáveis dentro de uma única imagem, ou seja, transformar uma imagem em várias áreas interativas e clicáveis, cada uma podendo ter seu próprio link ou ação. Para utilização dessa ferramenta é preciso se atentar à alguns detalhes:
+    - usemap=" "
+            `--->> colocado na imagem que será utilizada como mapa, e usando o "#" para fazer a ligação com o nome escolhido para o mapa.
+                    Exp.: 
+                        <img src="brasil.png" usemap="#mapa-brasil">
+    - name=" "
+            `--->> identifica o mapa.
+                    Exp.:
+                        <map name="mapa-brasil">
+    - <area>
+            `--->> utilizada em conjunto com o <map>, sinaliza a área de clique.
+                    Exp.:
+                        <img src="brasil.png" usemap="#mapa-brasil">
+                        <map name="mapa-brasil">
+                            <area shape="rect"
+                                coords="10,10,100,100"
+                                href="sao-paulo.html"
+                                alt="São Paulo">
+                        </map>
+    - shape=" "
+            `--->> define o formato da área clicável.
+                - rect
+                    `--->> retangulo, onde para as coordenadas são dois pontos (um pra X e um pra Y em cada ponto) compostas de quatro valores, sendo respectivamente:
+                        1°: valor (x1): coordenada X do canto superior esquerdo.
+                        2°: valor (y1): coordenada Y do canto superior esquerdo.
+                        3°: valor (x2): coordenada X do canto inferior direito.
+                        4°: valor (y2): coordenada Y do canto inferior direito.
+                                Exp.:
+                                    coords="10,10,100,100"
+                - circle
+                    `--->> círculo, onde para as coordenadas deve-se informar o ponto do centro da circunferência e o tamanho (em pixel) do raio.
+                            Exp.:
+                                coords="158,243,12"
+                                            `--->> onde 158,243 é o ponto central, e 12 é a medida do raio em pixels.
+                - poly
+                    `--->> polígono, onde para as coordenadas podem haver de três até quantos pontos você achar necessário para demarcar o local. O primeiro ponto sempre começa pelo ponto superior esquerdo, indo no sentido horário.
+                            Exp.:
+                                coords="28,143,83,216,84,249,27,169"
+                - default
+                    `--->> toda a área restante.
+    - coords=" "
+            `--->> define as coordenadas da área clicável.
+                    Exp.:
+                        coords="10,10,100,100"
+    - href=" "
+            `--->> determina para onde o usuário será redirecionado após clicar.
+                    Exp.:
+                        href="sao-paulo.html"
+            OBS.: caso você queira que seja apresentado um local específico do html informado, pode usar "#" pa linkar com o local específico.
+                    Exp.:
+                        href="google-glass.html#tela"
+                                `--->> nesse caso, vai ser aberto o arquivo "google-glas" e será procurado a parte de id="tela".
+    - alt=" "
+            `--->> descreve a área clicável.
+                    Exp.:
+                        alt="São Paulo"
+    - target=" "
+            `--->> estipula o local onde será aberta a página.
+                    Exp.:
+                        target="janela"
+                                `--->> informa que será aberto no local com o name="janela"
+
 ### <script></script>
         `--->> indica a inclusão ou execução de um código javascript direto no html, sem precisar criar um arquivo a parte.
     OBS.: em um arquivo html pode haver mais de uma tag "<script>", podendo ser colocada à uma altura preferida da diagramação da página.

@@ -28,4 +28,4 @@ Aula 24 - Concluída
 Aula 25 - Concluída
 Aula 26 - Concluída
 Aula 27 - Concluída
-Aula 28 - 
+Aula 28 - Concluída
