@@ -965,18 +965,18 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 ### display:
             `--->> modifica a configuração de disposição dos itens na caixa em questão. Define como um elemento aparece na página e como ele ocupa espaço em relação aos outros elementos.
-                    - inline;
-                            `--->> o elemento ocupa apenas o espaço necessário para o seu conteúdo e fica na mesma linha que os outros elementos, se houver espaço, dispondo os itens em uma única linha, um do lado da outra.
-                    - block;
-                            `--->> o elemento ocupa uma linha inteira por padrão, mesmo que seu conteúdo seja pequeno. Dispõe os itens em blocos flutuantes e esse blocos ficam cada um em uma linha diferente.
-                    - inline-block;
-                            `--->> combina característica dos dois anteriores, ficando na mesma linha como o "inline" e permite definir altura e largura como o "block". Se esses elementos recebem "inline-block", poderão ficar um do lado do outro e ter dimensões definidas.
-                    - none;
-                            `--->> dispõe os itens de forma oculta. O elemento desaparece da página e não ocupa espaço no layout. O elemento continua existindo no HTML, mas não aparece na página.
-                    - grid;
-                            `--->> permite organizar os elementos em linhas E colunas, como uma grade ou tabela.
-                    - flex;
-                            `--->> permite organizar os elementos filhos de um contêiner com facilidade, geralmente em uma linha OU coluna.
+        - inline;
+                `--->> o elemento ocupa apenas o espaço necessário para o seu conteúdo e fica na mesma linha que os outros elementos, se houver espaço, dispondo os itens em uma única linha, um do lado da outra.
+        - block;
+                `--->> o elemento ocupa uma linha inteira por padrão, mesmo que seu conteúdo seja pequeno. Dispõe os itens em blocos flutuantes e esse blocos ficam cada um em uma linha diferente.
+        - inline-block;
+                `--->> combina característica dos dois anteriores, ficando na mesma linha como o "inline" e permite definir altura e largura como o "block". Se esses elementos recebem "inline-block", poderão ficar um do lado do outro e ter dimensões definidas.
+        - none;
+                `--->> dispõe os itens de forma oculta. O elemento desaparece da página e não ocupa espaço no layout. O elemento continua existindo no HTML, mas não aparece na página.
+        - grid;
+                `--->> permite organizar os elementos em linhas E colunas, como uma grade ou tabela.
+        - flex;
+                `--->> permite organizar os elementos filhos de um contêiner com facilidade, geralmente em uma linha OU coluna.
                             
 ### font-family: 
             `--->> estilo de fonte
@@ -1004,7 +1004,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
             font-size: 30pt;
 
 ### float:
-            `--->> posiciona um elemento à esquera ou à direita dentro do seu contêiner, permitindo que outros elementos, principalmente textos, ocupem o espaço ao redor dele. Muito utilizado para fazer textos contornarem imagens.
+            `--->> posiciona um elemento à esquera ou à direita dentro do seu contêiner, permitindo que outros elementos, principalmente textos, ocupem o espaço ao redor dele. Muito utilizado para fazer textos contornarem imagens. Muito utilizado em "display: block;".
                     Exp.:
                             - Agenda
                             - Fotos
@@ -1012,14 +1012,14 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                         float: left;
                             - Agenda - Fotos - Vídeos
                                         `--->> aplicar o "float:" no exemplo a cima fez eles flutuarem um ao lado do outro, ao invés de um em cima do outro.
-            - left;
-                    `--->> posiciona os elementos à esquerda.
-            - right;
-                    `--->> posiciona os elementos à direita.
-            - none;
-                    `--->> remove o efeito de flutuação (valor padrão).
-            - inherit;
-                    `--->> herda o valor do elemento pai. 
+        - left;
+                `--->> posiciona os elementos à esquerda.
+        - right;
+                `--->> posiciona os elementos à direita.
+        - none;
+                `--->> remove o efeito de flutuação (valor padrão).
+        - inherit;
+                `--->> herda o valor do elemento pai. 
 
 ### height:
             `--->> define a altura do elemento.
@@ -1040,6 +1040,46 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 `--->> cada elemento recebe espaços ao seu redor. Os espaços nas extremidades ficam menores que os espaços entre os elementos.
         - space-evenly;
                 `--->> os espaços entre os elementos e nas duas extremidades são iguais.
+
+### list-style:
+            `--->> serve para trabalhar os marcadores de um lista, ordenada ou não ordenada. Permite controlar o tipo de marcador, sua posição e até utilizar uma imagem como marcador.
+                    Exp.:
+                        list-style: none;
+                                    `--->> faz os marcadores desaparecer, ficando apenas os nomes da lista.
+        OBS.: você pode escrever tudo de uma vezz, ou optar por especificar de um por um.
+                    Exp.:
+                        ul{
+                            list-style: disc inside none;
+                        }
+                    ou
+                        ul{
+                            list-style-type: disc;
+                            list-style-position: inside;
+                            list-style-image: none;
+                        }
+#### liste-style-type:
+            `--->> modifica o tipo de desenho dos marcadores.
+        - disc;
+                `--->> bola pequena preenchida.
+        - circle;
+                `--->> bola maior oca.
+        - square;
+                `--->> quadrado pequeno preenchido.
+        - none;
+                `--->> sem marcadores, ou seja, desaparece com qualquer marcador existente.
+        - decimal;
+                `--->> numeração.
+#### list-style-position:
+            `--->> controla onde o marcador aparece.
+        - inside;
+                `--->> o marcador fica dentro do bloco de conteúdo.
+        - outside;
+                `--->> o marcador fica fora do bloco de conteúdo (valor padrão).
+#### list-style-image:
+            `--->> permite substituir os marcadores padrões de uma lista por uma imagem personalizada.
+                    Exp.:
+                        list-style-image: url("icone.png");
+        OBS.: o "list-style-image:" não permite controlar diretamente o tamanho da imagem, então, se você quiser personalizar o tamanho, alinhamento e espaçamento do ícone, uma alternativa é usar "li::before{ }" no lugar.
 
 ### margin:
             `--->> cria espaço EXTERNO ao redor de um elemento, afastando-o de outros elementos.
@@ -1190,11 +1230,6 @@ align-itens
                     - none;
                             `--->> palavra sem decoração nenhuma.
 
-list-style:
-            `--->> vai pegar a lista e trabalhar os marcadores dela.
-                    - none;
-                            `--->> sinaliza que s marcadores da lista serão retirados.
-
 ### text-transform:
             `--->> transforma o texto do local indicado.
                     - uppercase;
@@ -1209,12 +1244,6 @@ list-style:
                     - row:
                             `--->>> organiza os itens em linha, um ao lado do outro.
 
-float:
-            `--->> muito utilizado em "display: block;", aplicando o FLOAT(flutuar) você dá o comando para os BLOCOS(block) do display indicado para que fiquem flutuanto, especificando o lado que deseja que fique.
-        Exp.:
-            float: left;
-                    => flutuar, se posicionar, à esquerda.
-
 clear: both;
             `--->> vai limpar toda a configuração já aplicada aquele local indicado anteriormente por outras seções.
 
@@ -1223,17 +1252,6 @@ clear: both;
         `--->>> trabalha o espaçamento de dentro da caixa, afastando o conteúdo de dentro das bordas da caixa, como o nome, a largura que a caixa vai tomar...
                 Exp.: 
                     padding: 20px;
-
-### position:
-            `--->> trabalha com a posição do elemento.
-                    - relative;
-                            `--->> trabalha com a posição do elemento APENAS em relação ao conteúda da caixa que ele se encontra.
-                    - absolute;
-                            `--->> trabalha com a posição do elemento em relação à TODO O SITE.
-                    - fixed;
-                            `--->> prende a posição do elemento no ponto indicado e, mesmo que role a página, o elemento se manterá no mesmo local sempre.
-                    - static;
-                            `--->> prende a posição do elemento no ponto indicado, sem permitir que modifique o local dele.
 
 ### transition:
             `--->> trabalha com a transição de efeitos.
@@ -1258,27 +1276,6 @@ clear: both;
                                                                 - ...
                     - border-spacing:
                             `--->> trabalha o espaçamento entre bordar, ou seja, diz quanto de espaço uma borda terá da outra.
-
-height:
-            `--->> estipula a ALTURA.
-                Exp.:
-                    height: 150px;
-
-background:
-            `--->> trabalha com o fundo do local indicado.
-                    - url (' '):
-                            `--->> acrescenta ao fundo uma imagem.
-    
-DICA: caso uma imagem colocada seja muito pequena, ela se repetirá até preencher todo o background. Para que ela não se repita, você pode usar o NO-REPEAT que fará ela ser usada só uma vez.
-    Exp.:
-        background: url ('imagem.jpg) no-repeat;
-    Você também pode especificar, logo após o comando, a posição que quer que a imagem fique, informando o deslocamento lateral e o deslocamento vertical.
-        Exp.:
-            background: url ('imagem.jpg) no-repeat 0px 100px;
-
-
-
-
 
 # *JAVASCRIPT*
 
