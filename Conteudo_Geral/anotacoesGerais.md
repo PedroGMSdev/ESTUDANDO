@@ -1003,6 +1003,24 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
         Exp.:
             font-size: 30pt;
 
+### float:
+            `--->> posiciona um elemento à esquera ou à direita dentro do seu contêiner, permitindo que outros elementos, principalmente textos, ocupem o espaço ao redor dele. Muito utilizado para fazer textos contornarem imagens.
+                    Exp.:
+                            - Agenda
+                            - Fotos
+                            - Vídeos
+                        float: left;
+                            - Agenda - Fotos - Vídeos
+                                        `--->> aplicar o "float:" no exemplo a cima fez eles flutuarem um ao lado do outro, ao invés de um em cima do outro.
+            - left;
+                    `--->> posiciona os elementos à esquerda.
+            - right;
+                    `--->> posiciona os elementos à direita.
+            - none;
+                    `--->> remove o efeito de flutuação (valor padrão).
+            - inherit;
+                    `--->> herda o valor do elemento pai. 
+
 ### height:
             `--->> define a altura do elemento.
                     Exp.:
@@ -1126,6 +1144,8 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 ------------------------------------------------------------------------------------------------------------------------
 
 border-radius
+
+clear: 
 
 object-fit: cover;
 
