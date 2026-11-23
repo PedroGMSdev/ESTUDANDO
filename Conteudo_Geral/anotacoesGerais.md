@@ -963,6 +963,17 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
         - border-box;
                     `--->> nesse modo, o "width" já inclui o conteúdo, o "padding" e o "border".
 
+### clear:
+            `--->> impede que um elemento fique ao lado de um elemento que possuam "float", forçando o elemento a começar abaixo de elementos flutuantes, em vez de permitir que ele fique ao lado deles. Ela possui quatro valores principais:
+        - none;
+                `--->> permite que elementos fiquem ao lado de elementos com "float" (padrão).
+        - left;
+                `--->> impede que o elemento fique ao lado de elementos com "float: left;".
+        - right;
+                `--->> impede que o elemento fique ao lado de elementos com "float: right;".
+        - both;
+                `--->> impede que o elemento fique ao lado de elementos com "float:" à esquerda ou à direita.
+
 ### display:
             `--->> modifica a configuração de disposição dos itens na caixa em questão. Define como um elemento aparece na página e como ele ocupa espaço em relação aos outros elementos.
         - inline;
@@ -1244,12 +1255,8 @@ align-itens
                     - row:
                             `--->>> organiza os itens em linha, um ao lado do outro.
 
-clear: both;
-            `--->> vai limpar toda a configuração já aplicada aquele local indicado anteriormente por outras seções.
-
-
 ### padding: --->>> distanciamento interno
-        `--->>> trabalha o espaçamento de dentro da caixa, afastando o conteúdo de dentro das bordas da caixa, como o nome, a largura que a caixa vai tomar...
+        `--->>> define o espaçamento de dentro da caixa, afastando o conteúdo de dentro e as bordas da caixa.
                 Exp.: 
                     padding: 20px;
 
