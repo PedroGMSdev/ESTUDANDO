@@ -956,6 +956,52 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 #### background-blend-mode:
             `--->> controla como as camadas do fundo se misturam.
 
+### border:
+            `--->> estiliza a borda ao redor de um elemento HTML, podendo definir espessura, estilo e cor.
+                    Exp.:
+                        border: 2px solid red;
+                                 \     \    \________ cor da borda.
+                                  \     \____________ estilo da borda.
+                                   \_________________ espessura da borda.
+    OBS.: os estilos de borda podem variar:
+        - solid;
+                `--->> borda contínua.
+        - dashed;
+                `--->> borda tracejada.
+        - dotted;
+                `--->> borda pontilhada.
+        - double;
+                `--->> borda dupla.
+        - none;
+                `--->> sem borda.
+    OBS.: pode-se escolher estilizar apenas um lado da borda de um contêiner.
+        - border-top:
+                `--->> cima
+        - border-bottom:
+                `--->> baixo
+        - border-left:
+                `--->> esquerda
+        - border-right:
+                `--->> direita
+#### border-radius:
+            `--->> arrendonda os cantos das bordas.
+                    Exp.:
+                        border-radius: 15px;
+#### border-spacing:
+            `--->> define o espaçamento entre as bordas das células de uma tabela.
+#### border-collapse:
+            `--->> define se o espaçamento entre as bordas de uma tabela ficam juntas ou separadas.
+#### border-image:
+            `--->> usa uma imagem como borda.
+##### border-image-source:
+            `--->> define a imagem utilizada na borda.
+##### border-image-slice:
+            `--->> define como a imagem será dividida.
+##### border-image-width:
+            `--->> define a largura da borda com imagem.
+##### border-image-repeat:
+            `--->> define como a imagem será repetida.          
+
 ### box-sizing:
             `--->> define como o navegador calcula altura (HEIGHT) e largura (WIDHT) de um elemento. Ou seja, o tamanho que o elemento vai poder ocupar na página.
         - content-box;
@@ -1096,14 +1142,14 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
             `--->> cria espaço EXTERNO ao redor de um elemento, afastando-o de outros elementos.
         Exp.:
             margin: 20px;
-        - margin-top:
-                    `--->> trabalha apenas com a margem de cima do elemento.
-        - margin-right:
-                    `--->> trabalha apenas com a margem da direita do elemento.
-        - margin-bottom:
-                    `--->> trabalha apenas com a margem de baixo do elemento.
-        - margin-left:
-                    `--->> trabalha apenas com a margem da esquerda do elemento.
+    - margin-top:
+                `--->> trabalha apenas com a margem de cima do elemento.
+    - margin-right:
+                `--->> trabalha apenas com a margem da direita do elemento.
+    - margin-bottom:
+                `--->> trabalha apenas com a margem de baixo do elemento.
+    - margin-left:
+                `--->> trabalha apenas com a margem da esquerda do elemento.
 
 ### overflow:
             `--->> controla o que acontece quando o conteúdo de um elemento é maior que o espaço disponível dentro dele.
@@ -1119,6 +1165,19 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
             `--->> controla o conteúdo que ultrapassa horizontalmente.
 #### overflow-y:
             `--->> controla o conteúdo que ultrapassa verticalmente.
+
+### padding:
+        `--->>> define o espaçamento de dentro da caixa, afastando o conteúdo de dentro e as bordas da caixa.
+                Exp.: 
+                    padding: 20px;    
+    OBS.: padding também pode ser personalizado individualmente a partir da escolha e especificação do local, como "-top", "-bottom", "-left" e "-right".
+                Exp.:
+                    padding-top: 20px;
+                                `--->> aplica espaçamento na parte de cima.
+    OBS.: o padding também pode aplicar diferentes distanciamentos para cada lado.
+                Exp.:
+                    padding: padding: 10px 20px 30px 40px;
+                                `--->> Superior, direita, inferior e esquerda, nessa ordem.
 
 ### position:
             `--->> define como um elemento vai ser posicionado na página, podendo ficar na posição normal do documento, se pode ser deslocado ou se fica fixo em algum lugar da tela.
@@ -1194,9 +1253,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 ------------------------------------------------------------------------------------------------------------------------
 
-border-radius
 
-clear: 
 
 object-fit: cover;
 
@@ -1255,34 +1312,13 @@ align-itens
                     - row:
                             `--->>> organiza os itens em linha, um ao lado do outro.
 
-### padding: --->>> distanciamento interno
-        `--->>> define o espaçamento de dentro da caixa, afastando o conteúdo de dentro e as bordas da caixa.
-                Exp.: 
-                    padding: 20px;
+
 
 ### transition:
             `--->> trabalha com a transição de efeitos.
                 Exp.:
                     transition: background-color 1s;
                             `--->> sinaliza que quando houver uma mudança na cor do fundo, essa transição levará 1 segundo para acontecer.
-
-### border:
-            `--->> trabalha com a borda da caixa.
-                Exp.:
-                    - border-bottom:
-                            `--->> trabalha com a parte de baixo da borda da caixa.
-                                Exp.:
-                                    border-bottom: 1px #606060 solid
-                                            `--->> sinaliza que:
-                                                    - 1px = a espessura da borda será de 1 pixel
-                                                    - #606060 = a cor da borda
-                                                    - solid = o formato da borda, que pode ser:
-                                                                - solid = completa
-                                                                - dashed = tracejada
-                                                                - dotted = pontilhada
-                                                                - ...
-                    - border-spacing:
-                            `--->> trabalha o espaçamento entre bordar, ou seja, diz quanto de espaço uma borda terá da outra.
 
 # *JAVASCRIPT*
 
@@ -1331,7 +1367,6 @@ align-itens
 
 # *TYPESCRIPT*
 
-
 # *JAVA*
 
 ## System.out
@@ -1372,7 +1407,6 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
 
 ## .isEmpty()
         `--->>> sinaliza que algo irá acontecer se o local estiver vazio.
-
 
 # *C*
 
@@ -1453,8 +1487,6 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
 
 ## ENTRADA E SAÍDA DE DADOS
 
-
-
 ### OUTRAS FUNÇÕES DE ENTRADA (Para Interação Com Usuários)
 #### putc
 #### puts
@@ -1477,7 +1509,6 @@ OBS.: a diferença entre PRINT e PRINTLN pode ser diferenciada com um \n.
 
 
 # *BANCO DE DADOS*
-
 
 # *GIT*
 
