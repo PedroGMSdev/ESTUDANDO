@@ -1034,6 +1034,26 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 `--->> permite organizar os elementos em linhas E colunas, como uma grade ou tabela.
         - flex;
                 `--->> permite organizar os elementos filhos de um contêiner com facilidade, geralmente em uma linha OU coluna.
+            
+### flex-direction:
+            `--->> usado em um contêiner de "display: flex;", define a direção em que os elementos serão organizados.
+        - row;
+                `--->> organiza horizontalmente, da esquerda para a direita.
+        - row-reverse;
+                `--->> organiza horizontalmente, mas inverte a ordem dos elementos.
+        - column;
+                `--->> organiza verticalmente, de cima para baixo.
+        - column-reverse;
+                `--->> organiza verticalmente, mas inverte a ordem dos elementos.
+
+### flex-wrap:
+            `--->> propriedade do FLEXBOX, controla se os elementos do contêiner podem ou não quebrar para uma nova linha (ou coluna) quando não existe espaço suficiente no contêiner.
+        - nowrap;
+                `--->> não permite que os elementos quebrem para outra linha. Todos tentam se manter na mesma linha, mesmo que precisem diminuir ou ultrapassar o espaço disponível (padrão).
+        - wrap;
+                `--->> permite que os elementos que não couberem na mesma linha passem para a próxima linha, quando necessário.
+        - wrap-reverse;
+                `--->> permite a quebra de linha, mas inverte a direção das linhas.
                             
 ### font-family: 
             `--->> estilo de fonte
@@ -1302,17 +1322,6 @@ align-itens
             `--->> transforma o texto do local indicado.
                     - uppercase;
                             `--->> transforma todo o texto em LETRAS MAIÚSCULAS.
-
-
-
-### flex-direction: --->>> direcionamento dentro do flex
-            `--->>> sinaliza em qual direção os itens do "display: flex;" vão ser dispostos:
-                    - column:
-                            `--->>> organiza os itens em coluna, um abaixo do outro.
-                    - row:
-                            `--->>> organiza os itens em linha, um ao lado do outro.
-
-
 
 ### transition:
             `--->> trabalha com a transição de efeitos.
