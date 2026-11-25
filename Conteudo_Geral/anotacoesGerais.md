@@ -884,6 +884,19 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 - cqmax
                     `--->> 1% da maior dimensão relevante do contêiner.
 
+### align-items:
+            `--->> utilizada no FLEXBOX, controla o alinhamento dos elementos no eixo tranversal do contêiner, ou seja, ele determina como os elementos ficam posicionados no sentindo contrário ao definido pelo "flex-direction".
+        - stretch;
+                `--->> faz com que os elementos ocupem todo o espaço disponível no eixo transversal, desde que não tenham uma dimensão definida que impeça esse comportamento.
+        - flex-start;
+                `--->> alinha os itens no início do eixo transversal.
+        - flex-end;
+                `--->> alinha os itens no final do eixo transversal.
+        - center;
+                `--->> centraliza os elementos no eixo transversal.
+        - baseline;
+                `--->> alinha os elementos de acordo com a linha de base do texto (baseline). É útil quando você tem elementos com tamanhos de fontes diferentes e quer que os textos fiquem alinhados.
+    OBS.: o "align-items" depende diretamente do "flex-direction" para ser ajustado, por exemplo, se o "flex-direction" for organizado como "row"(horizontalmente, da esquerda para a direita) o "align-items" irá organizar verticalmente, e se for "column"(forma de coluna, de cima para baixo) o "align-items" organizará horizontalmente.
 
 ### background:
             `--->> trabalha com o fundo da página.
@@ -1076,9 +1089,33 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                     `--->> busca uma fonte em um site externo, como o GOOGLE FONTS. Você salva a referência linkando no seu HTML e importando (@import) no CSS. Depois, é só mudar o "font-family" para o nome da fonte.
 
 ### font-size: 
-            `--->> tamanho da fonte
+            `--->> define o tamanho da fonte.
         Exp.:
             font-size: 30pt;
+
+### font-weight:
+            `--->> define a espessura (grossura) da fonte, podendo ser usada valores numéricos ou palavras-chaves:
+                        Exp.:
+                            font-weight: 700;
+                                ou
+                            font-weight: bold;
+        - thin;
+                `--->> equivalente a 100, é uma letra extremamente fina.
+        - light;
+                `--->> equivalente a 300, é uma letra fina.
+        - normal;
+                `--->> equivalente a 400.
+        - medium;
+                `--->> equivalente a 500, é uma letra de média espessura.
+        - bold;
+                `--->> equivalente a 700, é uma letra em negrito.
+        - black;
+                `--->> equivalente a 900, é uma letra extremamente grossa.
+        - lighter;
+                `--->> define um peso relativamente mais leve que o elemento pai, ou seja, mais fino que a grossura especificada para a letra normal, mesmo sem informar um número específico.
+        - bolder;
+                `--->> define um peso relativamente mais pesado que o elemento pai, ou seja, mais grosso que a grossura especificada para a letra normal, mesmo sem informar um número específico.
+    OBS.: nem todas as fontes possuem todas as espessuras, ficando a cargo do navegador escolher um peso disponível ou sintetizar uma aparência mais próxima.
 
 ### float:
             `--->> posiciona um elemento à esquera ou à direita dentro do seu contêiner, permitindo que outros elementos, principalmente textos, ocupem o espaço ao redor dele. Muito utilizado para fazer textos contornarem imagens. Muito utilizado em "display: block;".
@@ -1097,6 +1134,20 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 `--->> remove o efeito de flutuação (valor padrão).
         - inherit;
                 `--->> herda o valor do elemento pai. 
+            
+### gap:
+            `--->> aplica espaçamentro entre os elementos de um contêiner, criando uma distância entre todos eles ao mesmo tempo.
+    OBS.: você também pode aplicar valores diferentes para linhas e colunas, informando dois valores, ou específicar com uma propriedade isolada.
+                Exp.:
+                    gap: 10px 20px;
+                                `--->> onde o 10px será o espaçamento entre as linhas e o 20px o espaçamento entre as colunas.
+                        ou
+                    row-gap: 10px;
+                    column-gap: 20px;
+#### row-gap:
+            `--->> define, especificamente, o espaçamento entre as linhas.
+#### column-gap:
+            `--->> define, especificamente, o espaçamento entre as colunas.
 
 ### height:
             `--->> define a altura do elemento.
@@ -1170,6 +1221,19 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 `--->> trabalha apenas com a margem de baixo do elemento.
     - margin-left:
                 `--->> trabalha apenas com a margem da esquerda do elemento.
+
+### object-fit: (ajuste de tamanho de imagem)
+            `--->> controla como uma imagem ou vídeo se ajusta dentro das dimensões de um elemento, ou seja, determina como o conteúdo vai ocupar os espaço disponível sem necessariamente alterar as dimensões do próprio elemento. Muito utilizada em imagens de produtos, fotos de perfil, banners, galerias e vídeos.
+        - fill;
+                `--->> faz a imagem ocupar todo o espaço disponível, mesmo que precise distorcer suas proporções, como deixando cortada apenas o referente ao espaço disponível.
+        - contain;
+                `--->> mantém a proporção original da imagem e faz com que ela caiba completamente dentro do espaço disponível, podendo deixar espaços vazios nas laterais ou na parte superior e inferior.
+        - cover;
+                `--->> mantém a proporção original, preenchendo todo o espaço disponível. Se necessário, a imagem será cortada nas partes que ultapassem o contêiner.
+        - none;
+                `--->> não redimenciona a imagem para caber no contêiner, mantendo seu tamanho intríseco e pode ultrapassar os limites do espaço disponível, sendo cortada pelo contêiner caso haja "overflow: hidden;".
+        - scale-down;
+                `--->> compara o comportamento entre "none;" e "contain;" e escolhe o que resultar na menor dimensão final. Ou seja, se a imagem já couber no espaço não precisa aumentá-la, se for maior que o espaço ela será reduzida para caber completamente. A imagem é reduzida quando necessário, mas não ampliada além do tamanho original.
 
 ### overflow:
             `--->> controla o que acontece quando o conteúdo de um elemento é maior que o espaço disponível dentro dele.
@@ -1271,27 +1335,10 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 
 
-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
 
-
-
-object-fit: cover;
 
 object-position: top;
-
-gap:
-
-align-itens
-
-### font-weight:
-        `--->> espessura da letra.
-                - bold;
-                        `--->> aplica um negrito.
-                - bolder;
-                        `--->> aplica algo mais espesso que o negrito.
-
-
-
        
 ### text-shadow 
             `--->> aplica sombra no texto
