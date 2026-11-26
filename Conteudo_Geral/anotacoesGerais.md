@@ -1352,7 +1352,8 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 Exp.:
                     text-shadow:
                         2px 2px 3px black,
-                        0 0 10px blue;
+                        0 0 10px blue;   \______> sobra forte preta
+                                    \___________> brilho leve azul
 
 ### width: (largura)
             `--->> define a largura de um elemento, ou a largura que ele irá ocupar.
