@@ -884,7 +884,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 - cqmax
                     `--->> 1% da maior dimensão relevante do contêiner.
 
-### align-items:
+### align-items: (alinhamento dos itens)
             `--->> utilizada no FLEXBOX, controla o alinhamento dos elementos no eixo tranversal do contêiner, ou seja, ele determina como os elementos ficam posicionados no sentindo contrário ao definido pelo "flex-direction".
         - stretch;
                 `--->> faz com que os elementos ocupem todo o espaço disponível no eixo transversal, desde que não tenham uma dimensão definida que impeça esse comportamento.
@@ -1117,7 +1117,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 `--->> define um peso relativamente mais pesado que o elemento pai, ou seja, mais grosso que a grossura especificada para a letra normal, mesmo sem informar um número específico.
     OBS.: nem todas as fontes possuem todas as espessuras, ficando a cargo do navegador escolher um peso disponível ou sintetizar uma aparência mais próxima.
 
-### float:
+### float: 
             `--->> posiciona um elemento à esquera ou à direita dentro do seu contêiner, permitindo que outros elementos, principalmente textos, ocupem o espaço ao redor dele. Muito utilizado para fazer textos contornarem imagens. Muito utilizado em "display: block;".
                     Exp.:
                             - Agenda
@@ -1135,7 +1135,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
         - inherit;
                 `--->> herda o valor do elemento pai. 
             
-### gap:
+### gap: (espaçamento entre itens)
             `--->> aplica espaçamentro entre os elementos de um contêiner, criando uma distância entre todos eles ao mesmo tempo.
     OBS.: você também pode aplicar valores diferentes para linhas e colunas, informando dois valores, ou específicar com uma propriedade isolada.
                 Exp.:
@@ -1149,7 +1149,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 #### column-gap:
             `--->> define, especificamente, o espaçamento entre as colunas.
 
-### height:
+### height: (altura)
             `--->> define a altura do elemento.
                     Exp.:
                         height: 100px;
@@ -1169,7 +1169,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
         - space-evenly;
                 `--->> os espaços entre os elementos e nas duas extremidades são iguais.
 
-### list-style:
+### list-style: (personalização de listas)
             `--->> serve para trabalhar os marcadores de um lista, ordenada ou não ordenada. Permite controlar o tipo de marcador, sua posição e até utilizar uma imagem como marcador.
                     Exp.:
                         list-style: none;
@@ -1209,7 +1209,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                         list-style-image: url("icone.png");
         OBS.: o "list-style-image:" não permite controlar diretamente o tamanho da imagem, então, se você quiser personalizar o tamanho, alinhamento e espaçamento do ícone, uma alternativa é usar "li::before{ }" no lugar.
 
-### margin:
+### margin: (espaçamento externo ao redor)
             `--->> cria espaço EXTERNO ao redor de um elemento, afastando-o de outros elementos.
         Exp.:
             margin: 20px;
@@ -1222,7 +1222,7 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
     - margin-left:
                 `--->> trabalha apenas com a margem da esquerda do elemento.
 
-### object-fit: (ajuste de tamanho de imagem)
+### object-fit: (ajuste de tamanho de imagem dentro do contêiner)
             `--->> controla como uma imagem ou vídeo se ajusta dentro das dimensões de um elemento, ou seja, determina como o conteúdo vai ocupar os espaço disponível sem necessariamente alterar as dimensões do próprio elemento. Muito utilizada em imagens de produtos, fotos de perfil, banners, galerias e vídeos.
         - fill;
                 `--->> faz a imagem ocupar todo o espaço disponível, mesmo que precise distorcer suas proporções, como deixando cortada apenas o referente ao espaço disponível.
@@ -1234,6 +1234,19 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
                 `--->> não redimenciona a imagem para caber no contêiner, mantendo seu tamanho intríseco e pode ultrapassar os limites do espaço disponível, sendo cortada pelo contêiner caso haja "overflow: hidden;".
         - scale-down;
                 `--->> compara o comportamento entre "none;" e "contain;" e escolhe o que resultar na menor dimensão final. Ou seja, se a imagem já couber no espaço não precisa aumentá-la, se for maior que o espaço ela será reduzida para caber completamente. A imagem é reduzida quando necessário, mas não ampliada além do tamanho original.
+
+### object-position: (posição da imagem dentro do local de exibição) 
+            `--->> define qual parte da imagem ou vídeo será exibida dentro do espaço do elemento disponível para visualização, controlando o posicionamento da imagem dentro desse espaço. Geralmente usada junto com "object-fit: cover;" ou "object-fit: contain;".
+        - center;
+                `--->> prioriza que a parte do centro da imagem seja exibida, centralizando a imagem (padrão).
+        - top;
+                `--->> prioriza que a parte superior da imagem seja exibida.
+        - bottom;
+                `--->> prioriza que a parte inferior da imagem seja exibida.
+    OBS.: você também pode personalizar essa exibição informando a porcentagem horizontal e vertical, respectivamente, que quer que a imagem exiba.
+                    Exp.:
+                        object-position: 50% 30%;
+                                    `--->> onde 50% será horizontalmente e 30% verticalmente.
 
 ### overflow:
             `--->> controla o que acontece quando o conteúdo de um elemento é maior que o espaço disponível dentro dele.
@@ -1327,7 +1340,21 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 ### text-indent:
             `--->> usado para definir um recuo na primeira linha de um texto, ou seja, criar aquele espaço na primeira linha de um parágrafo, como nos livros.
 
-### width:
+### text-shadow:
+            `--->> adiciona uma sobra ao texto, criando efeito de profundidade, destaque ou brilho. Você pode informar paramentros diferente para o deslocamento horizontal para a direita, para o deslocamento vertical para baixo, grau de desfoque e cor da sombra, respectivamente.
+                        Exp.:
+                            text-shadow: 2px 3px 5px black;
+                                          \   \    \     \______> cor da sombra
+                                           \   \    \___________> desfoque
+                                            \   \_______________> vertical
+                                             \__________________> horizontal
+    OBS.: você pode adicionar mais de uma sombra no mesmo elemento, basta separá-las por vígurla (",").
+                Exp.:
+                    text-shadow:
+                        2px 2px 3px black,
+                        0 0 10px blue;
+
+### width: (largura)
             `--->> define a largura de um elemento, ou a largura que ele irá ocupar.
                     Exp.: 
                         width: 100px;
@@ -1336,9 +1363,6 @@ Essas TAGs deixam o html mais semântico, ou seja, mais organizado.
 
 
 --------------------------------------------------------------------------------------------------------
-
-
-object-position: top;
        
 ### text-shadow 
             `--->> aplica sombra no texto
